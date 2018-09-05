@@ -69,6 +69,4 @@ public class Auth {
     public String getCurrentUser() {
         return preferences.get("username", "session");
     }
-
-
 }

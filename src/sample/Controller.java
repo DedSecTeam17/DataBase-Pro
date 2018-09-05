@@ -40,6 +40,9 @@ public class Controller implements Initializable {
             SignIn(email_filed, password_field);
         });
     }
+
+
+
     private void SignIn(JFXTextField email, JFXPasswordField password) {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
@@ -49,7 +52,6 @@ public class Controller implements Initializable {
         } else {
 //            inform user with his error on email
             if (!FormValidation.getInstance().checkEmail(_email)) {
-
                 if (_email.equals("")) {
                     email_hint.setStyle("-fx-text-fill:   #f64747");
                     email_hint.setText("empty field not allowed");
@@ -60,7 +62,6 @@ public class Controller implements Initializable {
                 Log.e("not valid email address");
 
             } else {
-
                 email_hint.setStyle("-fx-text-fill:   limegreen");
                 email_hint.setText("valid email");
             }
