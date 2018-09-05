@@ -17,7 +17,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Controller implements Initializable {
-
     @FXML
     private Pane login_Pane;
 
@@ -43,7 +42,7 @@ public class Controller implements Initializable {
     private Pane SignUp_Pane;
 
     @FXML
-    private JFXTextField Signup_Username;
+    private JFXTextField Signup_FirstName;
 
     @FXML
     private JFXTextField Signup_Email;
@@ -55,7 +54,19 @@ public class Controller implements Initializable {
     private JFXButton SignUp_Button;
 
     @FXML
-    private JFXTextField Signup_Username1;
+    private JFXTextField Signup_LastName;
+
+    @FXML
+    private Label SignUp_fname_hint;
+
+    @FXML
+    private Label SignUp_email_hint;
+
+    @FXML
+    private Label SignUp_lname_hint;
+
+    @FXML
+    private Label SignUp_password_hint;
 
     @FXML
     private Label WarningText;
@@ -64,35 +75,57 @@ public class Controller implements Initializable {
     private JFXToggleButton toggleButton;
 
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
 
         toggleButton.setOnAction(event -> {
-            if (toggleButton.isSelected()){
+            if (toggleButton.isSelected()) {
                 toggleButton.setText("Sign in");
                 SignUp_Pane.setVisible(false);
                 login_Pane.setVisible(true);
-//                clear_Fields();
-            }
-            else {
+                clear_Fields();
+            } else {
                 toggleButton.setText("Sign up");
                 login_Pane.setVisible(false);
                 SignUp_Pane.setVisible(true);
-//                clear_Fields();
+                clear_Fields();
             }
         });
         btn_sign_in.setOnAction(event ->
         {
             SignIn(email_filed, password_filed);
         });
+        SignUp_Button.setOnAction(event -> {
+            SignUp(Signup_FirstName,Signup_LastName,Signup_Email,Signup_Password);
+        });
+
+
     }
+    private void clear_Fields() {
+        // ------------------ LABELS --------
+//        registration
+        this.SignUp_fname_hint.setText("");
+        this.SignUp_password_hint.setText("");
+        this.SignUp_email_hint.setText("");
+        this.SignUp_lname_hint.setText("");
+//        login
+        this.email_hint.setText("");
+        this.password_hint.setText("");
 
 
+        /// ------ FIELDS
 
+//        LOGIN
+        this.password_filed.clear();
+        this.email_filed.clear();
+//        REGISTRATIONS
+        this.Signup_Email.clear();
+        this.Signup_Password.clear();
+        this.Signup_FirstName.clear();
+        this.Signup_LastName.clear();
 
+    }
     private void SignIn(JFXTextField email, JFXPasswordField password) {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
@@ -131,6 +164,76 @@ public class Controller implements Initializable {
                 password_hint.setText("valid password");
             }
         }
+    }
+    private void SignUp(JFXTextField first_name, JFXTextField last_name, JFXTextField email, JFXPasswordField password) {
+        String _email = email.getText().trim();
+        String _password = password.getText().trim();
+        String _fname = first_name.getText().trim();
+        String _lname = last_name.getText().trim();
+        if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && FormValidation.getInstance().checkuserName(_fname) && FormValidation.getInstance().checkuserName(_lname)) {
+            User user = new User(_email, _password,_fname,_lname);
+            Log.i("user email " + user.getFirstName()+"\t"+user.getLastName());
+        } else {
+
+            if (!FormValidation.getInstance().checkuserName(_fname)) {
+                if (_fname.equals("")) {
+                    SignUp_fname_hint.setStyle("-fx-text-fill:   #f64747");
+                    SignUp_fname_hint.setText("empty filed not allowed");
+                } else {
+                    SignUp_fname_hint.setStyle("-fx-text-fill:   #f64747");
+                    SignUp_fname_hint.setText("first name to short ,must be bigger than 7 char");
+                }
+                Log.e("not valid first name");
+            } else {
+                SignUp_fname_hint.setStyle("-fx-text-fill:   limegreen");
+                SignUp_fname_hint.setText("valid first name");
+            }
+
+            if (!FormValidation.getInstance().checkuserName(_lname)) {
+                if (_lname.equals("")) {
+                    SignUp_lname_hint.setStyle("-fx-text-fill:   #f64747");
+                    SignUp_lname_hint.setText("empty filed not allowed");
+                } else {
+                    SignUp_lname_hint.setStyle("-fx-text-fill:   #f64747");
+                    SignUp_lname_hint.setText("last name to short ,must be bigger than 7 char");
+                }
+                Log.e("not valid  last name");
+            } else {
+                SignUp_lname_hint.setStyle("-fx-text-fill:   limegreen");
+                SignUp_lname_hint.setText("valid last name");
+            }
+//            inform user with his error on email
+            if (!FormValidation.getInstance().checkEmail(_email)) {
+                if (_email.equals("")) {
+                    SignUp_email_hint.setStyle("-fx-text-fill:   #f64747");
+                    SignUp_email_hint.setText("empty field not allowed");
+                } else {
+                    SignUp_email_hint.setStyle("-fx-text-fill:   #f64747");
+                    SignUp_email_hint.setText("email address not valid");
+                }
+                Log.e("not valid email address");
+
+            } else {
+                SignUp_email_hint.setStyle("-fx-text-fill:   limegreen");
+                SignUp_email_hint.setText("valid email");
+            }
+
+// inform user with his err password
+            if (!FormValidation.getInstance().checkPassword(_password)) {
+                if (_password.equals("")) {
+                    SignUp_password_hint.setStyle("-fx-text-fill:   #f64747");
+                    SignUp_password_hint.setText("empty filed not allowed");
+                } else {
+                    SignUp_password_hint.setStyle("-fx-text-fill:   #f64747");
+                    SignUp_password_hint.setText("password must only contains char and num");
+                }
+                Log.e("not valid password password");
+            } else {
+                SignUp_password_hint.setStyle("-fx-text-fill:   limegreen");
+                SignUp_password_hint.setText("valid password");
+            }
+        }
+
     }
 
     //#endregion
