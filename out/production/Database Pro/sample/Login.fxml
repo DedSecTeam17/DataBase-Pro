@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="450.0" fitWidth="681.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Background.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="457.0" layoutY="-2.0" prefHeight="457.0" prefWidth="343.0" style="-fx-background-color: #22313f;">
+               <children>
+                  <Pane layoutX="39.0" layoutY="32.0" prefHeight="365.0" prefWidth="278.0" style="-fx-background-color: #ececec; -fx-background-radius: 5PX;">
+                     <effect>
+                        <DropShadow radius="6.2925" width="6.17" />
+                     </effect>
+                     <children>
+                        <Label layoutX="89.0" prefHeight="124.0" prefWidth="136.0" text="Sign In" textFill="#f64747">
+                           <font>
+                              <Font name="Akhbar MT Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="sign_in_btn" layoutX="40.0" layoutY="291.0" prefHeight="33.0" prefWidth="198.0" style="-fx-background-color: #f64747;" text="Sing In" textFill="WHITE" />
+                        <JFXTextField fx:id="email_filed" focusColor="#f64747" layoutX="54.0" layoutY="170.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="#f64747" />
+                        <JFXPasswordField fx:id="password_field" focusColor="#f64747" layoutX="54.0" layoutY="221.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="#f64747" />
+                        <ImageView fitHeight="78.0" fitWidth="76.0" layoutX="101.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/login_logo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="14.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/emial.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="14.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/password.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="email_hint" layoutX="54.0" layoutY="204.0" />
+                        <Label fx:id="password_hint" layoutX="54.0" layoutY="255.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="-1.0" opacity="0.45" prefHeight="450.0" prefWidth="459.0" style="-fx-background-color: #95a5a6;">
+               <children>
+                  <Label layoutX="95.0" layoutY="115.0" text="Welcome to DataBasePro" textFill="#f64747">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="95.0" layoutY="150.0" text="Seimple app to manage employee" textFill="#f64747">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="sign_up_btn" layoutX="102.0" layoutY="209.0" prefHeight="33.0" prefWidth="248.0" style="-fx-background-color: #f64747;" text="Sing Up" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
