@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginSignupController">
+    <children>
+        <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@backGround.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="login_Pane" layoutX="449.0" prefHeight="500.0" prefWidth="354.0" style="-fx-background-color: #8f9efc;">
+            <children>
+                <JFXTextField fx:id="Login_Username" layoutX="41.0" layoutY="148.0" maxWidth="272.0" minWidth="239.0" prefHeight="31.0" prefWidth="272.0" promptText="Email/Username" unFocusColor="#eeeeee" />
+                <JFXPasswordField fx:id="Login_Password" layoutX="41.0" layoutY="250.0" maxWidth="272.0" minWidth="272.0" prefHeight="31.0" prefWidth="272.0" promptText="Password" unFocusColor="#eeeeee" />
+                <Label layoutX="151.0" layoutY="55.0" text="Sign in" textFill="#fcfcfc">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <JFXButton fx:id="SignIn_Button" layoutX="81.0" layoutY="385.0" onAction="#handleLogin" prefHeight="25.0" prefWidth="193.0" style="-fx-background-color: #1c5dec;" text="Sign In" textFill="#e5e5e5" />
+                <Label fx:id="ForgotPassword" layoutX="129.0" layoutY="432.0" text="Forgot Password ?" textFill="#c9c9c9" underline="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="SignUp_Pane" layoutX="449.0" prefHeight="500.0" prefWidth="354.0" style="-fx-background-color: #8f9efc;" visible="false">
+            <children>
+                <JFXTextField fx:id="Signup_Username" layoutX="81.0" layoutY="127.0" maxWidth="223.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Name..." unFocusColor="#eeeeee" />
+                <JFXTextField fx:id="Signup_Email" layoutX="81.0" layoutY="196.0" maxWidth="223.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Email Address" unFocusColor="#eeeeee" />
+                <JFXPasswordField fx:id="Signup_Password" layoutX="81.0" layoutY="271.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Password" unFocusColor="#eeeeee" />
+                <JFXPasswordField fx:id="Signup_ConfirmPassword" layoutX="81.0" layoutY="345.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Confirm Password" unFocusColor="#eeeeee" />
+                <JFXButton fx:id="SignUp_Button" layoutX="81.0" layoutY="421.0" onAction="#handleSignUp" prefHeight="25.0" prefWidth="193.0" style="-fx-background-color: #1c5dec;" text="Sign Up" textFill="#eeeeee" />
+                <Label layoutX="153.0" layoutY="55.0" text="Sign Up" textFill="#eeeeee">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <JFXToggleButton fx:id="toggleButton" layoutX="368.0" layoutY="222.0" onAction="#handleToggle" selected="true" style="-fx-background-color: ffffff;" text="Sign In" />
+        <Label fx:id="WarningText" layoutX="113.0" layoutY="408.0" prefHeight="19.0" prefWidth="193.0" textFill="RED">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="818.0" layoutY="4.0" onMouseClicked="#HandleClose" prefHeight="17.0" prefWidth="5.0" text="X">
+            <font>
+                <Font size="15.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Label>
+    </children>
+</AnchorPane>

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane prefHeight="450.0" prefWidth="200.0">
          <children>
@@ -23,7 +23,7 @@
             </ImageView>
             <Pane layoutX="457.0" layoutY="-2.0" prefHeight="457.0" prefWidth="343.0" style="-fx-background-color: #22313f;">
                <children>
-                  <Pane layoutX="39.0" layoutY="32.0" prefHeight="365.0" prefWidth="278.0" style="-fx-background-color: #ececec; -fx-background-radius: 5PX;">
+                  <Pane fx:id="signinPanel" layoutX="39.0" layoutY="32.0" prefHeight="365.0" prefWidth="278.0" style="-fx-background-color: #ececec; -fx-background-radius: 5PX;" visible="false">
                      <effect>
                         <DropShadow radius="6.2925" width="6.17" />
                      </effect>
@@ -53,6 +53,45 @@
                         </ImageView>
                         <Label fx:id="email_hint" layoutX="54.0" layoutY="204.0" />
                         <Label fx:id="password_hint" layoutX="54.0" layoutY="255.0" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="signupPanel" layoutX="39.0" layoutY="9.0" prefHeight="422.0" prefWidth="278.0" style="-fx-background-color: #ececec; -fx-background-radius: 5PX;">
+                     <effect>
+                        <DropShadow radius="6.2925" width="6.17" />
+                     </effect>
+                     <children>
+                        <Label layoutX="89.0" layoutY="-38.0" prefHeight="124.0" prefWidth="136.0" text="Sign up" textFill="#f64747">
+                           <font>
+                              <Font name="Akhbar MT Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="78.0" fitWidth="76.0" layoutX="101.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/login_logo.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="14.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/emial.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="email_filed1" focusColor="#f64747" layoutX="54.0" layoutY="136.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="#f64747" />
+                        <Label fx:id="email_hint1" layoutX="54.0" layoutY="170.0" text="Email is invalid" />
+                        <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="14.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/password.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="password_field1" focusColor="#f64747" layoutX="59.0" layoutY="191.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="#f64747" />
+                        <Label fx:id="password_hint1" layoutX="52.0" layoutY="225.0" text="Passwprd is invalid" />
+                        <JFXButton fx:id="sign_in_btn1" layoutX="40.0" layoutY="357.0" prefHeight="33.0" prefWidth="198.0" style="-fx-background-color: #f64747;" text="Sing In" textFill="WHITE" />
+                        <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="29.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/password.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="password_field11" focusColor="#f64747" layoutX="69.0" layoutY="201.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="#f64747" />
+                        <Label fx:id="password_hint11" layoutX="62.0" layoutY="235.0" text="Passwprd is invalid" />
                      </children>
                   </Pane>
                </children>
