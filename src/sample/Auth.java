@@ -4,12 +4,16 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.prefs.Preferences;
-
+/*
+* The utility of this module verifies the user who moves between the pages.
+ * So that it saves the user's email temporarily and
+ * compares it with the databases. If it exists in the databases it is allowed to initiate
+  * the operations imposed on it.
+* */
 public class Auth {
 
     private static Auth ourInstance = new Auth();
     private static Preferences preferences = Preferences.userRoot().node(Auth.class.getName());
-
 
     public static Auth getInstance() {
         return ourInstance;
