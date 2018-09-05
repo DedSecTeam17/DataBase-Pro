@@ -7,12 +7,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
+    private static final int WINDOW_HEIGHT = 450;
+    private static final int WINDOW_WIDTH = 800;
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, WINDOW_WIDTH, WINDOW_HEIGHT));
+        primaryStage.setMinWidth(WINDOW_WIDTH);
+        primaryStage.setMinHeight(WINDOW_HEIGHT);
+        primaryStage.setMinHeight(WINDOW_HEIGHT);
+        primaryStage.setMaxWidth(WINDOW_WIDTH);
         primaryStage.show();
     }
 

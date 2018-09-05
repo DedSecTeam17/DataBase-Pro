@@ -75,16 +75,11 @@ public class Controller implements Initializable {
                     password_hint.setText("password not valid");
                 }
                 Log.e("not valid password password");
-
             } else {
                 password_hint.setStyle("-fx-text-fill:   limegreen");
                 password.setText("valid password");
             }
-
-
         }
-
-
     }
 
     //#endregion
