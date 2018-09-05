@@ -3,76 +3,103 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <AnchorPane prefHeight="450.0" prefWidth="200.0">
+      <ImageView fitHeight="534.0" fitWidth="751.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Background.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="378.0" prefHeight="500.0" prefWidth="428.0" style="-fx-background-color: #22313f;" />
+      <Pane layoutX="-15.0" layoutY="-3.0" opacity="0.33" prefHeight="508.0" prefWidth="392.0" style="-fx-background-color: #95a5a6;">
          <children>
-            <ImageView fitHeight="450.0" fitWidth="681.0" pickOnBounds="true" preserveRatio="true">
+            <Label layoutX="95.0" layoutY="115.0" text="Welcome to DataBasePro" textFill="#f64747">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="150.0" text="Seimple app to manage employee" textFill="#f64747">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="login_Pane" layoutX="431.0" layoutY="42.0" prefHeight="416.0" prefWidth="321.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+         <children>
+            <JFXTextField fx:id="email_filed" focusColor="#f64747" layoutX="65.0" layoutY="148.0" maxWidth="272.0" minWidth="230.0" prefHeight="31.0" prefWidth="230.0" promptText="Email/Username" unFocusColor="#f64747" />
+            <JFXPasswordField fx:id="password_filed" focusColor="#f64747" layoutX="65.0" layoutY="250.0" maxWidth="272.0" minWidth="230.0" prefHeight="31.0" prefWidth="230.0" promptText="Password" unFocusColor="#f64747" />
+            <Label layoutX="151.0" layoutY="55.0" text="Sign in" textFill="#fcfcfc">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_sign_in" layoutX="65.0" layoutY="325.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #f64747;" text="Sign In" textFill="#e5e5e5" />
+            <Label fx:id="ForgotPassword" layoutX="116.0" layoutY="377.0" text="Forgot Password ?" textFill="#c9c9c9" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="105.0" layoutX="99.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Images/Background.jpg" />
+                  <Image url="@Images/login_logo.png" />
                </image>
             </ImageView>
-            <Pane layoutX="457.0" layoutY="-2.0" prefHeight="457.0" prefWidth="343.0" style="-fx-background-color: #22313f;">
-               <children>
-                  <Pane layoutX="39.0" layoutY="32.0" prefHeight="365.0" prefWidth="278.0" style="-fx-background-color: #ececec; -fx-background-radius: 5PX;">
-                     <effect>
-                        <DropShadow radius="6.2925" width="6.17" />
-                     </effect>
-                     <children>
-                        <Label layoutX="89.0" prefHeight="124.0" prefWidth="136.0" text="Sign In" textFill="#f64747">
-                           <font>
-                              <Font name="Akhbar MT Bold" size="31.0" />
-                           </font>
-                        </Label>
-                        <JFXButton fx:id="sign_in_btn" layoutX="40.0" layoutY="291.0" prefHeight="33.0" prefWidth="198.0" style="-fx-background-color: #f64747;" text="Sing In" textFill="WHITE" />
-                        <JFXTextField fx:id="email_filed" focusColor="#f64747" layoutX="54.0" layoutY="170.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="#f64747" />
-                        <JFXPasswordField fx:id="password_field" focusColor="#f64747" layoutX="54.0" layoutY="221.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="#f64747" />
-                        <ImageView fitHeight="78.0" fitWidth="76.0" layoutX="101.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/login_logo.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="14.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/emial.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="150.0" fitWidth="33.0" layoutX="14.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Images/password.png" />
-                           </image>
-                        </ImageView>
-                        <Label fx:id="email_hint" layoutX="54.0" layoutY="204.0" />
-                        <Label fx:id="password_hint" layoutX="54.0" layoutY="255.0" />
-                     </children>
-                  </Pane>
-               </children>
-            </Pane>
-            <Pane layoutX="-1.0" opacity="0.45" prefHeight="450.0" prefWidth="459.0" style="-fx-background-color: #95a5a6;">
-               <children>
-                  <Label layoutX="95.0" layoutY="115.0" text="Welcome to DataBasePro" textFill="#f64747">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="95.0" layoutY="150.0" text="Seimple app to manage employee" textFill="#f64747">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <JFXButton fx:id="sign_up_btn" layoutX="102.0" layoutY="209.0" prefHeight="33.0" prefWidth="248.0" style="-fx-background-color: #f64747;" text="Sing Up" textFill="WHITE" />
-               </children>
-            </Pane>
+            <ImageView fitHeight="45.0" fitWidth="30.0" layoutX="28.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/emial.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="30.0" layoutX="28.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/password.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="email_hint" layoutX="65.0" layoutY="194.0" text="Label" />
+            <Label fx:id="password_hint" layoutX="65.0" layoutY="288.0" text="Label" />
          </children>
-      </AnchorPane>
+      </Pane>
+      <Pane fx:id="SignUp_Pane" layoutX="430.0" layoutY="42.0" prefHeight="416.0" prefWidth="321.0" style="-fx-background-color: white; -fx-background-radius: 5px;" visible="false">
+         <children>
+            <JFXTextField fx:id="Signup_Username" focusColor="#f64747" layoutX="64.0" layoutY="83.0" maxWidth="223.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="First Name" unFocusColor="#f64747" />
+            <JFXTextField fx:id="Signup_Email" focusColor="#f64747" layoutX="64.0" layoutY="193.0" maxWidth="223.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Email Address" unFocusColor="#f64747" />
+            <JFXPasswordField fx:id="Signup_Password" focusColor="#f64747" layoutX="64.0" layoutY="249.0" maxWidth="193.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Password" unFocusColor="#f64747" />
+            <JFXButton fx:id="SignUp_Button" layoutX="61.0" layoutY="319.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #f64747;" text="Sign Up" textFill="#eeeeee" />
+            <JFXTextField fx:id="Signup_Username1" focusColor="#f64747" layoutX="64.0" layoutY="143.0" maxWidth="223.0" minWidth="193.0" prefHeight="31.0" prefWidth="193.0" promptText="Last Name" unFocusColor="#f64747" />
+            <ImageView fitHeight="75.0" fitWidth="105.0" layoutX="124.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/login_logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="WarningText" layoutX="113.0" layoutY="408.0" prefHeight="19.0" prefWidth="193.0" textFill="RED">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="818.0" layoutY="4.0" prefHeight="17.0" prefWidth="5.0" text="X">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <JFXToggleButton fx:id="toggleButton" layoutX="267.0" layoutY="247.0" prefHeight="58.0" prefWidth="153.0" selected="true" style="-fx-background-color: #ffffff;" text="Sign In" textFill="#22313f" toggleColor="#f64747" toggleLineColor="#22313f" unToggleColor="#22313f">
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXToggleButton>
    </children>
-</StackPane>
+</AnchorPane>

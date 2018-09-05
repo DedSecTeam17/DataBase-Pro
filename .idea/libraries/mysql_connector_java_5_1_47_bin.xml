@@ -3,7 +3,6 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/src/mysql-connector-java-5.1.47-bin.jar!/" />
       <root url="jar://$PROJECT_DIR$/src/ojdbc6.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/jfoenix-8.0.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

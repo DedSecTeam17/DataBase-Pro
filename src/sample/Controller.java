@@ -3,9 +3,11 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.JFXToggleButton;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 
 import javax.swing.*;
 import java.net.URL;
@@ -15,31 +17,79 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Controller implements Initializable {
+
     @FXML
-    private JFXButton sign_in_btn;
+    private Pane login_Pane;
 
     @FXML
     private JFXTextField email_filed;
 
     @FXML
-    private JFXPasswordField password_field;
+    private JFXPasswordField password_filed;
 
     @FXML
-    private JFXButton sign_up_btn;
+    private JFXButton btn_sign_in;
 
+    @FXML
+    private Label ForgotPassword;
 
     @FXML
     private Label email_hint;
 
     @FXML
     private Label password_hint;
+
+    @FXML
+    private Pane SignUp_Pane;
+
+    @FXML
+    private JFXTextField Signup_Username;
+
+    @FXML
+    private JFXTextField Signup_Email;
+
+    @FXML
+    private JFXPasswordField Signup_Password;
+
+    @FXML
+    private JFXButton SignUp_Button;
+
+    @FXML
+    private JFXTextField Signup_Username1;
+
+    @FXML
+    private Label WarningText;
+
+    @FXML
+    private JFXToggleButton toggleButton;
+
+
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        sign_in_btn.setOnAction(event ->
+
+
+        toggleButton.setOnAction(event -> {
+            if (toggleButton.isSelected()){
+                toggleButton.setText("Sign in");
+                SignUp_Pane.setVisible(false);
+                login_Pane.setVisible(true);
+//                clear_Fields();
+            }
+            else {
+                toggleButton.setText("Sign up");
+                login_Pane.setVisible(false);
+                SignUp_Pane.setVisible(true);
+//                clear_Fields();
+            }
+        });
+        btn_sign_in.setOnAction(event ->
         {
-            SignIn(email_filed, password_field);
+            SignIn(email_filed, password_filed);
         });
     }
+
 
 
 
@@ -78,7 +128,7 @@ public class Controller implements Initializable {
                 Log.e("not valid password password");
             } else {
                 password_hint.setStyle("-fx-text-fill:   limegreen");
-                password.setText("valid password");
+                password_hint.setText("valid password");
             }
         }
     }
