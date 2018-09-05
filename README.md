@@ -65,7 +65,6 @@ Add items to Cart:
 - product name 
 - product price + Profit
 
-
 ///// 
 # at end of day week etc.. admin view his reports
 
