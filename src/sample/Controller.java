@@ -8,13 +8,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
+import sample.MarketModel.User;
 
-import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.prefs.Preferences;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Controller implements Initializable {
     @FXML
@@ -75,10 +72,11 @@ public class Controller implements Initializable {
     private JFXToggleButton toggleButton;
 
 
+
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-
         toggleButton.setOnAction(event -> {
             if (toggleButton.isSelected()) {
                 toggleButton.setText("Sign in");
@@ -99,8 +97,6 @@ public class Controller implements Initializable {
         SignUp_Button.setOnAction(event -> {
             SignUp(Signup_FirstName,Signup_LastName,Signup_Email,Signup_Password);
         });
-
-
     }
     private void clear_Fields() {
         // ------------------ LABELS --------
@@ -172,6 +168,9 @@ public class Controller implements Initializable {
         String _lname = last_name.getText().trim();
         if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && FormValidation.getInstance().checkuserName(_fname) && FormValidation.getInstance().checkuserName(_lname)) {
             User user = new User(_email, _password,_fname,_lname);
+//            User a=User.newUser().email("").firstName().build();
+
+//            User user1= User.newUser().
             Log.i("user email " + user.getFirstName()+"\t"+user.getLastName());
         } else {
 
