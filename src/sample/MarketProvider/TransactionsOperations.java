@@ -6,7 +6,7 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.TransactionDataBaseSingelton;
 
-public class TransactionsOperations implements  CrudOperations {
+public class TransactionsOperations implements CrudOperations {
     @Override
     public String insertUser(User user) {
         return null;

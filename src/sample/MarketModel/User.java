@@ -9,7 +9,15 @@ public class User {
 //    user registration
     private String firstName;
     private  String lastName;
+    private  boolean role;
 
+    public boolean isRole() {
+        return role;
+    }
+
+    public void setRole(boolean role) {
+        this.role = role;
+    }
 
     public  User(UserBuilder UserBuilder)
     {
@@ -17,6 +25,7 @@ public class User {
         setEmail(UserBuilder.email);
         setLastName(UserBuilder.lastName);
         setPassword(UserBuilder.password);
+        setRole(UserBuilder.role);
     }
 
 
@@ -60,8 +69,7 @@ public class User {
         private  String firstName;
         private  String lastName;
         private  String email;
-
-
+        private  boolean role;
 
 
         private  String password;
@@ -87,6 +95,12 @@ public class User {
         public  UserBuilder password(String password)
         {
             this.password=password;
+            return  this;
+        }
+//        TRUE FOR ADMIN FALSE FOR SELLER
+        public  UserBuilder role(boolean role)
+        {
+                this.role=role;
             return  this;
         }
         public  User build(){

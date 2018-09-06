@@ -1,5 +1,6 @@
 package sample.MarketProvider;
 
+import sample.MarketModel.Category;
 import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
@@ -34,6 +35,21 @@ public class CartOperations implements CrudOperations {
 
     @Override
     public String deleteProduct(Product product) {
+        return null;
+    }
+
+    @Override
+    public String insertCategory(Category Category) {
+        return null;
+    }
+
+    @Override
+    public String updateCategory(Category Category) {
+        return null;
+    }
+
+    @Override
+    public String deleteCategory(Category Category) {
         return null;
     }
 

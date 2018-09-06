@@ -1,19 +1,23 @@
 package sample;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.controls.JFXToggleButton;
+import com.jfoenix.controls.*;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
 import sample.MarketModel.User;
+import sample.MarketProvider.FacadeMarketProvider;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
+    private static final boolean ADMIN_ROLE = true;
+    private static final boolean SELLER_ROLE = false;
     @FXML
     private Pane login_Pane;
 
@@ -34,6 +38,15 @@ public class Controller implements Initializable {
 
     @FXML
     private Label password_hint;
+
+    @FXML
+    private JFXRadioButton admin_radio;
+
+    @FXML
+    private JFXRadioButton seller_radio;
+
+    @FXML
+    private Label radio_hint;
 
     @FXML
     private Pane SignUp_Pane;
@@ -65,18 +78,25 @@ public class Controller implements Initializable {
     @FXML
     private Label SignUp_password_hint;
 
+
+
     @FXML
     private Label WarningText;
 
     @FXML
     private JFXToggleButton toggleButton;
+    private String selectedUser = "";
 
 
-
+    private ToggleGroup usersGroupSignUp;
+    private ToggleGroup usersGroupSignIn;
+    private FacadeMarketProvider facadeMarketProvider;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        facadeMarketProvider = new FacadeMarketProvider();
+        setUpRadioBtnWithItToggle();
         toggleButton.setOnAction(event -> {
             if (toggleButton.isSelected()) {
                 toggleButton.setText("Sign in");
@@ -95,9 +115,41 @@ public class Controller implements Initializable {
             SignIn(email_filed, password_filed);
         });
         SignUp_Button.setOnAction(event -> {
-            SignUp(Signup_FirstName,Signup_LastName,Signup_Email,Signup_Password);
+            SignUp(Signup_FirstName, Signup_LastName, Signup_Email, Signup_Password);
+
         });
     }
+
+    private void setUpRadioBtnWithItToggle() {
+        //        Sign In
+        usersGroupSignIn = new ToggleGroup();
+        usersGroupSignUp = new ToggleGroup();
+        admin_radio.setToggleGroup(usersGroupSignIn);
+        admin_radio.setUserData(true);
+        seller_radio.setToggleGroup(usersGroupSignIn);
+        seller_radio.setUserData(false);
+
+        //        Sign Up
+
+
+
+        usersGroupSignIn.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+                selectedUser = usersGroupSignIn.getSelectedToggle().getUserData().toString();
+                Log.i(usersGroupSignIn.getSelectedToggle().getUserData().toString());
+            }
+        });
+        usersGroupSignUp.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+                selectedUser = usersGroupSignUp.getSelectedToggle().getUserData().toString();
+                Log.i(usersGroupSignUp.getSelectedToggle().getUserData().toString());
+            }
+        });
+
+    }
+
     private void clear_Fields() {
         // ------------------ LABELS --------
 //        registration
@@ -105,11 +157,13 @@ public class Controller implements Initializable {
         this.SignUp_password_hint.setText("");
         this.SignUp_email_hint.setText("");
         this.SignUp_lname_hint.setText("");
+
 //        login
         this.email_hint.setText("");
         this.password_hint.setText("");
-
-
+        this.admin_radio.setUserData(true);
+        this.seller_radio.setUserData(false);
+        this.radio_hint.setText("");
         /// ------ FIELDS
 
 //        LOGIN
@@ -122,11 +176,12 @@ public class Controller implements Initializable {
         this.Signup_LastName.clear();
 
     }
+
     private void SignIn(JFXTextField email, JFXPasswordField password) {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
-        if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password)) {
-            User user=User.newUser().
+        if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && !this.selectedUser.equals("")) {
+            User user = User.newUser().
                     firstName("mohammed").
                     lastName("elamin").
                     email("mohanned").
@@ -164,24 +219,43 @@ public class Controller implements Initializable {
                 password_hint.setStyle("-fx-text-fill:   limegreen");
                 password_hint.setText("valid password");
             }
+
+            if (this.selectedUser.equals("")) {
+                radio_hint.setStyle("-fx-text-fill:   #f64747");
+                radio_hint.setText("required");
+            } else {
+                radio_hint.setStyle("-fx-text-fill:   limegreen");
+                radio_hint.setText("valid");
+            }
         }
     }
+
     private void SignUp(JFXTextField first_name, JFXTextField last_name, JFXTextField email, JFXPasswordField password) {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
         String _fname = first_name.getText().trim();
         String _lname = last_name.getText().trim();
-        if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && FormValidation.getInstance().checkuserName(_fname) && FormValidation.getInstance().checkuserName(_lname)) {
-
-            User user=User.newUser().
-                    firstName("mohammed").
-                    lastName("elamin").
-                    email("mohanned").
-                    password("mohamed1337").
+        if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && FormValidation.getInstance().checkuserName(_fname) && FormValidation.getInstance().checkuserName(_lname) ) {
+            User user = User.newUser().
+                    firstName(_fname).
+                    lastName(_lname).
+                    email(_email).
+                    password(_password).
+                    role(ADMIN_ROLE).
                     build();
+//            add user
+            String warning=facadeMarketProvider.insertAdmin(user);
 
 //            User user1= User.newUser().
-            Log.i("user email " + user.getFirstName()+"\t"+user.getLastName());
+//            Log.i(warning);
+
+            if (!warning.equals(""))
+            {
+                SignUp_email_hint.setStyle("-fx-text-fill:   #f64747");
+                SignUp_email_hint.setText("this email already used");
+            }else {
+                Log.i("welcome admin");
+            }
         } else {
 
             if (!FormValidation.getInstance().checkuserName(_fname)) {
@@ -241,6 +315,8 @@ public class Controller implements Initializable {
                 SignUp_password_hint.setStyle("-fx-text-fill:   limegreen");
                 SignUp_password_hint.setText("valid password");
             }
+
+
         }
 
     }

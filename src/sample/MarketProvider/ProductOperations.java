@@ -6,7 +6,7 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.ProductDataBaseSingleton;
 
-public class ProductOperations implements  CrudOperations {
+public class ProductOperations implements CrudOperations {
     @Override
     public String insertUser(User user) {
         return null;
@@ -22,7 +22,7 @@ public class ProductOperations implements  CrudOperations {
         return null;
     }
 
-//
+    //
     @Override
     public String insertProduct(Product product) {
         return ProductDataBaseSingleton.getInstance().addProduct(product);
@@ -37,7 +37,8 @@ public class ProductOperations implements  CrudOperations {
     public String deleteProduct(Product product) {
         return ProductDataBaseSingleton.getInstance().deleteProduct(product);
     }
-//
+
+    //
     @Override
     public String insertCategory(Category Category) {
         return null;

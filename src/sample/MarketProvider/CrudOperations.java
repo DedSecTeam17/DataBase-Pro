@@ -23,7 +23,6 @@ public interface CrudOperations {
     public String deleteProduct(Product product);
 
 
-
 //
 
     public String insertCategory(Category Category);

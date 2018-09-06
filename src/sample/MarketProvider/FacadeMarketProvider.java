@@ -67,7 +67,6 @@ public class FacadeMarketProvider {
     }
 
 
-
     public String insertCategory(Category Category) {
         return categoryOperations.insertCategory(Category);
     }
