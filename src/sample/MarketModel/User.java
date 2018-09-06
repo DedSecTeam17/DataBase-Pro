@@ -1,5 +1,5 @@
 package sample.MarketModel;
-// Builder Pattern
+// UserBuilder Pattern
 public class User {
     
 //    user login
@@ -11,49 +11,38 @@ public class User {
     private  String lastName;
 
 
-    public  User(Builder builder)
+    public  User(UserBuilder UserBuilder)
     {
-        setFirstName(builder.firstName);
-        setEmail(builder.email);
-        setLastName(builder.lastName);
-        setPassword(builder.password);
-    }
-    public  static Builder newUser(){
-        return  new Builder();
-    }
-// fo
-// r user login
-    public User(String Email, String password) {
-        this.Email = Email;
-        this.password = password;
-    }
-// for user sign up
-    public User(String Email, String password, String firstName, String lastName) {
-        this.Email = Email;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-    public String getEmail() {
-        return Email;
+        setFirstName(UserBuilder.firstName);
+        setEmail(UserBuilder.email);
+        setLastName(UserBuilder.lastName);
+        setPassword(UserBuilder.password);
     }
 
+
+
+
+
+
+    public  static UserBuilder newUser(){
+        return  new UserBuilder();
+    }
     public void setEmail(String Email) {
         this.Email = Email;
+    }
+    public String getEmail() {
+        return this.Email;
     }
 
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
-
     public String getFirstName() {
         return firstName;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -63,31 +52,39 @@ public class User {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public  static class  Builder{
+
+
+
+
+    public  static class  UserBuilder{
         private  String firstName;
         private  String lastName;
         private  String email;
+
+
+
+
         private  String password;
 
-        private Builder()
+        private UserBuilder()
         {
         }
-        public    Builder firstName(String firstName)
+        public    UserBuilder firstName(String firstName)
         {
             this.firstName=firstName;
             return  this;
         }
-        public  Builder lastName(String lastName)
+        public  UserBuilder lastName(String lastName)
         {
             this.lastName=lastName;
             return  this;
         }
-        public  Builder email(String email)
+        public  UserBuilder email(String email)
         {
             this.email=email;
             return  this;
         }
-        public  Builder password(String password)
+        public  UserBuilder password(String password)
         {
             this.password=password;
             return  this;

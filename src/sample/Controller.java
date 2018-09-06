@@ -126,7 +126,12 @@ public class Controller implements Initializable {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
         if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password)) {
-            User user = new User(_email, _password);
+            User user=User.newUser().
+                    firstName("mohammed").
+                    lastName("elamin").
+                    email("mohanned").
+                    password("mohamed1337").
+                    build();
             Log.i("user email " + user.getEmail());
         } else {
 //            inform user with his error on email
@@ -167,8 +172,13 @@ public class Controller implements Initializable {
         String _fname = first_name.getText().trim();
         String _lname = last_name.getText().trim();
         if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && FormValidation.getInstance().checkuserName(_fname) && FormValidation.getInstance().checkuserName(_lname)) {
-            User user = new User(_email, _password,_fname,_lname);
-//            User a=User.newUser().email("").firstName().build();
+
+            User user=User.newUser().
+                    firstName("mohammed").
+                    lastName("elamin").
+                    email("mohanned").
+                    password("mohamed1337").
+                    build();
 
 //            User user1= User.newUser().
             Log.i("user email " + user.getFirstName()+"\t"+user.getLastName());
