@@ -4,20 +4,29 @@ import com.jfoenix.controls.*;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import sample.MarketModel.User;
 import sample.MarketProvider.FacadeMarketProvider;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     private static final boolean ADMIN_ROLE = true;
     private static final boolean SELLER_ROLE = false;
+    @FXML
+    private AnchorPane login_reg_pane;
     @FXML
     private Pane login_Pane;
 
@@ -79,19 +88,15 @@ public class Controller implements Initializable {
     private Label SignUp_password_hint;
 
 
-
     @FXML
     private Label WarningText;
 
     @FXML
     private JFXToggleButton toggleButton;
     private String selectedUser = "";
-
-
     private ToggleGroup usersGroupSignUp;
     private ToggleGroup usersGroupSignIn;
     private FacadeMarketProvider facadeMarketProvider;
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -119,7 +124,6 @@ public class Controller implements Initializable {
 
         });
     }
-
     private void setUpRadioBtnWithItToggle() {
         //        Sign In
         usersGroupSignIn = new ToggleGroup();
@@ -130,7 +134,6 @@ public class Controller implements Initializable {
         seller_radio.setUserData(false);
 
         //        Sign Up
-
 
 
         usersGroupSignIn.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
@@ -149,7 +152,6 @@ public class Controller implements Initializable {
         });
 
     }
-
     private void clear_Fields() {
         // ------------------ LABELS --------
 //        registration
@@ -176,18 +178,56 @@ public class Controller implements Initializable {
         this.Signup_LastName.clear();
 
     }
-
     private void SignIn(JFXTextField email, JFXPasswordField password) {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
+        boolean role;
+        if (selectedUser.equals("true")) {
+            role = true;
+
+        } else {
+            role = false;
+
+        }
         if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && !this.selectedUser.equals("")) {
             User user = User.newUser().
-                    firstName("mohammed").
-                    lastName("elamin").
-                    email("mohanned").
-                    password("mohamed1337").
+                    email(_email).
+                    password(_password).
+                    role(role).
                     build();
-            Log.i("user email " + user.getEmail());
+            List<User> result = facadeMarketProvider.login(user);
+            if (result.get(0).isRole()) {
+                if (!result.get(0).getEmail().equals("")) {
+                    if (result.get(0).getMessage().equals("")) {
+                        //                redirect user into admin dashboard
+                        Log.i("this is admin and his email :" + result.get(0).getEmail());
+                    } else {
+                        email_hint.setStyle("-fx-text-fill:   #f64747");
+                        email_hint.setText("this email is used or not registered");
+                    }
+
+                } else {
+                    email_hint.setStyle("-fx-text-fill:   #f64747");
+                    email_hint.setText("this email is used or not registered");
+                }
+
+
+            } else {
+                if (!result.get(0).getEmail().equals("")) {
+                    if (result.get(0).getMessage().equals("")) {
+
+                        Log.i("this is seller and his email :" + result.get(0).getEmail());
+                    } else {
+                        email_hint.setStyle("-fx-text-fill:   #f64747");
+                        email_hint.setText("this email is used or not registered");
+                    }
+//                redirect seller into his scene
+                } else {
+                    email_hint.setStyle("-fx-text-fill:   #f64747");
+                    email_hint.setText("this email is used or not registered");
+                }
+            }
+
         } else {
 //            inform user with his error on email
             if (!FormValidation.getInstance().checkEmail(_email)) {
@@ -229,13 +269,12 @@ public class Controller implements Initializable {
             }
         }
     }
-
     private void SignUp(JFXTextField first_name, JFXTextField last_name, JFXTextField email, JFXPasswordField password) {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
         String _fname = first_name.getText().trim();
         String _lname = last_name.getText().trim();
-        if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && FormValidation.getInstance().checkuserName(_fname) && FormValidation.getInstance().checkuserName(_lname) ) {
+        if (FormValidation.getInstance().checkEmail(_email) && FormValidation.getInstance().checkPassword(_password) && FormValidation.getInstance().checkuserName(_fname) && FormValidation.getInstance().checkuserName(_lname)) {
             User user = User.newUser().
                     firstName(_fname).
                     lastName(_lname).
@@ -244,17 +283,20 @@ public class Controller implements Initializable {
                     role(ADMIN_ROLE).
                     build();
 //            add user
-            String warning=facadeMarketProvider.insertAdmin(user);
+            String warning = facadeMarketProvider.insertAdmin(user);
 
 //            User user1= User.newUser().
 //            Log.i(warning);
 
-            if (!warning.equals(""))
-            {
+            if (!warning.equals("")) {
                 SignUp_email_hint.setStyle("-fx-text-fill:   #f64747");
                 SignUp_email_hint.setText("this email already used");
-            }else {
-                Log.i("welcome admin");
+            } else {
+                try {
+                    Auth.getInstance().RedirectUser(login_reg_pane, "../sample/AdminUI/Admin.fxml");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         } else {
 
@@ -320,7 +362,6 @@ public class Controller implements Initializable {
         }
 
     }
-
     //#endregion
 
 

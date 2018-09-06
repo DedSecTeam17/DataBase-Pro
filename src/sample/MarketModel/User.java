@@ -11,6 +11,17 @@ public class User {
     private  String lastName;
     private  boolean role;
 
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    //  message come from data base
+private  String message;
+
     public boolean isRole() {
         return role;
     }
@@ -26,6 +37,7 @@ public class User {
         setLastName(UserBuilder.lastName);
         setPassword(UserBuilder.password);
         setRole(UserBuilder.role);
+        setMessage(UserBuilder.message);
     }
 
 
@@ -70,9 +82,8 @@ public class User {
         private  String lastName;
         private  String email;
         private  boolean role;
-
-
         private  String password;
+        private  String message;
 
         private UserBuilder()
         {
@@ -101,6 +112,11 @@ public class User {
         public  UserBuilder role(boolean role)
         {
                 this.role=role;
+            return  this;
+        }
+        public  UserBuilder message(String message)
+        {
+            this.message=message;
             return  this;
         }
         public  User build(){

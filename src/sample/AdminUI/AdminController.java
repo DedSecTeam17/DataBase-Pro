@@ -10,6 +10,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import sample.Auth;
+import sample.Log;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -38,6 +40,7 @@ public class AdminController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
+        Log.i(Auth.getInstance().getCurrentUser());
         drawer.setSidePane(vbox);
 
         hamburgerTransition = new HamburgerBackArrowBasicTransition(hamburgerButton);
@@ -125,6 +128,4 @@ public class AdminController implements Initializable {
         categoriesPanel.setVisible(false);
         homePanel.setVisible(false);
     }
-
-
 }

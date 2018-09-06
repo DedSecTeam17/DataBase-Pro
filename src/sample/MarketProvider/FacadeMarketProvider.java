@@ -4,6 +4,9 @@ import sample.MarketModel.Category;
 import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
+import sample.MarketSingeltons.AdminDataBaseSingleton;
+
+import java.util.List;
 
 public class FacadeMarketProvider {
 
@@ -35,6 +38,11 @@ public class FacadeMarketProvider {
 
     public String deleteAdmin(User user) {
         return adminOperations.deleteUser(user);
+    }
+
+
+    public List<User> login(User user) {
+        return adminOperations.login(user);
     }
 
     //

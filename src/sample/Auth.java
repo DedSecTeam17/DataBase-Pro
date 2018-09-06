@@ -1,5 +1,11 @@
 package sample;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -68,5 +74,17 @@ public class Auth {
 // get current user use the system
     public String getCurrentUser() {
         return preferences.get("username", "session");
+    }
+
+
+//    user redirection
+
+
+    public  void  RedirectUser(Pane CurrentScene,String destinationScene) throws IOException {
+        Parent   secondRoot = FXMLLoader.load(getClass().getResource(destinationScene));
+        Scene newScene = new Scene(secondRoot);
+        Stage curStage = (Stage) CurrentScene.getScene().getWindow();
+        curStage.setScene(newScene);
+
     }
 }

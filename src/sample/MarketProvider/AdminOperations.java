@@ -6,7 +6,9 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.AdminDataBaseSingleton;
 
-public class AdminOperations implements CrudOperations {
+import java.util.List;
+
+public class AdminOperations implements CrudOperations,Login {
     @Override
     public String insertUser(User user) {
         return AdminDataBaseSingleton.getInstance().addAdmin(user);
@@ -66,5 +68,10 @@ public class AdminOperations implements CrudOperations {
     @Override
     public String deleteTransaction(Transaction transaction) {
         return null;
+    }
+
+    @Override
+    public List<User> login(User user) {
+        return AdminDataBaseSingleton.getInstance().loginAdmin(user);
     }
 }

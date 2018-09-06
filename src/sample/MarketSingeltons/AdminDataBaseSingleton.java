@@ -19,11 +19,16 @@ public class AdminDataBaseSingleton {
     }
 
 
-//    public  static  void  main(String a[])
-//    {
-//        User user= User.newUser().firstName("mohammed").lastName("elamin").email("mohammed@gmial.com").password("mohamed1337").role(true).build();
-//      System.out.println(  getInstance().addAdmin(user));
-//    }
+    public  static  void  main(String a[])
+    {
+        User user= User.newUser().firstName("mohammed").lastName("elamin").email("mohammed@gmial.com").password("mohamed1337").role(true).build();
+
+        if (getInstance().loginAdmin(user).get(0).isRole()){
+            System.out.println(  "welcome your gmail :"+getInstance().loginAdmin(user).get(0).getEmail()+"you are an admin");
+        }else {
+            System.out.println(  "welcome your gmail :"+getInstance().loginAdmin(user).get(0).getEmail()+"you are an seller");
+        }
+    }
     public  String addAdmin(User user)
     {
 
@@ -72,39 +77,44 @@ public class AdminDataBaseSingleton {
         return new java.sql.Timestamp(today.getTime());
 
     }
-    public  String  loginAdmin(User user)
+    public  List<User>  loginAdmin(User user)
     {
+        String data_base_message="";
+        String email="";
+        String role="";
         Connection connection = null;
         User loggedUser;
-        List<User> rules = new ArrayList<>(20);
+        List<User> selected_user=new ArrayList<>();
         try {
             connection = Config.getInstance().getConnection();
         } catch (SQLException e) {
-            e.printStackTrace();
+            data_base_message=e.getMessage();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+           data_base_message=e.getMessage();
         }
 
         try {
 
-            String sql = String.format("SELECT  * FROM  MarketUser where email='%s' and password='%s' ",user.getEmail(),Auth.getInstance().md5(user.getPassword()));
+            String sql = String.format("SELECT  * FROM  MarketUser where email='%s' and password='%s' and role='%s' ",user.getEmail(),Auth.getInstance().md5(user.getPassword()),String.valueOf(user.isRole()));
             PreparedStatement statement = connection.prepareStatement(sql);
 
             ResultSet set = statement.executeQuery(sql);
 
 
-            while (set.next()) {
-                String email = set.getString("email");
-                 loggedUser= User.newUser().email(email).build();
 
+            while (set.next()) {
+             email = set.getString("email");
+             role = set.getString("role");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            data_base_message=e.getMessage();
         } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
+            data_base_message=e.getMessage();
         }
 
-        return  user.getEmail();
+        loggedUser= User.newUser().email(email).role(Boolean.parseBoolean(role)).message(data_base_message). build();
+        selected_user.add(loggedUser);
+        return  selected_user;
     }
 
 
