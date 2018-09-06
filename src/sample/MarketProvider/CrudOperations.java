@@ -1,5 +1,6 @@
 package sample.MarketProvider;
 
+import sample.MarketModel.Category;
 import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
@@ -22,6 +23,14 @@ public interface CrudOperations {
     public String deleteProduct(Product product);
 
 
+
+//
+
+    public String insertCategory(Category Category);
+
+    public String updateCategory(Category Category);
+
+    public String deleteCategory(Category Category);
 //    transaction operation
 
     public String insertTransaction(Transaction transaction);

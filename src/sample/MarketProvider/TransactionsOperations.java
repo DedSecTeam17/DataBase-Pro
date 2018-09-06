@@ -1,8 +1,10 @@
 package sample.MarketProvider;
 
+import sample.MarketModel.Category;
 import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
+import sample.MarketSingeltons.TransactionDataBaseSingelton;
 
 public class TransactionsOperations implements  CrudOperations {
     @Override
@@ -36,17 +38,32 @@ public class TransactionsOperations implements  CrudOperations {
     }
 
     @Override
-    public String insertTransaction(Transaction transaction) {
+    public String insertCategory(Category Category) {
         return null;
+    }
+
+    @Override
+    public String updateCategory(Category Category) {
+        return null;
+    }
+
+    @Override
+    public String deleteCategory(Category Category) {
+        return null;
+    }
+
+    @Override
+    public String insertTransaction(Transaction transaction) {
+        return TransactionDataBaseSingelton.getInstance().addTransaction(transaction);
     }
 
     @Override
     public String updateTransaction(Transaction transaction) {
-        return null;
+        return TransactionDataBaseSingelton.getInstance().updateTransaction(transaction);
     }
 
     @Override
     public String deleteTransaction(Transaction transaction) {
-        return null;
+        return TransactionDataBaseSingelton.getInstance().deleteTransaction(transaction);
     }
 }

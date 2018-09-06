@@ -1,5 +1,6 @@
 package sample.MarketProvider;
 
+import sample.MarketModel.Category;
 import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
@@ -65,6 +66,23 @@ public class FacadeMarketProvider {
         return productOperations.deleteProduct(product);
     }
 
+
+
+    public String insertCategory(Category Category) {
+        return categoryOperations.insertCategory(Category);
+    }
+
+
+    public String updateCategory(Category Category) {
+        return categoryOperations.updateCategory(Category);
+    }
+
+
+    public String deleteCategory(Category Category) {
+        return categoryOperations.deleteCategory(Category);
+    }
+
+//
 
     public String insertTransaction(Transaction transaction) {
         return transactionsOperations.insertTransaction(transaction);
