@@ -15,11 +15,10 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<<<<<<< HEAD
+        
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
-=======
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="836.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
->>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
+
+
    <children>
       <AnchorPane prefHeight="596.0" prefWidth="890.0" style="-fx-background-color: #22313f;">
          <children>
