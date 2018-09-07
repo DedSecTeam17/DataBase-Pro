@@ -1,4 +1,4 @@
-package sample.Admin;
+package sample.AdminUI;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
@@ -51,6 +51,7 @@ public class AdminController implements Initializable {
     @FXML
     private void handleHamburgerClick()
     {
+        //Open and close drawer on hamburger button click
         hamburgerTransition.setRate(hamburgerTransition.getRate()*-1);
         hamburgerTransition.play();
         if (drawer.isOpened()){
@@ -65,62 +66,51 @@ public class AdminController implements Initializable {
     @FXML
     void CategoriesButtonClicked(ActionEvent event)
     {
-        selectionLabel.setLayoutY(
-                ((JFXButton)event.getSource()).getLayoutY()
-        );
-
-        clearAllFields();
+        highlight(((JFXButton)event.getSource()).getLayoutY());
+        hideAllPanels();
         categoriesPanel.setVisible(true);
-
     }
 
     @FXML
     void ProductsButtonClicked(ActionEvent event)
     {
-        selectionLabel.setLayoutY(
-                ((JFXButton)event.getSource()).getLayoutY()
-        );
-
-        clearAllFields();
+        highlight(((JFXButton)event.getSource()).getLayoutY());
+        hideAllPanels();
         productsPanel.setVisible(true);
-
     }
 
     @FXML
     void HomeButtonClicked(ActionEvent event)
     {
-        selectionLabel.setLayoutY(
-                ((JFXButton)event.getSource()).getLayoutY()
-        );
-
-
+        highlight(((JFXButton)event.getSource()).getLayoutY());
+        hideAllPanels();
+        homePanel.setVisible(true);
     }
 
     @FXML
     void SellersButtonClicked(ActionEvent event)
     {
-        selectionLabel.setLayoutY(
-                ((JFXButton)event.getSource()).getLayoutY()
-        );
-
-        clearAllFields();
+        highlight(((JFXButton)event.getSource()).getLayoutY());
+        hideAllPanels();
         sellersPanel.setVisible(true);
-
     }
 
     @FXML
     void TransactionsButtonClicked(ActionEvent event)
     {
-        selectionLabel.setLayoutY(
-                ((JFXButton)event.getSource()).getLayoutY()
-        );
-
-        clearAllFields();
+        highlight(((JFXButton)event.getSource()).getLayoutY());
+        hideAllPanels();
         transactionsPanel.setVisible(true);
 
     }
 
-    void clearAllFields()
+    void highlight(double y)
+    {
+        //moves the selection label to the y-axis of the selected button
+        selectionLabel.setLayoutY(y);
+    }
+
+    void hideAllPanels()
     {
         sellersPanel.setVisible(false);
         productsPanel.setVisible(false);
