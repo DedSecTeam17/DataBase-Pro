@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="836.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="836.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -66,6 +66,7 @@
                         <Image url="@../Images/Background.jpg" />
                      </image>
                   </ImageView>
+                  <JFXButton layoutX="726.0" layoutY="552.0" onAction="#signOut" opacity="0.68" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #620101;" text="Sign out" textFill="WHITE" />
                </children>
             </AnchorPane>
             <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" miniDrawerSize="0.0" prefHeight="600.0" prefWidth="250.0">
