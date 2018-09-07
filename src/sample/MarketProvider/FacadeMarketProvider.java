@@ -6,6 +6,7 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.AdminDataBaseSingleton;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class FacadeMarketProvider {
@@ -105,5 +106,10 @@ public class FacadeMarketProvider {
         return transactionsOperations.deleteTransaction(transaction);
     }
 
+
+//    repeort
+    public  List<Product> getAllProduct() throws SQLException, ClassNotFoundException {
+        return  productOperations.getAllAdminProducts();
+    }
 
 }

@@ -6,7 +6,10 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.ProductDataBaseSingleton;
 
-public class ProductOperations implements CrudOperations {
+import java.sql.SQLException;
+import java.util.List;
+
+public class ProductOperations implements CrudOperations ,AdminPrivilidgeOpertation{
     @Override
     public String insertUser(User user) {
         return null;
@@ -67,5 +70,17 @@ public class ProductOperations implements CrudOperations {
     @Override
     public String deleteTransaction(Transaction transaction) {
         return null;
+    }
+
+
+    @Override
+    public List<User> login(User user) {
+        return null;
+    }
+
+    @Override
+    public List<Product> getAllAdminProducts() throws SQLException, ClassNotFoundException {
+
+        return ProductDataBaseSingleton.getInstance().getAllProduct();
     }
 }

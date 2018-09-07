@@ -35,7 +35,7 @@
             </AnchorPane>
             <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
                <children>
-                  <JFXTreeTableView fx:id="products_table" layoutX="111.0" layoutY="43.0" prefHeight="400.0" prefWidth="429.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+                  <JFXTreeTableView fx:id="products_table" layoutX="12.0" layoutY="50.0" prefHeight="541.0" prefWidth="535.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
                      <effect>
                         <DropShadow radius="6.54" width="7.16" />
                      </effect></JFXTreeTableView>
@@ -58,11 +58,11 @@
                         <Label fx:id="p_expi_hint" layoutX="40.0" layoutY="340.0" />
                      </children>
                   </Pane>
-                  <Pane layoutX="111.0" layoutY="477.0" prefHeight="65.0" prefWidth="700.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                  <Pane layoutX="562.0" layoutY="454.0" prefHeight="138.0" prefWidth="240.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <children>
-                        <JFXButton fx:id="add_product" layoutX="43.0" layoutY="19.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton fx:id="update_product" layoutX="270.0" layoutY="19.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Update" textFill="WHITE" />
-                        <JFXButton fx:id="delete_product" layoutX="526.0" layoutY="18.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
+                        <JFXButton fx:id="add_product" layoutX="40.0" layoutY="14.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton fx:id="update_product" layoutX="43.0" layoutY="58.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Update" textFill="WHITE" />
+                        <JFXButton fx:id="delete_product" layoutX="43.0" layoutY="99.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
                      </children>
                      <effect>
                         <DropShadow radius="6.54" width="7.16" />

@@ -8,7 +8,7 @@ import sample.MarketSingeltons.AdminDataBaseSingleton;
 
 import java.util.List;
 
-public class AdminOperations implements CrudOperations,Login {
+public class AdminOperations implements CrudOperations,AdminPrivilidgeOpertation {
     @Override
     public String insertUser(User user) {
         return AdminDataBaseSingleton.getInstance().addAdmin(user);
@@ -70,8 +70,16 @@ public class AdminOperations implements CrudOperations,Login {
         return null;
     }
 
+
     @Override
     public List<User> login(User user) {
-        return AdminDataBaseSingleton.getInstance().loginAdmin(user);
+        return null;
     }
+
+    @Override
+    public List<Product> getAllAdminProducts() {
+        return null;
+    }
+
+
 }
