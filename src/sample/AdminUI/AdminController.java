@@ -118,4 +118,9 @@ public class AdminController implements Initializable {
         categoriesPanel.setVisible(false);
         homePanel.setVisible(false);
     }
+
+    @FXML void signOut()
+    {
+        //Code to return to the login scene
+    }
 }

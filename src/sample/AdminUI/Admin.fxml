@@ -15,7 +15,11 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
+<<<<<<< HEAD
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
+=======
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="836.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
    <children>
       <AnchorPane prefHeight="596.0" prefWidth="890.0" style="-fx-background-color: #22313f;">
          <children>
@@ -85,6 +89,7 @@
                         <Image url="@../Images/Background.jpg" />
                      </image>
                   </ImageView>
+                  <JFXButton layoutX="726.0" layoutY="552.0" onAction="#signOut" opacity="0.68" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #620101;" text="Sign out" textFill="WHITE" />
                </children>
             </AnchorPane>
             <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutX="1.0" miniDrawerSize="0.0" prefHeight="600.0" prefWidth="249.0">

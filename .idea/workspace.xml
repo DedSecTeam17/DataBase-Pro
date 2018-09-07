@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/SellerUI/seller.fxml" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/SellerUI/seller.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/sample/SellerUI/SellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SellerUI/SellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/SellerUI/seller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SellerUI/seller.fxml" afterDir="false" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +52,12 @@
         <entry file="file://$PROJECT_DIR$/src/sample/Atuhentication/Auth.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1702">
+<<<<<<< HEAD
               <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding />
+=======
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
             </state>
           </provider>
         </entry>
@@ -56,9 +65,14 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="77">
               <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
               <folding />
+=======
+            <state relative-caret-position="368">
+              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
             </state>
           </provider>
         </entry>
@@ -89,9 +103,14 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="299">
               <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
+=======
+            <state relative-caret-position="-1216">
+              <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
             </state>
           </provider>
         </entry>
@@ -99,9 +118,14 @@
       <file leaf-file-name="modules.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+=======
+            <state relative-caret-position="-710">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
             </state>
           </provider>
         </entry>
@@ -109,6 +133,7 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="19366">
               <caret line="960" column="45" lean-forward="false" selection-start-line="960" selection-start-column="45" selection-end-line="960" selection-end-column="45" />
               <folding>
@@ -149,6 +174,10 @@
                 <marker date="1536308348455" expanded="true" signature="64356:64460" ph="..." />
                 <marker date="1536308348455" expanded="true" signature="64377:64438" ph="..." />
               </folding>
+=======
+            <state relative-caret-position="1679">
+              <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
             </state>
           </provider>
         </entry>
@@ -156,6 +185,7 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2760">
               <caret line="391" column="16" lean-forward="false" selection-start-line="391" selection-start-column="16" selection-end-line="391" selection-end-column="16" />
               <folding>
@@ -179,18 +209,29 @@
             <state relative-caret-position="506">
               <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding />
+=======
+            <state relative-caret-position="54">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="seller.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/seller.fxml">
+<<<<<<< HEAD
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1536300316467" expanded="true" signature="3976:4809" ph="..." />
               </folding>
+=======
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" column="279" selection-start-line="18" selection-start-column="279" selection-end-line="18" selection-end-column="279" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
             </state>
           </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
@@ -283,14 +324,25 @@
         <option value="$PROJECT_DIR$/src/sample/LoginRegestrationUi/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/Login.fxml" />
         <option value="$PROJECT_DIR$/src/sample/LoginRegestrationUi/Login.fxml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
+=======
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
         <option value="$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java" />
         <option value="$PROJECT_DIR$/src/sample/SellerUI/SellerController.java" />
         <option value="$PROJECT_DIR$/src/sample/Atuhentication/Auth.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_1.sql" />
+=======
+        <option value="$PROJECT_DIR$/src/sample/SellerUI/seller.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/SellerUI/SellerController.java" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
       </list>
     </option>
   </component>
@@ -328,6 +380,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -353,14 +411,27 @@
               <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="AdminUI" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="SellerUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+=======
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -554,9 +625,13 @@
       <workItem from="1536243290053" duration="17479000" />
       <workItem from="1536264926917" duration="5249000" />
       <workItem from="1536270959658" duration="1237000" />
+<<<<<<< HEAD
       <workItem from="1536293145344" duration="4791000" />
       <workItem from="1536299860746" duration="1551000" />
       <workItem from="1536306235140" duration="2239000" />
+=======
+      <workItem from="1536293145344" duration="4451000" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
     </task>
     <task id="LOCAL-00001" summary="VALIDATION">
       <created>1536131780433</created>
@@ -569,12 +644,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="66143000" />
+=======
+    <option name="totallyTimeSpent" value="62013000" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3233831" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -603,6 +683,36 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3291866" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32669982" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2963671" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3283582" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.314375" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.0" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32223904" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="10" weight="0.3283582" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -901,23 +1011,53 @@
     <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2162">
+<<<<<<< HEAD
           <caret line="106" column="42" lean-forward="false" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
           <caret line="106" column="42" lean-forward="false" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+=======
+          <caret line="106" column="42" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+          <folding>
+            <element signature="imports" />
+            <element signature="method#deleteAdmin#0;class#AdminDataBaseSingleton#0" />
+            <element signature="e#2374#2375#0" />
+            <element signature="e#2424#2425#0" />
+            <element signature="method#getCurrentTimeStamp#0;class#AdminDataBaseSingleton#0" />
+          </folding>
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/TestCases/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
+<<<<<<< HEAD
           <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+=======
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Debugging/Log.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
+<<<<<<< HEAD
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+=======
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/cart.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1679">
+          <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
         </state>
       </provider>
     </entry>
@@ -931,8 +1071,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2760">
           <caret line="391" column="16" lean-forward="false" selection-start-line="391" selection-start-column="16" selection-end-line="391" selection-end-column="16" />
+=======
+        <state relative-caret-position="1666">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2576#3022#0" expanded="false" />
@@ -947,30 +1092,64 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="287" selection-start-line="16" selection-start-column="287" selection-end-line="16" selection-end-column="287" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/seller.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="279" selection-start-line="18" selection-start-column="279" selection-end-line="18" selection-end-column="279" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="506">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="54">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1702">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="-1216">
+          <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/SellerController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="506">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding />
@@ -1030,6 +1209,10 @@
             <folding />
           </first_editor>
           <second_editor />
+=======
+        <state relative-caret-position="-710">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+>>>>>>> b3b0e2605d8bd378bbfef6a11bd1a7c1d4e223e6
         </state>
       </provider>
     </entry>
