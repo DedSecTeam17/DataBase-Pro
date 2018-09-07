@@ -15,7 +15,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-        
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
 
 
@@ -36,7 +35,7 @@
             </AnchorPane>
             <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
                <children>
-                  <JFXTreeTableView layoutX="111.0" layoutY="43.0" prefHeight="400.0" prefWidth="429.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
+                  <JFXTreeTableView fx:id="products_table" layoutX="111.0" layoutY="43.0" prefHeight="400.0" prefWidth="429.0" style="-fx-background-color: white; -fx-background-radius: 2px;">
                      <effect>
                         <DropShadow radius="6.54" width="7.16" />
                      </effect></JFXTreeTableView>
@@ -45,19 +44,25 @@
                         <DropShadow radius="6.2925" width="6.17" />
                      </effect>
                      <children>
-                        <JFXTextField layoutX="40.0" layoutY="46.0" prefWidth="160.0" promptText="Product Name" />
-                        <JFXTextField layoutX="40.0" layoutY="98.0" prefWidth="160.0" promptText="Purchase Price" />
-                        <JFXTextField layoutX="40.0" layoutY="146.0" prefWidth="160.0" promptText="Company" />
-                        <JFXTextField layoutX="40.0" layoutY="197.0" prefWidth="160.0" promptText="Quantity" />
-                        <JFXDatePicker layoutX="40.0" layoutY="249.0" prefHeight="25.0" prefWidth="160.0" promptText="Producton Date" />
-                        <JFXDatePicker layoutX="40.0" layoutY="318.0" prefHeight="25.0" prefWidth="160.0" promptText="Expiration Date" />
+                        <JFXTextField fx:id="p_name" layoutX="40.0" layoutY="46.0" prefWidth="160.0" promptText="Product Name" />
+                        <JFXTextField fx:id="p_price" layoutX="40.0" layoutY="98.0" prefWidth="160.0" promptText="Purchase Price" />
+                        <JFXTextField fx:id="p_company" layoutX="40.0" layoutY="146.0" prefWidth="160.0" promptText="Company" />
+                        <JFXTextField fx:id="p_quantity" layoutX="40.0" layoutY="197.0" prefWidth="160.0" promptText="Quantity" />
+                        <JFXDatePicker fx:id="p_date" layoutX="40.0" layoutY="249.0" prefHeight="25.0" prefWidth="160.0" promptText="Producton Date" />
+                        <JFXDatePicker fx:id="expi_date" layoutX="40.0" layoutY="303.0" prefHeight="25.0" prefWidth="160.0" promptText="Expiration Date" />
+                        <Label fx:id="p_name_hint" layoutX="40.0" layoutY="81.0" />
+                        <Label fx:id="p_price_hint" layoutX="40.0" layoutY="129.0" />
+                        <Label fx:id="p_company_hint" layoutX="40.0" layoutY="180.0" />
+                        <Label fx:id="p_quantity_hint" layoutX="40.0" layoutY="232.0" />
+                        <Label fx:id="produ_hint" layoutX="40.0" layoutY="286.0" />
+                        <Label fx:id="p_expi_hint" layoutX="40.0" layoutY="340.0" />
                      </children>
                   </Pane>
                   <Pane layoutX="111.0" layoutY="477.0" prefHeight="65.0" prefWidth="700.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <children>
-                        <JFXButton layoutX="43.0" layoutY="19.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton layoutX="270.0" layoutY="19.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Update" textFill="WHITE" />
-                        <JFXButton layoutX="526.0" layoutY="18.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
+                        <JFXButton fx:id="add_product" layoutX="43.0" layoutY="19.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton fx:id="update_product" layoutX="270.0" layoutY="19.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Update" textFill="WHITE" />
+                        <JFXButton fx:id="delete_product" layoutX="526.0" layoutY="18.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
                      </children>
                      <effect>
                         <DropShadow radius="6.54" width="7.16" />

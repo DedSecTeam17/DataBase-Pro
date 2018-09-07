@@ -23,6 +23,7 @@ import sample.UiValidation.FormValidation;
 import sample.Debugging.Log;
 import sample.MarketModel.User;
 import sample.MarketProvider.FacadeMarketProvider;
+import sample.UiValidation.UiValidation;
 
 import java.io.IOException;
 import java.net.URL;
@@ -131,6 +132,7 @@ public class Controller implements Initializable {
 
         });
     }
+
     private void setUpRadioBtnWithItToggle() {
         //        Sign In
         usersGroupSignIn = new ToggleGroup();
@@ -159,6 +161,7 @@ public class Controller implements Initializable {
         });
 
     }
+
     private void clear_Fields() {
         // ------------------ LABELS --------
 //        registration
@@ -185,6 +188,7 @@ public class Controller implements Initializable {
         this.Signup_LastName.clear();
 
     }
+
     private void SignIn(JFXTextField email, JFXPasswordField password) {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
@@ -211,89 +215,39 @@ public class Controller implements Initializable {
                         Auth.getInstance().addUser(result.get(0).getEmail());
                         Log.i(Auth.getInstance().getCurrentUser());
                         if (Auth.getInstance().isset()) {
-
-                DirectUserWithFade(login_reg_pane,"../sample/AdminUI/Admin.fxml");
-
+                            DirectUserWithFade(login_reg_pane, "../sample/AdminUI/Admin.fxml");
                         }
                         Log.i("this is admin and his email :" + result.get(0).getEmail());
                     } else {
-                        email_hint.setStyle("-fx-text-fill:   #f64747");
-                        email_hint.setText("this email is used or not registered");
+                        UiValidation.hintErr(email_hint, "this email is used or not registered");
                     }
 
                 } else {
-                    email_hint.setStyle("-fx-text-fill:   #f64747");
-                    email_hint.setText("this email is used or not registered");
+                    UiValidation.hintErr(email_hint, "this email is used or not registered");
                 }
-
 
             } else {
                 if (!result.get(0).getEmail().equals("")) {
                     if (result.get(0).getMessage().equals("")) {
+                        //                redirect user into admin dashboard
                         Auth.getInstance().start_session();
                         Auth.getInstance().addUser(result.get(0).getEmail());
                         Log.i(Auth.getInstance().getCurrentUser());
-                        try {
-                            if (Auth.getInstance().isset()) {
-                                Parent secondRoot = FXMLLoader.load(getClass().getResource("../sample/SellerUI/seller.fxml"));
-                                Scene newScene = new Scene(secondRoot);
-                                Stage curStage = (Stage) login_reg_pane.getScene().getWindow();
-                                curStage.setScene(newScene);
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                        if (Auth.getInstance().isset()) {
+                            DirectUserWithFade(login_reg_pane, "../sample/SellerUI/seller.fxml");
                         }
-                        Log.i("this is seller and his email :" + result.get(0).getEmail());
+                        Log.i("this is admin and his email :" + result.get(0).getEmail());
                     } else {
-                        email_hint.setStyle("-fx-text-fill:   #f64747");
-                        email_hint.setText("this email is used or not registered");
+                        UiValidation.hintErr(email_hint, "this email is used or not registered");
                     }
-//                redirect seller into his scene
+
                 } else {
-                    email_hint.setStyle("-fx-text-fill:   #f64747");
-                    email_hint.setText("this email is used or not registered");
+                    UiValidation.hintErr(email_hint, "this email is used or not registered");
                 }
             }
-
         } else {
-//            inform user with his error on email
-            if (!FormValidation.getInstance().checkEmail(_email)) {
-                if (_email.equals("")) {
-                    email_hint.setStyle("-fx-text-fill:   #f64747");
-                    email_hint.setText("empty field not allowed");
-                } else {
-                    email_hint.setStyle("-fx-text-fill:   #f64747");
-                    email_hint.setText("email address not valid");
-                }
-                Log.e("not valid email address");
-
-            } else {
-                email_hint.setStyle("-fx-text-fill:   limegreen");
-                email_hint.setText("valid email");
-            }
-
-// inform user with his err password
-            if (!FormValidation.getInstance().checkPassword(_password)) {
-                if (_password.equals("")) {
-                    password_hint.setStyle("-fx-text-fill:   #f64747");
-                    password_hint.setText("empty filed not allowed");
-                } else {
-                    password_hint.setStyle("-fx-text-fill:   #f64747");
-                    password_hint.setText("password not valid");
-                }
-                Log.e("not valid password password");
-            } else {
-                password_hint.setStyle("-fx-text-fill:   limegreen");
-                password_hint.setText("valid password");
-            }
-
-            if (this.selectedUser.equals("")) {
-                radio_hint.setStyle("-fx-text-fill:   #f64747");
-                radio_hint.setText("required");
-            } else {
-                radio_hint.setStyle("-fx-text-fill:   limegreen");
-                radio_hint.setText("valid");
-            }
+            UiValidation.validateInput(password, password_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name");
+            UiValidation.validateInput(email, email_hint, "empty filed not allowed", "invalid email", "valid email", "email");
         }
     }
     private void SignUp(JFXTextField first_name, JFXTextField last_name, JFXTextField email, JFXPasswordField password) {
@@ -309,15 +263,9 @@ public class Controller implements Initializable {
                     password(_password).
                     role(ADMIN_ROLE).
                     build();
-//            add user
             String warning = facadeMarketProvider.insertAdmin(user);
-
-//            User user1= User.newUser().
-//            Log.i(warning);
-
             if (!warning.equals("")) {
-                SignUp_email_hint.setStyle("-fx-text-fill:   #f64747");
-                SignUp_email_hint.setText("this email already used");
+                UiValidation.hintSuccess(SignUp_email_hint, "this email already used");
             } else {
                 try {
                     Auth.getInstance().RedirectUser(login_reg_pane, "../sample/AdminUI/Admin.fxml");
@@ -326,74 +274,17 @@ public class Controller implements Initializable {
                 }
             }
         } else {
-
-            if (!FormValidation.getInstance().checkuserName(_fname)) {
-                if (_fname.equals("")) {
-                    SignUp_fname_hint.setStyle("-fx-text-fill:   #f64747");
-                    SignUp_fname_hint.setText("empty filed not allowed");
-                } else {
-                    SignUp_fname_hint.setStyle("-fx-text-fill:   #f64747");
-                    SignUp_fname_hint.setText("first name to short ,must be bigger than 7 char");
-                }
-                Log.e("not valid first name");
-            } else {
-                SignUp_fname_hint.setStyle("-fx-text-fill:   limegreen");
-                SignUp_fname_hint.setText("valid first name");
-            }
-
-            if (!FormValidation.getInstance().checkuserName(_lname)) {
-                if (_lname.equals("")) {
-                    SignUp_lname_hint.setStyle("-fx-text-fill:   #f64747");
-                    SignUp_lname_hint.setText("empty filed not allowed");
-                } else {
-                    SignUp_lname_hint.setStyle("-fx-text-fill:   #f64747");
-                    SignUp_lname_hint.setText("last name to short ,must be bigger than 7 char");
-                }
-                Log.e("not valid  last name");
-            } else {
-                SignUp_lname_hint.setStyle("-fx-text-fill:   limegreen");
-                SignUp_lname_hint.setText("valid last name");
-            }
-//            inform user with his error on email
-            if (!FormValidation.getInstance().checkEmail(_email)) {
-                if (_email.equals("")) {
-                    SignUp_email_hint.setStyle("-fx-text-fill:   #f64747");
-                    SignUp_email_hint.setText("empty field not allowed");
-                } else {
-                    SignUp_email_hint.setStyle("-fx-text-fill:   #f64747");
-                    SignUp_email_hint.setText("email address not valid");
-                }
-                Log.e("not valid email address");
-
-            } else {
-                SignUp_email_hint.setStyle("-fx-text-fill:   limegreen");
-                SignUp_email_hint.setText("valid email");
-            }
-
-// inform user with his err password
-            if (!FormValidation.getInstance().checkPassword(_password)) {
-                if (_password.equals("")) {
-                    SignUp_password_hint.setStyle("-fx-text-fill:   #f64747");
-                    SignUp_password_hint.setText("empty filed not allowed");
-                } else {
-                    SignUp_password_hint.setStyle("-fx-text-fill:   #f64747");
-                    SignUp_password_hint.setText("password must only contains char and num");
-                }
-                Log.e("not valid password password");
-            } else {
-                SignUp_password_hint.setStyle("-fx-text-fill:   limegreen");
-                SignUp_password_hint.setText("valid password");
-            }
-
-
+            UiValidation.validateInput(first_name, SignUp_fname_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name", "normal");
+            UiValidation.validateInput(last_name, SignUp_lname_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name", "normal");
+            UiValidation.validateInput(password, SignUp_password_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name");
+            UiValidation.validateInput(email, SignUp_email_hint, "empty filed not allowed", "invalid email", "valid email", "email");
         }
 
     }
     //#endregion
-    private void  DirectUserWithFade(AnchorPane currentPane, String fxml_file)
-    {
+    private void DirectUserWithFade(AnchorPane currentPane, String fxml_file) {
 
-        FadeTransition fadeTransition=new FadeTransition();
+        FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(1000));
         fadeTransition.setNode(currentPane);
         fadeTransition.setFromValue(1);

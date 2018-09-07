@@ -4,7 +4,7 @@ public class Product {
 
 
     private String productName;
-    private String productPrice;
+    private int productPrice;
     private String productionDate;
     private String expiredDate;
     private String productedCompany;
@@ -21,7 +21,7 @@ public class Product {
     }
 
 
-    public ProductBuilder newProduct() {
+    public static ProductBuilder newProduct() {
         return new ProductBuilder();
     }
 
@@ -34,11 +34,11 @@ public class Product {
         this.productName = productName;
     }
 
-    public String getProductPrice() {
+    public int getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(String productPrice) {
+    public void setProductPrice(int productPrice) {
         this.productPrice = productPrice;
     }
 
@@ -76,7 +76,7 @@ public class Product {
 
     public static class ProductBuilder {
         private String productName;
-        private String productPrice;
+        private int productPrice;
         private String productionDate;
         private String expiredDate;
         private String productedCompany;
@@ -89,7 +89,7 @@ public class Product {
 
         }
 
-        public ProductBuilder productPrice(String productPrice) {
+        public ProductBuilder productPrice(int productPrice) {
             this.productPrice = productPrice;
             return this;
 

@@ -13,8 +13,6 @@ public class CategoryDataBaseSingleton {
 
     private CategoryDataBaseSingleton() {
     }
-
-
     public  String addCategory(Category Category)
     {
         return  "message come from server";
