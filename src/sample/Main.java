@@ -11,7 +11,7 @@ public class Main extends Application {
     private static final int WINDOW_WIDTH = 803;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../sample/SellerUI/seller.fxml"));
         primaryStage.setTitle("SoftWareMarket");
         primaryStage.setScene(new Scene(root, WINDOW_WIDTH, WINDOW_HEIGHT));
         primaryStage.setMinWidth(WINDOW_WIDTH);
