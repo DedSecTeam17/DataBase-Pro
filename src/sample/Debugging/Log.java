@@ -1,4 +1,4 @@
-package sample;
+package sample.Debugging;
 
 public class Log {
 

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Seller.SellerController">
+   <children>
+      <JFXTabPane>
+         <tabs>
+            <Tab text="Sale">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField layoutX="45.0" layoutY="35.0" prefHeight="25.0" prefWidth="207.0" promptText="Search...." />
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="695.0" layoutY="496.0" onAction="#cartButtonClicked" prefHeight="47.0" prefWidth="53.0">
+                           <graphic>
+                              <ImageView fitHeight="49.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@cart.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXListView fx:id="productsList" layoutX="45.0" layoutY="82.0" prefHeight="431.0" prefWidth="329.0" />
+                        <JFXButton fx:id="startTransactionButton" layoutX="623.0" layoutY="82.0" prefHeight="25.0" prefWidth="105.0" text="Add to cart" textFill="#cdcdcd" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Transactions">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTreeTableView layoutX="46.0" layoutY="38.0" prefHeight="461.0" prefWidth="709.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <AnchorPane fx:id="transactionDialog" opacity="0.75" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" visible="false">
+         <children>
+            <JFXTextField fx:id="spField" layoutX="301.0" layoutY="248.0" prefHeight="25.0" prefWidth="199.0" promptText="Selling price" />
+            <JFXTextField fx:id="quantityField" layoutX="301.0" layoutY="288.0" prefHeight="25.0" prefWidth="199.0" promptText="Quantity" />
+            <JFXButton layoutX="348.0" layoutY="339.0" onAction="#addToCart" prefHeight="25.0" prefWidth="105.0" text="Add" textFill="#a1a1a1" underline="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cartPane" opacity="0.95" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;">
+         <children>
+            <JFXTreeTableView fx:id="cart" layoutX="87.0" layoutY="107.0" prefHeight="387.0" prefWidth="626.0">
+               <columns>
+                  <TreeTableColumn prefWidth="75.0" text="Product Name" />
+                  <TreeTableColumn prefWidth="75.0" text="Purchase Price" />
+                  <TreeTableColumn prefWidth="75.0" text="Selling Price" />
+               </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </JFXTreeTableView>
+            <JFXButton layoutX="87.0" layoutY="523.0" onAction="#cartCheckOut" prefHeight="52.0" prefWidth="199.0" style="-fx-background-color: #F6A9A9;" text="Proceed to checkout" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

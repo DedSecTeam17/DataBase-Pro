@@ -14,6 +14,9 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import sample.Atuhentication.Auth;
+import sample.UiValidation.FormValidation;
+import sample.Debugging.Log;
 import sample.MarketModel.User;
 import sample.MarketProvider.FacadeMarketProvider;
 
@@ -179,8 +182,8 @@ public class Controller implements Initializable {
 
     }
     private void SignIn(JFXTextField email, JFXPasswordField password) {
-        String _email = email.getText().trim();
-        String _password = password.getText().trim();
+        String _email = "mohammed@gmial.com";
+        String _password = "mohamed1337";
         boolean role;
         if (selectedUser.equals("true")) {
             role = true;
@@ -200,6 +203,19 @@ public class Controller implements Initializable {
                 if (!result.get(0).getEmail().equals("")) {
                     if (result.get(0).getMessage().equals("")) {
                         //                redirect user into admin dashboard
+                        Auth.getInstance().start_session();
+                        Auth.getInstance().addUser(result.get(0).getEmail());
+                        Log.i(Auth.getInstance().getCurrentUser());
+                        try {
+                            if (Auth.getInstance().isset()) {
+                                Parent secondRoot = FXMLLoader.load(getClass().getResource("../sample/AdminUI/Admin.fxml"));
+                                Scene newScene = new Scene(secondRoot);
+                                Stage curStage = (Stage) login_reg_pane.getScene().getWindow();
+                                curStage.setScene(newScene);
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                         Log.i("this is admin and his email :" + result.get(0).getEmail());
                     } else {
                         email_hint.setStyle("-fx-text-fill:   #f64747");
@@ -215,7 +231,19 @@ public class Controller implements Initializable {
             } else {
                 if (!result.get(0).getEmail().equals("")) {
                     if (result.get(0).getMessage().equals("")) {
-
+                        Auth.getInstance().start_session();
+                        Auth.getInstance().addUser(result.get(0).getEmail());
+                        Log.i(Auth.getInstance().getCurrentUser());
+                        try {
+                            if (Auth.getInstance().isset()) {
+                                Parent secondRoot = FXMLLoader.load(getClass().getResource("../sample/SellerUI/seller.fxml"));
+                                Scene newScene = new Scene(secondRoot);
+                                Stage curStage = (Stage) login_reg_pane.getScene().getWindow();
+                                curStage.setScene(newScene);
+                            }
+                            } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                         Log.i("this is seller and his email :" + result.get(0).getEmail());
                     } else {
                         email_hint.setStyle("-fx-text-fill:   #f64747");

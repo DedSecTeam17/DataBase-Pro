@@ -1,10 +1,8 @@
 package sample.MarketSingeltons;
 
-import sample.Log;
+import sample.Debugging.Log;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Config {
     private static final String USER_NAME = "hr";

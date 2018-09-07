@@ -1,7 +1,7 @@
 package sample.MarketSingeltons;
 
-import sample.Auth;
-import sample.Log;
+import sample.Atuhentication.Auth;
+import sample.Debugging.Log;
 import sample.MarketModel.User;
 
 import java.security.NoSuchAlgorithmException;
