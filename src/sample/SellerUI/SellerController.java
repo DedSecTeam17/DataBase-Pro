@@ -1,4 +1,4 @@
-package sample.Seller;
+package sample.SellerUI;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
@@ -51,6 +51,8 @@ public class SellerController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Log.i("Seller  debugging----->"+ Auth.getInstance().getCurrentUser());
+
+        //create 20 dummy test list elements
         for (int i = 0; i < 20; i++) { testList(); }
 
         //show the transaction dialog (selling price,quantity fields ) after selecting the product you wanna add
@@ -70,10 +72,12 @@ public class SellerController implements Initializable {
         //from the text fields
 
         String name = ((Label)(productsList.getSelectionModel().getSelectedItem())).getText();
+
         int sp = Integer.parseInt(spField.getText()) ;
         int quantity = Integer.parseInt(quantityField.getText()) ;
 
         transaction temp = new transaction(name , sp , quantity);
+
         cartList.add(temp);
         hideAllPanes();
     }
@@ -95,6 +99,12 @@ public class SellerController implements Initializable {
 
     @FXML void cartCheckOut()
     {
-        //Code add the transactions list to the transactions table in the database
+        hideAllPanes();
+        //Code to add the transactions list to the transactions table in the database
+    }
+
+    @FXML void sellerLogOut()
+    {
+        //code to return to the main login scene
     }
 }
