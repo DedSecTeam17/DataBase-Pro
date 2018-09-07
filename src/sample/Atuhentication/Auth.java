@@ -1,10 +1,15 @@
 package sample.Atuhentication;
 
+import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import sample.Debugging.Log;
 
 import java.io.IOException;
@@ -88,4 +93,5 @@ public class Auth {
         curStage.setScene(newScene);
 
     }
+
 }

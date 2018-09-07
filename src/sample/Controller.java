@@ -1,8 +1,11 @@
 package sample;
 
 import com.jfoenix.controls.*;
+import javafx.animation.FadeTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,6 +17,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import sample.Atuhentication.Auth;
 import sample.UiValidation.FormValidation;
 import sample.Debugging.Log;
@@ -182,8 +186,8 @@ public class Controller implements Initializable {
 
     }
     private void SignIn(JFXTextField email, JFXPasswordField password) {
-        String _email = "mohammed@gmial.com";
-        String _password = "mohamed1337";
+        String _email = email.getText().trim();
+        String _password = password.getText().trim();
         boolean role;
         if (selectedUser.equals("true")) {
             role = true;
@@ -206,15 +210,10 @@ public class Controller implements Initializable {
                         Auth.getInstance().start_session();
                         Auth.getInstance().addUser(result.get(0).getEmail());
                         Log.i(Auth.getInstance().getCurrentUser());
-                        try {
-                            if (Auth.getInstance().isset()) {
-                                Parent secondRoot = FXMLLoader.load(getClass().getResource("../sample/AdminUI/Admin.fxml"));
-                                Scene newScene = new Scene(secondRoot);
-                                Stage curStage = (Stage) login_reg_pane.getScene().getWindow();
-                                curStage.setScene(newScene);
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
+                        if (Auth.getInstance().isset()) {
+
+                DirectUserWithFade(login_reg_pane,"../sample/AdminUI/Admin.fxml");
+
                         }
                         Log.i("this is admin and his email :" + result.get(0).getEmail());
                     } else {
@@ -241,7 +240,7 @@ public class Controller implements Initializable {
                                 Stage curStage = (Stage) login_reg_pane.getScene().getWindow();
                                 curStage.setScene(newScene);
                             }
-                            } catch (IOException e) {
+                        } catch (IOException e) {
                             e.printStackTrace();
                         }
                         Log.i("this is seller and his email :" + result.get(0).getEmail());
@@ -391,6 +390,31 @@ public class Controller implements Initializable {
 
     }
     //#endregion
+    private void  DirectUserWithFade(AnchorPane currentPane, String fxml_file)
+    {
+
+        FadeTransition fadeTransition=new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(currentPane);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Parent secondRoot = null;
+                try {
+                    secondRoot = FXMLLoader.load(getClass().getResource(fxml_file));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Scene newScene = new Scene(secondRoot);
+                Stage curStage = (Stage) currentPane.getScene().getWindow();
+                curStage.setScene(newScene);
+            }
+        });
+        fadeTransition.play();
+
+    }
 
 
 }

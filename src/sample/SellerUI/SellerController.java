@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import sample.Atuhentication.Auth;
+import sample.Debugging.Log;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -48,7 +50,7 @@ public class SellerController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        Log.i("Seller  debugging----->"+ Auth.getInstance().getCurrentUser());
         for (int i = 0; i < 20; i++) { testList(); }
 
         //show the transaction dialog (selling price,quantity fields ) after selecting the product you wanna add

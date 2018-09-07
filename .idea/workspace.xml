@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/Auth.java" afterPath="$PROJECT_DIR$/src/sample/Atuhentication/Auth.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/FormValidation.java" afterPath="$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/Log.java" afterPath="$PROJECT_DIR$/src/sample/Debugging/Log.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/sample/TestClass.java" afterPath="$PROJECT_DIR$/src/sample/TestCases/TestClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" afterPath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Atuhentication/Auth.java" afterPath="$PROJECT_DIR$/src/sample/Atuhentication/Auth.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Login.fxml" afterPath="$PROJECT_DIR$/src/sample/Login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/Config.java" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/Config.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/SellerUI/SellerController.java" afterPath="$PROJECT_DIR$/src/sample/SellerUI/SellerController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +27,12 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FavoritesManager">
@@ -45,8 +43,8 @@
       <file leaf-file-name="Auth.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Atuhentication/Auth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="84" column="4" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="87" selection-end-column="36" />
+            <state relative-caret-position="353">
+              <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="353">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -65,13 +63,18 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1441">
-              <caret line="245" column="25" lean-forward="true" selection-start-line="245" selection-start-column="25" selection-end-line="245" selection-end-column="25" />
+            <state relative-caret-position="402">
+              <caret line="391" column="16" lean-forward="false" selection-start-line="391" selection-start-column="16" selection-end-line="391" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2576#3022#0" expanded="false" />
+                <element signature="e#3057#3134#0" expanded="false" />
+                <element signature="e#3171#3278#0" expanded="false" />
                 <element signature="method#setUpRadioBtnWithItToggle#0;class#Controller#0" expanded="false" />
                 <element signature="method#clear_Fields#0;class#Controller#0" expanded="false" />
+                <element signature="method#SignIn#0;class#Controller#0" expanded="false" />
                 <element signature="method#SignUp#0;class#Controller#0" expanded="false" />
+                <element signature="method#DirectUserWithFade#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,7 +84,17 @@
         <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
-              <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+              <caret line="42" column="72" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SellerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/SellerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -107,20 +120,8 @@
         <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
-              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/TestCases/TestClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding>
-                <marker date="1536271883161" expanded="true" signature="814:839" ph="SELECT * FRO... employees" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -243,7 +244,6 @@
         <option value="$PROJECT_DIR$/src/sample/MarketModel/User.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java" />
         <option value="$PROJECT_DIR$/src/sample/FormValidation.java" />
-        <option value="$PROJECT_DIR$/src/sample/Atuhentication/Auth.java" />
         <option value="$PROJECT_DIR$/src/sample/Debugging/Log.java" />
         <option value="$PROJECT_DIR$/src/sample/TestCases/TestClass.java" />
         <option value="$PROJECT_DIR$/src/sample/LoginRegestrationUi/Controller.java" />
@@ -252,6 +252,8 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
         <option value="$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java" />
+        <option value="$PROJECT_DIR$/src/sample/SellerUI/SellerController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Atuhentication/Auth.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
@@ -314,7 +316,7 @@
               <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminUI" type="462c0819:PsiDirectoryNode" />
+              <item name="Atuhentication" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -529,7 +531,7 @@
       <workItem from="1536243290053" duration="17479000" />
       <workItem from="1536264926917" duration="5249000" />
       <workItem from="1536270959658" duration="1237000" />
-      <workItem from="1536293145344" duration="1614000" />
+      <workItem from="1536293145344" duration="4451000" />
     </task>
     <task id="LOCAL-00001" summary="VALIDATION">
       <created>1536131780433</created>
@@ -542,7 +544,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59176000" />
+    <option name="totallyTimeSpent" value="62013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -557,12 +559,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31177446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2968491" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31467474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04387292" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32223904" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -625,22 +627,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2576#3022#0" expanded="false" />
+            <element signature="e#3057#3134#0" expanded="false" />
+            <element signature="e#3171#3278#0" expanded="false" />
             <element signature="method#setUpRadioBtnWithItToggle#0;class#Controller#0" expanded="false" />
             <element signature="method#clear_Fields#0;class#Controller#0" expanded="false" />
+            <element signature="method#SignIn#0;class#Controller#0" expanded="false" />
             <element signature="method#SignUp#0;class#Controller#0" expanded="false" />
+            <element signature="method#DirectUserWithFade#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -658,9 +658,14 @@
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2576#3022#0" expanded="false" />
+            <element signature="e#3057#3134#0" expanded="false" />
+            <element signature="e#3171#3278#0" expanded="false" />
             <element signature="method#setUpRadioBtnWithItToggle#0;class#Controller#0" expanded="false" />
             <element signature="method#clear_Fields#0;class#Controller#0" expanded="false" />
+            <element signature="method#SignIn#0;class#Controller#0" expanded="false" />
             <element signature="method#SignUp#0;class#Controller#0" expanded="false" />
+            <element signature="method#DirectUserWithFade#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -898,10 +903,10 @@
         <state relative-caret-position="2162">
           <caret line="106" column="42" lean-forward="false" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#deleteAdmin#0;class#AdminDataBaseSingleton#0" expanded="false" />
-            <element signature="e#2374#2375#0" expanded="true" />
-            <element signature="e#2424#2425#0" expanded="true" />
+            <element signature="e#2374#2375#0" expanded="false" />
+            <element signature="e#2424#2425#0" expanded="false" />
             <element signature="method#getCurrentTimeStamp#0;class#AdminDataBaseSingleton#0" expanded="false" />
             <marker date="1536271883032" expanded="true" signature="511:1054" ph="..." />
             <marker date="1536271883032" expanded="true" signature="1251:1337" ph="INSERT INTO MarketUser... " />
@@ -943,14 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Atuhentication/Auth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="84" column="4" lean-forward="true" selection-start-line="84" selection-start-column="4" selection-end-line="87" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -968,7 +965,7 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -976,7 +973,7 @@
     <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -984,20 +981,41 @@
     <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
-          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <caret line="42" column="72" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/SellerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Atuhentication/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1441">
-          <caret line="245" column="25" lean-forward="true" selection-start-line="245" selection-start-column="25" selection-end-line="245" selection-end-column="25" />
+        <state relative-caret-position="402">
+          <caret line="391" column="16" lean-forward="false" selection-start-line="391" selection-start-column="16" selection-end-line="391" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2576#3022#0" expanded="false" />
+            <element signature="e#3057#3134#0" expanded="false" />
+            <element signature="e#3171#3278#0" expanded="false" />
             <element signature="method#setUpRadioBtnWithItToggle#0;class#Controller#0" expanded="false" />
             <element signature="method#clear_Fields#0;class#Controller#0" expanded="false" />
+            <element signature="method#SignIn#0;class#Controller#0" expanded="false" />
             <element signature="method#SignUp#0;class#Controller#0" expanded="false" />
+            <element signature="method#DirectUserWithFade#0;class#Controller#0" expanded="false" />
           </folding>
         </state>
       </provider>
