@@ -12,6 +12,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
@@ -50,6 +51,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <JFXTreeTableView layoutX="46.0" layoutY="38.0" prefHeight="461.0" prefWidth="709.0" />
+                        <JFXButton layoutX="46.0" layoutY="524.0" onAction="#viewTransaction" prefHeight="25.0" prefWidth="105.0" text="Transaction info" textFill="#dadada" />
                      </children>
                   </AnchorPane>
               </content>
@@ -76,6 +78,24 @@
                </columnResizePolicy>
             </JFXTreeTableView>
             <JFXButton layoutX="87.0" layoutY="523.0" onAction="#cartCheckOut" prefHeight="52.0" prefWidth="199.0" style="-fx-background-color: #F6A9A9;" text="Proceed to checkout" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="transactionInfo" prefHeight="200.0" prefWidth="775.0">
+         <children>
+            <Pane layoutX="111.0" layoutY="101.0" opacity="0.95" prefHeight="398.0" prefWidth="579.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Label layoutX="14.0" layoutY="83.0" prefHeight="35.0" prefWidth="105.0" text="Product name" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="164.0" prefHeight="35.0" prefWidth="78.0" text="Selling price" textFill="WHITE" />
+                  <Label layoutX="147.0" layoutY="164.0" prefHeight="35.0" prefWidth="78.0" text="Quantity" textFill="WHITE" />
+                  <Label layoutX="303.0" layoutY="164.0" prefHeight="35.0" prefWidth="105.0" text="Profit" textFill="WHITE" />
+                  <Label layoutX="460.0" layoutY="164.0" prefHeight="35.0" prefWidth="105.0" text="Purchase price" textFill="WHITE" />
+                  <JFXButton fx:id="ok" layoutX="274.0" layoutY="298.0" text="Ok" />
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </children>

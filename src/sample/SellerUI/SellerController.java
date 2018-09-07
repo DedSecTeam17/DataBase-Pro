@@ -23,9 +23,12 @@ public class SellerController implements Initializable {
 
     @FXML private AnchorPane cartPane;
 
+    @FXML private AnchorPane transactionInfo;
+
     @FXML private JFXTreeTableView cart;
 
     @FXML JFXButton startTransactionButton;
+    @FXML JFXButton ok;
 
 
     @FXML JFXTextField spField;
@@ -57,6 +60,8 @@ public class SellerController implements Initializable {
 
         //show the transaction dialog (selling price,quantity fields ) after selecting the product you wanna add
         startTransactionButton.setOnAction(event -> transactionDialog.setVisible(!transactionDialog.isVisible()));
+        ok.setOnAction(event -> hideAllPanes());
+
     }
 
     @FXML public void cartButtonClicked()
@@ -107,4 +112,11 @@ public class SellerController implements Initializable {
     {
         //code to return to the main login scene
     }
+
+    @FXML void viewTransaction()
+    {
+        hideAllPanes();
+        transactionInfo.setVisible(true);
+    }
+
 }
