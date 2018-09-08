@@ -55,11 +55,14 @@ public class CategoryFragment
             clearFields(name,id,name_hint,id_hint);
         } else {
             UiValidation.validateInput(name, name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(id, id_hint, "empty filed not allowed", "only numbers allowed", "valid", "num");
         }
 
     }
     public  void  deleteCategory(JFXTextField name,JFXTextField id,Label id_hint,Label name_hint,JFXTreeTableView treeTableView)
     {
+
+
         int r_index = treeTableView.getSelectionModel().getSelectedIndex();
             CategorytItem categorytItem = codeObservableList.get(r_index);
         StringProperty _id = categorytItem.cat_id;
@@ -88,11 +91,11 @@ public class CategoryFragment
             clearFields(name,id,name_hint,id_hint);
         } else {
             UiValidation.validateInput(name, name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(id, id_hint, "empty filed not allowed", "only numbers allowed", "valid", "num");
 
 
         }
     }
-
     private  void  clearFields(JFXTextField cat_name, JFXTextField cat_id, Label cat_name_hint,Label cat_id_hint)
     {
         cat_name.clear();
@@ -101,6 +104,16 @@ public class CategoryFragment
         cat_name_hint.setText("");
         cat_id.setEditable(true);
     }
+
+
+
+
+
+
+
+
+
+
     public void CategorytTableColumn(JFXTreeTableView cat_tree_table) throws Exception {
         JFXTreeTableColumn< CategorytItem, String> cat_id = new JFXTreeTableColumn<>("category id");
         cat_id.setPrefWidth(COLUMN_WIDTH);

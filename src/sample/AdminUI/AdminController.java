@@ -20,6 +20,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 import sample.AdminUI.fragmnets.CategoryFragment;
+import sample.AdminUI.fragmnets.ProductFragment;
 import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
 import sample.MarketModel.Product;
@@ -136,15 +137,15 @@ public class AdminController implements Initializable {
     private JFXHamburger hamburgerButton;
 
 
-    private ObservableList<ProductItem> codeObservableList;
     private FacadeMarketProvider facadeMarketProvider;
     private CategoryFragment categoryFragment = new CategoryFragment();
+    private ProductFragment productFragment = new ProductFragment();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         facadeMarketProvider = new FacadeMarketProvider();
         try {
-            ProductTableColumn();
+            productFragment.ProductTableColumn(products_table);
             categoryFragment.CategorytTableColumn(categor_tree_table);
         } catch (Exception e) {
             e.printStackTrace();
@@ -152,47 +153,22 @@ public class AdminController implements Initializable {
 
         Log.i("Admin UI debugging" + Auth.getInstance().getCurrentUser());
         setUpAsideNavBar();
-
+        productFragment.onTableItemSelected(p_name, p_price, p_company, p_quantity, p_date, expi_date, products_table);
 
         add_product.setOnAction(event -> {
             try {
-                addProduct();
+                productFragment.addProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-        products_table.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                Log.e("clicked");
-                int r_index = products_table.getSelectionModel().getSelectedIndex();
-                ProductItem RuleItem = codeObservableList.get(r_index);
-                StringProperty name = RuleItem.productName;
-                StringProperty price = RuleItem.productPrice;
-                StringProperty company = RuleItem.productedCompany;
-                StringProperty quantity = RuleItem.quantity;
-                StringProperty date = RuleItem.productionDate;
-                StringProperty edate = RuleItem.expiredDate;
-                p_name.setEditable(false);
-
-                p_name.setText(name.getValue());
-                p_price.setText(price.getValue());
-                p_company.setText(company.getValue());
-                p_date.setValue(LocalDate.parse(date.getValue().replace(" ", "").replace(":", "").replace(".", "").replace("0000000", "")));
-                expi_date.setValue(LocalDate.parse(edate.getValue().replace(" ", "").replace(":", "").replace(".", "").replace("0000000", "")));
-//                expi_date.setValue(LocalDate.parse(edate.getValue()));
-                p_quantity.setText(quantity.getValue());
-
-
-            }
-        });
         delete_product.setOnAction(event -> {
-            deleteProduct();
+            productFragment.deleteProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
         });
         update_product.setOnAction(event ->
         {
             try {
-                updateProduct();
+                productFragment.updateProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -215,63 +191,6 @@ public class AdminController implements Initializable {
         });
     }
 
-    private void deleteProduct() {
-        int r_index = products_table.getSelectionModel().getSelectedIndex();
-        ProductItem RuleItem = codeObservableList.get(r_index);
-        StringProperty getIdForSelectedItem = RuleItem.productName;
-        String product_name = getIdForSelectedItem.getValue();
-        Product product = Product.newProduct().productName(product_name).build();
-        facadeMarketProvider.deleteProduct(product);
-        clearFields();
-        try {
-            ProductTableColumn();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        Log.i(product_name);
-    }
-
-    private void updateProduct() throws Exception {
-        if (!p_name.getText().equals("") && !p_price.getText().equals("") && !expi_date.getTypeSelector().equals("") && !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals("")) {
-            Product product = Product.newProduct()
-                    .productName(p_name.getText())
-                    .productPrice(Integer.parseInt(p_price.getText()))
-                    .productedCompany(p_company.getText())
-                    .productionDate(p_date.getValue().toString())
-                    .expiredDate(expi_date.getValue().toString())
-                    .quantity(Integer.parseInt(p_quantity.getText()))
-                    .build();
-            facadeMarketProvider.updateProduct(product);
-            ProductTableColumn();
-            clearFields();
-        } else {
-            UiValidation.validateInput(p_name, p_name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-
-
-        }
-    }
-
-    private void addProduct() throws Exception {
-        if (!p_name.getText().equals("") && !p_price.getText().equals("") && !expi_date.getTypeSelector().equals("") && !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals("")) {
-            Product product = Product.newProduct()
-                    .productName(p_name.getText())
-                    .productPrice(Integer.parseInt(p_price.getText()))
-                    .productedCompany(p_company.getText())
-                    .productionDate(p_date.getValue().toString())
-                    .expiredDate(expi_date.getValue().toString())
-                    .quantity(Integer.parseInt(p_quantity.getText()))
-                    .build();
-
-            facadeMarketProvider.insertProduct(product);
-            ProductTableColumn();
-            clearFields();
-        } else {
-            UiValidation.validateInput(p_name, p_name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-
-
-        }
-
-    }
 
     private void setUpAsideNavBar() {
         drawer.setSidePane(vbox);
@@ -279,15 +198,6 @@ public class AdminController implements Initializable {
         hamburgerTransition.setRate(-1);
     }
 
-    private void clearFields() {
-        p_name.setEditable(true);
-        p_name.clear();
-        p_price.clear();
-        p_company.clear();
-        p_quantity.clear();
-        p_date.setValue(null);
-        expi_date.setValue(null);
-    }
 
     @FXML
     private void handleHamburgerClick() {
@@ -354,104 +264,5 @@ public class AdminController implements Initializable {
         //Code to return to the login scene
     }
 
-    //    PRODUCT TABLE
-    private void ProductTableColumn() throws Exception {
-        JFXTreeTableColumn<ProductItem, String> name = new JFXTreeTableColumn<>("name");
-        name.setPrefWidth(COLUMN_WIDTH);
-        name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-                return param.getValue().getValue().productName;
-            }
-        });
 
-
-        JFXTreeTableColumn<ProductItem, String> price = new JFXTreeTableColumn<>("price");
-        price.setPrefWidth(COLUMN_WIDTH);
-        price.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-                return param.getValue().getValue().productPrice;
-            }
-        });
-
-
-        JFXTreeTableColumn<ProductItem, String> company = new JFXTreeTableColumn<>("company");
-        company.setPrefWidth(COLUMN_WIDTH);
-        company.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-                return param.getValue().getValue().productedCompany;
-            }
-        });
-
-
-        JFXTreeTableColumn<ProductItem, String> quantity = new JFXTreeTableColumn<>("quantity");
-        quantity.setPrefWidth(COLUMN_WIDTH);
-        quantity.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-                return param.getValue().getValue().quantity;
-            }
-        });
-
-        JFXTreeTableColumn<ProductItem, String> productionDate = new JFXTreeTableColumn<>("Production date");
-        productionDate.setPrefWidth(COLUMN_WIDTH);
-        productionDate.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-                return param.getValue().getValue().productionDate;
-            }
-        });
-        JFXTreeTableColumn<ProductItem, String> expiredDate = new JFXTreeTableColumn<>("Expired date");
-        expiredDate.setPrefWidth(COLUMN_WIDTH);
-        expiredDate.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-            @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-                return param.getValue().getValue().expiredDate;
-            }
-        });
-
-        try {
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        codeObservableList = FXCollections.observableArrayList();
-        for (Product product : facadeMarketProvider.getAllProduct()
-                ) {
-
-            codeObservableList.add(new ProductItem(product.getProductName(), product.getProductPrice(), product.getProductionDate(), product.getExpiredDate(), product.getProductedCompany(), product.getQuantity()));
-
-        }
-        final TreeItem<ProductItem> root = new RecursiveTreeItem<ProductItem>(codeObservableList, RecursiveTreeObject::getChildren);
-
-
-        products_table.getColumns().setAll(name, price, productionDate, expiredDate, company, quantity);
-        products_table.setRoot(root);
-        products_table.setShowRoot(false);
-
-
-    }
-
-    class ProductItem extends RecursiveTreeObject<ProductItem> {
-        StringProperty productName;
-        StringProperty productPrice;
-        StringProperty productionDate;
-        StringProperty expiredDate;
-        StringProperty productedCompany;
-        StringProperty quantity;
-
-        public ProductItem(String productName, int productPrice, String productionDate, String expiredDate, String productedCompany, int quantity) {
-            this.productName = new SimpleStringProperty(productName);
-            this.productPrice = new SimpleStringProperty(String.valueOf(productPrice));
-            this.productionDate = new SimpleStringProperty(productionDate);
-            this.expiredDate = new SimpleStringProperty(expiredDate);
-            this.productedCompany = new SimpleStringProperty(productedCompany);
-            this.quantity = new SimpleStringProperty(String.valueOf(quantity));
-            this.productedCompany = new SimpleStringProperty(productedCompany);
-        }
-    }
 }
