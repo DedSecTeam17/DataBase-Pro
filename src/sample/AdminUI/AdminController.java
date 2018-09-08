@@ -32,7 +32,7 @@ import java.util.ResourceBundle;
 
 public class AdminController implements Initializable {
 
-    private static final double COLUMN_WIDTH =166 ;
+    private static final double COLUMN_WIDTH =831/6 ;
     private HamburgerBackArrowBasicTransition hamburgerTransition;
 
     @FXML
@@ -90,13 +90,34 @@ public class AdminController implements Initializable {
     private JFXButton delete_product;
 
     @FXML
-    private JFXHamburger hamburgerButton;
-
-    @FXML
     private AnchorPane transactionsPanel;
 
     @FXML
     private AnchorPane categoriesPanel;
+
+    @FXML
+    private JFXTreeTableView categor_tree_table;
+
+    @FXML
+    private JFXTextField cat_id;
+
+    @FXML
+    private JFXTextField cat_name;
+
+    @FXML
+    private Label cat_id_hint;
+
+    @FXML
+    private Label cat_name_hint;
+
+    @FXML
+    private JFXButton add_cat;
+
+    @FXML
+    private JFXButton remove_cat;
+
+    @FXML
+    private JFXButton update_cat;
 
     @FXML
     private AnchorPane homePanel;
@@ -109,9 +130,14 @@ public class AdminController implements Initializable {
 
     @FXML
     private Label selectionLabel;
+
+    @FXML
+    private JFXHamburger hamburgerButton;
+
+
+
     private ObservableList<ProductItem> codeObservableList;
     private FacadeMarketProvider facadeMarketProvider;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         facadeMarketProvider = new FacadeMarketProvider();

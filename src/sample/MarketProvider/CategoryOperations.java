@@ -6,6 +6,9 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.CategoryDataBaseSingleton;
 
+import java.sql.SQLException;
+import java.util.List;
+
 public class CategoryOperations implements CrudOperations {
     @Override
     public String insertUser(User user) {
@@ -51,6 +54,12 @@ public class CategoryOperations implements CrudOperations {
     public String deleteCategory(Category Category) {
         return CategoryDataBaseSingleton.getInstance().deleteCategory(Category);
     }
+
+    public List<Category> getAllCategories() throws SQLException, ClassNotFoundException {
+        return  CategoryDataBaseSingleton.getInstance().getAllCategory();
+    }
+
+
 
     @Override
     public String insertTransaction(Transaction transaction) {

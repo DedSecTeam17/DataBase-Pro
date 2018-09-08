@@ -44,7 +44,7 @@
             </AnchorPane>
 
 
-            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
+            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;" visible="false">
                <children>
                   <JFXTreeTableView fx:id="products_table" layoutX="12.0" layoutY="50.0" prefHeight="646.0" prefWidth="831.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../css/design.css">
                      <effect>
@@ -127,19 +127,35 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="categoriesPanel" prefHeight="768.0" prefWidth="1270.0" visible="false">
+            <AnchorPane fx:id="categoriesPanel" prefHeight="768.0" prefWidth="1270.0">
                <children>
-                  <JFXTreeTableView layoutX="45.0" layoutY="70.0" prefHeight="513.0" prefWidth="622.0" />
-                  <Pane layoutX="679.0" layoutY="70.0" prefHeight="350.0" prefWidth="207.0" style="-fx-background-color: white; -fx-border-radius: 5px;">
+                  <JFXTreeTableView fx:id="categor_tree_table" layoutX="341.0" layoutY="70.0" prefHeight="513.0" prefWidth="314.0" style="-fx-background-radius: 5px;">
+                     <effect>
+                        <DropShadow radius="6.54" width="7.16" />
+                     </effect></JFXTreeTableView>
+                  <Pane layoutX="679.0" layoutY="70.0" prefHeight="350.0" prefWidth="207.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <children>
-                        <JFXTextField layoutX="24.0" layoutY="14.0" prefHeight="25.0" prefWidth="160.0" promptText="Name" />
+                        <JFXTextField fx:id="cat_id" layoutX="51.0" layoutY="71.0" prefHeight="25.0" prefWidth="143.0" promptText="Id" />
+                        <JFXTextField fx:id="cat_name" layoutX="51.0" layoutY="163.0" prefHeight="25.0" prefWidth="143.0" promptText="Name" />
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/id.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/cat.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="cat_id_hint" layoutX="51.0" layoutY="105.0" />
+                        <Label fx:id="cat_name_hint" layoutX="51.0" layoutY="198.0" />
                      </children>
                   </Pane>
-                  <Pane layoutX="679.0" layoutY="434.0" prefHeight="149.0" prefWidth="207.0" style="-fx-background-color: white; -fx-border-radius: 5;">
+                  <Pane layoutX="679.0" layoutY="434.0" prefHeight="149.0" prefWidth="207.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <children>
-                        <JFXButton layoutX="20.0" layoutY="14.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton layoutX="20.0" layoutY="110.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
-                        <JFXButton layoutX="20.0" layoutY="62.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #59abe3;" text="Update" textFill="WHITE" />
+                        <JFXButton fx:id="add_cat" layoutX="20.0" layoutY="14.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton fx:id="remove_cat" layoutX="20.0" layoutY="110.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
+                        <JFXButton fx:id="update_cat" layoutX="20.0" layoutY="62.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #59abe3;" text="Update" textFill="WHITE" />
                      </children>
                   </Pane>
                </children>
@@ -157,7 +173,7 @@
                </children>
             </AnchorPane>
 
-            <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutX="-7.0" miniDrawerSize="0.0" prefHeight="768.0" prefWidth="269.0">
+            <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutX="-7.0" miniDrawerSize="0.0" prefHeight="768.0" prefWidth="269.0" visible="false">
                <children>
                   <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="269.0" style="-fx-background-color: #22313f;">
                      <children>

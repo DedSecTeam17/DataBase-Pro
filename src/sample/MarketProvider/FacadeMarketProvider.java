@@ -90,6 +90,10 @@ public class FacadeMarketProvider {
         return categoryOperations.deleteCategory(Category);
     }
 
+    public List<Category> getAllCategories() throws SQLException, ClassNotFoundException {
+        return categoryOperations.getAllCategories();
+    }
+
 //
 
     public String insertTransaction(Transaction transaction) {
@@ -107,9 +111,9 @@ public class FacadeMarketProvider {
     }
 
 
-//    repeort
-    public  List<Product> getAllProduct() throws SQLException, ClassNotFoundException {
-        return  productOperations.getAllAdminProducts();
+    //    repeort
+    public List<Product> getAllProduct() throws SQLException, ClassNotFoundException {
+        return productOperations.getAllAdminProducts();
     }
 
 }

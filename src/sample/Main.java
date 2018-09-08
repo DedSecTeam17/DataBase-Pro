@@ -7,11 +7,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    private static final int WINDOW_HEIGHT = 500;
-    private static final int WINDOW_WIDTH = 800;
+    private static final int WINDOW_HEIGHT = 768;
+    private static final int WINDOW_WIDTH = 1366;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../sample/AdminUI/Admin.fxml"));
         primaryStage.setTitle("SoftWareMarket");
         primaryStage.setScene(new Scene(root, WINDOW_WIDTH, WINDOW_HEIGHT));
         primaryStage.setMinWidth(WINDOW_WIDTH);
