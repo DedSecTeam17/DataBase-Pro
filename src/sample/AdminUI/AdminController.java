@@ -182,6 +182,7 @@ public class AdminController implements Initializable {
         String product_name = getIdForSelectedItem.getValue();
         Product product = Product.newProduct().productName(product_name).build();
         facadeMarketProvider.deleteProduct(product);
+        clearFields();
         try {
             ProductTableColumn();
         } catch (Exception e) {

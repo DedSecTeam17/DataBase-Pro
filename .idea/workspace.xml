@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Images/company.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Images/expired.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Images/price.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Images/product.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Images/quant.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Images/start_time.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" afterPath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,26 +85,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Admin.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="935">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="992">
               <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
-                <marker date="1536418069096" expanded="true" signature="9985:11081" ph="..." />
+                <marker date="1536419385130" expanded="true" signature="11791:13046" ph="..." />
               </folding>
             </state>
           </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+          <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FormValidation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="177" column="33" lean-forward="false" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
               <folding>
                 <element signature="method#initialize#0;class#AdminController#0" expanded="false" />
                 <element signature="e#2955#3110#0" expanded="false" />
@@ -116,7 +135,7 @@
                 <element signature="method#highlight#0;class#AdminController#0" expanded="false" />
                 <element signature="method#hideAllPanels#0;class#AdminController#0" expanded="false" />
                 <element signature="method#signOut#0;class#AdminController#0" expanded="false" />
-                <marker date="1536417355350" expanded="false" signature="13681:14614" ph="{...}" />
+                <marker date="1536419619613" expanded="false" signature="13704:14637" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -150,19 +169,6 @@
                 <marker date="1536416180734" expanded="true" signature="2567:2588" ph="UPDATE Marke... " />
                 <marker date="1536416180734" expanded="true" signature="2567:2709" ph="UPDATE Marke... " />
                 <marker date="1536416180734" expanded="true" signature="2567:2737" ph="UPDATE Marke... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminOperations.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="75" column="67" lean-forward="false" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
-              <folding>
-                <element signature="e#1673#1674#0" expanded="true" />
-                <element signature="e#1749#1750#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -308,10 +314,10 @@
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
         <option value="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
         <option value="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
       </list>
     </option>
   </component>
@@ -378,6 +384,13 @@
               <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="AdminUI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="UiValidation" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -393,14 +406,14 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="Oracle" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Mohammed Elamin\IdeaProjects\DataBase-Pro\src\sample\css" />
-      <recent name="C:\Users\Mohammed Elamin\IdeaProjects\DataBase-Pro\src\sample\Images" />
-      <recent name="C:\Users\Mohammed Elamin\IdeaProjects\DataBasePro\src\sample\Images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Mohammed Elamin\IdeaProjects\DataBase-Pro\src\sample\LoginRegestrationUi" />
       <recent name="C:\Users\Mohammed Elamin\IdeaProjects\DataBase-Pro\src\sample" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mohammed Elamin\IdeaProjects\DataBase-Pro\src\sample\Images" />
+      <recent name="C:\Users\Mohammed Elamin\IdeaProjects\DataBase-Pro\src\sample\css" />
+      <recent name="C:\Users\Mohammed Elamin\IdeaProjects\DataBasePro\src\sample\Images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -592,12 +605,12 @@
       <workItem from="1536332376832" duration="3421000" />
       <workItem from="1536344891348" duration="2702000" />
       <workItem from="1536391598557" duration="2669000" />
-      <workItem from="1536409287583" duration="8259000" />
+      <workItem from="1536409287583" duration="9758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86968000" />
+    <option name="totallyTimeSpent" value="88467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -612,7 +625,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6053068" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6016667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -641,7 +654,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -778,13 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -971,10 +977,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <marker date="1536419385130" expanded="true" signature="11791:13046" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="177" column="33" lean-forward="false" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
           <folding>
             <element signature="method#initialize#0;class#AdminController#0" expanded="false" />
             <element signature="e#2955#3110#0" expanded="false" />
@@ -995,22 +1022,9 @@
             <element signature="method#highlight#0;class#AdminController#0" expanded="false" />
             <element signature="method#hideAllPanels#0;class#AdminController#0" expanded="false" />
             <element signature="method#signOut#0;class#AdminController#0" expanded="false" />
-            <marker date="1536417355350" expanded="false" signature="13681:14614" ph="{...}" />
+            <marker date="1536419619613" expanded="false" signature="13704:14637" ph="{...}" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <marker date="1536418069096" expanded="true" signature="9985:11081" ph="..." />
-          </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
   </component>

@@ -44,7 +44,7 @@
             </AnchorPane>
 
 
-            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;" visible="false">
+            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
                <children>
                   <JFXTreeTableView fx:id="products_table" layoutX="12.0" layoutY="50.0" prefHeight="646.0" prefWidth="831.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../css/design.css">
                      <effect>
@@ -55,24 +55,54 @@
                         <DropShadow radius="6.2925" width="6.17" />
                      </effect>
                      <children>
-                        <JFXTextField fx:id="p_name" layoutX="40.0" layoutY="46.0" prefHeight="25.0" prefWidth="250.0" promptText="Product Name" />
-                        <JFXTextField fx:id="p_price" layoutX="40.0" layoutY="98.0" prefHeight="25.0" prefWidth="250.0" promptText="Purchase Price" />
-                        <JFXTextField fx:id="p_company" layoutX="40.0" layoutY="146.0" prefHeight="25.0" prefWidth="249.0" promptText="Company" />
-                        <JFXTextField fx:id="p_quantity" layoutX="40.0" layoutY="197.0" prefHeight="25.0" prefWidth="249.0" promptText="Quantity" />
-                        <JFXDatePicker fx:id="p_date" layoutX="40.0" layoutY="249.0" prefHeight="25.0" prefWidth="250.0" promptText="Producton Date" />
-                        <JFXDatePicker fx:id="expi_date" layoutX="40.0" layoutY="303.0" prefHeight="25.0" prefWidth="250.0" promptText="Expiration Date" />
+                        <JFXTextField fx:id="p_name" layoutX="57.0" layoutY="46.0" prefHeight="25.0" prefWidth="216.0" promptText="Product Name" />
+                        <JFXTextField fx:id="p_price" layoutX="57.0" layoutY="98.0" prefHeight="25.0" prefWidth="207.0" promptText="Purchase Price" />
+                        <JFXTextField fx:id="p_company" layoutX="57.0" layoutY="146.0" prefHeight="25.0" prefWidth="207.0" promptText="Company" />
+                        <JFXTextField fx:id="p_quantity" layoutX="59.0" layoutY="197.0" prefHeight="25.0" prefWidth="207.0" promptText="Quantity" />
+                        <JFXDatePicker fx:id="p_date" layoutX="57.0" layoutY="249.0" prefHeight="25.0" prefWidth="233.0" promptText="Producton Date" />
+                        <JFXDatePicker fx:id="expi_date" layoutX="57.0" layoutY="303.0" prefHeight="25.0" prefWidth="233.0" promptText="Expiration Date" />
                         <Label fx:id="p_name_hint" layoutX="40.0" layoutY="81.0" />
                         <Label fx:id="p_price_hint" layoutX="40.0" layoutY="129.0" />
                         <Label fx:id="p_company_hint" layoutX="40.0" layoutY="180.0" />
                         <Label fx:id="p_quantity_hint" layoutX="40.0" layoutY="232.0" />
                         <Label fx:id="produ_hint" layoutX="40.0" layoutY="286.0" />
                         <Label fx:id="p_expi_hint" layoutX="40.0" layoutY="340.0" />
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/product.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/price.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/company.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/quant.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/start_time.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/expired.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </Pane>
                   <Pane layoutX="858.0" layoutY="516.0" prefHeight="178.0" prefWidth="321.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <children>
-                        <JFXButton fx:id="add_product" layoutX="40.0" layoutY="24.0" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton fx:id="update_product" layoutX="40.0" layoutY="72.0" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Update" textFill="WHITE" />
+                        <JFXButton fx:id="add_product" layoutX="40.0" layoutY="24.0" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton fx:id="update_product" layoutX="40.0" layoutY="72.0" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #81cfe0;" text="Update" textFill="WHITE" />
                         <JFXButton fx:id="delete_product" layoutX="40.0" layoutY="119.0" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
                      </children>
                      <effect>
@@ -107,15 +137,15 @@
                   </Pane>
                   <Pane layoutX="679.0" layoutY="434.0" prefHeight="149.0" prefWidth="207.0" style="-fx-background-color: white; -fx-border-radius: 5;">
                      <children>
-                        <JFXButton layoutX="20.0" layoutY="14.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton layoutX="20.0" layoutY="110.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
-                        <JFXButton layoutX="20.0" layoutY="62.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Update" textFill="WHITE" />
+                        <JFXButton layoutX="20.0" layoutY="14.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton layoutX="20.0" layoutY="110.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
+                        <JFXButton layoutX="20.0" layoutY="62.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #59abe3;" text="Update" textFill="WHITE" />
                      </children>
                   </Pane>
                </children>
             </AnchorPane>
 
-            <AnchorPane fx:id="homePanel" prefHeight="600.0" prefWidth="800.0">
+            <AnchorPane fx:id="homePanel" prefHeight="600.0" prefWidth="800.0" visible="false">
 
                <children>
                   <ImageView fitHeight="616.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
@@ -129,7 +159,7 @@
 
             <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutX="-7.0" miniDrawerSize="0.0" prefHeight="768.0" prefWidth="269.0">
                <children>
-                  <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #22313f;">
+                  <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="269.0" style="-fx-background-color: #22313f;">
                      <children>
                         <Pane prefHeight="768.0" prefWidth="269.0">
                            <children>
