@@ -32,6 +32,7 @@ import java.util.ResourceBundle;
 
 public class AdminController implements Initializable {
 
+    private static final double COLUMN_WIDTH =166 ;
     private HamburgerBackArrowBasicTransition hamburgerTransition;
 
     @FXML
@@ -108,29 +109,25 @@ public class AdminController implements Initializable {
 
     @FXML
     private Label selectionLabel;
+    private ObservableList<ProductItem> codeObservableList;
+    private FacadeMarketProvider facadeMarketProvider;
 
-    private    ObservableList<ProductItem> codeObservableList;
-
-
-private FacadeMarketProvider facadeMarketProvider;
     @Override
-    public void initialize(URL location, ResourceBundle resources)
-    {
-        facadeMarketProvider=new FacadeMarketProvider();
+    public void initialize(URL location, ResourceBundle resources) {
+        facadeMarketProvider = new FacadeMarketProvider();
         try {
             ProductTableColumn();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        Log.i("Admin UI debugging"+Auth.getInstance().getCurrentUser());
+        Log.i("Admin UI debugging" + Auth.getInstance().getCurrentUser());
         setUpAsideNavBar();
 
 
         add_product.setOnAction(event -> {
-            addProduct();
             try {
-                ProductTableColumn();
+                addProduct();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -148,43 +145,71 @@ private FacadeMarketProvider facadeMarketProvider;
                 StringProperty quantity = RuleItem.quantity;
                 StringProperty date = RuleItem.productionDate;
                 StringProperty edate = RuleItem.expiredDate;
+                p_name.setEditable(false);
 
                 p_name.setText(name.getValue());
                 p_price.setText(price.getValue());
                 p_company.setText(company.getValue());
-                p_date.setValue(LocalDate.parse(date.getValue().replace(" ","").replace(":","").replace(".","").replace("0000000","")));
-                expi_date.setValue(LocalDate.parse(edate.getValue().replace(" ","").replace(":","").replace(".","").replace("0000000","")));
+                p_date.setValue(LocalDate.parse(date.getValue().replace(" ", "").replace(":", "").replace(".", "").replace("0000000", "")));
+                expi_date.setValue(LocalDate.parse(edate.getValue().replace(" ", "").replace(":", "").replace(".", "").replace("0000000", "")));
 //                expi_date.setValue(LocalDate.parse(edate.getValue()));
                 p_quantity.setText(quantity.getValue());
 
 
-
             }
         });
 
 
-
         delete_product.setOnAction(event -> {
-            int r_index = products_table.getSelectionModel().getSelectedIndex();
-            ProductItem RuleItem = codeObservableList.get(r_index);
-            StringProperty getIdForSelectedItem = RuleItem.productName;
-            String product_name=getIdForSelectedItem.getValue();
-            Product product= Product.newProduct().productName(product_name).build();
-            facadeMarketProvider.deleteProduct(product);
+           deleteProduct();
+        });
+
+        update_product.setOnAction(event ->
+        {
             try {
-                ProductTableColumn();
+                updateProduct();
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            Log.i(product_name);
         });
 
 
     }
+    private void deleteProduct() {
+        int r_index = products_table.getSelectionModel().getSelectedIndex();
+        ProductItem RuleItem = codeObservableList.get(r_index);
+        StringProperty getIdForSelectedItem = RuleItem.productName;
+        String product_name = getIdForSelectedItem.getValue();
+        Product product = Product.newProduct().productName(product_name).build();
+        facadeMarketProvider.deleteProduct(product);
+        try {
+            ProductTableColumn();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Log.i(product_name);
+    }
+    private void updateProduct() throws Exception {
+        if (!p_name.getText().equals("") && !p_price.getText().equals("") && !expi_date.getTypeSelector().equals("") && !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals("")) {
+            Product product = Product.newProduct()
+                    .productName(p_name.getText())
+                    .productPrice(Integer.parseInt(p_price.getText()))
+                    .productedCompany(p_company.getText())
+                    .productionDate(p_date.getValue().toString())
+                    .expiredDate(expi_date.getValue().toString())
+                    .quantity(Integer.parseInt(p_quantity.getText()))
+                    .build();
+            facadeMarketProvider.updateProduct(product);
+            ProductTableColumn();
+            clearFields();
+        } else {
+            UiValidation.validateInput(p_name, p_name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
 
-    private  void  addProduct() {
-        if (!p_name.getText().equals("") && !p_price.getText().equals("")  && !expi_date.getTypeSelector().equals("")&& !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals(""))
-        {
+
+        }
+    }
+    private void addProduct() throws Exception {
+        if (!p_name.getText().equals("") && !p_price.getText().equals("") && !expi_date.getTypeSelector().equals("") && !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals("")) {
             Product product = Product.newProduct()
                     .productName(p_name.getText())
                     .productPrice(Integer.parseInt(p_price.getText()))
@@ -194,183 +219,170 @@ private FacadeMarketProvider facadeMarketProvider;
                     .quantity(Integer.parseInt(p_quantity.getText()))
                     .build();
 
-        facadeMarketProvider.insertProduct(product);
-    }
-    else
-        {
+            facadeMarketProvider.insertProduct(product);
+            ProductTableColumn();
+            clearFields();
+        } else {
             UiValidation.validateInput(p_name, p_name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-
 
 
         }
 
     }
-
-
-
-
-
-
     private void setUpAsideNavBar() {
         drawer.setSidePane(vbox);
         hamburgerTransition = new HamburgerBackArrowBasicTransition(hamburgerButton);
         hamburgerTransition.setRate(-1);
     }
-
-    @FXML
-    private void handleHamburgerClick()
+    private  void  clearFields()
     {
+        p_name.setEditable(true);
+        p_name.clear();
+        p_price.clear();
+        p_company.clear();
+        p_quantity.clear();
+        p_date.setValue(null);
+        expi_date.setValue(null);
+    }
+    @FXML
+    private void handleHamburgerClick() {
         //Open and close drawer on hamburger button click
-        hamburgerTransition.setRate(hamburgerTransition.getRate()*-1);
+        hamburgerTransition.setRate(hamburgerTransition.getRate() * -1);
         hamburgerTransition.play();
-        if (drawer.isOpened()){
+        if (drawer.isOpened()) {
             drawer.close();
-        }
-        else {
+        } else {
             drawer.open();
         }
     }
-
-
     @FXML
-    void CategoriesButtonClicked(ActionEvent event)
-    {
-        highlight(((JFXButton)event.getSource()).getLayoutY());
+    void CategoriesButtonClicked(ActionEvent event) {
+        highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         categoriesPanel.setVisible(true);
     }
-
     @FXML
-    void ProductsButtonClicked(ActionEvent event)
-    {
-        highlight(((JFXButton)event.getSource()).getLayoutY());
+    void ProductsButtonClicked(ActionEvent event) {
+        highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         productsPanel.setVisible(true);
     }
     @FXML
-    void HomeButtonClicked(ActionEvent event)
-    {
-        highlight(((JFXButton)event.getSource()).getLayoutY());
+    void HomeButtonClicked(ActionEvent event) {
+        highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         homePanel.setVisible(true);
     }
     @FXML
-    void SellersButtonClicked(ActionEvent event)
-    {
-        highlight(((JFXButton)event.getSource()).getLayoutY());
+    void SellersButtonClicked(ActionEvent event) {
+        highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         sellersPanel.setVisible(true);
     }
     @FXML
-    void TransactionsButtonClicked(ActionEvent event)
-    {
-        highlight(((JFXButton)event.getSource()).getLayoutY());
+    void TransactionsButtonClicked(ActionEvent event) {
+        highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         transactionsPanel.setVisible(true);
-
     }
-    void highlight(double y)
-    {
+    void highlight(double y) {
         //moves the selection label to the y-axis of the selected button
         selectionLabel.setLayoutY(y);
     }
-    void hideAllPanels()
-    {
+    void hideAllPanels() {
         sellersPanel.setVisible(false);
         productsPanel.setVisible(false);
         transactionsPanel.setVisible(false);
         categoriesPanel.setVisible(false);
         homePanel.setVisible(false);
     }
-    @FXML void signOut()
-    {
+    @FXML
+    void signOut() {
         //Code to return to the login scene
     }
-//    PRODUCT TABLE 
-private void ProductTableColumn() throws Exception {
-    JFXTreeTableColumn<ProductItem, String> name = new JFXTreeTableColumn<>("name");
-    name.setPrefWidth(89.16);
-    name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-        @Override
-        public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-            return param.getValue().getValue().productName;
+    //    PRODUCT TABLE
+    private void ProductTableColumn() throws Exception {
+        JFXTreeTableColumn<ProductItem, String> name = new JFXTreeTableColumn<>("name");
+        name.setPrefWidth(COLUMN_WIDTH);
+        name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
+                return param.getValue().getValue().productName;
+            }
+        });
+
+
+        JFXTreeTableColumn<ProductItem, String> price = new JFXTreeTableColumn<>("price");
+        price.setPrefWidth(COLUMN_WIDTH);
+        price.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
+                return param.getValue().getValue().productPrice;
+            }
+        });
+
+
+        JFXTreeTableColumn<ProductItem, String> company = new JFXTreeTableColumn<>("company");
+        company.setPrefWidth(COLUMN_WIDTH);
+        company.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
+                return param.getValue().getValue().productedCompany;
+            }
+        });
+
+
+        JFXTreeTableColumn<ProductItem, String> quantity = new JFXTreeTableColumn<>("quantity");
+        quantity.setPrefWidth(COLUMN_WIDTH);
+        quantity.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
+                return param.getValue().getValue().quantity;
+            }
+        });
+
+        JFXTreeTableColumn<ProductItem, String> productionDate = new JFXTreeTableColumn<>("Production date");
+        productionDate.setPrefWidth(COLUMN_WIDTH);
+        productionDate.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
+                return param.getValue().getValue().productionDate;
+            }
+        });
+        JFXTreeTableColumn<ProductItem, String> expiredDate = new JFXTreeTableColumn<>("Expired date");
+        expiredDate.setPrefWidth(COLUMN_WIDTH);
+        expiredDate.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
+                return param.getValue().getValue().expiredDate;
+            }
+        });
+
+        try {
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-    });
 
+        codeObservableList = FXCollections.observableArrayList();
+        for (Product product : facadeMarketProvider.getAllProduct()
+                ) {
 
-    JFXTreeTableColumn<ProductItem, String> price = new JFXTreeTableColumn<>("price");
-    price.setPrefWidth(89.16);
-    price.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-        @Override
-        public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-            return param.getValue().getValue().productPrice;
+            codeObservableList.add(new ProductItem(product.getProductName(), product.getProductPrice(), product.getProductionDate(), product.getExpiredDate(), product.getProductedCompany(), product.getQuantity()));
+
         }
-    });
+        final TreeItem<ProductItem> root = new RecursiveTreeItem<ProductItem>(codeObservableList, RecursiveTreeObject::getChildren);
 
 
-    JFXTreeTableColumn<ProductItem, String> company = new JFXTreeTableColumn<>("company");
-    company.setPrefWidth(89.16);
-    company.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-        @Override
-        public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-            return param.getValue().getValue().productedCompany;
-        }
-    });
+        products_table.getColumns().setAll(name, price, productionDate, expiredDate, company, quantity);
+        products_table.setRoot(root);
+        products_table.setShowRoot(false);
 
 
-    JFXTreeTableColumn<ProductItem, String> quantity = new JFXTreeTableColumn<>("quantity");
-    quantity.setPrefWidth(89.16);
-    quantity.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-        @Override
-        public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-            return param.getValue().getValue().quantity;
-        }
-    });
-
-    JFXTreeTableColumn<ProductItem, String> productionDate = new JFXTreeTableColumn<>("Production date");
-    productionDate.setPrefWidth(89.16);
-    productionDate.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-        @Override
-        public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-            return param.getValue().getValue().productionDate;
-        }
-    });
-    JFXTreeTableColumn<ProductItem, String> expiredDate = new JFXTreeTableColumn<>("Expired date");
-    expiredDate.setPrefWidth(89.16);
-    expiredDate.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-        @Override
-        public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-            return param.getValue().getValue().expiredDate;
-        }
-    });
-
-    try {
-
-
-    
-
-    } catch (Exception e) {
-        e.printStackTrace();
     }
-
- codeObservableList=FXCollections.observableArrayList();
-    for (Product product: facadeMarketProvider.getAllProduct()
-         ) {
-
-        codeObservableList.add(new ProductItem(product.getProductName(), product.getProductPrice(), product.getProductionDate(), product.getExpiredDate(),product.getProductedCompany(),product.getQuantity()));
-
-    }
-    final TreeItem<ProductItem> root = new RecursiveTreeItem<ProductItem>(codeObservableList, RecursiveTreeObject::getChildren);
-
-
-    products_table.getColumns().setAll(name, price, productionDate, expiredDate,company,quantity);
-    products_table.setRoot(root);
-    products_table.setShowRoot(false);
-
-
-}
     class ProductItem extends RecursiveTreeObject<ProductItem> {
-         StringProperty productName;
+        StringProperty productName;
         StringProperty productPrice;
         StringProperty productionDate;
         StringProperty expiredDate;

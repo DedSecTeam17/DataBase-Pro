@@ -33,6 +33,8 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
     private static final boolean ADMIN_ROLE = true;
     private static final boolean SELLER_ROLE = false;
+    private static final double WINDOW_WIDTH =1366 ;
+    private static final double WINDOW_HEIGHT =768 ;
     @FXML
     private AnchorPane login_reg_pane;
     @FXML
@@ -105,6 +107,7 @@ public class Controller implements Initializable {
     private ToggleGroup usersGroupSignUp;
     private ToggleGroup usersGroupSignIn;
     private FacadeMarketProvider facadeMarketProvider;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -268,11 +271,7 @@ public class Controller implements Initializable {
             if (!warning.equals("")) {
                 UiValidation.hintSuccess(SignUp_email_hint, "this email already used");
             } else {
-                try {
-                    Auth.getInstance().RedirectUser(login_reg_pane, "../sample/AdminUI/Admin.fxml");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                DirectUserWithFade(login_reg_pane, "../sample/SellerUI/seller.fxml");
             }
         } else {
             UiValidation.validateInput(first_name, SignUp_fname_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name", "normal");
@@ -300,7 +299,13 @@ public class Controller implements Initializable {
                     e.printStackTrace();
                 }
                 Scene newScene = new Scene(secondRoot);
+
                 Stage curStage = (Stage) currentPane.getScene().getWindow();
+                curStage.setMinWidth(WINDOW_WIDTH);
+                curStage.setMinHeight(WINDOW_HEIGHT);
+                curStage.setMinHeight(WINDOW_HEIGHT);
+                curStage.setMaxWidth(WINDOW_WIDTH);
+
                 curStage.setScene(newScene);
             }
         });

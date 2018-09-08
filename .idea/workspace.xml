@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/css/design.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" afterPath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" afterPath="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="111">
+              <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -61,13 +58,12 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1363">
-              <caret line="215" column="67" lean-forward="true" selection-start-line="215" selection-start-column="67" selection-end-line="215" selection-end-column="67" />
+            <state relative-caret-position="-673">
+              <caret line="273" column="85" lean-forward="false" selection-start-line="273" selection-start-column="85" selection-end-line="273" selection-end-column="85" />
               <folding>
-                <element signature="e#3212#3319#0" expanded="false" />
+                <element signature="e#3319#3426#0" expanded="false" />
                 <element signature="method#setUpRadioBtnWithItToggle#0;class#Controller#0" expanded="false" />
                 <element signature="method#clear_Fields#0;class#Controller#0" expanded="false" />
-                <element signature="method#DirectUserWithFade#0;class#Controller#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,11 +72,12 @@
       <file leaf-file-name="UiValidation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
+            <state relative-caret-position="1288">
               <caret line="63" column="6" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1186#1187#0" expanded="true" />
+                <element signature="e#1230#1231#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,7 +88,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1536411224049" expanded="true" signature="9848:9869" ph="..." />
+                <marker date="1536411224049" expanded="true" signature="9848:9889" ph="..." />
+                <marker date="1536411224049" expanded="true" signature="9848:9904" ph="..." />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
@@ -99,12 +100,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="155" column="25" lean-forward="false" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="138">
+              <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+              <folding>
+                <element signature="method#initialize#0;class#AdminController#0" expanded="false" />
+                <element signature="e#2955#3110#0" expanded="false" />
+                <element signature="class#3159:4467" expanded="false" />
+                <element signature="e#4507#4555#0" expanded="false" />
+                <element signature="e#4594#4760#0" expanded="false" />
+                <element signature="method#deleteProduct#0;class#AdminController#0" expanded="false" />
+                <element signature="method#updateProduct#0;class#AdminController#0" expanded="false" />
+                <element signature="method#addProduct#0;class#AdminController#0" expanded="false" />
+                <element signature="method#setUpAsideNavBar#0;class#AdminController#0" expanded="false" />
+                <element signature="method#clearFields#0;class#AdminController#0" expanded="false" />
+                <element signature="method#handleHamburgerClick#0;class#AdminController#0" expanded="false" />
+                <element signature="method#CategoriesButtonClicked#0;class#AdminController#0" expanded="false" />
+                <element signature="method#ProductsButtonClicked#0;class#AdminController#0" expanded="false" />
+                <element signature="method#HomeButtonClicked#0;class#AdminController#0" expanded="false" />
+                <element signature="method#SellersButtonClicked#0;class#AdminController#0" expanded="false" />
+                <element signature="method#TransactionsButtonClicked#0;class#AdminController#0" expanded="false" />
+                <element signature="method#highlight#0;class#AdminController#0" expanded="false" />
+                <element signature="method#hideAllPanels#0;class#AdminController#0" expanded="false" />
+                <element signature="method#signOut#0;class#AdminController#0" expanded="false" />
+                <marker date="1536417355350" expanded="false" signature="13681:14614" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,11 +134,13 @@
       <file leaf-file-name="AdminDataBaseSingleton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="70" column="34" lean-forward="false" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="34" />
+            <state relative-caret-position="275">
+              <caret line="60" column="41" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
               <folding>
+                <element signature="method#addAdmin#0;class#AdminDataBaseSingleton#0" expanded="false" />
                 <element signature="method#deleteAdmin#0;class#AdminDataBaseSingleton#0" expanded="false" />
                 <element signature="method#getCurrentTimeStamp#0;class#AdminDataBaseSingleton#0" expanded="false" />
+                <element signature="method#loginAdmin#0;class#AdminDataBaseSingleton#0" expanded="false" />
                 <marker date="1536392561522" expanded="true" signature="711:797" ph="INSERT INTO MarketUser... " />
               </folding>
             </state>
@@ -126,14 +150,15 @@
       <file leaf-file-name="ProductDataBaseSingleton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="247">
+              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
-                <element signature="method#addProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
                 <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
-                <element signature="method#updateProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
                 <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
-                <marker date="1536346590633" expanded="true" signature="754:906" ph="INSERT INTO MarketProduct... " />
+                <marker date="1536416180734" expanded="true" signature="755:907" ph="INSERT INTO MarketProduct... " />
+                <marker date="1536416180734" expanded="true" signature="2567:2588" ph="UPDATE Marke... " />
+                <marker date="1536416180734" expanded="true" signature="2567:2709" ph="UPDATE Marke... " />
+                <marker date="1536416180734" expanded="true" signature="2567:2737" ph="UPDATE Marke... " />
               </folding>
             </state>
           </provider>
@@ -142,7 +167,7 @@
       <file leaf-file-name="AdminOperations.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
+            <state relative-caret-position="1012">
               <caret line="75" column="67" lean-forward="false" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
               <folding>
                 <element signature="e#1673#1674#0" expanded="true" />
@@ -155,7 +180,7 @@
       <file leaf-file-name="ProductOperations.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
+            <state relative-caret-position="831">
               <caret line="70" column="60" lean-forward="false" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
               <folding>
                 <element signature="e#1657#1658#0" expanded="true" />
@@ -168,7 +193,7 @@
       <file leaf-file-name="FacadeMarketProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1748">
+            <state relative-caret-position="1045">
               <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
               <folding />
             </state>
@@ -203,6 +228,10 @@
       <find>type</find>
       <find>rules</find>
       <find>#81CFE0</find>
+      <find>SET</find>
+      <find>set</find>
+      <find>?</find>
+      <find>89.16</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -219,6 +248,10 @@
       <replace>name</replace>
       <replace>products</replace>
       <replace>#22313f</replace>
+      <replace>COLUMN_WIDTH</replace>
+      <replace>set</replace>
+      <replace>SET</replace>
+      <replace>COLUMN_WIDTH</replace>
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -279,15 +312,15 @@
         <option value="$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java" />
         <option value="$PROJECT_DIR$/src/sample/css/design.css" />
-        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
       </list>
     </option>
   </component>
@@ -298,7 +331,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1386" />
@@ -325,6 +358,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -350,28 +387,10 @@
               <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="AdminUI" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="MarketProvider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="MarketSingeltons" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,6 +399,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="Oracle" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -557,8 +577,8 @@
     <recent_temporary>
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.AdminDataBaseSingleton" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ProductDataBaseSingleton" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ProductDataBaseSingleton" />
+        <item index="2" class="java.lang.String" itemvalue="Application.AdminDataBaseSingleton" />
         <item index="3" class="java.lang.String" itemvalue="Application.TestClass" />
       </list>
     </recent_temporary>
@@ -581,14 +601,15 @@
       <workItem from="1536332376832" duration="3421000" />
       <workItem from="1536344891348" duration="2702000" />
       <workItem from="1536391598557" duration="2669000" />
+      <workItem from="1536409287583" duration="7505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78709000" />
+    <option name="totallyTimeSpent" value="86214000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -600,11 +621,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7595357" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6119403" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32223904" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -847,8 +868,8 @@
         <state relative-caret-position="115">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="25" />
           <folding>
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="false" />
+            <element signature="e#1066#1067#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -868,73 +889,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1748">
-          <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="method#addProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
-            <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
-            <element signature="method#updateProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
-            <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
-            <marker date="1536346590633" expanded="true" signature="754:906" ph="INSERT INTO MarketProduct... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="70" column="60" lean-forward="false" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
-          <folding>
-            <element signature="e#1657#1658#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="155" column="25" lean-forward="false" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1536411224049" expanded="true" signature="9848:9869" ph="..." />
+            <marker date="1536411224049" expanded="true" signature="9848:9889" ph="..." />
+            <marker date="1536411224049" expanded="true" signature="9848:9904" ph="..." />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="70" column="34" lean-forward="false" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="34" />
-          <folding>
-            <element signature="method#deleteAdmin#0;class#AdminDataBaseSingleton#0" expanded="false" />
-            <element signature="method#getCurrentTimeStamp#0;class#AdminDataBaseSingleton#0" expanded="false" />
-            <marker date="1536392561522" expanded="true" signature="711:797" ph="INSERT INTO MarketUser... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
+        <state relative-caret-position="1012">
           <caret line="75" column="67" lean-forward="false" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
           <folding>
             <element signature="e#1673#1674#0" expanded="true" />
@@ -943,35 +915,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1363">
-          <caret line="215" column="67" lean-forward="true" selection-start-line="215" selection-start-column="67" selection-end-line="215" selection-end-column="67" />
-          <folding>
-            <element signature="e#3212#3319#0" expanded="false" />
-            <element signature="method#setUpRadioBtnWithItToggle#0;class#Controller#0" expanded="false" />
-            <element signature="method#clear_Fields#0;class#Controller#0" expanded="false" />
-            <element signature="method#DirectUserWithFade#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="1288">
           <caret line="63" column="6" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="111">
+          <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="60" column="41" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <folding>
+            <element signature="method#addAdmin#0;class#AdminDataBaseSingleton#0" expanded="false" />
+            <element signature="method#deleteAdmin#0;class#AdminDataBaseSingleton#0" expanded="false" />
+            <element signature="method#getCurrentTimeStamp#0;class#AdminDataBaseSingleton#0" expanded="false" />
+            <element signature="method#loginAdmin#0;class#AdminDataBaseSingleton#0" expanded="false" />
+            <marker date="1536392561522" expanded="true" signature="711:797" ph="INSERT INTO MarketUser... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
+            <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
+            <marker date="1536416180734" expanded="true" signature="755:907" ph="INSERT INTO MarketProduct... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2588" ph="UPDATE Marke... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2709" ph="UPDATE Marke... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2737" ph="UPDATE Marke... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="70" column="60" lean-forward="false" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
+          <folding>
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-673">
+          <caret line="273" column="85" lean-forward="false" selection-start-line="273" selection-start-column="85" selection-end-line="273" selection-end-column="85" />
+          <folding>
+            <element signature="e#3319#3426#0" expanded="false" />
+            <element signature="method#setUpRadioBtnWithItToggle#0;class#Controller#0" expanded="false" />
+            <element signature="method#clear_Fields#0;class#Controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+          <folding>
+            <element signature="method#initialize#0;class#AdminController#0" expanded="false" />
+            <element signature="e#2955#3110#0" expanded="false" />
+            <element signature="class#3159:4467" expanded="false" />
+            <element signature="e#4507#4555#0" expanded="false" />
+            <element signature="e#4594#4760#0" expanded="false" />
+            <element signature="method#deleteProduct#0;class#AdminController#0" expanded="false" />
+            <element signature="method#updateProduct#0;class#AdminController#0" expanded="false" />
+            <element signature="method#addProduct#0;class#AdminController#0" expanded="false" />
+            <element signature="method#setUpAsideNavBar#0;class#AdminController#0" expanded="false" />
+            <element signature="method#clearFields#0;class#AdminController#0" expanded="false" />
+            <element signature="method#handleHamburgerClick#0;class#AdminController#0" expanded="false" />
+            <element signature="method#CategoriesButtonClicked#0;class#AdminController#0" expanded="false" />
+            <element signature="method#ProductsButtonClicked#0;class#AdminController#0" expanded="false" />
+            <element signature="method#HomeButtonClicked#0;class#AdminController#0" expanded="false" />
+            <element signature="method#SellersButtonClicked#0;class#AdminController#0" expanded="false" />
+            <element signature="method#TransactionsButtonClicked#0;class#AdminController#0" expanded="false" />
+            <element signature="method#highlight#0;class#AdminController#0" expanded="false" />
+            <element signature="method#hideAllPanels#0;class#AdminController#0" expanded="false" />
+            <element signature="method#signOut#0;class#AdminController#0" expanded="false" />
+            <marker date="1536417355350" expanded="false" signature="13681:14614" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
