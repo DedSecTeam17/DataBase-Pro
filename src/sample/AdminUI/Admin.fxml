@@ -173,7 +173,7 @@
                </children>
             </AnchorPane>
 
-            <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutX="-7.0" miniDrawerSize="0.0" prefHeight="768.0" prefWidth="269.0" visible="false">
+            <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutX="-7.0" miniDrawerSize="0.0" prefHeight="768.0" prefWidth="269.0">
                <children>
                   <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="269.0" style="-fx-background-color: #22313f;">
                      <children>

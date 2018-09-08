@@ -19,6 +19,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
+import sample.AdminUI.fragmnets.CategoryFragment;
 import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
 import sample.MarketModel.Product;
@@ -32,7 +33,7 @@ import java.util.ResourceBundle;
 
 public class AdminController implements Initializable {
 
-    private static final double COLUMN_WIDTH =831/6 ;
+    private static final double COLUMN_WIDTH = 831 / 6;
     private HamburgerBackArrowBasicTransition hamburgerTransition;
 
     @FXML
@@ -135,14 +136,16 @@ public class AdminController implements Initializable {
     private JFXHamburger hamburgerButton;
 
 
-
     private ObservableList<ProductItem> codeObservableList;
     private FacadeMarketProvider facadeMarketProvider;
+    private CategoryFragment categoryFragment = new CategoryFragment();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         facadeMarketProvider = new FacadeMarketProvider();
         try {
             ProductTableColumn();
+            categoryFragment.CategorytTableColumn(categor_tree_table);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -158,7 +161,6 @@ public class AdminController implements Initializable {
                 e.printStackTrace();
             }
         });
-
         products_table.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -184,12 +186,9 @@ public class AdminController implements Initializable {
 
             }
         });
-
-
         delete_product.setOnAction(event -> {
-           deleteProduct();
+            deleteProduct();
         });
-
         update_product.setOnAction(event ->
         {
             try {
@@ -198,9 +197,24 @@ public class AdminController implements Initializable {
                 e.printStackTrace();
             }
         });
-
-
+        categoryFragment.onTableItemSelected(categor_tree_table, cat_name, cat_id);
+        add_cat.setOnAction(event -> {
+            try {
+                categoryFragment.addCategory(cat_name, cat_id, cat_id_hint, cat_name_hint, categor_tree_table);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        remove_cat.setOnAction(event -> categoryFragment.deleteCategory(cat_name, cat_id, cat_id_hint, cat_name_hint, categor_tree_table));
+        update_cat.setOnAction(event -> {
+            try {
+                categoryFragment.updateCategory(cat_name, cat_id, cat_id_hint, cat_name_hint, categor_tree_table);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
+
     private void deleteProduct() {
         int r_index = products_table.getSelectionModel().getSelectedIndex();
         ProductItem RuleItem = codeObservableList.get(r_index);
@@ -216,6 +230,7 @@ public class AdminController implements Initializable {
         }
         Log.i(product_name);
     }
+
     private void updateProduct() throws Exception {
         if (!p_name.getText().equals("") && !p_price.getText().equals("") && !expi_date.getTypeSelector().equals("") && !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals("")) {
             Product product = Product.newProduct()
@@ -235,6 +250,7 @@ public class AdminController implements Initializable {
 
         }
     }
+
     private void addProduct() throws Exception {
         if (!p_name.getText().equals("") && !p_price.getText().equals("") && !expi_date.getTypeSelector().equals("") && !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals("")) {
             Product product = Product.newProduct()
@@ -256,13 +272,14 @@ public class AdminController implements Initializable {
         }
 
     }
+
     private void setUpAsideNavBar() {
         drawer.setSidePane(vbox);
         hamburgerTransition = new HamburgerBackArrowBasicTransition(hamburgerButton);
         hamburgerTransition.setRate(-1);
     }
-    private  void  clearFields()
-    {
+
+    private void clearFields() {
         p_name.setEditable(true);
         p_name.clear();
         p_price.clear();
@@ -271,6 +288,7 @@ public class AdminController implements Initializable {
         p_date.setValue(null);
         expi_date.setValue(null);
     }
+
     @FXML
     private void handleHamburgerClick() {
         //Open and close drawer on hamburger button click
@@ -282,40 +300,47 @@ public class AdminController implements Initializable {
             drawer.open();
         }
     }
+
     @FXML
     void CategoriesButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         categoriesPanel.setVisible(true);
     }
+
     @FXML
     void ProductsButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         productsPanel.setVisible(true);
     }
+
     @FXML
     void HomeButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         homePanel.setVisible(true);
     }
+
     @FXML
     void SellersButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         sellersPanel.setVisible(true);
     }
+
     @FXML
     void TransactionsButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         transactionsPanel.setVisible(true);
     }
+
     void highlight(double y) {
         //moves the selection label to the y-axis of the selected button
         selectionLabel.setLayoutY(y);
     }
+
     void hideAllPanels() {
         sellersPanel.setVisible(false);
         productsPanel.setVisible(false);
@@ -323,10 +348,12 @@ public class AdminController implements Initializable {
         categoriesPanel.setVisible(false);
         homePanel.setVisible(false);
     }
+
     @FXML
     void signOut() {
         //Code to return to the login scene
     }
+
     //    PRODUCT TABLE
     private void ProductTableColumn() throws Exception {
         JFXTreeTableColumn<ProductItem, String> name = new JFXTreeTableColumn<>("name");
@@ -408,6 +435,7 @@ public class AdminController implements Initializable {
 
 
     }
+
     class ProductItem extends RecursiveTreeObject<ProductItem> {
         StringProperty productName;
         StringProperty productPrice;
