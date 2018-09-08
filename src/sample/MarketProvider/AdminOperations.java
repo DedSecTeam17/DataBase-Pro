@@ -73,7 +73,7 @@ public class AdminOperations implements CrudOperations,AdminPrivilidgeOpertation
 
     @Override
     public List<User> login(User user) {
-        return null;
+        return AdminDataBaseSingleton.getInstance().loginAdmin(user);
     }
 
     @Override

@@ -19,16 +19,7 @@ public class AdminDataBaseSingleton {
     }
 
 
-    public  static  void  main(String a[])
-    {
-        User user= User.newUser().firstName("mohammed").lastName("elamin").email("mohammed@gmial.com").password("mohamed1337").role(true).build();
-
-        if (getInstance().loginAdmin(user).get(0).isRole()){
-            System.out.println(  "welcome your gmail :"+getInstance().loginAdmin(user).get(0).getEmail()+"you are an admin");
-        }else {
-            System.out.println(  "welcome your gmail :"+getInstance().loginAdmin(user).get(0).getEmail()+"you are an seller");
-        }
-    }
+//
     public  String addAdmin(User user)
     {
 

@@ -19,10 +19,6 @@ public class ProductDataBaseSingleton {
 
     private ProductDataBaseSingleton() {
     }
-
-
-
-
     public  String addProduct(Product Product)
     {
         String data_base_message="";
@@ -51,10 +47,17 @@ public class ProductDataBaseSingleton {
         return  data_base_message;
 
     }
-    public  String deleteProduct(Product Product)
-    {
-        return  "message come from server";
-
+    public  String deleteProduct(Product Product)  {
+        String meaasge="";
+        String sql = String.format("DELETE   FROM MarketProduct WHERE  product_name='%s'", Product.getProductName());
+        try {
+            Connection connection = Config.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sql);
+        } catch (SQLException | ClassNotFoundException e) {
+            meaasge=e.getMessage();
+        }
+        return  meaasge;
     }
     public  String updateProduct(Product Product)
     {

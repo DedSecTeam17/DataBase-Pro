@@ -215,6 +215,7 @@ public class Controller implements Initializable {
                         Auth.getInstance().addUser(result.get(0).getEmail());
                         Log.i(Auth.getInstance().getCurrentUser());
                         if (Auth.getInstance().isset()) {
+                            Log.e("asdasd");
                             DirectUserWithFade(login_reg_pane, "../sample/AdminUI/Admin.fxml");
                         }
                         Log.i("this is admin and his email :" + result.get(0).getEmail());

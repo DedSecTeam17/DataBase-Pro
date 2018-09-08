@@ -9,11 +9,13 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
@@ -24,6 +26,7 @@ import sample.MarketProvider.FacadeMarketProvider;
 import sample.UiValidation.UiValidation;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -106,6 +109,8 @@ public class AdminController implements Initializable {
     @FXML
     private Label selectionLabel;
 
+    private    ObservableList<ProductItem> codeObservableList;
+
 
 private FacadeMarketProvider facadeMarketProvider;
     @Override
@@ -129,6 +134,49 @@ private FacadeMarketProvider facadeMarketProvider;
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        });
+
+        products_table.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Log.e("clicked");
+                int r_index = products_table.getSelectionModel().getSelectedIndex();
+                ProductItem RuleItem = codeObservableList.get(r_index);
+                StringProperty name = RuleItem.productName;
+                StringProperty price = RuleItem.productPrice;
+                StringProperty company = RuleItem.productedCompany;
+                StringProperty quantity = RuleItem.quantity;
+                StringProperty date = RuleItem.productionDate;
+                StringProperty edate = RuleItem.expiredDate;
+
+                p_name.setText(name.getValue());
+                p_price.setText(price.getValue());
+                p_company.setText(company.getValue());
+                p_date.setValue(LocalDate.parse(date.getValue().replace(" ","").replace(":","").replace(".","").replace("0000000","")));
+                expi_date.setValue(LocalDate.parse(edate.getValue().replace(" ","").replace(":","").replace(".","").replace("0000000","")));
+//                expi_date.setValue(LocalDate.parse(edate.getValue()));
+                p_quantity.setText(quantity.getValue());
+
+
+
+            }
+        });
+
+
+
+        delete_product.setOnAction(event -> {
+            int r_index = products_table.getSelectionModel().getSelectedIndex();
+            ProductItem RuleItem = codeObservableList.get(r_index);
+            StringProperty getIdForSelectedItem = RuleItem.productName;
+            String product_name=getIdForSelectedItem.getValue();
+            Product product= Product.newProduct().productName(product_name).build();
+            facadeMarketProvider.deleteProduct(product);
+            try {
+                ProductTableColumn();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            Log.i(product_name);
         });
 
 
@@ -305,7 +353,7 @@ private void ProductTableColumn() throws Exception {
         e.printStackTrace();
     }
 
-    ObservableList<ProductItem> codeObservableList=FXCollections.observableArrayList();
+ codeObservableList=FXCollections.observableArrayList();
     for (Product product: facadeMarketProvider.getAllProduct()
          ) {
 
