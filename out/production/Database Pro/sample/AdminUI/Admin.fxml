@@ -44,7 +44,7 @@
             </AnchorPane>
 
 
-            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;" visible="false">
+            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
                <children>
                   <JFXTreeTableView fx:id="products_table" layoutX="12.0" layoutY="50.0" prefHeight="646.0" prefWidth="831.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../css/design.css">
                      <effect>
@@ -127,7 +127,7 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="categoriesPanel" prefHeight="768.0" prefWidth="1270.0">
+            <AnchorPane fx:id="categoriesPanel" prefHeight="768.0" prefWidth="1270.0" visible="false">
                <children>
                   <JFXTreeTableView fx:id="categor_tree_table" layoutX="341.0" layoutY="70.0" prefHeight="513.0" prefWidth="314.0" style="-fx-background-radius: 5px;">
                      <effect>

@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7da8a652-ecf3-496f-aa63-167d0c036c02" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java" />
+    <list default="true" id="11a68062-2ee8-4f21-8895-d66f3fd38b10" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" afterPath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" afterPath="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" />
-=======
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java" afterDir="false" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,81 +39,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-174">
-              <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-              <folding>
-                <marker date="1536448901773" expanded="true" signature="63767:64011" ph="..." />
-                <marker date="1536448901773" expanded="true" signature="63767:64026" ph="..." />
-                <marker date="1536448901773" expanded="true" signature="63767:64040" ph="..." />
-                <marker date="1536448901773" expanded="true" signature="63767:64055" ph="..." />
-                <marker date="1536448901773" expanded="true" signature="63813:63991" ph="..." />
-                <marker date="1536448901773" expanded="true" signature="63853:63957" ph="..." />
-                <marker date="1536448901773" expanded="true" signature="63874:63935" ph="..." />
-              </folding>
-=======
-            <state relative-caret-position="1035">
-              <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Admin.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="269">
+              <caret line="202" column="19" lean-forward="false" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionDataBaseSingelton.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="575">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormValidation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
+      <file leaf-file-name="Transaction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Transaction.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="376">
-              <caret line="81" column="1" lean-forward="true" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+            <state relative-caret-position="146">
+              <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionsOperations.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding>
-                <element signature="method#isNumberOnly#0;class#FormValidation#0" expanded="false" />
-                <element signature="method#isLettersOnly#0;class#FormValidation#0" expanded="false" />
-=======
-            <state relative-caret-position="3496">
-              <caret line="207" column="139" selection-start-line="207" selection-start-column="139" selection-end-line="207" selection-end-column="139" />
-              <folding>
-                <element signature="class#3725:5033" />
-                <element signature="e#5071#5120#0" />
-                <element signature="e#5850#6090#0" />
-                <element signature="e#6104#6722#0" />
-                <element signature="e#6728#7772#0" />
-                <element signature="e#7778#8821#0" />
-                <element signature="e#8827#9027#0" />
-                <element signature="e#9033#9270#0" />
-                <element signature="e#9276#9611#0" />
-                <element signature="e#9617#9814#0" />
-                <element signature="e#9820#10013#0" />
-                <element signature="e#10019#10204#0" />
-                <element signature="e#10210#10401#0" />
-                <element signature="e#10407#10608#0" />
-                <element signature="e#10614#10757#0" />
-                <element signature="e#10763#10997#0" />
-                <element signature="e#11003#11079#0" />
-                <element signature="e#11085#14977#0" />
-                <element signature="e#14983#15975#0" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
+                <element signature="e#1089#1090#0" expanded="true" />
+                <element signature="e#1116#1117#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,9 +88,8 @@
       <file leaf-file-name="CategoryFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="100">
-              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="207">
+              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onTableItemSelected#0;class#CategoryFragment#0" expanded="false" />
@@ -142,144 +99,117 @@
                 <element signature="method#clearFields#0;class#CategoryFragment#0" expanded="false" />
                 <element signature="method#CategorytTableColumn#0;class#CategoryFragment#0" expanded="false" />
                 <element signature="e#6182#6198#0" expanded="true" />
-                <marker date="1536448516829" expanded="false" signature="6474:6756" ph="{...}" />
-=======
-            <state relative-caret-position="683">
-              <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#onTableItemSelected#0;class#CategoryFragment#0" />
-                <element signature="method#addCategory#0;class#CategoryFragment#0" />
-                <element signature="method#deleteCategory#0;class#CategoryFragment#0" />
-                <element signature="method#updateCategory#0;class#CategoryFragment#0" />
+                <element signature="class#CategorytItem#0;class#CategoryFragment#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SellerDataBaseSingleton.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java">
+      <file leaf-file-name="ProductDataBaseSingleton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="103" column="37" lean-forward="true" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
+            <state relative-caret-position="207">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <element signature="method#addSeller#0;class#SellerDataBaseSingleton#0" />
-                <element signature="method#deleteSeller#0;class#SellerDataBaseSingleton#0" />
-                <element signature="method#updateSeller#0;class#SellerDataBaseSingleton#0" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
+                <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
+                <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
+                <marker date="1536416180734" expanded="true" signature="755:907" ph="INSERT INTO MarketProduct... " />
+                <marker date="1536416180734" expanded="true" signature="2567:2588" ph="UPDATE Marke... " />
+                <marker date="1536416180734" expanded="true" signature="2567:2709" ph="UPDATE Marke... " />
+                <marker date="1536416180734" expanded="true" signature="2567:2737" ph="UPDATE Marke... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java">
+      <file leaf-file-name="CategoryDataBaseSingleton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="418">
-              <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#onTableItemSelected#0;class#ProductFragment#0" expanded="false" />
-                <element signature="method#deleteProduct#0;class#ProductFragment#0" expanded="false" />
-                <element signature="method#updateProduct#0;class#ProductFragment#0" expanded="false" />
-                <element signature="method#addProduct#0;class#ProductFragment#0" expanded="false" />
-                <element signature="method#clearFields#0;class#ProductFragment#0" expanded="false" />
-                <element signature="method#ProductTableColumn#0;class#ProductFragment#0" expanded="false" />
-                <marker date="1536448898040" expanded="false" signature="11788:11801" ph="&lt;~&gt;" />
-                <marker date="1536448898040" expanded="false" signature="12113:13046" ph="{...}" />
-=======
-            <state relative-caret-position="276">
-              <caret line="22" selection-start-line="22" selection-end-line="122" selection-end-column="5" />
-              <folding>
-                <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" />
-                <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UiValidation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="353">
-              <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-              <folding />
-=======
             <state relative-caret-position="405">
               <caret line="78" column="23" lean-forward="true" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
               <folding>
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="method#addCategory#0;class#CategoryDataBaseSingleton#0" />
-                <element signature="method#deleteCategory#0;class#CategoryDataBaseSingleton#0" />
-                <element signature="method#updateCategory#0;class#CategoryDataBaseSingleton#0" />
+                <element signature="method#addCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
+                <element signature="method#deleteCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
+                <element signature="method#updateCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
+                <marker date="1536435769819" expanded="true" signature="724:787" ph="INSERT INTO MarketCategory... " />
+                <marker date="1536435769819" expanded="true" signature="2142:2199" ph="UPDATE Marke... " />
               </folding>
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryOperations.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="897">
-              <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
+            <state relative-caret-position="254">
+              <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FacadeMarketProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
+      <file leaf-file-name="SellerDataBaseSingleton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1449">
-              <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163">
-              <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+            <state relative-caret-position="23">
+              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
               <folding>
-                <element signature="e#5223#5463#0" expanded="false" />
-                <element signature="method#setUpAsideNavBar#0;class#AdminController#0" expanded="false" />
-                <element signature="method#handleHamburgerClick#0;class#AdminController#0" expanded="false" />
-                <element signature="method#CategoriesButtonClicked#0;class#AdminController#0" expanded="false" />
-                <element signature="method#ProductsButtonClicked#0;class#AdminController#0" expanded="false" />
-                <element signature="method#HomeButtonClicked#0;class#AdminController#0" expanded="false" />
-                <element signature="method#SellersButtonClicked#0;class#AdminController#0" expanded="false" />
-                <element signature="method#TransactionsButtonClicked#0;class#AdminController#0" expanded="false" />
-                <element signature="method#highlight#0;class#AdminController#0" expanded="false" />
-                <element signature="method#hideAllPanels#0;class#AdminController#0" expanded="false" />
-                <element signature="method#signOut#0;class#AdminController#0" expanded="false" />
+                <marker date="1536449011560" expanded="true" signature="705:775" ph="INSERT INTO MarketCategory... " />
+                <marker date="1536449011560" expanded="true" signature="2139:2214" ph="UPDATE MARKE... " />
+                <marker date="1536449011560" expanded="true" signature="3167:3212" ph="SELECT * FRO... MARKETUSER" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/sample" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/sample">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>sample</OriginalElement>
+              <nodes>
+                <node x="320.125" y="287.0">sample.MarketProvider</node>
+                <node x="198.0" y="502.0">sample.LoginRegestrationUi</node>
+                <node x="0.0" y="502.0">sample.Main</node>
+                <node x="560.2645833333333" y="287.0">sample.UiValidation</node>
+                <node x="318.0" y="620.0">sample.css</node>
+                <node x="220.49999999999997" y="178.0">sample.MarketSingeltons</node>
+                <node x="191.60659722222218" y="417.0">sample.AdminUI</node>
+                <node x="376.02326388888883" y="406.0">sample.Controller</node>
+                <node x="162.0" y="620.0">sample.Query</node>
+                <node x="364.1319444444444" y="79.0">sample.MarketModel</node>
+                <node x="50.49999999999997" y="178.0">sample.SellerUI</node>
+                <node x="119.43125000000006" y="0.0">sample.Debugging</node>
+                <node x="0.0" y="620.0">sample.Images</node>
+                <node x="105.49999999999997" y="79.0">sample.Atuhentication</node>
+                <node x="429.0" y="502.0">sample.TestCases</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="0.5936484490398818" x="25.0" y="447.0" />
+              <SelectedNodes>
+                <node>sample.MarketProvider</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Inner Classes</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>public</VISIBILITY>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</find>
-      <find>product</find>
-      <find>private</find>
     </findStrings>
     <replaceStrings>
-      <replace />
-      <replace>Category</replace>
       <replace>public</replace>
     </replaceStrings>
   </component>
@@ -291,19 +221,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/sample/Query/sql.sql" />
-        <option value="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java" />
-=======
-        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
       </list>
     </option>
   </component>
@@ -327,13 +254,22 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -359,31 +295,20 @@
               <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="MarketSingeltons" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="MarketModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="UiValidation" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/ojdbc6.jar!/" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -409,70 +334,124 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HEIGHT" value="0" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="WIDTH" value="0" />
-    </configuration>
     <configuration name="AdminDataBaseSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.MarketSingeltons.AdminDataBaseSingleton" />
-      <module name="Database Pro" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="sample.MarketSingeltons.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="MAIN_CLASS_NAME" value="sample.MarketSingeltons.AdminDataBaseSingleton" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Database Pro" />
+      <envs />
     </configuration>
     <configuration name="CategoryDataBaseSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.MarketSingeltons.CategoryDataBaseSingleton" />
-      <module name="Database Pro" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="sample.MarketSingeltons.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="MAIN_CLASS_NAME" value="sample.MarketSingeltons.CategoryDataBaseSingleton" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Database Pro" />
+      <envs />
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <module name="Database Pro" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="sample.MarketModel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="MAIN_CLASS_NAME" value="sample.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Database Pro" />
+      <envs />
     </configuration>
     <configuration name="ProductDataBaseSingleton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.MarketSingeltons.ProductDataBaseSingleton" />
-      <module name="Database Pro" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="sample.MarketSingeltons.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="MAIN_CLASS_NAME" value="sample.MarketSingeltons.ProductDataBaseSingleton" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Database Pro" />
+      <envs />
     </configuration>
     <configuration name="TestClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sample.TestCases.TestClass" />
-      <module name="Database Pro" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
           <option name="PATTERN" value="sample.Atuhentication.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="MAIN_CLASS_NAME" value="sample.TestCases.TestClass" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Database Pro" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
+      <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -482,13 +461,17 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
+      <envs />
       <patterns />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -501,67 +484,72 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
     </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.TestClass" />
-      <item itemvalue="Application.CategoryDataBaseSingleton" />
-      <item itemvalue="Application.ProductDataBaseSingleton" />
-      <item itemvalue="Application.AdminDataBaseSingleton" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TestClass" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CategoryDataBaseSingleton" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ProductDataBaseSingleton" />
+      <item index="4" class="java.lang.String" itemvalue="Application.AdminDataBaseSingleton" />
     </list>
     <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.AdminDataBaseSingleton" />
-        <item itemvalue="Application.ProductDataBaseSingleton" />
-        <item itemvalue="Application.CategoryDataBaseSingleton" />
-        <item itemvalue="Application.TestClass" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.AdminDataBaseSingleton" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ProductDataBaseSingleton" />
+        <item index="3" class="java.lang.String" itemvalue="Application.CategoryDataBaseSingleton" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestClass" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7da8a652-ecf3-496f-aa63-167d0c036c02" name="Default" comment="" />
-      <created>1536446941065</created>
+      <changelist id="11a68062-2ee8-4f21-8895-d66f3fd38b10" name="Default" comment="" />
+      <created>1536482110461</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1536446941065</updated>
+      <updated>1536482110461</updated>
+      <workItem from="1536482148536" duration="270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6025000" />
+    <option name="totallyTimeSpent" value="899000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-<<<<<<< HEAD
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32333332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5456053" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54228854" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32669982" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26399395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32223904" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -573,45 +561,14 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32333332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-=======
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info id="DB Browser" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="DB Execution Console" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5555556" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32669982" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3283582" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2673522" />
-      <window_info id="Project Explorer" />
-      <window_info id="Job Explorer" />
-      <window_info anchor="bottom" id="Console" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.0" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39800996" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="8" weight="0.32223904" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.3283582" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32333332" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -620,64 +577,34 @@
     <breakpoint-manager>
       <option name="time" value="9" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/LoginSignupController.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingelton.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingelton.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/SellerOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
-          <caret line="24" selection-end-line="70" />
+          <caret line="24" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="51" column="78" selection-end-line="69" />
+          <caret line="51" column="78" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CartOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
-          <caret line="42" column="8" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1058">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+          <caret line="42" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -686,14 +613,14 @@
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CrudOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -702,24 +629,24 @@
     <entry file="file://$PROJECT_DIR$/src/sample/TestCases/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Debugging/Log.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Atuhentication/Auth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1702">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -737,31 +664,20 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
-<<<<<<< HEAD
-            <element signature="e#434#435#0" expanded="false" />
-            <element signature="e#468#469#0" expanded="false" />
             <element signature="method#addCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
             <element signature="method#deleteCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
             <element signature="method#updateCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
-            <element signature="method#getAllCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
             <marker date="1536435769819" expanded="true" signature="724:787" ph="INSERT INTO MarketCategory... " />
             <marker date="1536435769819" expanded="true" signature="2142:2199" ph="UPDATE Marke... " />
-=======
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="method#addCategory#0;class#CategoryDataBaseSingleton#0" />
-            <element signature="method#deleteCategory#0;class#CategoryDataBaseSingleton#0" />
-            <element signature="method#updateCategory#0;class#CategoryDataBaseSingleton#0" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
           </folding>
         </state>
       </provider>
@@ -769,23 +685,20 @@
     <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-<<<<<<< HEAD
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="25" />
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="e#1018#1019#0" expanded="false" />
             <element signature="e#1066#1067#0" expanded="false" />
           </folding>
-=======
-          <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="25" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/AdminPrivilidgeOpertation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -799,29 +712,22 @@
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1012">
-          <caret line="75" column="67" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
-          <folding>
-            <element signature="e#1673#1674#0" />
-            <element signature="e#1749#1750#0" />
-          </folding>
+          <caret line="75" column="67" lean-forward="false" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-=======
     <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1288">
-          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+          <caret line="63" column="6" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
         </state>
       </provider>
     </entry>
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
     <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/AdminDataBaseSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
-          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <caret line="60" column="41" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <caret line="60" column="41" lean-forward="false" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -829,10 +735,14 @@
     <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1472">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
           <folding>
-            <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" />
-            <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" />
+            <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
+            <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
+            <marker date="1536416180734" expanded="true" signature="755:907" ph="INSERT INTO MarketProduct... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2588" ph="UPDATE Marke... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2709" ph="UPDATE Marke... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2737" ph="UPDATE Marke... " />
           </folding>
         </state>
       </provider>
@@ -840,57 +750,28 @@
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
-          <caret line="70" column="60" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
-          <folding>
-            <element signature="e#1657#1658#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-          </folding>
+          <caret line="70" column="60" lean-forward="false" selection-start-line="70" selection-start-column="60" selection-end-line="70" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-=======
     <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="22" selection-start-line="22" selection-end-line="122" selection-end-column="5" />
-          <folding>
-<<<<<<< HEAD
-            <element signature="e#434#435#0" expanded="false" />
-            <element signature="e#468#469#0" expanded="false" />
-            <element signature="method#addCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
-            <element signature="method#deleteCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
-            <element signature="method#updateCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
-            <element signature="method#getAllCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
-            <marker date="1536435769819" expanded="true" signature="724:787" ph="INSERT INTO MarketCategory... " />
-            <marker date="1536435769819" expanded="true" signature="2142:2199" ph="UPDATE Marke... " />
-=======
-            <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" />
-            <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
-          </folding>
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="897">
-          <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
+          <caret line="58" column="73" lean-forward="false" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1449">
-          <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+          <caret line="96" column="2" lean-forward="false" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -904,57 +785,28 @@
     <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/SellerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-174">
-          <caret line="44" column="59" lean-forward="false" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-          <folding>
-            <marker date="1536448901773" expanded="true" signature="63767:64011" ph="..." />
-            <marker date="1536448901773" expanded="true" signature="63767:64026" ph="..." />
-            <marker date="1536448901773" expanded="true" signature="63767:64040" ph="..." />
-            <marker date="1536448901773" expanded="true" signature="63767:64055" ph="..." />
-            <marker date="1536448901773" expanded="true" signature="63813:63991" ph="..." />
-            <marker date="1536448901773" expanded="true" signature="63853:63957" ph="..." />
-            <marker date="1536448901773" expanded="true" signature="63874:63935" ph="..." />
-          </folding>
-=======
-        <state relative-caret-position="1035">
-          <caret line="45" column="59" selection-start-line="45" selection-start-column="59" selection-end-line="45" selection-end-column="59" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
+        <state relative-caret-position="-470">
+          <caret line="70" column="31" lean-forward="false" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Query/sql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="81" column="1" lean-forward="true" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+        <state relative-caret-position="1242">
+          <caret line="81" column="1" lean-forward="false" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
           <folding>
             <element signature="method#isNumberOnly#0;class#FormValidation#0" expanded="false" />
             <element signature="method#isLettersOnly#0;class#FormValidation#0" expanded="false" />
@@ -964,35 +816,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="59" column="22" lean-forward="true" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
+        <state relative-caret-position="1196">
+          <caret line="59" column="22" lean-forward="false" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="138">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onTableItemSelected#0;class#CategoryFragment#0" expanded="false" />
-            <element signature="method#addCategory#0;class#CategoryFragment#0" expanded="false" />
-            <element signature="method#deleteCategory#0;class#CategoryFragment#0" expanded="false" />
-            <element signature="method#updateCategory#0;class#CategoryFragment#0" expanded="false" />
-            <element signature="method#clearFields#0;class#CategoryFragment#0" expanded="false" />
-            <element signature="method#CategorytTableColumn#0;class#CategoryFragment#0" expanded="false" />
-            <element signature="e#6182#6198#0" expanded="true" />
-            <marker date="1536448516829" expanded="false" signature="6474:6756" ph="{...}" />
+            <element signature="method#onTableItemSelected#0;class#ProductFragment#0" expanded="false" />
+            <element signature="method#deleteProduct#0;class#ProductFragment#0" expanded="false" />
+            <element signature="method#updateProduct#0;class#ProductFragment#0" expanded="false" />
+            <element signature="method#addProduct#0;class#ProductFragment#0" expanded="false" />
+            <element signature="method#clearFields#0;class#ProductFragment#0" expanded="false" />
+            <element signature="method#ProductTableColumn#0;class#ProductFragment#0" expanded="false" />
+            <element signature="class#ProductItem#0;class#ProductFragment#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-163">
-          <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+        <state relative-caret-position="3266">
+          <caret line="172" column="29" lean-forward="false" selection-start-line="172" selection-start-column="29" selection-end-line="172" selection-end-column="29" />
           <folding>
             <element signature="e#5223#5463#0" expanded="false" />
             <element signature="method#setUpAsideNavBar#0;class#AdminController#0" expanded="false" />
@@ -1005,58 +863,89 @@
             <element signature="method#highlight#0;class#AdminController#0" expanded="false" />
             <element signature="method#hideAllPanels#0;class#AdminController#0" expanded="false" />
             <element signature="method#signOut#0;class#AdminController#0" expanded="false" />
-=======
-        <state relative-caret-position="3496">
-          <caret line="207" column="139" selection-start-line="207" selection-start-column="139" selection-end-line="207" selection-end-column="139" />
-          <folding>
-            <element signature="class#3725:5033" />
-            <element signature="e#5071#5120#0" />
-            <element signature="e#5850#6090#0" />
-            <element signature="e#6104#6722#0" />
-            <element signature="e#6728#7772#0" />
-            <element signature="e#7778#8821#0" />
-            <element signature="e#8827#9027#0" />
-            <element signature="e#9033#9270#0" />
-            <element signature="e#9276#9611#0" />
-            <element signature="e#9617#9814#0" />
-            <element signature="e#9820#10013#0" />
-            <element signature="e#10019#10204#0" />
-            <element signature="e#10210#10401#0" />
-            <element signature="e#10407#10608#0" />
-            <element signature="e#10614#10757#0" />
-            <element signature="e#10763#10997#0" />
-            <element signature="e#11003#11079#0" />
-            <element signature="e#11085#14977#0" />
-            <element signature="e#14983#15975#0" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java">
+    <entry file="uml://JAVA/sample">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample</OriginalElement>
+          <nodes>
+            <node x="320.125" y="287.0">sample.MarketProvider</node>
+            <node x="198.0" y="502.0">sample.LoginRegestrationUi</node>
+            <node x="0.0" y="502.0">sample.Main</node>
+            <node x="560.2645833333333" y="287.0">sample.UiValidation</node>
+            <node x="318.0" y="620.0">sample.css</node>
+            <node x="220.49999999999997" y="178.0">sample.MarketSingeltons</node>
+            <node x="191.60659722222218" y="417.0">sample.AdminUI</node>
+            <node x="376.02326388888883" y="406.0">sample.Controller</node>
+            <node x="162.0" y="620.0">sample.Query</node>
+            <node x="364.1319444444444" y="79.0">sample.MarketModel</node>
+            <node x="50.49999999999997" y="178.0">sample.SellerUI</node>
+            <node x="119.43125000000006" y="0.0">sample.Debugging</node>
+            <node x="0.0" y="620.0">sample.Images</node>
+            <node x="105.49999999999997" y="79.0">sample.Atuhentication</node>
+            <node x="429.0" y="502.0">sample.TestCases</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5936484490398818" x="25.0" y="447.0" />
+          <SelectedNodes>
+            <node>sample.MarketProvider</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Inner Classes</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="418">
-          <caret line="25" column="51" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        <state relative-caret-position="207">
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="45" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#onTableItemSelected#0;class#ProductFragment#0" expanded="false" />
-            <element signature="method#deleteProduct#0;class#ProductFragment#0" expanded="false" />
-            <element signature="method#updateProduct#0;class#ProductFragment#0" expanded="false" />
-            <element signature="method#addProduct#0;class#ProductFragment#0" expanded="false" />
-            <element signature="method#clearFields#0;class#ProductFragment#0" expanded="false" />
-            <element signature="method#ProductTableColumn#0;class#ProductFragment#0" expanded="false" />
-            <marker date="1536448898040" expanded="false" signature="11788:11801" ph="&lt;~&gt;" />
-            <marker date="1536448898040" expanded="false" signature="12113:13046" ph="{...}" />
-=======
-        <state relative-caret-position="683">
-          <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+            <element signature="method#onTableItemSelected#0;class#CategoryFragment#0" expanded="false" />
+            <element signature="method#addCategory#0;class#CategoryFragment#0" expanded="false" />
+            <element signature="method#deleteCategory#0;class#CategoryFragment#0" expanded="false" />
+            <element signature="method#updateCategory#0;class#CategoryFragment#0" expanded="false" />
+            <element signature="method#clearFields#0;class#CategoryFragment#0" expanded="false" />
+            <element signature="method#CategorytTableColumn#0;class#CategoryFragment#0" expanded="false" />
+            <element signature="e#6182#6198#0" expanded="true" />
+            <element signature="class#CategorytItem#0;class#CategoryFragment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="202" column="19" lean-forward="false" selection-start-line="202" selection-start-column="19" selection-end-line="202" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onTableItemSelected#0;class#CategoryFragment#0" />
-            <element signature="method#addCategory#0;class#CategoryFragment#0" />
-            <element signature="method#deleteCategory#0;class#CategoryFragment#0" />
-            <element signature="method#updateCategory#0;class#CategoryFragment#0" />
+            <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
+            <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" expanded="false" />
+            <marker date="1536416180734" expanded="true" signature="755:907" ph="INSERT INTO MarketProduct... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2588" ph="UPDATE Marke... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2709" ph="UPDATE Marke... " />
+            <marker date="1536416180734" expanded="true" signature="2567:2737" ph="UPDATE Marke... " />
           </folding>
         </state>
       </provider>
@@ -1066,25 +955,59 @@
         <state relative-caret-position="405">
           <caret line="78" column="23" lean-forward="true" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
           <folding>
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="method#addCategory#0;class#CategoryDataBaseSingleton#0" />
-            <element signature="method#deleteCategory#0;class#CategoryDataBaseSingleton#0" />
-            <element signature="method#updateCategory#0;class#CategoryDataBaseSingleton#0" />
+            <element signature="method#addCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
+            <element signature="method#deleteCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
+            <element signature="method#updateCategory#0;class#CategoryDataBaseSingleton#0" expanded="false" />
+            <marker date="1536435769819" expanded="true" signature="724:787" ph="INSERT INTO MarketCategory... " />
+            <marker date="1536435769819" expanded="true" signature="2142:2199" ph="UPDATE Marke... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding>
+            <element signature="e#1089#1090#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="103" column="37" lean-forward="true" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="37" />
+        <state relative-caret-position="23">
+          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
           <folding>
-            <element signature="method#addSeller#0;class#SellerDataBaseSingleton#0" />
-            <element signature="method#deleteSeller#0;class#SellerDataBaseSingleton#0" />
-            <element signature="method#updateSeller#0;class#SellerDataBaseSingleton#0" />
->>>>>>> e8b1ddfa51d72ecf37ab6008211b36f776f79df9
+            <marker date="1536449011560" expanded="true" signature="705:775" ph="INSERT INTO MarketCategory... " />
+            <marker date="1536449011560" expanded="true" signature="2139:2214" ph="UPDATE MARKE... " />
+            <marker date="1536449011560" expanded="true" signature="3167:3212" ph="SELECT * FRO... MARKETUSER" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
