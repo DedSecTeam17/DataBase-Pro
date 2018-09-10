@@ -21,11 +21,9 @@ import sample.UiValidation.UiValidation;
 import java.time.LocalDate;
 
 public class ProductFragment {
-
-
-       public static final double COLUMN_WIDTH =831/6 ;
-       public ObservableList<ProductItem> codeObservableList;
-       public FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
+    public static final double COLUMN_WIDTH =831/6 ;
+    public ObservableList<ProductItem> codeObservableList;
+    public FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
     public  void  onTableItemSelected(JFXTextField p_name,JFXTextField p_price,JFXTextField p_company,JFXTextField p_quantity,JFXDatePicker p_date,JFXDatePicker expi_date,JFXTreeTableView treeTableView)
     {
         treeTableView.setOnMouseClicked(new EventHandler<MouseEvent>() {
