@@ -22,7 +22,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="877.0" layoutY="674.0"  prefHeight="57.0" prefWidth="97.0">
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="877.0" layoutY="674.0" prefHeight="57.0" prefWidth="97.0">
                            <graphic>
                               <ImageView fitHeight="49.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -36,7 +36,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <JFXButton layoutX="706.0" layoutY="28.0"  prefHeight="25.0" prefWidth="80.0" text="Log out" textFill="#e4e4e4" />
+                        <JFXButton layoutX="706.0" layoutY="28.0" prefHeight="25.0" prefWidth="80.0" text="Log out" textFill="#e4e4e4" />
                         <JFXTreeTableView fx:id="seller_products_table" layoutX="37.0" layoutY="28.0" prefHeight="646.0" prefWidth="831.0" style="-fx-background-radius: 5px;" stylesheets="@../css/design.css">
                            <effect>
                               <DropShadow radius="6.2925" width="6.17" />

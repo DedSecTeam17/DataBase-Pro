@@ -8,9 +8,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import sample.AdminUI.fragmnets.CategoryFragment;
 import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
 import sample.MarketModel.Transaction;
+import sample.SellerUI.Fragments.CartFragments;
 import sample.SellerUI.Fragments.SellerProductsFragment;
 
 import java.net.URL;
@@ -48,6 +50,7 @@ public class SellerController implements Initializable {
     private JFXButton add_all_cart_item_into_transaction;
 
     private SellerProductsFragment sellerProductsFragment;
+    private CartFragments cartFragments;
     private List<Transaction> transactions;
 
 
@@ -55,8 +58,49 @@ public class SellerController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         transactions=new ArrayList<>();
         sellerProductsFragment=new SellerProductsFragment();
+        cartFragments =new CartFragments();
+
+        setupSellerProductOperations();
+        setupCartOperations();
+
+
+
+    }
+
+    private void setupCartOperations() {
         try {
-            sellerProductsFragment.CartTableColumn(seller_products_table);
+            cartFragments.CartTableColumn(cart_table,transactions);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        delete_cart_item.setOnAction(event ->
+        {
+            try {
+                cartFragments.deleteCartItem(cart_table,transactions);
+                for (Transaction transaction:transactions)
+                {
+                    Log.i(transaction.getProductName()+" \t"+transaction.getSellingPrice());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        add_all_cart_item_into_transaction.setOnAction(event ->
+        {
+            try {
+                cartFragments.SellAllProducts(transactions);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        );
+    }
+
+    private void setupSellerProductOperations() {
+        try {
+            sellerProductsFragment.SellerProductsTableColumn(seller_products_table);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -69,13 +113,12 @@ public class SellerController implements Initializable {
                 {
                     Log.i(transaction.getProductName()+" \t"+transaction.getSellingPrice());
                 }
+                cartFragments.CartTableColumn(cart_table,transactions);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-
-
-
     }
 
 }

@@ -9,7 +9,7 @@ import sample.MarketSingeltons.ProductDataBaseSingleton;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ProductOperations implements CrudOperations ,AdminPrivilidgeOpertation{
+public class ProductOperations implements CrudOperations ,AdminPrivilidgeOpertation,SellerPrivilegeOperation {
     @Override
     public String insertUser(User user) {
         return null;
@@ -82,5 +82,11 @@ public class ProductOperations implements CrudOperations ,AdminPrivilidgeOpertat
     public List<Product> getAllAdminProducts() throws SQLException, ClassNotFoundException {
 
         return ProductDataBaseSingleton.getInstance().getAllProduct();
+    }
+
+    @Override
+    public List<Product> getAllProductForSellers() throws SQLException, ClassNotFoundException {
+
+        return ProductDataBaseSingleton.getInstance().getAllProductForSellers();
     }
 }

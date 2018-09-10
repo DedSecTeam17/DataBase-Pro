@@ -28,8 +28,8 @@ public class SellerProductsFragment
 {
 
 
-    private ObservableList<CartItem> codeObservableList;
-    private static final double COLUMN_WIDTH =70 ;
+    private ObservableList<SellerProductsItem> codeObservableList;
+    private static final double COLUMN_WIDTH =831/3;
     private FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
 
     public  void  addCategoryItem(JFXTextField quantity, Label quantity_hint , Label selectedItemName, Label selectItemSellingPrice, JFXTreeTableView sellerProductTable, List<Transaction> transactions) throws Exception {
@@ -41,7 +41,7 @@ public class SellerProductsFragment
                             build();
             transactions.add(transaction);
 //            updeate new quantity
-            CartTableColumn(sellerProductTable);
+            SellerProductsTableColumn(sellerProductTable);
             clearFields(quantity,selectedItemName,selectItemSellingPrice);
         } else {
             UiValidation.validateInput(quantity, quantity_hint, "empty filed not allowed", "not valid", "valid", "num");
@@ -56,7 +56,7 @@ public class SellerProductsFragment
             public void handle(MouseEvent event) {
                 Log.e("clicked");
                 int r_index = treeTableView.getSelectionModel().getSelectedIndex();
-                CartItem cartItem = codeObservableList.get(r_index);
+                SellerProductsItem cartItem = codeObservableList.get(r_index);
                 StringProperty _name = cartItem.productName;
                 StringProperty _price = cartItem.productSellingPrice;
                 name.setText(_name.getValue());
@@ -79,31 +79,31 @@ public class SellerProductsFragment
         selectedItemName.setText("");
         selectItemSellingPrice.setText("");
     }
-    public void CartTableColumn(JFXTreeTableView cat_tree_table) throws Exception {
-        JFXTreeTableColumn< CartItem, String> name = new JFXTreeTableColumn<>("product name");
+    public void SellerProductsTableColumn(JFXTreeTableView cat_tree_table) throws Exception {
+        JFXTreeTableColumn< SellerProductsItem, String> name = new JFXTreeTableColumn<>("product name");
         name.setPrefWidth(COLUMN_WIDTH);
-        name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures< CartItem, String>, ObservableValue<String>>() {
+        name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures< SellerProductsItem, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures< CartItem, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures< SellerProductsItem, String> param) {
                 return param.getValue().getValue().productName;
             }
         });
 
 
-        JFXTreeTableColumn< CartItem, String> price = new JFXTreeTableColumn<>("product selling price");
+        JFXTreeTableColumn< SellerProductsItem, String> price = new JFXTreeTableColumn<>("product selling price");
         price.setPrefWidth(COLUMN_WIDTH);
-        price.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures< CartItem, String>, ObservableValue<String>>() {
+        price.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures< SellerProductsItem, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures< CartItem, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures< SellerProductsItem, String> param) {
                 return param.getValue().getValue().productSellingPrice;
             }
         });
 
-        JFXTreeTableColumn< CartItem, String> quantity = new JFXTreeTableColumn<>("product quantity");
+        JFXTreeTableColumn< SellerProductsItem, String> quantity = new JFXTreeTableColumn<>("product quantity");
         quantity.setPrefWidth(COLUMN_WIDTH);
-        quantity.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures< CartItem, String>, ObservableValue<String>>() {
+        quantity.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures< SellerProductsItem, String>, ObservableValue<String>>() {
             @Override
-            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<CartItem, String> param) {
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<SellerProductsItem, String> param) {
                 return param.getValue().getValue().productQuantity;
             }
         });
@@ -121,23 +121,23 @@ public class SellerProductsFragment
         
         }
         codeObservableList = FXCollections.observableArrayList();
-        for (Product product : facadeMarketProvider.getAllProduct()
+        for (Product product : facadeMarketProvider.getAllProductForSellers()
                 ) {
-            codeObservableList.add(new CartItem(product.getProductName(),product.getProductPrice(),product.getQuantity()));
+            codeObservableList.add(new SellerProductsItem(product.getProductName(),product.getProductPrice(),product.getQuantity()));
         }
-        final TreeItem< CartItem> root = new RecursiveTreeItem< CartItem>(codeObservableList, RecursiveTreeObject::getChildren);
+        final TreeItem< SellerProductsItem> root = new RecursiveTreeItem< SellerProductsItem>(codeObservableList, RecursiveTreeObject::getChildren);
         cat_tree_table.getColumns().setAll(name, price,quantity);
         cat_tree_table.setRoot(root);
         cat_tree_table.setShowRoot(false);
 
 
     }
-    class CartItem extends RecursiveTreeObject<CartItem> {
+    class SellerProductsItem extends RecursiveTreeObject<SellerProductsItem> {
         StringProperty productName;
         StringProperty productSellingPrice;
         StringProperty productQuantity;
 
-        public CartItem(String productName, int productSellingPrice,int productQuantity) {
+        public SellerProductsItem(String productName, int productSellingPrice,int productQuantity) {
             this.productName = new SimpleStringProperty(productName);
             this.productSellingPrice = new SimpleStringProperty(String.valueOf(productSellingPrice));
             this.productQuantity = new SimpleStringProperty(String.valueOf(productQuantity));

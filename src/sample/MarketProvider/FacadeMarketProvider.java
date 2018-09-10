@@ -116,4 +116,8 @@ public class FacadeMarketProvider {
         return productOperations.getAllAdminProducts();
     }
 
+    public List<Product> getAllProductForSellers() throws SQLException, ClassNotFoundException {
+        return productOperations.getAllProductForSellers();
+    }
+
 }

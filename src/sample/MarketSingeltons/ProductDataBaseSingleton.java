@@ -138,4 +138,38 @@ public class ProductDataBaseSingleton {
         }
         return products;
     }
+    public List<Product> getAllProductForSellers() throws SQLException, ClassNotFoundException {
+        Connection connection = null;
+//        product_name,product_price,production_date,expired_date,production_company,admin_email
+        connection = Config.getInstance().getConnection();
+
+        String sql = String.format("SELECT  * FROM  MarketProduct   ORDER  by production_date ASC ");
+        PreparedStatement statement = null;
+        statement = connection.prepareStatement(sql);
+
+        ResultSet SET = statement.executeQuery(sql);
+        List<Product> products = new ArrayList<>(20);
+        while (SET.next()) {
+            String p_name = SET.getString("product_name");
+            int p_price = SET.getInt("product_price");
+            String p_date = SET.getString("production_date");
+            String p_expi_date = SET.getString("expired_date");
+            String p_company = SET.getString("production_company");
+            int p_quantity = SET.getInt("PRODUCT_QUANTITY");
+
+            Product product = Product.newProduct()
+                    .productName(p_name)
+                    .productPrice(p_price)
+                    .productedCompany(p_company)
+                    .productionDate(p_date)
+                    .expiredDate(p_expi_date)
+                    .quantity(p_quantity)
+                    .build();
+
+
+            products.add(product);
+        }
+        return products;
+    }
+
 }

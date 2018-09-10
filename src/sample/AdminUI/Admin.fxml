@@ -22,11 +22,9 @@
    <children>
       <AnchorPane fx:id="admin_main_pane" prefHeight="600.0" prefWidth="1039.0" style="-fx-background-color: #22313f;">
          <children>
-<<<<<<< HEAD
+
             <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1286.0" style="-fx-background-color: #22313f;" visible="false">
-=======
-            <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1288.0" style="-fx-background-color: #22313f;" visible="false">
->>>>>>> 9860c2da435f41fae019b3eef6f061ea78f58ff3
+
                <children>
                   <JFXTreeTableView layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-radius: 5;">
                      <effect>
@@ -57,11 +55,9 @@
             </AnchorPane>
 
 
-<<<<<<< HEAD
+
             <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
-=======
-            <AnchorPane fx:id="productsPanel" prefHeight="768.0" prefWidth="1288.0" style="-fx-background-color: #22313f;" visible="false">
->>>>>>> 9860c2da435f41fae019b3eef6f061ea78f58ff3
+
                <children>
                   <JFXTreeTableView fx:id="products_table" layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../css/design.css">
                      <effect>

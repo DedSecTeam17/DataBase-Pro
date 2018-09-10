@@ -77,10 +77,6 @@ public class CategoryFragment
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-
     }
     public  void  updateCategory(JFXTextField name,JFXTextField id,Label id_hint,Label name_hint,JFXTreeTableView treeTableView) throws Exception {
         if (!id.getText().equals("") && !name.getText().equals("") ) {

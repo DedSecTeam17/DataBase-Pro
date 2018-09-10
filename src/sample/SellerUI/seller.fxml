@@ -90,7 +90,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <JFXTreeTableView layoutX="46.0" layoutY="38.0" prefHeight="461.0" prefWidth="709.0" />
-                        <JFXButton layoutX="46.0" layoutY="524.0" onAction="#viewTransaction" prefHeight="25.0" prefWidth="105.0" text="Transaction info" textFill="#dadada" />
+                        <JFXButton layoutX="46.0" layoutY="524.0"  prefHeight="25.0" prefWidth="105.0" text="Transaction info" textFill="#dadada" />
                      </children>
                   </AnchorPane>
               </content>
