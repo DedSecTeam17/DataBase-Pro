@@ -161,7 +161,7 @@
                </children>
             </AnchorPane>
 
-            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1286.0">
+            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1286.0" visible="false">
 
                <children>
                   <ImageView fitHeight="768.0" fitWidth="1288.0" pickOnBounds="true" preserveRatio="false">

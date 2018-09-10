@@ -22,7 +22,7 @@
    <children>
       <AnchorPane fx:id="admin_main_pane" prefHeight="600.0" prefWidth="1039.0" style="-fx-background-color: #22313f;">
          <children>
-            <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1286.0" style="-fx-background-color: #22313f;">
+            <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1286.0" style="-fx-background-color: #22313f;" visible="false">
                <children>
                   <JFXTreeTableView layoutX="45.0" layoutY="70.0" prefHeight="513.0" prefWidth="610.0" />
                   <Pane layoutX="670.0" layoutY="70.0" prefHeight="350.0" prefWidth="216.0" style="-fx-background-color: white; -fx-border-radius: 5px;">
@@ -44,7 +44,7 @@
             </AnchorPane>
 
 
-            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;" visible="false">
+            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
                <children>
                   <JFXTreeTableView fx:id="products_table" layoutX="12.0" layoutY="50.0" prefHeight="646.0" prefWidth="831.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../css/design.css">
                      <effect>
