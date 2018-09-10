@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a68062-2ee8-4f21-8895-d66f3fd38b10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Images/test.MKV" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/Images/test.mp4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/Login.fxml" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/Login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/Query/sql.sql" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/Query/sql.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" afterPath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" afterPath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Login.fxml" afterPath="$PROJECT_DIR$/src/sample/Login.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Images/test.MKV" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/sample/Images/test.mp4" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -264,6 +250,13 @@
               <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="MarketProvider" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -502,16 +495,15 @@
       <workItem from="1536520081846" duration="29000" />
       <workItem from="1536559754716" duration="1040000" />
       <workItem from="1536574973095" duration="2509000" />
-      <workItem from="1536580749181" duration="253000" />
+      <workItem from="1536580749181" duration="756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9674000" />
+    <option name="totallyTimeSpent" value="10177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -525,7 +517,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2980333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32223904" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
