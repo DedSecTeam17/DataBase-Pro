@@ -15,95 +15,104 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
+<StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
 
 
 
    <children>
       <AnchorPane fx:id="admin_main_pane" prefHeight="600.0" prefWidth="1039.0" style="-fx-background-color: #22313f;">
          <children>
-            <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1286.0" style="-fx-background-color: #22313f;">
+            <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1288.0" style="-fx-background-color: #22313f;" visible="false">
                <children>
-                  <JFXTreeTableView layoutX="45.0" layoutY="70.0" prefHeight="513.0" prefWidth="610.0" />
-                  <Pane layoutX="670.0" layoutY="70.0" prefHeight="350.0" prefWidth="216.0" style="-fx-background-color: white; -fx-border-radius: 5px;">
+                  <JFXTreeTableView layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect></JFXTreeTableView>
+                  <Pane layoutX="900.0" layoutY="60.0" prefHeight="450.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5;">
                      <children>
-                        <JFXTextField layoutX="14.0" layoutY="14.0" prefWidth="160.0" promptText="Username" />
-                        <JFXTextField layoutX="14.0" layoutY="64.0" prefWidth="160.0" promptText="Email" />
-                        <JFXTextField layoutX="14.0" layoutY="114.0" prefWidth="160.0" promptText="Password" />
-                        <JFXTextField layoutX="14.0" layoutY="164.0" prefWidth="160.0" promptText="Phone number" />
+                        <JFXTextField layoutX="50.0" layoutY="50.0" prefHeight="25.0" prefWidth="220.0" promptText="Username" />
+                        <JFXTextField layoutX="50.0" layoutY="100.0" prefHeight="25.0" prefWidth="220.0" promptText="Email" />
+                        <JFXTextField layoutX="50.0" layoutY="150.0" prefHeight="25.0" prefWidth="220.0" promptText="Password" />
+                        <JFXTextField layoutX="50.0" layoutY="200.0" prefHeight="25.0" prefWidth="220.0" promptText="Phone number" />
                      </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Pane>
-                  <Pane layoutX="670.0" layoutY="437.0" prefHeight="149.0" prefWidth="216.0" style="-fx-background-color: white; -fx-border-radius: 5px;">
+                  <Pane layoutX="900.0" layoutY="530.0" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5;">
                      <children>
-                        <JFXButton layoutX="28.0" layoutY="14.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton layoutX="28.0" layoutY="110.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
-                        <JFXButton layoutX="28.0" layoutY="62.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Update" textFill="WHITE" />
+                        <JFXButton layoutX="28.0" layoutY="14.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton layoutX="28.0" layoutY="131.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
+                        <JFXButton layoutX="28.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Update" textFill="WHITE" />
                      </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Pane>
                </children>
             </AnchorPane>
 
 
-            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;" visible="false">
+            <AnchorPane fx:id="productsPanel" prefHeight="768.0" prefWidth="1288.0" style="-fx-background-color: #22313f;" visible="false">
                <children>
-                  <JFXTreeTableView fx:id="products_table" layoutX="12.0" layoutY="50.0" prefHeight="646.0" prefWidth="831.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../css/design.css">
+                  <JFXTreeTableView fx:id="products_table" layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../css/design.css">
                      <effect>
                         <DropShadow radius="6.54" width="7.16" />
                      </effect></JFXTreeTableView>
-                  <Pane layoutX="857.0" layoutY="50.0" prefHeight="451.0" prefWidth="321.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                  <Pane layoutX="900.0" layoutY="60.0" prefHeight="450.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <effect>
                         <DropShadow radius="6.2925" width="6.17" />
                      </effect>
                      <children>
-                        <JFXTextField fx:id="p_name" layoutX="57.0" layoutY="46.0" prefHeight="25.0" prefWidth="216.0" promptText="Product Name" />
-                        <JFXTextField fx:id="p_price" layoutX="57.0" layoutY="98.0" prefHeight="25.0" prefWidth="207.0" promptText="Purchase Price" />
-                        <JFXTextField fx:id="p_company" layoutX="57.0" layoutY="146.0" prefHeight="25.0" prefWidth="207.0" promptText="Company" />
-                        <JFXTextField fx:id="p_quantity" layoutX="59.0" layoutY="197.0" prefHeight="25.0" prefWidth="207.0" promptText="Quantity" />
-                        <JFXDatePicker fx:id="p_date" layoutX="57.0" layoutY="249.0" prefHeight="25.0" prefWidth="233.0" promptText="Producton Date" />
-                        <JFXDatePicker fx:id="expi_date" layoutX="57.0" layoutY="303.0" prefHeight="25.0" prefWidth="233.0" promptText="Expiration Date" />
-                        <Label fx:id="p_name_hint" layoutX="40.0" layoutY="81.0" />
-                        <Label fx:id="p_price_hint" layoutX="40.0" layoutY="129.0" />
-                        <Label fx:id="p_company_hint" layoutX="40.0" layoutY="180.0" />
-                        <Label fx:id="p_quantity_hint" layoutX="40.0" layoutY="232.0" />
-                        <Label fx:id="produ_hint" layoutX="40.0" layoutY="286.0" />
-                        <Label fx:id="p_expi_hint" layoutX="40.0" layoutY="340.0" />
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                        <JFXTextField fx:id="p_name" layoutX="50.0" layoutY="50.0" prefHeight="25.0" prefWidth="220.0" promptText="Product Name" />
+                        <JFXTextField fx:id="p_price" layoutX="50.0" layoutY="100.0" prefHeight="25.0" prefWidth="220.0" promptText="Purchase Price" />
+                        <JFXTextField fx:id="p_company" layoutX="50.0" layoutY="150.0" prefHeight="25.0" prefWidth="220.0" promptText="Company" />
+                        <JFXTextField fx:id="p_quantity" layoutX="50.0" layoutY="200.0" prefHeight="25.0" prefWidth="220.0" promptText="Quantity" />
+                        <JFXDatePicker fx:id="p_date" layoutX="50.0" layoutY="250.0" prefHeight="25.0" prefWidth="220.0" promptText="Producton Date" />
+                        <JFXDatePicker fx:id="expi_date" layoutX="50.0" layoutY="300.0" prefHeight="25.0" prefWidth="220.0" promptText="Expiration Date" />
+                        <Label fx:id="p_name_hint" layoutX="50.0" layoutY="80.0" />
+                        <Label fx:id="p_price_hint" layoutX="50.0" layoutY="130.0" />
+                        <Label fx:id="p_company_hint" layoutX="50.0" layoutY="180.0" />
+                        <Label fx:id="p_quantity_hint" layoutX="50.0" layoutY="230.0" />
+                        <Label fx:id="produ_hint" layoutX="50.0" layoutY="280.0" />
+                        <Label fx:id="p_expi_hint" layoutX="50.0" layoutY="330.0" />
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/product.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/price.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/company.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/quant.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/start_time.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="14.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/expired.png" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane layoutX="858.0" layoutY="516.0" prefHeight="178.0" prefWidth="321.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                  <Pane layoutX="900.0" layoutY="530.0" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <children>
-                        <JFXButton fx:id="add_product" layoutX="40.0" layoutY="24.0" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton fx:id="update_product" layoutX="40.0" layoutY="72.0" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #81cfe0;" text="Update" textFill="WHITE" />
-                        <JFXButton fx:id="delete_product" layoutX="40.0" layoutY="119.0" prefHeight="34.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
+                        <JFXButton fx:id="add_product" layoutX="35.0" layoutY="14.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton fx:id="update_product" layoutX="35.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #81cfe0;" text="Update" textFill="WHITE" />
+                        <JFXButton fx:id="delete_product" layoutX="35.0" layoutY="131.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
                      </children>
                      <effect>
                         <DropShadow radius="6.54" width="7.16" />
@@ -111,57 +120,65 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="transactionsPanel" prefHeight="768.0" prefWidth="1270.0" style="-fx-background-color: #22313f;" visible="false">
+            <AnchorPane fx:id="transactionsPanel" prefHeight="768.0" prefWidth="1288.0" style="-fx-background-color: #22313f;" visible="false">
                <children>
-                  <JFXTreeTableView layoutX="45.0" layoutY="70.0" prefHeight="513.0" prefWidth="630.0" />
-                  <Pane layoutX="682.0" layoutY="70.0" prefHeight="363.0" prefWidth="207.0" style="-fx-background-color: white; -fx-border-radius: 5;">
+                  <JFXTreeTableView layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-radius: 5;">
+                     <effect>
+                        <DropShadow />
+                     </effect></JFXTreeTableView>
+                  <Pane layoutX="900.0" layoutY="60.0" prefHeight="450.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5;">
                      <children>
-                        <JFXTextField layoutX="24.0" layoutY="14.0" prefHeight="25.0" prefWidth="160.0" promptText="Selling Price" />
+                        <JFXTextField layoutX="50.0" layoutY="50.0" prefHeight="25.0" prefWidth="220.0" promptText="Selling Price" />
                      </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Pane>
-                  <Pane layoutX="682.0" layoutY="445.0" prefHeight="138.0" prefWidth="207.0" style="-fx-background-color: white; -fx-border-radius: 5;">
+                  <Pane layoutX="900.0" layoutY="530.0" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5;">
                      <children>
-                        <JFXButton layoutX="20.0" layoutY="22.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Update" textFill="#f8f8f8" />
-                        <JFXButton layoutX="20.0" layoutY="88.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="#f8f8f8" />
+                        <JFXButton layoutX="35.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="#f8f8f8" />
                      </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="categoriesPanel" prefHeight="768.0" prefWidth="1270.0" visible="false">
+            <AnchorPane fx:id="categoriesPanel" prefHeight="768.0" prefWidth="1288.0" visible="false">
                <children>
-                  <JFXTreeTableView fx:id="categor_tree_table" layoutX="341.0" layoutY="70.0" prefHeight="513.0" prefWidth="314.0" style="-fx-background-radius: 5px;">
+                  <JFXTreeTableView fx:id="categor_tree_table" layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-radius: 5px;">
                      <effect>
                         <DropShadow radius="6.54" width="7.16" />
                      </effect></JFXTreeTableView>
-                  <Pane layoutX="679.0" layoutY="70.0" prefHeight="350.0" prefWidth="207.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                  <Pane layoutX="900.0" layoutY="60.0" prefHeight="450.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <children>
-                        <JFXTextField fx:id="cat_id" layoutX="51.0" layoutY="71.0" prefHeight="25.0" prefWidth="143.0" promptText="Id" />
-                        <JFXTextField fx:id="cat_name" layoutX="51.0" layoutY="163.0" prefHeight="25.0" prefWidth="143.0" promptText="Name" />
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                        <JFXTextField fx:id="cat_id" layoutX="50.0" layoutY="50.0" prefHeight="25.0" prefWidth="220.0" promptText="Id" />
+                        <JFXTextField fx:id="cat_name" layoutX="50.0" layoutY="100.0" prefHeight="25.0" prefWidth="220.0" promptText="Name" />
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/id.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/cat.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="cat_id_hint" layoutX="51.0" layoutY="105.0" />
-                        <Label fx:id="cat_name_hint" layoutX="51.0" layoutY="198.0" />
+                        <Label fx:id="cat_id_hint" layoutX="50.0" layoutY="80.0" />
+                        <Label fx:id="cat_name_hint" layoutX="50.0" layoutY="130.0" />
                      </children>
                   </Pane>
-                  <Pane layoutX="679.0" layoutY="434.0" prefHeight="149.0" prefWidth="207.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                  <Pane layoutX="900.0" layoutY="530.0" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                      <children>
-                        <JFXButton fx:id="add_cat" layoutX="20.0" layoutY="14.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton fx:id="remove_cat" layoutX="20.0" layoutY="110.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
-                        <JFXButton fx:id="update_cat" layoutX="20.0" layoutY="62.0" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #59abe3;" text="Update" textFill="WHITE" />
+                        <JFXButton fx:id="add_cat" layoutX="35.0" layoutY="14.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton fx:id="remove_cat" layoutX="35.0" layoutY="131.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
+                        <JFXButton fx:id="update_cat" layoutX="35.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #59abe3;" text="Update" textFill="WHITE" />
                      </children>
                   </Pane>
                </children>
             </AnchorPane>
 
-            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1286.0" visible="false">
+            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1288.0">
 
                <children>
                   <ImageView fitHeight="768.0" fitWidth="1288.0" pickOnBounds="true" preserveRatio="false">
