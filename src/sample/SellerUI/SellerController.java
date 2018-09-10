@@ -10,113 +10,72 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
+import sample.MarketModel.Transaction;
+import sample.SellerUI.Fragments.SellerProductsFragment;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class SellerController implements Initializable {
 
-    @FXML private JFXListView productsList;
+    @FXML
+    private JFXTreeTableView<?> seller_products_table;
 
-    @FXML private AnchorPane transactionDialog;
+    @FXML
+    private JFXButton add_item_to_cart;
 
-    @FXML private AnchorPane cartPane;
+    @FXML
+    private Label selected_product_name;
 
-    @FXML private AnchorPane transactionInfo;
+    @FXML
+    private JFXTextField customer_quantity;
 
-    @FXML private JFXTreeTableView cart;
+    @FXML
+    private Label selected_product_price;
 
-    @FXML JFXButton startTransactionButton;
-    @FXML JFXButton ok;
+    @FXML
+    private Label quantity_hint;
 
+    @FXML
+    private JFXTreeTableView<?> cart_table;
 
-    @FXML JFXTextField spField;
-    @FXML JFXTextField quantityField;
+    @FXML
+    private JFXButton delete_cart_item;
 
-    //save transaction info
-    public class transaction
-    {
-        transaction(String name , int sp , int quantity)
-        {
-            this.name = name;
-            this.sellingPrice = sp;
-            this.quantity = quantity;
-        }
-        String name;
-        int sellingPrice;
-        int quantity;
+    @FXML
+    private JFXButton add_all_cart_item_into_transaction;
 
-    }
+    private SellerProductsFragment sellerProductsFragment;
+    private List<Transaction> transactions;
 
-    ArrayList<transaction> cartList = new ArrayList<>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Log.i("Seller  debugging----->"+ Auth.getInstance().getCurrentUser());
-
-        //create 20 dummy test list elements
-        for (int i = 0; i < 20; i++) { testList(); }
-
-        //show the transaction dialog (selling price,quantity fields ) after selecting the product you wanna add
-        startTransactionButton.setOnAction(event -> transactionDialog.setVisible(!transactionDialog.isVisible()));
-        ok.setOnAction(event -> hideAllPanes());
-
-    }
-
-    @FXML public void cartButtonClicked()
-    {
-        cartPane.setVisible(true);
-    }
-
-    @FXML public void addToCart()
-    {
-
-        //add a new item to cart after selecting the name
-        //from the list view and the selling price ,quantity
-        //from the text fields
-
-        String name = ((Label)(productsList.getSelectionModel().getSelectedItem())).getText();
-
-        int sp = Integer.parseInt(spField.getText()) ;
-        int quantity = Integer.parseInt(quantityField.getText()) ;
-
-        transaction temp = new transaction(name , sp , quantity);
-
-        cartList.add(temp);
-        hideAllPanes();
-    }
-
-    void testList()
-    {
-        //just to test the JFX list view
-        Label dummy_item = new Label("dummy item");
-        productsList.getItems().add(dummy_item);
-    }
+        transactions=new ArrayList<>();
+        sellerProductsFragment=new SellerProductsFragment();
+        try {
+            sellerProductsFragment.CartTableColumn(seller_products_table);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        sellerProductsFragment.onTableItemSelected(seller_products_table,selected_product_name,selected_product_price);
+        add_item_to_cart.setOnAction(event ->
+        {
+            try {
+                sellerProductsFragment.addCategoryItem(customer_quantity,quantity_hint,selected_product_name,selected_product_price,seller_products_table,transactions);
+                for (Transaction transaction:transactions)
+                {
+                    Log.i(transaction.getProductName()+" \t"+transaction.getSellingPrice());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 
 
-    void hideAllPanes()
-    {
-        //clear panes on screen
-        cartPane.setVisible(false);
-        transactionDialog.setVisible(false);
-    }
 
-    @FXML void cartCheckOut()
-    {
-        hideAllPanes();
-        //Code to add the transactions list to the transactions table in the database
-    }
-
-    @FXML void sellerLogOut()
-    {
-        //code to return to the main login scene
-    }
-
-    @FXML void viewTransaction()
-    {
-        hideAllPanes();
-        transactionInfo.setVisible(true);
     }
 
 }

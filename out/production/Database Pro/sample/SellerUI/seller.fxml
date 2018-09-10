@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXListView?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -16,7 +14,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SellerUI.SellerController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SellerUI.SellerController">
    <children>
       <JFXTabPane>
          <tabs>
@@ -24,8 +22,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <JFXTextField layoutX="400.0" layoutY="123.0" prefHeight="25.0" prefWidth="207.0" promptText="Search...." />
-                        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="695.0" layoutY="496.0" onAction="#cartButtonClicked" prefHeight="47.0" prefWidth="53.0">
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="877.0" layoutY="674.0"  prefHeight="57.0" prefWidth="97.0">
                            <graphic>
                               <ImageView fitHeight="49.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -34,14 +31,56 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXListView fx:id="productsList" layoutX="45.0" layoutY="82.0" prefHeight="431.0" prefWidth="329.0" />
-                        <JFXButton fx:id="startTransactionButton" layoutX="400.0" layoutY="179.0" prefHeight="25.0" prefWidth="105.0" text="Add to cart" textFill="#cdcdcd" />
                         <Label layoutX="45.0" layoutY="14.0" prefHeight="52.0" prefWidth="234.0" text="Seller Name" textFill="WHITE">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <JFXButton layoutX="706.0" layoutY="28.0" onAction="#sellerLogOut" prefHeight="25.0" prefWidth="80.0" text="Log out" textFill="#e4e4e4" />
+                        <JFXButton layoutX="706.0" layoutY="28.0"  prefHeight="25.0" prefWidth="80.0" text="Log out" textFill="#e4e4e4" />
+                        <JFXTreeTableView fx:id="seller_products_table" layoutX="37.0" layoutY="28.0" prefHeight="646.0" prefWidth="831.0" style="-fx-background-radius: 5px;" stylesheets="@../css/design.css">
+                           <effect>
+                              <DropShadow radius="6.2925" width="6.17" />
+                           </effect>
+                        </JFXTreeTableView>
+                        <Pane layoutX="906.0" layoutY="28.0" prefHeight="200.0" prefWidth="321.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                           <children>
+                              <JFXButton fx:id="add_item_to_cart" layoutX="14.0" layoutY="139.0" prefHeight="35.0" prefWidth="294.0" style="-fx-background-color: #03c9a9;" text="Add to cart" textFill="#cdcdcd" />
+                              <Label fx:id="selected_product_name" layoutX="14.0" layoutY="38.0" text="Label">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="customer_quantity" layoutX="55.0" layoutY="75.0" prefHeight="25.0" prefWidth="253.0" />
+                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="17.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/quant.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="selected_product_price" layoutX="127.0" layoutY="38.0" text="Label">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="quantity_hint" layoutX="56.0" layoutY="110.0" text="Label" />
+                           </children>
+                           <effect>
+                              <DropShadow radius="6.2925" width="6.17" />
+                           </effect>
+                        </Pane>
+                        <JFXTreeTableView fx:id="cart_table" layoutX="906.0" layoutY="241.0" prefHeight="301.0" prefWidth="322.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                           <effect>
+                              <DropShadow radius="6.2925" width="6.17" />
+                           </effect>
+                        </JFXTreeTableView>
+                        <Pane layoutX="906.0" layoutY="552.0" prefHeight="119.0" prefWidth="323.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                           <effect>
+                              <DropShadow radius="6.2925" width="6.17" />
+                           </effect>
+                           <children>
+                              <JFXButton fx:id="delete_cart_item" layoutX="15.0" layoutY="25.0" prefHeight="35.0" prefWidth="294.0" style="-fx-background-color: #f64747;" text="delete" textFill="#cdcdcd" />
+                              <JFXButton fx:id="add_all_cart_item_into_transaction" layoutX="15.0" layoutY="70.0" prefHeight="35.0" prefWidth="294.0" style="-fx-background-color: #81cfe0;" text="sell" textFill="#cdcdcd" />
+                           </children>
+                        </Pane>
                      </children>
                   </AnchorPane>
               </content>
@@ -51,52 +90,12 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <JFXTreeTableView layoutX="46.0" layoutY="38.0" prefHeight="461.0" prefWidth="709.0" />
-                        <JFXButton layoutX="46.0" layoutY="524.0" onAction="#viewTransaction" prefHeight="25.0" prefWidth="105.0" text="Transaction info" textFill="#dadada" />
+                        <JFXButton layoutX="46.0" layoutY="524.0"  prefHeight="25.0" prefWidth="105.0" text="Transaction info" textFill="#dadada" />
                      </children>
                   </AnchorPane>
               </content>
             </Tab>
          </tabs>
       </JFXTabPane>
-      <AnchorPane fx:id="transactionDialog" opacity="0.75" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" visible="false">
-         <children>
-            <JFXTextField fx:id="spField" layoutX="301.0" layoutY="248.0" prefHeight="25.0" prefWidth="199.0" promptText="Selling price" />
-            <JFXTextField fx:id="quantityField" layoutX="301.0" layoutY="288.0" prefHeight="25.0" prefWidth="199.0" promptText="Quantity" />
-            <JFXButton layoutX="348.0" layoutY="339.0" onAction="#addToCart" prefHeight="25.0" prefWidth="105.0" text="Add" textFill="#a1a1a1" underline="true" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="cartPane" opacity="0.95" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" visible="false">
-         <children>
-            <JFXTreeTableView fx:id="cart" layoutX="87.0" layoutY="107.0" prefHeight="387.0" prefWidth="626.0">
-               <columns>
-                  <TreeTableColumn prefWidth="75.0" text="Product Name" />
-                  <TreeTableColumn prefWidth="75.0" text="Purchase Price" />
-                  <TreeTableColumn prefWidth="75.0" text="Selling Price" />
-               </columns>
-               <columnResizePolicy>
-                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-               </columnResizePolicy>
-            </JFXTreeTableView>
-            <JFXButton layoutX="87.0" layoutY="523.0" onAction="#cartCheckOut" prefHeight="52.0" prefWidth="199.0" style="-fx-background-color: #F6A9A9;" text="Proceed to checkout" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="transactionInfo" prefHeight="200.0" prefWidth="775.0" visible="false">
-         <children>
-            <Pane layoutX="111.0" layoutY="101.0" opacity="0.95" prefHeight="398.0" prefWidth="579.0" style="-fx-background-color: #000000;">
-               <children>
-                  <Label layoutX="14.0" layoutY="83.0" prefHeight="35.0" prefWidth="105.0" text="Product name" textFill="WHITE" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="14.0" layoutY="164.0" prefHeight="35.0" prefWidth="78.0" text="Selling price" textFill="WHITE" />
-                  <Label layoutX="147.0" layoutY="164.0" prefHeight="35.0" prefWidth="78.0" text="Quantity" textFill="WHITE" />
-                  <Label layoutX="303.0" layoutY="164.0" prefHeight="35.0" prefWidth="105.0" text="Profit" textFill="WHITE" />
-                  <Label layoutX="460.0" layoutY="164.0" prefHeight="35.0" prefWidth="105.0" text="Purchase price" textFill="WHITE" />
-                  <JFXButton fx:id="ok" layoutX="274.0" layoutY="298.0" text="Ok" />
-               </children>
-            </Pane>
-         </children>
-      </AnchorPane>
    </children>
 </StackPane>
