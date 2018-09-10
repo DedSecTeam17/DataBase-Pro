@@ -21,6 +21,23 @@ public class ProductDataBaseSingleton {
     private ProductDataBaseSingleton() {
     }
 
+
+
+    public  static  void  main(String a[]){
+        for (int i=1; i<10000000; i++)
+        {
+            Product product= Product.newProduct()
+                    .productName("Itemz"+i)
+                    .productPrice(i)
+                    .productedCompany("companyz"+i)
+                    .quantity(i*10)
+                    .productionDate(String.valueOf(LocalDate.now()))
+                    .expiredDate(String.valueOf(LocalDate.now())).
+                    build();
+            getInstance().addProduct(product);
+        }
+    }
+
     public String addProduct(Product Product) {
         String data_base_message = "";
         try {

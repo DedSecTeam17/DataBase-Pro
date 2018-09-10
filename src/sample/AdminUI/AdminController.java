@@ -3,6 +3,7 @@ package sample.AdminUI;
 import com.jfoenix.controls.*;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
+import javafx.animation.FadeTransition;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ObservableValue;
@@ -11,14 +12,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Callback;
+import javafx.util.Duration;
 import sample.AdminUI.fragmnets.CategoryFragment;
 import sample.AdminUI.fragmnets.ProductFragment;
 import sample.Atuhentication.Auth;
@@ -27,6 +34,7 @@ import sample.MarketModel.Product;
 import sample.MarketProvider.FacadeMarketProvider;
 import sample.UiValidation.UiValidation;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.List;
@@ -35,8 +43,11 @@ import java.util.ResourceBundle;
 public class AdminController implements Initializable {
 
     private static final double COLUMN_WIDTH = 831 / 6;
+    private static final double WINDOW_WIDTH =800 ;
+    private static final double WINDOW_HEIGHT = 500;
     private HamburgerBackArrowBasicTransition hamburgerTransition;
-
+    @FXML
+    private StackPane main_pane;
     @FXML
     private AnchorPane sellersPanel;
 
@@ -249,6 +260,10 @@ public class AdminController implements Initializable {
     void highlight(double y) {
         //moves the selection label to the y-axis of the selected button
         selectionLabel.setLayoutY(y);
+        drawer.close();
+        hamburgerTransition.setRate(hamburgerTransition.getRate() * -1);
+        hamburgerTransition.play();
+
     }
 
     void hideAllPanels() {
@@ -262,7 +277,36 @@ public class AdminController implements Initializable {
     @FXML
     void signOut() {
         //Code to return to the login scene
+        Auth.getInstance().destroyUser();
+        DirectUserWithFade(main_pane,"../Login.fxml");
+
     }
 
+    private void DirectUserWithFade(StackPane currentPane, String fxml_file) {
+
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setNode(currentPane);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Parent secondRoot = null;
+                try {
+                    secondRoot = FXMLLoader.load(getClass().getResource(fxml_file));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Scene newScene = new Scene(secondRoot,WINDOW_WIDTH,WINDOW_HEIGHT);
+
+                Stage curStage = (Stage) currentPane.getScene().getWindow();
+
+                curStage.setScene(newScene);
+            }
+        });
+        fadeTransition.play();
+
+    }
 
 }

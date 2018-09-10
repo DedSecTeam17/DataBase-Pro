@@ -22,9 +22,9 @@
          </image>
       </ImageView>
       <Pane layoutX="378.0" prefHeight="500.0" prefWidth="428.0" style="-fx-background-color: #22313f;" />
-      <Pane layoutX="-15.0" layoutY="-3.0" opacity="0.33" prefHeight="508.0" prefWidth="392.0" style="-fx-background-color: #95a5a6;">
+      <Pane layoutX="-15.0" layoutY="-3.0" opacity="0.66" prefHeight="508.0" prefWidth="392.0" style="-fx-background-color: #95a5a6;">
          <children>
-            <Label layoutX="95.0" layoutY="115.0" text="Welcome to DataBasePro" textFill="#f64747">
+            <Label layoutX="95.0" layoutY="115.0" text="Welcome to DataMarket" textFill="#f64747">
                <font>
                   <Font size="24.0" />
                </font>
@@ -66,8 +66,8 @@
                   <Image url="@Images/password.png" />
                </image>
             </ImageView>
-            <Label fx:id="email_hint" layoutX="65.0" layoutY="194.0" text="Label" />
-            <Label fx:id="password_hint" layoutX="65.0" layoutY="288.0" text="Label" />
+            <Label fx:id="email_hint" layoutX="65.0" layoutY="194.0" />
+            <Label fx:id="password_hint" layoutX="65.0" layoutY="288.0" />
             <JFXRadioButton fx:id="admin_radio" layoutX="65.0" layoutY="226.0" text="Admin" />
             <JFXRadioButton fx:id="seller_radio" layoutX="188.0" layoutY="226.0" text="Seller" />
             <Label fx:id="radio_hint" layoutX="259.0" layoutY="226.0" />

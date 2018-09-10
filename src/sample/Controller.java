@@ -16,6 +16,9 @@ import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import sample.Atuhentication.Auth;
@@ -27,6 +30,7 @@ import sample.UiValidation.UiValidation;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -35,6 +39,8 @@ public class Controller implements Initializable {
     private static final boolean SELLER_ROLE = false;
     private static final double WINDOW_WIDTH =1366 ;
     private static final double WINDOW_HEIGHT =768 ;
+
+
     @FXML
     private AnchorPane login_reg_pane;
     @FXML
@@ -107,10 +113,17 @@ public class Controller implements Initializable {
     private ToggleGroup usersGroupSignUp;
     private ToggleGroup usersGroupSignIn;
     private FacadeMarketProvider facadeMarketProvider;
+    private MediaPlayer mediaPlayer;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+
+
+
+
+
         facadeMarketProvider = new FacadeMarketProvider();
         setUpRadioBtnWithItToggle();
         toggleButton.setOnAction(event -> {

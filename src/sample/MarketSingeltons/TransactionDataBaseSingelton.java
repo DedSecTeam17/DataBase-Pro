@@ -31,17 +31,13 @@ public class TransactionDataBaseSingelton {
             preparedStatement.setInt(4, Transaction.getSellingPrice());
             preparedStatement.setInt(5,Transaction.getQuantity() );
             preparedStatement.executeUpdate();
-
-
         } catch (SQLException e) {
             Log.i(e.getMessage());
             data_base_message = e.getMessage();
         } catch (ClassNotFoundException e) {
             data_base_message = e.getMessage();
         }
-
         return data_base_message;
-
     }
     public  String deleteTransaction(Transaction Transaction)
     {

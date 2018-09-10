@@ -19,6 +19,11 @@ public class SellerDataBaseSingleton {
     private SellerDataBaseSingleton() {
     }
 
+
+
+
+
+
     public  String addSeller(User User)
     {
         String data_base_message = "";

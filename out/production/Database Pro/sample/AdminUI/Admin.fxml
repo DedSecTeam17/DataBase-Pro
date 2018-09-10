@@ -15,12 +15,12 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
+<StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUI.AdminController">
 
 
 
    <children>
-      <AnchorPane prefHeight="600.0" prefWidth="1039.0" style="-fx-background-color: #22313f;">
+      <AnchorPane fx:id="admin_main_pane" prefHeight="600.0" prefWidth="1039.0" style="-fx-background-color: #22313f;">
          <children>
             <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1286.0" style="-fx-background-color: #22313f;" visible="false">
                <children>
@@ -161,30 +161,30 @@
                </children>
             </AnchorPane>
 
-            <AnchorPane fx:id="homePanel" prefHeight="600.0" prefWidth="800.0" visible="false">
+            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1286.0">
 
                <children>
-                  <ImageView fitHeight="616.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="768.0" fitWidth="1288.0" pickOnBounds="true" preserveRatio="false">
                      <image>
                         <Image url="@../Images/Background.jpg" />
                      </image>
                   </ImageView>
-                  <JFXButton layoutX="726.0" layoutY="552.0" onAction="#signOut" opacity="0.68" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #620101;" text="Sign out" textFill="WHITE" />
+                  <JFXButton layoutX="1112.0" layoutY="720.0" onAction="#signOut" opacity="0.68" prefHeight="34.0" prefWidth="160.0" style="-fx-background-color: #620101;" text="Sign out" textFill="WHITE" />
                </children>
             </AnchorPane>
 
             <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutX="-7.0" miniDrawerSize="0.0" prefHeight="768.0" prefWidth="269.0">
                <children>
-                  <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="269.0" style="-fx-background-color: #22313f;">
+                  <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="768.0" prefWidth="269.0" style="-fx-background-color: #22313f;">
                      <children>
                         <Pane prefHeight="768.0" prefWidth="269.0">
                            <children>
-                              <Label fx:id="selectionLabel" prefHeight="65.0" prefWidth="269.0" style="-fx-background-color: #223F3F;" />
+                              <Label fx:id="selectionLabel" prefHeight="65.0" prefWidth="269.0" style="-fx-background-color: #f64747;" />
                               <JFXButton onAction="#HomeButtonClicked" prefHeight="65.0" prefWidth="269.0" style="-fx-background-color: #f64747;" text="Home" textFill="#ebebeb" />
-                              <JFXButton layoutY="65.0" onAction="#SellersButtonClicked" prefHeight="65.0" prefWidth="269.0" text="Sellers" textFill="#ebebeb" />
-                              <JFXButton layoutY="130.0" onAction="#ProductsButtonClicked" prefHeight="65.0" prefWidth="269.0" text="Products" textFill="#ebebeb" />
-                              <JFXButton layoutY="195.0" onAction="#TransactionsButtonClicked" prefHeight="65.0" prefWidth="269.0" text="Transactions" textFill="#ebebeb" />
-                              <JFXButton layoutY="260.0" onAction="#CategoriesButtonClicked" prefHeight="65.0" prefWidth="269.0" text="Categories" textFill="#ebebeb" />
+                              <JFXButton layoutY="65.0" onAction="#SellersButtonClicked" prefHeight="65.0" prefWidth="269.0" style="-fx-background-radius: 10px;" text="Sellers" textFill="#ebebeb" />
+                              <JFXButton buttonType="RAISED" layoutY="130.0" onAction="#ProductsButtonClicked" prefHeight="65.0" prefWidth="269.0" style="-fx-background-radius: 10px;" text="Products" textFill="#ebebeb" />
+                              <JFXButton layoutY="195.0" onAction="#TransactionsButtonClicked" prefHeight="65.0" prefWidth="269.0" style="-fx-background-radius: 10px;" text="Transactions" textFill="#ebebeb" />
+                              <JFXButton layoutY="260.0" onAction="#CategoriesButtonClicked" prefHeight="65.0" prefWidth="269.0" style="-fx-background-radius: 10px;" text="Categories" textFill="#ebebeb" />
                            </children>
                         </Pane>
                      </children>
