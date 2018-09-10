@@ -5,6 +5,11 @@ import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.AdminDataBaseSingleton;
+import sample.MarketSingeltons.CategoryDataBaseSingleton;
+import sample.MarketSingeltons.SellerDataBaseSingleton;
+
+import java.sql.SQLException;
+import java.util.List;
 
 public class SellerOperations implements CrudOperations {
     @Override
@@ -22,6 +27,9 @@ public class SellerOperations implements CrudOperations {
         return AdminDataBaseSingleton.getInstance().deleteAdmin(user);
     }
 
+    public List<User> getAllSellers() throws SQLException, ClassNotFoundException {
+        return  SellerDataBaseSingleton.getInstance().getAllSeller();
+    }
 
     @Override
     public String insertProduct(Product product) {

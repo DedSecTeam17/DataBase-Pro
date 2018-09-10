@@ -94,6 +94,10 @@ public class FacadeMarketProvider {
         return categoryOperations.getAllCategories();
     }
 
+    public List<User> getAllSellers() throws SQLException, ClassNotFoundException {
+        return sellerOperations.getAllSellers();
+    }
+
 //
 
     public String insertTransaction(Transaction transaction) {
