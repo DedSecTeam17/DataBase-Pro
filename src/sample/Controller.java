@@ -119,11 +119,6 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-
-
-
-
-
         facadeMarketProvider = new FacadeMarketProvider();
         setUpRadioBtnWithItToggle();
         toggleButton.setOnAction(event -> {

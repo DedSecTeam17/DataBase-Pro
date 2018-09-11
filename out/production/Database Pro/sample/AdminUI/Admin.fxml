@@ -22,20 +22,37 @@
    <children>
       <AnchorPane fx:id="admin_main_pane" prefHeight="600.0" prefWidth="1039.0" style="-fx-background-color: #22313f;">
          <children>
+<<<<<<< HEAD
 
             <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1286.0" style="-fx-background-color: #22313f;" visible="false">
 
                <children>
                   <JFXTreeTableView layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-radius: 5;">
+=======
+            <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1288.0" style="-fx-background-color: #22313f;" visible="false">
+               <children>
+                  <JFXTreeTableView fx:id="seller_table" layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-radius: 5;">
+>>>>>>> 864f3af88cc72d6d1c0fafbcd044ec1911e8f19e
                      <effect>
                         <DropShadow />
                      </effect></JFXTreeTableView>
                   <Pane layoutX="900.0" layoutY="60.0" prefHeight="450.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5;">
                      <children>
+<<<<<<< HEAD
                         <JFXTextField layoutX="50.0" layoutY="50.0" prefHeight="25.0" prefWidth="220.0" promptText="First Name" />
                         <JFXTextField layoutX="50.0" layoutY="100.0" prefHeight="25.0" prefWidth="220.0" promptText="Last Name" />
                         <JFXTextField layoutX="50.0" layoutY="150.0" prefHeight="25.0" prefWidth="220.0" promptText="Email" />
                         <JFXTextField layoutX="50.0" layoutY="200.0" prefHeight="25.0" prefWidth="220.0" promptText="Password" />
+=======
+                        <JFXTextField fx:id="seller_FirstName" layoutX="50.0" layoutY="50.0" prefHeight="25.0" prefWidth="220.0" promptText="First Name" />
+                        <JFXTextField fx:id="seller_LastName" layoutX="50.0" layoutY="100.0" prefHeight="25.0" prefWidth="220.0" promptText="Last Name" />
+                        <JFXTextField fx:id="seller_Email" layoutX="50.0" layoutY="150.0" prefHeight="25.0" prefWidth="220.0" promptText="Email" />
+                        <JFXTextField fx:id="seller_Password" layoutX="50.0" layoutY="200.0" prefHeight="25.0" prefWidth="220.0" promptText="Password" />
+                        <Label fx:id="hint_Seller_FirstName" layoutX="50.0" layoutY="80.0" />
+                        <Label fx:id="hint_Seller_LastName" layoutX="50.0" layoutY="130.0" />
+                        <Label fx:id="hint_Seller_Email" layoutX="50.0" layoutY="180.0" />
+                        <Label fx:id="hint_Seller_Password" layoutX="50.0" layoutY="230.0" />
+>>>>>>> 864f3af88cc72d6d1c0fafbcd044ec1911e8f19e
                         <ImageView fitHeight="34.0" fitWidth="43.0" layoutX="15.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/NameField.png" />
@@ -62,9 +79,15 @@
                   </Pane>
                   <Pane layoutX="900.0" layoutY="530.0" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5;">
                      <children>
+<<<<<<< HEAD
                         <JFXButton layoutX="28.0" layoutY="14.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
                         <JFXButton layoutX="28.0" layoutY="131.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
                         <JFXButton layoutX="28.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #81cfe0;" text="Update" textFill="WHITE" />
+=======
+                        <JFXButton fx:id="seller_AddButton" layoutX="28.0" layoutY="14.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
+                        <JFXButton fx:id="seller_UpdateButton" layoutX="28.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #81cfe0;" text="Update" textFill="WHITE" />
+                        <JFXButton fx:id="seller_RemoveButton" layoutX="28.0" layoutY="131.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="WHITE" />
+>>>>>>> 864f3af88cc72d6d1c0fafbcd044ec1911e8f19e
                      </children>
                      <effect>
                         <DropShadow />
@@ -72,11 +95,15 @@
                   </Pane>
                </children>
             </AnchorPane>
+<<<<<<< HEAD
 
 
 
             <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
 
+=======
+            <AnchorPane fx:id="productsPanel" prefHeight="768.0" prefWidth="1288.0" style="-fx-background-color: #22313f;" visible="false">
+>>>>>>> 864f3af88cc72d6d1c0fafbcd044ec1911e8f19e
                <children>
                   <JFXTreeTableView fx:id="products_table" layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-color: white; -fx-background-radius: 5px;" stylesheets="@../css/design.css">
                      <effect>
@@ -151,7 +178,11 @@
                      </effect></JFXTreeTableView>
                   <Pane layoutX="900.0" layoutY="60.0" prefHeight="650.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5;">
                      <children>
+<<<<<<< HEAD
                         <JFXButton layoutX="28.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="#f8f8f8" />
+=======
+                        <JFXButton fx:id="transaction_RemoveButton" layoutX="28.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="#f8f8f8" />
+>>>>>>> 864f3af88cc72d6d1c0fafbcd044ec1911e8f19e
                      </children>
                      <effect>
                         <DropShadow />

@@ -28,6 +28,7 @@ import javafx.util.Callback;
 import javafx.util.Duration;
 import sample.AdminUI.fragmnets.CategoryFragment;
 import sample.AdminUI.fragmnets.ProductFragment;
+import sample.AdminUI.fragmnets.SellerFragment;
 import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
 import sample.MarketModel.Product;
@@ -46,17 +47,68 @@ public class AdminController implements Initializable {
     private static final double WINDOW_WIDTH =800 ;
     private static final double WINDOW_HEIGHT = 500;
     private HamburgerBackArrowBasicTransition hamburgerTransition;
+
+    //region UI Variables
+
+
+    //#region sellers
+
+    //#region textFields
     @FXML
-    private StackPane main_pane;
-    @FXML
-    private AnchorPane sellersPanel;
+    private JFXTextField seller_FirstName;
 
     @FXML
-    private AnchorPane productsPanel;
+    private JFXTextField seller_LastName;
 
     @FXML
-    private JFXTreeTableView products_table;
+    private JFXTextField seller_Email;
 
+    @FXML
+    private JFXTextField seller_Password;
+    //#endregion
+
+    //#region hints
+    @FXML
+    private Label hint_Seller_FirstName;
+
+    @FXML
+    private Label hint_Seller_LastName;
+
+    @FXML
+    private Label hint_Seller_Email;
+
+    @FXML
+    private Label hint_Seller_Password;
+    //#endregion
+
+    //#region buttons
+    @FXML
+    private JFXButton seller_AddButton;
+
+    @FXML
+    private JFXButton seller_UpdateButton;
+
+    @FXML
+    private JFXButton seller_RemoveButton;
+    //#endregion
+
+
+    //#endregion
+
+    //#region products
+
+    //#region buttons
+    @FXML
+    private JFXButton add_product;
+
+    @FXML
+    private JFXButton update_product;
+
+    @FXML
+    private JFXButton delete_product;
+    //#endregion
+
+    //#region textFields
     @FXML
     private JFXTextField p_name;
 
@@ -75,6 +127,9 @@ public class AdminController implements Initializable {
     @FXML
     private JFXDatePicker expi_date;
 
+    //#endregion
+
+    //#region hints
     @FXML
     private Label p_name_hint;
 
@@ -92,15 +147,69 @@ public class AdminController implements Initializable {
 
     @FXML
     private Label p_expi_hint;
+    //#endregion
+
+    //#endregion
+
+    //#region transactions
+    @FXML
+    private JFXButton transaction_RemoveButton;
+    //#endregion
+
+    //#region Categories
+
+    //#region textFields
+    @FXML
+    private JFXTextField cat_id;
 
     @FXML
-    private JFXButton add_product;
+    private JFXTextField cat_name;
+    //#endregion
+
+    //#region hints
+    @FXML
+    private Label cat_id_hint;
 
     @FXML
-    private JFXButton update_product;
+    private Label cat_name_hint;
+    //#endregion
+
+    //#region buttons
+    @FXML
+    private JFXButton add_cat;
 
     @FXML
-    private JFXButton delete_product;
+    private JFXButton update_cat;
+
+    @FXML
+    private JFXButton remove_cat;
+    //#endregion
+
+    //#endregion
+
+    //#region Tables
+    @FXML
+    private JFXTreeTableView<?> products_table;
+
+    @FXML
+    private JFXTreeTableView<?> categor_tree_table;
+
+    @FXML
+    private JFXTreeTableView<?> seller_table;
+    //#endregion
+
+    //#region Panes
+
+    @FXML
+    private AnchorPane admin_main_pane;
+
+    @FXML
+    private AnchorPane sellersPanel;
+
+
+    @FXML
+    private AnchorPane productsPanel;
+
 
     @FXML
     private AnchorPane transactionsPanel;
@@ -109,31 +218,12 @@ public class AdminController implements Initializable {
     private AnchorPane categoriesPanel;
 
     @FXML
-    private JFXTreeTableView categor_tree_table;
-
-    @FXML
-    private JFXTextField cat_id;
-
-    @FXML
-    private JFXTextField cat_name;
-
-    @FXML
-    private Label cat_id_hint;
-
-    @FXML
-    private Label cat_name_hint;
-
-    @FXML
-    private JFXButton add_cat;
-
-    @FXML
-    private JFXButton remove_cat;
-
-    @FXML
-    private JFXButton update_cat;
-
-    @FXML
     private AnchorPane homePanel;
+
+    //#endregion
+
+    @FXML
+    private StackPane main_pane;
 
     @FXML
     private JFXDrawer drawer;
@@ -147,10 +237,12 @@ public class AdminController implements Initializable {
     @FXML
     private JFXHamburger hamburgerButton;
 
+    //#endregion
 
     private FacadeMarketProvider facadeMarketProvider;
     private CategoryFragment categoryFragment = new CategoryFragment();
     private ProductFragment productFragment = new ProductFragment();
+    private SellerFragment sellerFragment = new SellerFragment();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -158,14 +250,16 @@ public class AdminController implements Initializable {
         try {
             productFragment.ProductTableColumn(products_table);
             categoryFragment.CategorytTableColumn(categor_tree_table);
+            sellerFragment.SellerTableColumn(seller_table);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         Log.i("Admin UI debugging" + Auth.getInstance().getCurrentUser());
         setUpAsideNavBar();
-        productFragment.onTableItemSelected(p_name, p_price, p_company, p_quantity, p_date, expi_date, products_table);
 
+        productFragment.onTableItemSelected(p_name, p_price, p_company, p_quantity, p_date, expi_date, products_table);
         add_product.setOnAction(event -> {
             try {
                 productFragment.addProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
@@ -176,14 +270,14 @@ public class AdminController implements Initializable {
         delete_product.setOnAction(event -> {
             productFragment.deleteProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
         });
-        update_product.setOnAction(event ->
-        {
+        update_product.setOnAction(event -> {
             try {
                 productFragment.updateProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
+
         categoryFragment.onTableItemSelected(categor_tree_table, cat_name, cat_id);
         add_cat.setOnAction(event -> {
             try {
@@ -200,6 +294,25 @@ public class AdminController implements Initializable {
                 e.printStackTrace();
             }
         });
+
+        sellerFragment.onTableItemSelected(seller_FirstName,seller_LastName,seller_Email,seller_Password,seller_table);
+        seller_AddButton.setOnAction(event -> {
+            try {
+                sellerFragment.addSeller(seller_FirstName,seller_LastName,seller_Email,seller_Password,hint_Seller_FirstName,hint_Seller_LastName,hint_Seller_Email,hint_Seller_Password,seller_table);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        seller_RemoveButton.setOnAction(event -> sellerFragment.deleteSeller(seller_FirstName,seller_LastName,seller_Email,seller_Password,hint_Seller_FirstName,hint_Seller_LastName,hint_Seller_Email,hint_Seller_Password,seller_table));
+        seller_UpdateButton.setOnAction(event -> {
+            try {
+                sellerFragment.updateSeller(seller_FirstName,seller_LastName,seller_Email,seller_Password,hint_Seller_FirstName,hint_Seller_LastName,hint_Seller_Email,hint_Seller_Password,seller_table);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+
     }
 
 
@@ -257,7 +370,7 @@ public class AdminController implements Initializable {
         transactionsPanel.setVisible(true);
     }
 
-    void highlight(double y) {
+    private void highlight(double y) {
         //moves the selection label to the y-axis of the selected button
         selectionLabel.setLayoutY(y);
         drawer.close();
@@ -266,7 +379,7 @@ public class AdminController implements Initializable {
 
     }
 
-    void hideAllPanels() {
+    private void hideAllPanels() {
         sellersPanel.setVisible(false);
         productsPanel.setVisible(false);
         transactionsPanel.setVisible(false);
