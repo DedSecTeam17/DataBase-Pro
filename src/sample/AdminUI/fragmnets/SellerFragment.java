@@ -59,7 +59,7 @@ public class SellerFragment
 
         clearFields(fName,lName,emailField,passwordField,hint_fName,hint_lName,hint_email,hint_password);
         try {
-            ProductTableColumn(treeTableView);
+            SellerTableColumn(treeTableView);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -75,7 +75,7 @@ public class SellerFragment
                     .build();
 
             facadeMarketProvider.updateSeller(user);
-            ProductTableColumn(treeTableView);
+            SellerTableColumn(treeTableView);
             clearFields(fName,lName,emailField,passwordField,hint_fName,hint_lName,hint_email,hint_password);
         } else {
 
@@ -88,7 +88,7 @@ public class SellerFragment
 
         }
     }
-    public void addProduct(JFXTextField fName,JFXTextField lName,JFXTextField emailField,JFXTextField passwordField,Label hint_fName,Label hint_lName,Label hint_email,Label hint_password,JFXTreeTableView treeTableView) throws Exception {
+    public void addSeller(JFXTextField fName,JFXTextField lName,JFXTextField emailField,JFXTextField passwordField,Label hint_fName,Label hint_lName,Label hint_email,Label hint_password,JFXTreeTableView treeTableView) throws Exception {
         if (!fName.getText().equals("") && !lName.getText().equals("") && !emailField.getText().equals("") && !passwordField.getText().equals("")) {
             User user = User.newUser()
                     .firstName(fName.getText())
@@ -98,7 +98,7 @@ public class SellerFragment
                     .build();
 
             facadeMarketProvider.insertSeller(user);
-            ProductTableColumn(treeTableView);
+            SellerTableColumn(treeTableView);
             clearFields(fName,lName,emailField,passwordField,hint_email,hint_fName,hint_lName,hint_password);
         } else {
             UiValidation.validateInput(fName, hint_fName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
@@ -125,7 +125,7 @@ public class SellerFragment
     }
 
     //    PRODUCT TABLE
-    private void ProductTableColumn(JFXTreeTableView treeTableView) throws Exception {
+    public void SellerTableColumn(JFXTreeTableView treeTableView) throws Exception {
         JFXTreeTableColumn<SellerFragment.seller, String> fName = new JFXTreeTableColumn<>("name");
         fName.setPrefWidth(COLUMN_WIDTH);
         fName.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<SellerFragment.seller, String>, ObservableValue<String>>() {

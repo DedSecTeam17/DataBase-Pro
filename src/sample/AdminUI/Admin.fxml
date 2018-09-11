@@ -24,7 +24,7 @@
          <children>
             <AnchorPane fx:id="sellersPanel" prefHeight="768.0" prefWidth="1288.0" style="-fx-background-color: #22313f;" visible="false">
                <children>
-                  <JFXTreeTableView layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-radius: 5;">
+                  <JFXTreeTableView fx:id="seller_table" layoutX="60.0" layoutY="60.0" prefHeight="650.0" prefWidth="830.0" style="-fx-background-radius: 5;">
                      <effect>
                         <DropShadow />
                      </effect></JFXTreeTableView>
