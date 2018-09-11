@@ -22,6 +22,7 @@ import sample.MarketModel.Transaction;
 import sample.MarketProvider.FacadeMarketProvider;
 import sample.UiValidation.UiValidation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartFragments {
