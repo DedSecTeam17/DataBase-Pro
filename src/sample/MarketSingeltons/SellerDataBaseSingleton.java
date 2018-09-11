@@ -5,6 +5,7 @@ import sample.Debugging.Log;
 import sample.MarketModel.Category;
 import sample.MarketModel.User;
 
+import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,17 +25,20 @@ public class SellerDataBaseSingleton {
 
 
 
-    public  String addSeller(User User)
+    public  String addSeller(User user)
     {
         String data_base_message = "";
         try {
             Connection connection = Config.getInstance().getConnection();
-            String sql = "INSERT INTO MarketCategory(FNAME,LNAME,PASSWORD,EMAIL) VALUES(?,?,?,?)";
+            String sql = "INSERT INTO MarketUser(fname,lname,password,created_at,email,role) VALUES(?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, User.getFirstName());
-            preparedStatement.setString(2, User.getLastName());
-            preparedStatement.setString(3, User.getPassword());
-            preparedStatement.setString(3, User.getEmail());
+            preparedStatement.setString(1, user.getFirstName());
+            preparedStatement.setString(2, user.getLastName());
+            preparedStatement.setString(3, Auth.getInstance().md5(user.getPassword()));
+            preparedStatement.setTimestamp(4,getCurrentTimeStamp());
+            preparedStatement.setString(5, user.getEmail());
+            preparedStatement.setString(6, String.valueOf(user.isRole()));
+            preparedStatement.executeUpdate();
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -42,6 +46,8 @@ public class SellerDataBaseSingleton {
             data_base_message = e.getMessage();
         } catch (ClassNotFoundException e) {
             data_base_message = e.getMessage();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
         }
 
         return data_base_message;
@@ -90,15 +96,14 @@ public class SellerDataBaseSingleton {
 //        product_name,product_price,production_date,expired_date,production_company,admin_email
         connection = Config.getInstance().getConnection();
 
-        String sql = "SELECT  * FROM  MARKETUSER ORDER by EMAIL ASC ";
+        String sql = "SELECT  * FROM  MARKETUSER where  ROLE='false'  ORDER by EMAIL ASC ";
         PreparedStatement statement = null;
         statement = connection.prepareStatement(sql);
 
         ResultSet SET = statement.executeQuery(sql);
         List<User> users = new ArrayList<>(20);
         while (SET.next()) {
-            String cat_name = SET.getString("CAT_NAME");
-            int cat_id = SET.getInt("CAT_ID");
+
 
             String fname = SET.getString("FNAME") ;
             String lname = SET.getString("LNAME")  ;
@@ -116,5 +121,12 @@ public class SellerDataBaseSingleton {
 
         }
         return users;
+    }
+
+    private  java.sql.Timestamp getCurrentTimeStamp() {
+
+        java.util.Date today = new java.util.Date();
+        return new java.sql.Timestamp(today.getTime());
+
     }
 }

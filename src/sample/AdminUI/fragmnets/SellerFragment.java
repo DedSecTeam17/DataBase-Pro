@@ -98,8 +98,8 @@ public class SellerFragment
                     .lastName(lName.getText())
                     .email(emailField.getText())
                     .password(passwordField.getText())
+                    .role(false)
                     .build();
-
             facadeMarketProvider.insertSeller(user);
             SellerTableColumn(treeTableView);
             clearFields(fName,lName,emailField,passwordField,hint_email,hint_fName,hint_lName,hint_password);
