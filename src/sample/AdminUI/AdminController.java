@@ -46,17 +46,68 @@ public class AdminController implements Initializable {
     private static final double WINDOW_WIDTH =800 ;
     private static final double WINDOW_HEIGHT = 500;
     private HamburgerBackArrowBasicTransition hamburgerTransition;
+
+    //region UI Variables
+
+
+    //#region sellers
+
+    //#region textFields
     @FXML
-    private StackPane main_pane;
-    @FXML
-    private AnchorPane sellersPanel;
+    private JFXTextField seller_FirstName;
 
     @FXML
-    private AnchorPane productsPanel;
+    private JFXTextField seller_LastName;
 
     @FXML
-    private JFXTreeTableView products_table;
+    private JFXTextField seller_Email;
 
+    @FXML
+    private JFXTextField seller_Password;
+    //#endregion
+
+    //#region hints
+    @FXML
+    private Label hint_Seller_FirstName;
+
+    @FXML
+    private Label hint_Seller_LastName;
+
+    @FXML
+    private Label hint_Seller_Email;
+
+    @FXML
+    private Label hint_Seller_Password;
+    //#endregion
+
+    //#region buttons
+    @FXML
+    private JFXButton seller_AddButton;
+
+    @FXML
+    private JFXButton seller_UpdateButton;
+
+    @FXML
+    private JFXButton seller_RemoveButton;
+    //#endregion
+
+
+    //#endregion
+
+    //#region products
+
+    //#region buttons
+    @FXML
+    private JFXButton add_product;
+
+    @FXML
+    private JFXButton update_product;
+
+    @FXML
+    private JFXButton delete_product;
+    //#endregion
+
+    //#region textFields
     @FXML
     private JFXTextField p_name;
 
@@ -75,6 +126,9 @@ public class AdminController implements Initializable {
     @FXML
     private JFXDatePicker expi_date;
 
+    //#endregion
+
+    //#region hints
     @FXML
     private Label p_name_hint;
 
@@ -92,15 +146,66 @@ public class AdminController implements Initializable {
 
     @FXML
     private Label p_expi_hint;
+    //#endregion
+
+    //#endregion
+
+    //#region transactions
+    @FXML
+    private JFXButton transaction_RemoveButton;
+    //#endregion
+
+    //#region Categories
+
+    //#region textFields
+    @FXML
+    private JFXTextField cat_id;
 
     @FXML
-    private JFXButton add_product;
+    private JFXTextField cat_name;
+    //#endregion
+
+    //#region hints
+    @FXML
+    private Label cat_id_hint;
 
     @FXML
-    private JFXButton update_product;
+    private Label cat_name_hint;
+    //#endregion
+
+    //#region buttons
+    @FXML
+    private JFXButton add_cat;
 
     @FXML
-    private JFXButton delete_product;
+    private JFXButton update_cat;
+
+    @FXML
+    private JFXButton remove_cat;
+    //#endregion
+
+    //#endregion
+
+    //#region Tables
+    @FXML
+    private JFXTreeTableView<?> products_table;
+
+    @FXML
+    private JFXTreeTableView<?> categor_tree_table;
+    //#endregion
+
+    //#region Panes
+
+    @FXML
+    private AnchorPane admin_main_pane;
+
+    @FXML
+    private AnchorPane sellersPanel;
+
+
+    @FXML
+    private AnchorPane productsPanel;
+
 
     @FXML
     private AnchorPane transactionsPanel;
@@ -109,31 +214,12 @@ public class AdminController implements Initializable {
     private AnchorPane categoriesPanel;
 
     @FXML
-    private JFXTreeTableView categor_tree_table;
-
-    @FXML
-    private JFXTextField cat_id;
-
-    @FXML
-    private JFXTextField cat_name;
-
-    @FXML
-    private Label cat_id_hint;
-
-    @FXML
-    private Label cat_name_hint;
-
-    @FXML
-    private JFXButton add_cat;
-
-    @FXML
-    private JFXButton remove_cat;
-
-    @FXML
-    private JFXButton update_cat;
-
-    @FXML
     private AnchorPane homePanel;
+
+    //#endregion
+
+    @FXML
+    private StackPane main_pane;
 
     @FXML
     private JFXDrawer drawer;
@@ -147,6 +233,7 @@ public class AdminController implements Initializable {
     @FXML
     private JFXHamburger hamburgerButton;
 
+    //#endregion
 
     private FacadeMarketProvider facadeMarketProvider;
     private CategoryFragment categoryFragment = new CategoryFragment();
