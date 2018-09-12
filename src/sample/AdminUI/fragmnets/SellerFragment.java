@@ -82,10 +82,10 @@ public class SellerFragment
             clearFields(fName,lName,emailField,passwordField,hint_fName,hint_lName,hint_email,hint_password);
         } else {
 
-            UiValidation.validateInput(fName, hint_fName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(lName, hint_lName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(emailField, hint_email, "empty filed not allowed", "only numbers", "valid", "num");
-            UiValidation.validateInput(passwordField, hint_password, "empty filed not allowed", "only numbers", "valid", "num");
+            UiValidation.validateInput(fName.getText(), hint_fName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(lName.getText(), hint_lName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(emailField.getText(), hint_email, "empty filed not allowed", "only numbers", "valid", "num");
+            UiValidation.validateInput(passwordField.getText(), hint_password, "empty filed not allowed", "only numbers", "valid", "num");
 
 
 
@@ -104,10 +104,10 @@ public class SellerFragment
             SellerTableColumn(treeTableView);
             clearFields(fName,lName,emailField,passwordField,hint_email,hint_fName,hint_lName,hint_password);
         } else {
-            UiValidation.validateInput(fName, hint_fName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(lName, hint_lName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(emailField, hint_email, "empty filed not allowed", "only numbers", "valid", "num");
-            UiValidation.validateInput(passwordField, hint_password, "empty filed not allowed", "only numbers", "valid", "num");
+            UiValidation.validateInput(fName.getText(), hint_fName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(lName.getText(), hint_lName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(emailField.getText(), hint_email, "empty filed not allowed", "only numbers", "valid", "num");
+            UiValidation.validateInput(passwordField.getText(), hint_password, "empty filed not allowed", "only numbers", "valid", "num");
 
 
 

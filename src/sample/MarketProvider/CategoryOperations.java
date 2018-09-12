@@ -58,6 +58,9 @@ public class CategoryOperations implements CrudOperations {
     public List<Category> getAllCategories() throws SQLException, ClassNotFoundException {
         return  CategoryDataBaseSingleton.getInstance().getAllCategory();
     }
+    public  Category getItemById(int id) throws SQLException, ClassNotFoundException {
+        return  CategoryDataBaseSingleton.getInstance().getCategoryById(id);
+    }
 
 
 

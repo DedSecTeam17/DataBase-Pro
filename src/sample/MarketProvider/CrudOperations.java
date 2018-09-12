@@ -5,6 +5,8 @@ import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 
+import java.sql.SQLException;
+
 public interface CrudOperations {
 
     //    user operation
@@ -21,7 +23,7 @@ public interface CrudOperations {
     public String updateProduct(Product product);
 
     public String deleteProduct(Product product);
-
+    public  Category getItemById(int id) throws SQLException, ClassNotFoundException;
 
 //
 

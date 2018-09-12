@@ -6,6 +6,7 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.AdminDataBaseSingleton;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class AdminOperations implements CrudOperations,AdminPrivilidgeOpertation {
@@ -37,6 +38,11 @@ public class AdminOperations implements CrudOperations,AdminPrivilidgeOpertation
 
     @Override
     public String deleteProduct(Product product) {
+        return null;
+    }
+
+    @Override
+    public Category getItemById(int id) throws SQLException, ClassNotFoundException {
         return null;
     }
 

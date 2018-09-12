@@ -41,6 +41,11 @@ public class ProductOperations implements CrudOperations ,AdminPrivilidgeOpertat
         return ProductDataBaseSingleton.getInstance().deleteProduct(product);
     }
 
+    @Override
+    public Category getItemById(int id) throws SQLException, ClassNotFoundException {
+        return null;
+    }
+
     //
     @Override
     public String insertCategory(Category Category) {

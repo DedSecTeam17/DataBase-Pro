@@ -54,8 +54,8 @@ public class CategoryFragment
             CategorytTableColumn(categor_tree_table);
             clearFields(name,id,name_hint,id_hint);
         } else {
-            UiValidation.validateInput(name, name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(id, id_hint, "empty filed not allowed", "only numbers allowed", "valid", "num");
+            UiValidation.validateInput(name.getText(), name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(id.getText(), id_hint, "empty filed not allowed", "only numbers allowed", "valid", "num");
         }
 
     }
@@ -86,8 +86,8 @@ public class CategoryFragment
             CategorytTableColumn(treeTableView);
             clearFields(name,id,name_hint,id_hint);
         } else {
-            UiValidation.validateInput(name, name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(id, id_hint, "empty filed not allowed", "only numbers allowed", "valid", "num");
+            UiValidation.validateInput(name.getText(), name_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(id.getText(), id_hint, "empty filed not allowed", "only numbers allowed", "valid", "num");
 
 
         }

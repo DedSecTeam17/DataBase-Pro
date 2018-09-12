@@ -6,6 +6,8 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 import sample.MarketSingeltons.TransactionDataBaseSingelton;
 
+import java.sql.SQLException;
+
 public class TransactionsOperations implements CrudOperations {
     @Override
     public String insertUser(User user) {
@@ -34,6 +36,11 @@ public class TransactionsOperations implements CrudOperations {
 
     @Override
     public String deleteProduct(Product product) {
+        return null;
+    }
+
+    @Override
+    public Category getItemById(int id) throws SQLException, ClassNotFoundException {
         return null;
     }
 

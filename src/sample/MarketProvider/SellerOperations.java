@@ -47,6 +47,10 @@ public class SellerOperations implements CrudOperations {
     }
 
     @Override
+    public Category getItemById(int id) throws SQLException, ClassNotFoundException {
+        return null;
+    }
+    @Override
     public String insertCategory(Category Category) {
         return null;
     }

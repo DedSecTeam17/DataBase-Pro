@@ -44,7 +44,7 @@ public class SellerProductsFragment
             SellerProductsTableColumn(sellerProductTable);
             clearFields(quantity,selectedItemName,selectItemSellingPrice);
         } else {
-            UiValidation.validateInput(quantity, quantity_hint, "empty filed not allowed", "not valid", "valid", "num");
+            UiValidation.validateInput(quantity.getText(), quantity_hint, "empty filed not allowed", "not valid", "valid", "num");
         }
 
     }

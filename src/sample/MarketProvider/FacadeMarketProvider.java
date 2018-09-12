@@ -94,6 +94,10 @@ public class FacadeMarketProvider {
         return categoryOperations.getAllCategories();
     }
 
+    public  Category getCategoryById(int id) throws SQLException, ClassNotFoundException {
+        return  categoryOperations.getItemById(id);
+    }
+
     public List<User> getAllSellers() throws SQLException, ClassNotFoundException {
         return sellerOperations.getAllSellers();
     }

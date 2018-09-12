@@ -5,6 +5,8 @@ import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 
+import java.sql.SQLException;
+
 public class CartOperations implements CrudOperations {
 
 
@@ -35,6 +37,11 @@ public class CartOperations implements CrudOperations {
 
     @Override
     public String deleteProduct(Product product) {
+        return null;
+    }
+
+    @Override
+    public Category getItemById(int id) throws SQLException, ClassNotFoundException {
         return null;
     }
 

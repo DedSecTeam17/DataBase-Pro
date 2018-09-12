@@ -4,6 +4,9 @@ import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
 import sample.MarketModel.Product;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
 import java.time.LocalDate;
@@ -23,26 +26,30 @@ public class ProductDataBaseSingleton {
 
 
 
-    public  static  void  main(String a[]){
-        for (int i=1; i<10000000; i++)
-        {
-            Product product= Product.newProduct()
-                    .productName("Itemz"+i)
-                    .productPrice(i)
-                    .productedCompany("companyz"+i)
-                    .quantity(i*10)
-                    .productionDate(String.valueOf(LocalDate.now()))
-                    .expiredDate(String.valueOf(LocalDate.now())).
-                    build();
-            getInstance().addProduct(product);
-        }
-    }
-
+//    public  static  void  main(String a[]){
+//        for (int i=1; i<10000000; i++)
+//        {
+//            Product product= Product.newProduct()
+//                    .productName("Itemz"+i)
+//                    .productPrice(i)
+//                    .productedCompany("companyz"+i)
+//                    .quantity(i*10)
+//                    .productionDate(String.valueOf(LocalDate.now()))
+//                    .expiredDate(String.valueOf(LocalDate.now())).
+//                    build();
+//            getInstance().deleteProduct(product);
+//        }
+//    }
+    
     public String addProduct(Product Product) {
         String data_base_message = "";
+
         try {
+            FileInputStream fin =new FileInputStream(Product.getImage_path());
             Connection connection = Config.getInstance().getConnection();
-            String sql = "INSERT INTO MarketProduct(product_name,product_price,production_date,expired_date,production_company,admin_email,PRODUCT_QUANTITY) VALUES(?,?,?,?,?,?,?)";
+
+
+            String sql = "INSERT INTO MARKET_PRODUCT(product_name,product_price,production_date,expired_date,production_company,admin_email,PRODUCT_QUANTITY,PRODUCT_IMAGE,CAT_ID) VALUES(?,?,?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, Product.getProductName());
             preparedStatement.setInt(2, Product.getProductPrice());
@@ -51,13 +58,14 @@ public class ProductDataBaseSingleton {
             preparedStatement.setString(5, Product.getProductedCompany());
             preparedStatement.setString(6, Auth.getInstance().getCurrentUser());
             preparedStatement.setInt(7, Product.getQuantity());
+            preparedStatement.setBinaryStream(8,fin,fin.available());
+            preparedStatement.setInt(9,Product.getCat_id());
+//
             preparedStatement.executeUpdate();
-
-
         } catch (SQLException e) {
             Log.i(e.getMessage());
             data_base_message = e.getMessage();
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | IOException e) {
             data_base_message = e.getMessage();
         }
 
@@ -67,7 +75,7 @@ public class ProductDataBaseSingleton {
 
     public String deleteProduct(Product Product) {
         String meaasge = "";
-        String sql = String.format("DELETE   FROM MarketProduct WHERE  product_name='%s'", Product.getProductName());
+        String sql = String.format("DELETE   FROM MARKET_PRODUCT WHERE  product_name='%s'", Product.getProductName());
         try {
             Connection connection = Config.getInstance().getConnection();
             Statement statement = connection.createStatement();
@@ -82,7 +90,7 @@ public class ProductDataBaseSingleton {
         String data_base_message = "";
         try {
             Connection connection = Config.getInstance().getConnection();
-            String sql = "UPDATE MarketProduct SET  product_price = ? ,  production_date = ? ,expired_date = ? ,production_company = ? ,admin_email = ?,PRODUCT_QUANTITY = ? WHERE  product_name = ?";
+            String sql = "UPDATE MARKET_PRODUCT SET  product_price = ? ,  production_date = ? ,expired_date = ? ,production_company = ? ,admin_email = ?,PRODUCT_QUANTITY = ? WHERE  product_name = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 
@@ -110,7 +118,7 @@ public class ProductDataBaseSingleton {
 //        product_name,product_price,production_date,expired_date,production_company,admin_email
         connection = Config.getInstance().getConnection();
 
-        String sql = String.format("SELECT  * FROM  MarketProduct WHERE  admin_email='%s'  ORDER  by production_date ASC ", Auth.getInstance().getCurrentUser());
+        String sql = String.format("SELECT  * FROM  MARKET_PRODUCT WHERE  admin_email='%s'  ORDER  by production_date ASC ", Auth.getInstance().getCurrentUser());
         PreparedStatement statement = null;
         statement = connection.prepareStatement(sql);
 
@@ -123,6 +131,7 @@ public class ProductDataBaseSingleton {
             String p_expi_date = SET.getString("expired_date");
             String p_company = SET.getString("production_company");
             int p_quantity = SET.getInt("PRODUCT_QUANTITY");
+            int cat_id = SET.getInt("CAT_ID");
 
             Product product = Product.newProduct()
                     .productName(p_name)
@@ -131,7 +140,10 @@ public class ProductDataBaseSingleton {
                     .productionDate(p_date)
                     .expiredDate(p_expi_date)
                     .quantity(p_quantity)
+                    .Cat_id(cat_id)
                     .build();
+
+            Log.i(String.valueOf("test"+product.getCat_id()));
 
 
             products.add(product);
@@ -143,7 +155,7 @@ public class ProductDataBaseSingleton {
 //        product_name,product_price,production_date,expired_date,production_company,admin_email
         connection = Config.getInstance().getConnection();
 
-        String sql = String.format("SELECT  * FROM  MarketProduct   ORDER  by production_date ASC ");
+        String sql = String.format("SELECT  * FROM  MARKET_PRODUCT   ORDER  by production_date ASC ");
         PreparedStatement statement = null;
         statement = connection.prepareStatement(sql);
 

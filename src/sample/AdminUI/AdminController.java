@@ -14,6 +14,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -23,6 +24,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.Duration;
@@ -31,14 +33,18 @@ import sample.AdminUI.fragmnets.ProductFragment;
 import sample.AdminUI.fragmnets.SellerFragment;
 import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
+import sample.MarketModel.Category;
 import sample.MarketModel.Product;
 import sample.MarketProvider.FacadeMarketProvider;
 import sample.UiValidation.UiValidation;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class AdminController implements Initializable {
@@ -46,6 +52,9 @@ public class AdminController implements Initializable {
     private static final double COLUMN_WIDTH = 831 / 6;
     private static final double WINDOW_WIDTH =800 ;
     private static final double WINDOW_HEIGHT = 500;
+    public JFXButton upload_image;
+    public JFXComboBox<String> all_category;
+    public Label selected_hint_id;
     private HamburgerBackArrowBasicTransition hamburgerTransition;
 
     //region UI Variables
@@ -236,6 +245,8 @@ public class AdminController implements Initializable {
 
     @FXML
     private JFXHamburger hamburgerButton;
+   @FXML
+   private  Label image_hint ;
 
     //#endregion
 
@@ -244,10 +255,29 @@ public class AdminController implements Initializable {
     private ProductFragment productFragment = new ProductFragment();
     private SellerFragment sellerFragment = new SellerFragment();
 
+    private  String image_path="";
+    private Map<String,Integer> hashMap=new HashMap<>();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         facadeMarketProvider = new FacadeMarketProvider();
+
+
+
+
         try {
+            for (Category category:facadeMarketProvider.getAllCategories())
+            {
+                hashMap.put(category.getCategory_name(),category.getCategory_id());
+            }
+
+            for (Category cat: facadeMarketProvider.getAllCategories() ) {
+                all_category.getItems().add(cat.getCategory_name());
+
+            }
+
+
+                all_category.getItems().add("");
             productFragment.ProductTableColumn(products_table);
             categoryFragment.CategorytTableColumn(categor_tree_table);
             sellerFragment.SellerTableColumn(seller_table);
@@ -262,7 +292,7 @@ public class AdminController implements Initializable {
         productFragment.onTableItemSelected(p_name, p_price, p_company, p_quantity, p_date, expi_date, products_table);
         add_product.setOnAction(event -> {
             try {
-                productFragment.addProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
+                productFragment.addProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date,image_path,image_hint,hashMap.get(all_category.getSelectionModel().getSelectedItem()),selected_hint_id, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -272,11 +302,21 @@ public class AdminController implements Initializable {
         });
         update_product.setOnAction(event -> {
             try {
-                productFragment.updateProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
+                productFragment.updateProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date,image_path,image_hint,hashMap.get(all_category.getSelectionModel().getSelectedItem()),selected_hint_id, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
+        upload_image.setOnAction(event -> {
+            FileChooser fileChooser = new FileChooser();
+            String ReddenMessageFromTheFile = "";
+            File result = fileChooser.showOpenDialog(null);
+            this.image_path=result.getAbsolutePath().replace("'\'","'\\'");
+            Log.i(image_path);
+        });
+
+
+//
 
         categoryFragment.onTableItemSelected(categor_tree_table, cat_name, cat_id);
         add_cat.setOnAction(event -> {
@@ -398,7 +438,7 @@ public class AdminController implements Initializable {
     private void DirectUserWithFade(StackPane currentPane, String fxml_file) {
 
         FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setDuration(Duration.millis(100));
         fadeTransition.setNode(currentPane);
         fadeTransition.setFromValue(1);
         fadeTransition.setToValue(0);
@@ -411,11 +451,20 @@ public class AdminController implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Scene newScene = new Scene(secondRoot,WINDOW_WIDTH,WINDOW_HEIGHT);
+                Scene newScene = new Scene(secondRoot);
 
                 Stage curStage = (Stage) currentPane.getScene().getWindow();
+                curStage.setMinWidth(WINDOW_WIDTH);
+                curStage.setMinHeight(WINDOW_HEIGHT);
+
+                curStage.setMaxHeight(WINDOW_HEIGHT);
+                curStage.setMaxWidth(WINDOW_WIDTH);
+
 
                 curStage.setScene(newScene);
+
+
+                curStage.show();
             }
         });
         fadeTransition.play();

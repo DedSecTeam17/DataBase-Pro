@@ -1,25 +1,22 @@
 package sample.UiValidation;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.scene.control.Label;
 
-import java.awt.*;
-
 public class UiValidation {
 
 
-    public static void InputErrorValidationWithHint(JFXTextField field, Label label, String message1, String message2) {
-        if (field.getText().equals("")) {
+    public static void InputErrorValidationWithHint(JFXPasswordField field, Label label, String message1, String message2) {
+        if (field .equals("")) {
             hintErr(label, message1);
         } else {
             hintErr(label, message2);
         }
     }
 
-    public static void InputErrorValidationWithHint(JFXPasswordField field, Label label, String message1, String message2) {
-        if (field.getText().equals("")) {
+    public static void InputErrorValidationWithHint(String field, Label label, String message1, String message2) {
+        if (field .equals("")) {
             hintErr(label, message1);
         } else {
             hintErr(label, message2);
@@ -41,25 +38,25 @@ public class UiValidation {
     }
 
 
-    public static void validateInput(JFXTextField field, Label label, String message_err1, String message_err2, String sucess_message, String type) {
+    public static void validateInput(String field, Label label, String message_err1, String message_err2, String sucess_message, String type) {
 
         switch (type) {
             case "normal":
-                if (!FormValidation.getInstance().checkuserName(field.getText())) {
+                if (!FormValidation.getInstance().checkuserName(field )) {
                     UiValidation.InputErrorValidationWithHint(field, label, message_err1, message_err2);
                 } else {
                     UiValidation.InputSuccessValidationWithHint(label, sucess_message);
                 }
                 break;
             case "email":
-                if (!FormValidation.getInstance().checkEmail(field.getText())) {
+                if (!FormValidation.getInstance().checkEmail(field )) {
                     UiValidation.InputErrorValidationWithHint(field, label, message_err1, message_err2);
                 } else {
                     UiValidation.InputSuccessValidationWithHint(label, sucess_message);
                 }
                 break;
             case "num":
-                if (!FormValidation.getInstance().isNumberOnly(field.getText())) {
+                if (!FormValidation.getInstance().isNumberOnly(field )) {
                     UiValidation.InputErrorValidationWithHint(field, label, message_err1, message_err2);
                 } else {
                     UiValidation.InputSuccessValidationWithHint(label, sucess_message);
@@ -68,8 +65,8 @@ public class UiValidation {
 
     }
 
-      public static void validateInput(JFXPasswordField field, Label label, String message_err1, String message_err2, String sucess_message) {
-              if (!FormValidation.getInstance().checkuserName(field.getText())) {
+      public static void validateInput(String field, Label label, String message_err1, String message_err2, String sucess_message) {
+              if (!FormValidation.getInstance().checkuserName(field )) {
             UiValidation.InputErrorValidationWithHint(field, label, message_err1, message_err2);
         } else {
             UiValidation.InputSuccessValidationWithHint(label, sucess_message);

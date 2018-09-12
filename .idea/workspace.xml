@@ -2,12 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a68062-2ee8-4f21-8895-d66f3fd38b10" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/22adaed9-df73-4af0-ac7f-670740f01da8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/22adaed9-df73-4af0-ac7f-670740f01da8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/Query/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/Query/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/SellerUI/seller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/SellerUI/seller.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SellerUI/seller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SellerUI/seller.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketModel/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketModel/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/CartOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/CartOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/CrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/CrudOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/SellerOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/SellerOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,19 +68,57 @@
         <item name="HR: schema" type="ac44c5e0:OracleImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="HR: schema" type="ac44c5e0:OracleImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="MARKET_PRODUCT: table" type="be4db629:OracleImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
+  <component name="FileColors">
+    <fileColor scope="All" color="Blue" />
+    <fileColor scope="All" color="Theme" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="FacadeMarketProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SellerPrivilegeOperation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/SellerPrivilegeOperation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SellerFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+            <state relative-caret-position="229">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,24 +126,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SellerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/SellerController.java">
+      <file leaf-file-name="CartFragments.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/Fragments/CartFragments.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1363">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="322">
+              <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
+      <file leaf-file-name="SellerProductsFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4873">
-              <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+            <state relative-caret-position="-24">
+              <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UiValidation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="43" column="24" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="24" />
               <folding>
-                <element signature="e#1841#1861#0" />
-                <element signature="e#2093#2108#0" />
-                <element signature="e#2332#2349#0" />
+                <element signature="e#1109#1110#0" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,8 +160,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="304" selection-start-line="304" selection-end-line="304" />
+            <state relative-caret-position="232">
+              <caret line="291" column="16" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,57 +169,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seller.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/seller.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="CategoryFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="97" column="16" lean-forward="true" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+            <state relative-caret-position="183">
+              <caret line="57" column="51" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
+              <folding>
+                <element signature="method#onTableItemSelected#0;class#CategoryFragment#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sql.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Query/sql.sql">
+      <file leaf-file-name="TransactionsOperations.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="2" lean-forward="true" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MARKETPRODUCT.sql" pinned="false" current-in-tab="false">
-        <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETPRODUCT.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MARKETUSER.sql" pinned="false" current-in-tab="false">
-        <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETUSER.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MARKETCATEGORY.sql" pinned="false" current-in-tab="false">
-        <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETCATEGORY.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="13" lean-forward="true" selection-end-line="40" />
+            <state relative-caret-position="206">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -163,6 +196,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -172,12 +206,20 @@
       <find>CategorytTableColumn</find>
       <find>Cart</find>
       <find>Product</find>
+      <find>MarketProduct</find>
+      <find>category_name</find>
+      <find>.getText())</find>
+      <find>.getText()</find>
     </findStrings>
     <replaceStrings>
       <replace>public</replace>
       <replace>CartTableColumn</replace>
       <replace>SellerProducts</replace>
       <replace>Seller</replace>
+      <replace>MARKET_PRODUCT</replace>
+      <replace>cat_id</replace>
+      <replace>Cat_id</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="FindManager">
@@ -186,34 +228,57 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Mohammed Elamin &lt;34925145+dedsecteam17@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java" />
-        <option value="$PROJECT_DIR$/src/sample/MarketModel/Product.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketModel/Cart.java" />
         <option value="$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketProvider/SellerPrivilidgeOperation.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketProvider/SellerPrivilegeOperation.java" />
-        <option value="$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java" />
-        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" />
         <option value="$PROJECT_DIR$/src/sample/SellerUI/SellerController.java" />
-        <option value="$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java" />
         <option value="$PROJECT_DIR$/src/sample/SellerUI/Fragments/CartFragments.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
         <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/SellerDataBaseSingleton.java" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java" />
         <option value="$PROJECT_DIR$/src/sample/SellerUI/seller.fxml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console.sql" />
+        <option value="$PROJECT_DIR$/src/sample/Query/sql.sql" />
+        <option value="$PROJECT_DIR$/src/sample/s.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/SellerUI/xx.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_1.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_2.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_3.sql" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketModel/Product.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_4.sql" />
+        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketProvider/CrudOperations.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketProvider/CartOperations.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java" />
+        <option value="$PROJECT_DIR$/src/sample/MarketProvider/SellerOperations.java" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java" />
+        <option value="$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java" />
       </list>
     </option>
   </component>
@@ -244,6 +309,45 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DataBase-Pro" type="cbb8eebc:String" user="DataBase-Pro" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DataBase-Pro" type="cbb8eebc:String" user="DataBase-Pro" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="DataBase-Pro" type="cbb8eebc:String" user="DataBase-Pro" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="sample" type="cbb8eebc:String" user="sample" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DataBase-Pro" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Database Pro" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="DataBase-Pro" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Database Pro" type="616d4139:PackageViewModuleNode" />
+              <item name="sample" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,33 +386,38 @@
               <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="MarketSingeltons" type="462c0819:PsiDirectoryNode" />
+              <item name="SellerUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
               <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="Query" type="462c0819:PsiDirectoryNode" />
+              <item name="SellerUI" type="462c0819:PsiDirectoryNode" />
+              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="UiValidation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="C:/oracle/product/10.2.0/db_1/jdbc/lib/ojdbc14dms_g.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/jfoenix-8.0.4.jar!/" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -445,8 +554,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.CategoryDataBaseSingleton" />
         <item itemvalue="Application.ProductDataBaseSingleton" />
+        <item itemvalue="Application.CategoryDataBaseSingleton" />
         <item itemvalue="Application.AdminDataBaseSingleton" />
         <item itemvalue="Application.TestClass" />
       </list>
@@ -476,41 +585,52 @@
       <workItem from="1536642898369" duration="162000" />
       <workItem from="1536643095720" duration="521000" />
       <workItem from="1536648217752" duration="676000" />
-      <workItem from="1536656083137" duration="1376000" />
+      <workItem from="1536656083137" duration="2669000" />
+      <workItem from="1536688266071" duration="1733000" />
+      <workItem from="1536749933553" duration="5205000" />
+      <workItem from="1536755203486" duration="10641000" />
     </task>
+    <task id="LOCAL-00001" summary="add query to sql.sql">
+      <created>1536663277978</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536663277978</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24173000" />
+    <option name="totallyTimeSpent" value="43045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32237872" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32090762" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32954547" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3262987" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37437603" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3283582" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3294509" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32954547" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6739788" weight="0.32901135" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32612312" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3283582" />
       <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.327787" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32576984" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22314675" />
-      <window_info anchor="right" id="Database" order="1" visible="true" weight="0.2624811" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.30786687" />
+      <window_info anchor="right" id="Database" order="8" sideWeight="0.3260212" weight="0.30484116" />
+      <window_info id="Structure" order="1" sideWeight="0.5016234" side_tool="true" weight="0.14372164" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.0" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39800996" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5016234" side_tool="true" weight="0.14372164" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -550,6 +670,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="add query to sql.sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="add query to sql.sql" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -564,128 +690,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/css/design.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="75" column="67" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1288">
-          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1472">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" />
-            <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" />
-            <marker date="1536602715649" expanded="true" signature="1298:1450" ph="INSERT INTO MarketProduct... " />
-            <marker date="1536602715649" expanded="true" signature="3110:3131" ph="UPDATE Marke... " />
-            <marker date="1536602715649" expanded="true" signature="3110:3252" ph="UPDATE Marke... " />
-            <marker date="1536602715649" expanded="true" signature="3110:3280" ph="UPDATE Marke... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/FormValidation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="58" column="73" selection-start-line="58" selection-start-column="73" selection-end-line="58" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470">
-          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="59" column="22" selection-start-line="59" selection-start-column="22" selection-end-line="59" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -769,17 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2437">
-          <folding>
-            <marker date="1536506225175" expanded="true" signature="1052:7990" ph="..." />
-            <marker date="1536506225175" expanded="true" signature="3938:4228" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
@@ -809,106 +802,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CartOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-487">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/SellerPrivilegeOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="87" column="2" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="126" column="1" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/AdminPrivilidgeOpertation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2116">
-          <caret line="145" column="99" selection-start-line="145" selection-start-column="99" selection-end-line="145" selection-end-column="99" />
-          <folding>
-            <element signature="method#deleteProduct#0;class#ProductDataBaseSingleton#0" />
-            <element signature="method#getAllProduct#0;class#ProductDataBaseSingleton#0" />
-            <marker date="1536602715649" expanded="true" signature="1298:1450" ph="INSERT INTO MarketProduct... " />
-            <marker date="1536602715649" expanded="true" signature="3110:3131" ph="UPDATE Marke... " />
-            <marker date="1536602715649" expanded="true" signature="3110:3252" ph="UPDATE Marke... " />
-            <marker date="1536602715649" expanded="true" signature="3110:3280" ph="UPDATE Marke... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="method#onTableItemSelected#0;class#CategoryFragment#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETCATEGORY">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/Fragments/CartFragments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2737">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#clearFields#0;class#CartFragments#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1840">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
@@ -926,85 +823,315 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/SellerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="101" column="29" lean-forward="true" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+        <state relative-caret-position="1403">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETUSER.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETCATEGORY.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Query/sql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Atuhentication/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/seller.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2231">
+          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETCATEGORY">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/s.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/xx.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/sample/Login.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1536506225175" expanded="true" signature="1052:7990" ph="..." />
+            <marker date="1536506225175" expanded="true" signature="3938:4228" ph="..." />
           </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="66" selection-start-column="66" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETPRODUCT.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_3.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETPRODUCT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4873">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        <state relative-caret-position="229">
+          <caret line="316" selection-start-line="316" selection-end-line="316" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
           <folding>
-            <element signature="e#1841#1861#0" />
-            <element signature="e#2093#2108#0" />
-            <element signature="e#2332#2349#0" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1219#1220#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1566#1567#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+            <element signature="e#1787#1788#0" expanded="true" />
+            <element signature="e#1841#1842#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
+            <element signature="e#1930#1931#0" expanded="true" />
+            <element signature="e#1969#1970#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#2121#2122#0" expanded="true" />
+            <element signature="e#2152#2153#0" expanded="true" />
+            <element signature="e#2197#2198#0" expanded="true" />
+            <element signature="e#2237#2238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKET_PRODUCT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="145" column="38" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="78" column="36" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CrudOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CartOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="60" column="32" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/SellerOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/SellerPrivilegeOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="144" column="50" lean-forward="true" selection-start-line="144" selection-start-column="50" selection-end-line="144" selection-end-column="50" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_4.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="43" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="57" column="51" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
+          <folding>
+            <element signature="method#onTableItemSelected#0;class#CategoryFragment#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="304" selection-start-line="304" selection-end-line="304" />
+        <state relative-caret-position="232">
+          <caret line="291" column="16" lean-forward="true" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/SellerController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/Fragments/CartFragments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1363">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="322">
+          <caret line="37" column="56" lean-forward="true" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/seller.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="97" column="16" lean-forward="true" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+        <state relative-caret-position="229">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETPRODUCT.sql">
+    <entry file="file://$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="253">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="24" />
+          <folding>
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETUSER.sql">
+    <entry file="file://$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        <state relative-caret-position="-24">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="das://22adaed9-df73-4af0-ac7f-670740f01da8/schema/HR/table/MARKETCATEGORY.sql">
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" lean-forward="true" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Query/sql.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="2" lean-forward="true" selection-end-line="60" />
+        <state relative-caret-position="254">
+          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
@@ -1086,6 +1213,17 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>jfoenix-8.0.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

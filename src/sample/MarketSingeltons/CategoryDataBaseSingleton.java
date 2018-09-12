@@ -75,6 +75,29 @@ public class CategoryDataBaseSingleton {
         return data_base_message;
 
     }
+
+    public  Category getCategoryById(int id) throws SQLException, ClassNotFoundException {
+        Connection connection = null;
+//        product_name,product_price,production_date,expired_date,production_company,admin_email
+        connection = Config.getInstance().getConnection();
+
+        String sql = String.format("SELECT  * FROM  MarketCategory WHERE  EMAIL='%s' AND CAT_ID='%d'  ORDER  by CAT_ID ASC ", Auth.getInstance().getCurrentUser(),id);
+        PreparedStatement statement = null;
+        statement = connection.prepareStatement(sql);
+
+        ResultSet SET = statement.executeQuery(sql);
+        Category category = null;
+        while (SET.next()) {
+            String cat_name = SET.getString("CAT_NAME");
+            int cat_id = SET.getInt("CAT_ID");
+       category  = Category.newCategory()
+                    .categoryName(cat_name)
+                    .categoryID(cat_id)
+                    .build();
+
+        }
+        return category;
+    }
     public List<Category> getAllCategory() throws SQLException, ClassNotFoundException {
         Connection connection = null;
 //        product_name,product_price,production_date,expired_date,production_company,admin_email
@@ -85,17 +108,17 @@ public class CategoryDataBaseSingleton {
         statement = connection.prepareStatement(sql);
 
         ResultSet SET = statement.executeQuery(sql);
-        List<Category> products = new ArrayList<>(20);
+        List<Category> categories = new ArrayList<>(20);
         while (SET.next()) {
             String cat_name = SET.getString("CAT_NAME");
             int cat_id = SET.getInt("CAT_ID");
 
-            Category product = Category.newCategory()
+            Category category = Category.newCategory()
                     .categoryName(cat_name)
                     .categoryID(cat_id)
                     .build();
-            products.add(product);
+            categories.add(category);
         }
-        return products;
+        return categories;
     }
 }

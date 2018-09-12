@@ -258,8 +258,8 @@ public class Controller implements Initializable {
                 }
             }
         } else {
-            UiValidation.validateInput(password, password_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name");
-            UiValidation.validateInput(email, email_hint, "empty filed not allowed", "invalid email", "valid email", "email");
+            UiValidation.validateInput(password.getText(), password_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name");
+            UiValidation.validateInput(email.getText(), email_hint, "empty filed not allowed", "invalid email", "valid email", "email");
         }
     }
     private void SignUp(JFXTextField first_name, JFXTextField last_name, JFXTextField email, JFXPasswordField password) {
@@ -282,10 +282,10 @@ public class Controller implements Initializable {
                 DirectUserWithFade(login_reg_pane, "../sample/SellerUI/seller.fxml");
             }
         } else {
-            UiValidation.validateInput(first_name, SignUp_fname_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name", "normal");
-            UiValidation.validateInput(last_name, SignUp_lname_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name", "normal");
-            UiValidation.validateInput(password, SignUp_password_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name");
-            UiValidation.validateInput(email, SignUp_email_hint, "empty filed not allowed", "invalid email", "valid email", "email");
+            UiValidation.validateInput(first_name.getText(), SignUp_fname_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name", "normal");
+            UiValidation.validateInput(last_name.getText(), SignUp_lname_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name", "normal");
+            UiValidation.validateInput(password.getText(), SignUp_password_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name");
+            UiValidation.validateInput(email.getText(), SignUp_email_hint, "empty filed not allowed", "invalid email", "valid email", "email");
         }
 
     }
@@ -306,19 +306,21 @@ public class Controller implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Scene newScene = new Scene(secondRoot);
+                Scene newScene = new Scene(secondRoot,WINDOW_WIDTH,WINDOW_HEIGHT);
+
 
                 Stage curStage = (Stage) currentPane.getScene().getWindow();
+                curStage.setFullScreen(true);
                 curStage.setMinWidth(WINDOW_WIDTH);
                 curStage.setMinHeight(WINDOW_HEIGHT);
-                curStage.setMinHeight(WINDOW_HEIGHT);
+
+                curStage.setMaxHeight(WINDOW_HEIGHT);
                 curStage.setMaxWidth(WINDOW_WIDTH);
 
                 curStage.setScene(newScene);
             }
         });
         fadeTransition.play();
-
     }
 
 

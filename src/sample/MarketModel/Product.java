@@ -9,6 +9,24 @@ public class Product {
     private String expiredDate;
     private String productedCompany;
     private int quantity;
+    private  String image_path;
+    private  int Cat_id;
+
+    public int getCat_id() {
+        return Cat_id;
+    }
+
+    public void setCat_id(int Cat_id) {
+        this.Cat_id = Cat_id;
+    }
+
+    public String getImage_path() {
+        return image_path;
+    }
+
+    public void setImage_path(String image_path) {
+        this.image_path = image_path;
+    }
 
     public Product(ProductBuilder productBuilder) {
         setProductName(productBuilder.productName);
@@ -17,7 +35,8 @@ public class Product {
         setExpiredDate(productBuilder.expiredDate);
         setProductedCompany(productBuilder.productedCompany);
         setQuantity(productBuilder.quantity);
-
+        setImage_path(productBuilder.image_path);
+        setCat_id(productBuilder.Cat_id);
     }
 
 
@@ -81,6 +100,9 @@ public class Product {
         private String expiredDate;
         private String productedCompany;
         private int quantity;
+        private String image_path;
+        private  int Cat_id;
+
 
 
         public ProductBuilder productName(String productName) {
@@ -118,6 +140,16 @@ public class Product {
             return this;
 
         }
+        public ProductBuilder imagePath(String image_path) {
+            this.image_path = image_path;
+            return this;
+        }
+
+        public ProductBuilder Cat_id(int Cat_id) {
+            this.Cat_id = Cat_id;
+            return this;
+        }
+
 
 
         public Product build() {
