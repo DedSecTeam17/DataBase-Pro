@@ -31,6 +31,7 @@ import javafx.util.Duration;
 import sample.AdminUI.fragmnets.CategoryFragment;
 import sample.AdminUI.fragmnets.ProductFragment;
 import sample.AdminUI.fragmnets.SellerFragment;
+import sample.AdminUI.fragmnets.TransactionsFragment;
 import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
 import sample.MarketModel.Category;
@@ -161,8 +162,52 @@ public class AdminController implements Initializable {
     //#endregion
 
     //#region transactions
+
+    //#region TextFields
+    @FXML
+    private JFXTextField transaction_id;
+
+    @FXML
+    private JFXTextField transaction_userEmail;
+
+    @FXML
+    private JFXTextField transaction_productName;
+
+    @FXML
+    private JFXTextField transaction_sellingPrice;
+
+    @FXML
+    private JFXTextField transaction_quantity;
+    //#endregion
+
+    //#region hints
+    @FXML
+    private Label transaction_id_hint;
+
+    @FXML
+    private Label transaction_userEmail_hint;
+
+    @FXML
+    private Label transaction_productName_hint;
+
+    @FXML
+    private Label transaction_sellingPrice_hint;
+
+    @FXML
+    private Label transaction_quantity_hint;
+    //#endregion
+
+    //#region Buttons
+    @FXML
+    private JFXButton transaction_AddButton;
+
+    @FXML
+    private JFXButton transaction_UpdateButton;
+
     @FXML
     private JFXButton transaction_RemoveButton;
+    //#endregion
+
     //#endregion
 
     //#region Categories
@@ -205,6 +250,9 @@ public class AdminController implements Initializable {
 
     @FXML
     private JFXTreeTableView<?> seller_table;
+
+    @FXML
+    private JFXTreeTableView<?> transactions_table;
     //#endregion
 
     //#region Panes
@@ -254,6 +302,7 @@ public class AdminController implements Initializable {
     private CategoryFragment categoryFragment = new CategoryFragment();
     private ProductFragment productFragment = new ProductFragment();
     private SellerFragment sellerFragment = new SellerFragment();
+    private TransactionsFragment transactionsFragment = new TransactionsFragment();
 
     private  String image_path="";
     private Map<String,Integer> hashMap=new HashMap<>();
@@ -281,6 +330,7 @@ public class AdminController implements Initializable {
             productFragment.ProductTableColumn(products_table);
             categoryFragment.CategorytTableColumn(categor_tree_table);
             sellerFragment.SellerTableColumn(seller_table);
+            transactionsFragment.TransactionTableColumn(transactions_table);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -352,6 +402,19 @@ public class AdminController implements Initializable {
             }
         });
 
+        transactionsFragment.onTableItemSelected(transaction_id,transaction_userEmail,transaction_productName,transaction_sellingPrice,transaction_quantity,transactions_table);
+        transaction_RemoveButton.setOnAction(event -> transactionsFragment.deleteTransaction(transaction_id,transaction_userEmail,transaction_productName,transaction_sellingPrice,transaction_quantity,transaction_id_hint,transaction_userEmail_hint,transaction_productName_hint,transaction_sellingPrice_hint,transaction_quantity_hint,transactions_table));
+        transaction_UpdateButton.setOnAction(event -> {
+            try {
+                transactionsFragment.updateTransaction(transaction_id,transaction_userEmail,transaction_productName,
+                        transaction_sellingPrice,transaction_quantity,
+                        transaction_id_hint,transaction_userEmail_hint,transaction_productName_hint,
+                        transaction_sellingPrice_hint,transaction_quantity_hint,
+                        transactions_table);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 
     }
 

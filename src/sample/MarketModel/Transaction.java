@@ -4,6 +4,7 @@ public class Transaction {
 
 
     private int id;
+    private String userEmail;
     private String productName;
     private int sellingPrice;
     private int quantity;
@@ -12,6 +13,7 @@ public class Transaction {
 
     public Transaction(TransactionBuilder transactionBuilder) {
         setId(transactionBuilder.id);
+        setUserEmail(transactionBuilder.userEmail);
         setProductName(transactionBuilder.productName);
         setProfit(transactionBuilder.profit);
         setCreated_at(transactionBuilder.created_at);
@@ -32,6 +34,15 @@ public class Transaction {
     public void setId(int id) {
         this.id = id;
     }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
 
     public int getSellingPrice() {
         return sellingPrice;
@@ -77,12 +88,19 @@ public class Transaction {
 
     public static class TransactionBuilder {
         private int id;
+        private String userEmail;
         private String productName;
         private int profit;
         private String created_at;
         private int sellingPrice;
         private int quantity;
 
+
+        public TransactionBuilder userEmail(String userEmail)
+        {
+            this.userEmail = userEmail;
+            return this;
+        }
 
         public TransactionBuilder productName(String productName) {
 
