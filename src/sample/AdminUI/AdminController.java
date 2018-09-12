@@ -41,6 +41,7 @@ import sample.UiValidation.UiValidation;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
@@ -257,7 +258,23 @@ public class AdminController implements Initializable {
 
     private  String image_path="";
     private Map<String,Integer> hashMap=new HashMap<>();
+    private       int i=0;
+private  void  setUpCategory() throws SQLException, ClassNotFoundException {
+    for (Category category:facadeMarketProvider.getAllCategories())
+    {
+        hashMap.put(category.getCategory_name(),category.getCategory_id());
+    }
+    int i=0;
 
+    for (Category cat: facadeMarketProvider.getAllCategories() ) {
+
+        all_category.getItems().add(i,cat.getCategory_name());
+        i++;
+
+
+    }
+
+}
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         facadeMarketProvider = new FacadeMarketProvider();
@@ -266,15 +283,7 @@ public class AdminController implements Initializable {
 
 
         try {
-            for (Category category:facadeMarketProvider.getAllCategories())
-            {
-                hashMap.put(category.getCategory_name(),category.getCategory_id());
-            }
-
-            for (Category cat: facadeMarketProvider.getAllCategories() ) {
-                all_category.getItems().add(cat.getCategory_name());
-
-            }
+            setUpCategory();
 
 
                 all_category.getItems().add("");
@@ -311,7 +320,7 @@ public class AdminController implements Initializable {
             FileChooser fileChooser = new FileChooser();
             String ReddenMessageFromTheFile = "";
             File result = fileChooser.showOpenDialog(null);
-            this.image_path=result.getAbsolutePath().replace("'\'","'\\'");
+            this.image_path=result.getAbsolutePath();
             Log.i(image_path);
         });
 
@@ -322,6 +331,8 @@ public class AdminController implements Initializable {
         add_cat.setOnAction(event -> {
             try {
                 categoryFragment.addCategory(cat_name, cat_id, cat_id_hint, cat_name_hint, categor_tree_table);
+                this.i=0;
+                setUpCategory();
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -380,6 +391,9 @@ public class AdminController implements Initializable {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         categoriesPanel.setVisible(true);
+
+       loadAllTables();
+
     }
 
     @FXML
@@ -387,6 +401,19 @@ public class AdminController implements Initializable {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         productsPanel.setVisible(true);
+        loadAllTables();
+
+    }
+
+    private  void  loadAllTables()
+    {    try {
+        categoryFragment.CategorytTableColumn(categor_tree_table);
+        productFragment.ProductTableColumn(products_table);
+        sellerFragment.SellerTableColumn(seller_table);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
     }
 
     @FXML
@@ -401,6 +428,7 @@ public class AdminController implements Initializable {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         sellersPanel.setVisible(true);
+        loadAllTables();
     }
 
     @FXML
@@ -408,6 +436,7 @@ public class AdminController implements Initializable {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         transactionsPanel.setVisible(true);
+        loadAllTables();
     }
 
     private void highlight(double y) {

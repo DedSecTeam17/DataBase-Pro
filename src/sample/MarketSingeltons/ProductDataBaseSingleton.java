@@ -89,8 +89,9 @@ public class ProductDataBaseSingleton {
     public String updateProduct(Product Product) {
         String data_base_message = "";
         try {
+            FileInputStream fin =new FileInputStream(Product.getImage_path());
             Connection connection = Config.getInstance().getConnection();
-            String sql = "UPDATE MARKET_PRODUCT SET  product_price = ? ,  production_date = ? ,expired_date = ? ,production_company = ? ,admin_email = ?,PRODUCT_QUANTITY = ? WHERE  product_name = ?";
+            String sql = "UPDATE MARKET_PRODUCT SET  product_price = ? ,  production_date = ? ,expired_date = ? ,production_company = ? ,admin_email = ?,PRODUCT_QUANTITY = ? , PRODUCT_IMAGE = ?, CAT_ID=? WHERE  product_name = ? ";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 
@@ -100,13 +101,19 @@ public class ProductDataBaseSingleton {
             preparedStatement.setString(4, Product.getProductedCompany());
             preparedStatement.setString(5, Auth.getInstance().getCurrentUser());
             preparedStatement.setInt(6, Product.getQuantity());
-            preparedStatement.setString(7, Product.getProductName());
+            preparedStatement.setBinaryStream(7,fin,fin.available());
+            preparedStatement.setInt(8,Product.getCat_id());
+            preparedStatement.setString(9, Product.getProductName());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             Log.i(e.getMessage());
             data_base_message = e.getMessage();
         } catch (ClassNotFoundException e) {
             data_base_message = e.getMessage();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         return data_base_message;

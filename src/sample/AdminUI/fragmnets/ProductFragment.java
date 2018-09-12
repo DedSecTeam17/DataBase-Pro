@@ -27,11 +27,11 @@ import java.io.FileInputStream;
 import java.time.LocalDate;
 
 public class ProductFragment {
-    public static final double COLUMN_WIDTH =831/7 ;
+    public static final double COLUMN_WIDTH = 831 / 7;
     public ObservableList<ProductItem> codeObservableList;
-    public FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
-    public  void  onTableItemSelected(JFXTextField p_name,JFXTextField p_price,JFXTextField p_company,JFXTextField p_quantity,JFXDatePicker p_date,JFXDatePicker expi_date,JFXTreeTableView treeTableView)
-    {
+    public FacadeMarketProvider facadeMarketProvider = new FacadeMarketProvider();
+
+    public void onTableItemSelected(JFXTextField p_name, JFXTextField p_price, JFXTextField p_company, JFXTextField p_quantity, JFXDatePicker p_date, JFXDatePicker expi_date, JFXTreeTableView treeTableView) {
         treeTableView.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -59,14 +59,15 @@ public class ProductFragment {
         });
 
     }
-       public void deleteProduct(JFXTextField p_name,JFXTextField p_price,JFXTextField p_company,JFXTextField p_quantity,JFXDatePicker p_date,JFXDatePicker expi_date,Label hint_p_name,Label hint_p_price,Label hint_p_company,Label hint_p_quantity,Label hint_p_date,Label hint_expi_date,JFXTreeTableView treeTableView) {
+
+    public void deleteProduct(JFXTextField p_name, JFXTextField p_price, JFXTextField p_company, JFXTextField p_quantity, JFXDatePicker p_date, JFXDatePicker expi_date, Label hint_p_name, Label hint_p_price, Label hint_p_company, Label hint_p_quantity, Label hint_p_date, Label hint_expi_date, JFXTreeTableView treeTableView) {
         int r_index = treeTableView.getSelectionModel().getSelectedIndex();
         ProductItem RuleItem = codeObservableList.get(r_index);
         StringProperty getIdForSelectedItem = RuleItem.productName;
         String product_name = getIdForSelectedItem.getValue();
         Product product = Product.newProduct().productName(product_name).build();
         facadeMarketProvider.deleteProduct(product);
-        clearFields(p_name,p_price,p_company,p_quantity,p_date,expi_date,hint_p_name,hint_p_price,hint_p_company,hint_p_quantity,hint_p_date,hint_expi_date);
+        clearFields(p_name, p_price, p_company, p_quantity, p_date, expi_date, hint_p_name, hint_p_price, hint_p_company, hint_p_quantity, hint_p_date, hint_expi_date);
         try {
             ProductTableColumn(treeTableView);
         } catch (Exception e) {
@@ -74,7 +75,8 @@ public class ProductFragment {
         }
         Log.i(product_name);
     }
-       public void updateProduct(JFXTextField p_name, JFXTextField p_price, JFXTextField p_company, JFXTextField p_quantity, JFXDatePicker p_date, JFXDatePicker expi_date, String image_path, Label image_hint, Integer selectedItem, Label selected_hint_id, Label hint_p_name, Label hint_p_price, Label hint_p_company, Label hint_p_quantity, Label hint_p_date, Label hint_expi_date, JFXTreeTableView treeTableView) throws Exception {
+
+    public void updateProduct(JFXTextField p_name, JFXTextField p_price, JFXTextField p_company, JFXTextField p_quantity, JFXDatePicker p_date, JFXDatePicker expi_date, String image_path, Label image_hint, Integer selectedItem, Label selected_hint_id, Label hint_p_name, Label hint_p_price, Label hint_p_company, Label hint_p_quantity, Label hint_p_date, Label hint_expi_date, JFXTreeTableView treeTableView) throws Exception {
         if (!p_name.getText().equals("") && !p_price.getText().equals("") && !expi_date.getTypeSelector().equals("") && !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals("")) {
             Product product = Product.newProduct()
                     .productName(p_name.getText())
@@ -89,17 +91,18 @@ public class ProductFragment {
 
             facadeMarketProvider.updateProduct(product);
             ProductTableColumn(treeTableView);
-            clearFields(p_name,p_price,p_company,p_quantity,p_date,expi_date,hint_p_name,hint_p_price,hint_p_company,hint_p_quantity,hint_p_date,hint_expi_date);
+            clearFields(p_name, p_price, p_company, p_quantity, p_date, expi_date, hint_p_name, hint_p_price, hint_p_company, hint_p_quantity, hint_p_date, hint_expi_date);
         } else {
             UiValidation.validateInput(p_name.getText(), hint_p_name, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
             UiValidation.validateInput(p_company.getText(), hint_p_company, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
             UiValidation.validateInput(p_price.getText(), hint_p_price, "empty filed not allowed", "only numbers", "valid", "num");
             UiValidation.validateInput(p_quantity.getText(), hint_p_quantity, "empty filed not allowed", "only numbers", "valid", "num");
             UiValidation.validateInput(String.valueOf(selectedItem), selected_hint_id, "empty filed not allowed", "only numbers", "valid", "normal");
-            UiValidation.validateInput(image_path, image_hint, "empty filed not allowed", "only numbers", "valid", "normal");
+//            UiValidation.validateInput(image_path, image_hint, "empty filed not allowed", "only numbers", "valid", "normal");
         }
     }
-       public void addProduct(JFXTextField p_name, JFXTextField p_price, JFXTextField p_company, JFXTextField p_quantity, JFXDatePicker p_date, JFXDatePicker expi_date, String image_path, Label image_hint, Integer selectedCategoryItem, Label selected_hint_id, Label hint_p_name, Label hint_p_price, Label hint_p_company, Label hint_p_quantity, Label hint_p_date, Label hint_expi_date, JFXTreeTableView treeTableView) throws Exception {
+
+    public void addProduct(JFXTextField p_name, JFXTextField p_price, JFXTextField p_company, JFXTextField p_quantity, JFXDatePicker p_date, JFXDatePicker expi_date, String image_path, Label image_hint, Integer selectedCategoryItem, Label selected_hint_id, Label hint_p_name, Label hint_p_price, Label hint_p_company, Label hint_p_quantity, Label hint_p_date, Label hint_expi_date, JFXTreeTableView treeTableView) throws Exception {
         if (!p_name.getText().equals("") && !p_price.getText().equals("") && !expi_date.getTypeSelector().equals("") && !p_date.getTypeSelector().equals("") && !p_quantity.getText().equals("") && !p_company.getText().equals("")) {
             Product product = Product.newProduct()
                     .productName(p_name.getText())
@@ -114,7 +117,7 @@ public class ProductFragment {
             Log.i(product.getImage_path());
             facadeMarketProvider.insertProduct(product);
             ProductTableColumn(treeTableView);
-            clearFields(p_name,p_price,p_company,p_quantity,p_date,expi_date,hint_p_name,hint_p_price,hint_p_company,hint_p_quantity,hint_p_date,hint_expi_date);
+            clearFields(p_name, p_price, p_company, p_quantity, p_date, expi_date, hint_p_name, hint_p_price, hint_p_company, hint_p_quantity, hint_p_date, hint_expi_date);
         } else {
             UiValidation.validateInput(p_name.getText(), hint_p_name, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
             UiValidation.validateInput(p_company.getText(), hint_p_name, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
@@ -125,7 +128,8 @@ public class ProductFragment {
         }
 
     }
-       public void clearFields(JFXTextField p_name,JFXTextField p_price,JFXTextField p_company,JFXTextField p_quantity,JFXDatePicker p_date,JFXDatePicker expi_date,Label hint_p_name,Label hint_p_price,Label hint_p_company,Label hint_p_quantity,Label hint_p_date,Label hint_expi_date) {
+
+    public void clearFields(JFXTextField p_name, JFXTextField p_price, JFXTextField p_company, JFXTextField p_quantity, JFXDatePicker p_date, JFXDatePicker expi_date, Label hint_p_name, Label hint_p_price, Label hint_p_company, Label hint_p_quantity, Label hint_p_date, Label hint_expi_date) {
         p_name.setEditable(true);
         p_name.clear();
         p_price.clear();
@@ -133,9 +137,9 @@ public class ProductFragment {
         p_quantity.clear();
         p_date.setValue(null);
         expi_date.setValue(null);
-        
+
 //        
-        
+
         hint_p_name.setText("");
         hint_p_price.setText("");
         hint_p_company.setText("");
@@ -145,7 +149,7 @@ public class ProductFragment {
     }
 
     //    PRODUCT TABLE
-       public void ProductTableColumn(JFXTreeTableView treeTableView) throws Exception {
+    public void ProductTableColumn(JFXTreeTableView treeTableView) throws Exception {
         JFXTreeTableColumn<ProductItem, String> name = new JFXTreeTableColumn<>("name");
         name.setPrefWidth(COLUMN_WIDTH);
         name.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
@@ -202,14 +206,14 @@ public class ProductFragment {
             }
         });
 
-           JFXTreeTableColumn<ProductItem, String> category = new JFXTreeTableColumn<>("Category");
-           category.setPrefWidth(COLUMN_WIDTH);
-           category.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
-               @Override
-               public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
-                   return param.getValue().getValue().category;
-               }
-           });
+        JFXTreeTableColumn<ProductItem, String> category = new JFXTreeTableColumn<>("Category");
+        category.setPrefWidth(COLUMN_WIDTH);
+        category.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<ProductItem, String>, ObservableValue<String>>() {
+            @Override
+            public ObservableValue<String> call(TreeTableColumn.CellDataFeatures<ProductItem, String> param) {
+                return param.getValue().getValue().category;
+            }
+        });
 
 //
 
@@ -224,17 +228,18 @@ public class ProductFragment {
         for (Product product : facadeMarketProvider.getAllProduct()
                 ) {
 
-            codeObservableList.add(new ProductItem(product.getProductName(),product.getProductPrice(), product.getProductionDate(), product.getExpiredDate(), product.getProductedCompany(), product.getQuantity(),facadeMarketProvider.getCategoryById(product.getCat_id()).getCategory_name()));
+            codeObservableList.add(new ProductItem(product.getProductName(), product.getProductPrice(), product.getProductionDate(), product.getExpiredDate(), product.getProductedCompany(), product.getQuantity(), facadeMarketProvider.getCategoryById(product.getCat_id()).getCategory_name()));
 
         }
         final TreeItem<ProductItem> root = new RecursiveTreeItem<ProductItem>(codeObservableList, RecursiveTreeObject::getChildren);
 
 
-        treeTableView.getColumns().setAll(name, price, productionDate, expiredDate, company, quantity,category);
+        treeTableView.getColumns().setAll(name, price, productionDate, expiredDate, company, quantity, category);
         treeTableView.setRoot(root);
         treeTableView.setShowRoot(false);
 
     }
+
     class ProductItem extends RecursiveTreeObject<ProductItem> {
         StringProperty productName;
         StringProperty productPrice;
@@ -244,7 +249,7 @@ public class ProductFragment {
         StringProperty quantity;
         StringProperty category;
 
-        public ProductItem(String productName, int productPrice, String productionDate, String expiredDate, String productedCompany, int quantity,String category) {
+        public ProductItem(String productName, int productPrice, String productionDate, String expiredDate, String productedCompany, int quantity, String category) {
             this.productName = new SimpleStringProperty(productName);
             this.productPrice = new SimpleStringProperty(String.valueOf(productPrice));
             this.productionDate = new SimpleStringProperty(productionDate);

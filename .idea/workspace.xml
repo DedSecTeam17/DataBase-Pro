@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a68062-2ee8-4f21-8895-d66f3fd38b10" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/22adaed9-df73-4af0-ac7f-670740f01da8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/22adaed9-df73-4af0-ac7f-670740f01da8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/AdminUI/Admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/Query/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/Query/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Database Pro/sample/SellerUI/seller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Database Pro/sample/SellerUI/seller.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/Admin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/CategoryFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/SellerFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketModel/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketModel/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/AdminOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/CartOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/CartOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/CrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/CrudOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/ProductOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/SellerOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/SellerOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketProvider/TransactionsOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,13 +45,6 @@
         <item name="HR: schema" type="ac44c5e0:OracleImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="HR: schema" type="ac44c5e0:OracleImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="MARKET_PRODUCT: table" type="be4db629:OracleImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -87,29 +57,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FacadeMarketProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/FacadeMarketProvider.java">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="404" lean-forward="true" selection-start-line="404" selection-end-line="404" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SellerPrivilegeOperation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/MarketProvider/SellerPrivilegeOperation.java">
+      <file leaf-file-name="ProductDataBaseSingleton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="344">
+              <caret line="105" column="41" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="322">
+              <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+              <folding>
+                <element signature="method#onTableItemSelected#0;class#ProductFragment#0" />
+                <element signature="method#deleteProduct#0;class#ProductFragment#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -259,10 +233,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_1.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_2.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_3.sql" />
-        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketModel/Product.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_4.sql" />
-        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/CategoryDataBaseSingleton.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketProvider/CategoryOperations.java" />
         <option value="$PROJECT_DIR$/src/sample/MarketProvider/CrudOperations.java" />
@@ -278,7 +250,10 @@
         <option value="$PROJECT_DIR$/src/sample/SellerUI/Fragments/SellerProductsFragment.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/UiValidation/UiValidation.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_5.sql" />
+        <option value="$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java" />
         <option value="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java" />
+        <option value="$PROJECT_DIR$/src/sample/AdminUI/AdminController.java" />
       </list>
     </option>
   </component>
@@ -292,7 +267,7 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1386" />
@@ -386,22 +361,7 @@
               <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="SellerUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="SellerUI" type="462c0819:PsiDirectoryNode" />
-              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DataBase-Pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DataBase-Pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="UiValidation" type="462c0819:PsiDirectoryNode" />
+              <item name="MarketSingeltons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -588,7 +548,7 @@
       <workItem from="1536656083137" duration="2669000" />
       <workItem from="1536688266071" duration="1733000" />
       <workItem from="1536749933553" duration="5205000" />
-      <workItem from="1536755203486" duration="10641000" />
+      <workItem from="1536755203486" duration="12463000" />
     </task>
     <task id="LOCAL-00001" summary="add query to sql.sql">
       <created>1536663277978</created>
@@ -601,11 +561,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43045000" />
+    <option name="totallyTimeSpent" value="44867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -620,9 +579,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32612312" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3283582" />
       <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32576984" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.3241491" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.30786687" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.27382752" />
       <window_info anchor="right" id="Database" order="8" sideWeight="0.3260212" weight="0.30484116" />
       <window_info id="Structure" order="1" sideWeight="0.5016234" side_tool="true" weight="0.14372164" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.0" />
@@ -690,13 +649,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -924,13 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="316" selection-start-line="316" selection-end-line="316" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketModel/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -978,13 +923,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="145" column="38" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1128,10 +1066,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22adaed9-df73-4af0-ac7f-670740f01da8/console_5.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/ProductDataBaseSingleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="105" column="41" selection-start-line="105" selection-start-column="41" selection-end-line="105" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/fragmnets/ProductFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="99" lean-forward="true" selection-start-line="99" selection-end-line="99" />
+        <state relative-caret-position="322">
+          <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+          <folding>
+            <element signature="method#onTableItemSelected#0;class#ProductFragment#0" />
+            <element signature="method#deleteProduct#0;class#ProductFragment#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AdminUI/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="404" lean-forward="true" selection-start-line="404" selection-end-line="404" />
         </state>
       </provider>
     </entry>
