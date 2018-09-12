@@ -7,6 +7,7 @@ import sample.MarketModel.User;
 import sample.MarketSingeltons.TransactionDataBaseSingelton;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class TransactionsOperations implements CrudOperations {
     @Override
@@ -72,5 +73,10 @@ public class TransactionsOperations implements CrudOperations {
     @Override
     public String deleteTransaction(Transaction transaction) {
         return TransactionDataBaseSingelton.getInstance().deleteTransaction(transaction);
+    }
+
+    @Override
+    public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException {
+        return TransactionDataBaseSingelton.getInstance().getAllTransactionGroupedWithSellerEmailOrderedwithHighProfit();
     }
 }

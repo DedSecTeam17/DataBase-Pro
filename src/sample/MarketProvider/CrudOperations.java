@@ -6,6 +6,7 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public interface CrudOperations {
 
@@ -39,6 +40,8 @@ public interface CrudOperations {
     public String updateTransaction(Transaction transaction);
 
     public String deleteTransaction(Transaction transaction);
+
+    public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException;
 
 
 //

@@ -5,12 +5,14 @@ import sample.Debugging.Log;
 import sample.MarketModel.Category;
 import sample.MarketModel.Product;
 import sample.MarketModel.Transaction;
+import sample.MarketProvider.ProductOperations;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TransactionDataBaseSingelton {
+
     private static TransactionDataBaseSingelton ourInstance = new TransactionDataBaseSingelton();
 
     public static TransactionDataBaseSingelton getInstance() {
@@ -22,14 +24,22 @@ public class TransactionDataBaseSingelton {
     {
         String data_base_message = "";
         try {
+
+            //Calculate The Profit before adding it to the dataBase Table
+            //By getting the price from the Products table and subtracting it from the Selling Price
+            //in the transactions table
+            Transaction.setProfit(Transaction.getSellingPrice() - getProductPrice(Transaction.getProductName()));
+
             Connection connection = Config.getInstance().getConnection();
-            String sql = "INSERT INTO MARKETTRANSACTIONS(T_USER_EMAIL,T_PRODUCT_NAME,TRANSACTION_DATE,SELLING_PRICE,QUANTITY,TRANSACTION_TOTAL,TRANSACTION_PROFIT) VALUES(?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO MARKETTRANSACTIONS(TRANSACTION_ID,TRANSACTION_USER_EMAIL,TRANSACTION_PRODUCT_NAME,TRANSACTION_SELLING_PRICE,TRANSACTION_QUANTITY,TRANSACTION_PROFIT,TRANSACTION_DATE) VALUES(?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, Auth.getInstance().getCurrentUser());
-            preparedStatement.setString(2, Transaction.getProductName());
-            preparedStatement.setDate(3, Date.valueOf(Transaction.getCreated_at()));
-            preparedStatement.setInt(4, Transaction.getSellingPrice());
-            preparedStatement.setInt(5,Transaction.getQuantity() );
+            preparedStatement.setInt(1, Transaction.getId());
+            preparedStatement.setString(2, Transaction.getUserEmail());
+            preparedStatement.setString(3, Transaction.getProductName());
+            preparedStatement.setInt(4, Transaction.getQuantity());
+            preparedStatement.setInt(5,Transaction.getSellingPrice() );
+            preparedStatement.setInt(6,Transaction.getProfit());
+            preparedStatement.setTimestamp(7,getCurrentTimeStamp());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             Log.i(e.getMessage());
@@ -42,7 +52,7 @@ public class TransactionDataBaseSingelton {
     public  String deleteTransaction(Transaction Transaction)
     {
         String meaasge = "";
-        String sql = String.format("DELETE FROM MARKETTRANSACTIONS WHERE  Transaction_id='%d'", Transaction.getId());
+        String sql = String.format("DELETE FROM MARKET_TRANSACTIONS WHERE  TRANSACTION_ID='%d'", Transaction.getId());
         try {
             Connection connection = Config.getInstance().getConnection();
             Statement statement = connection.createStatement();
@@ -57,12 +67,12 @@ public class TransactionDataBaseSingelton {
         String data_base_message = "";
         try {
             Connection connection = Config.getInstance().getConnection();
-            String sql = "UPDATE MarketProduct SET  SELLING_PRICE = ? ,QUANTITY = ? WHERE  Transaction_id = ?";
+            String sql = "UPDATE MARKET_TRANSACTIONS SET  TRANSACTION_SELLING_PRICE = ? ,TRANSACTION_QUANTITY = ? WHERE  TRANSACTION_ID = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-            preparedStatement.setInt(1, Transaction.getSellingPrice());
-            preparedStatement.setInt(2, Transaction.getQuantity());
-            preparedStatement.setInt(3, Transaction.getId());
+            preparedStatement.setInt(1, Transaction.getId());
+            preparedStatement.setInt(2, Transaction.getSellingPrice());
+            preparedStatement.setInt(3, Transaction.getQuantity());
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -108,4 +118,26 @@ public class TransactionDataBaseSingelton {
         }
         return transactions;
     }
+
+    private int getProductPrice(String product_Name) throws SQLException, ClassNotFoundException {
+        Connection connection = Config.getInstance().getConnection();
+        String query = String.format("SELECT * FROM MARKETPRODUCT WHERE PRODUCT_NAME = '%s'",product_Name);
+
+        PreparedStatement statement = connection.prepareStatement(query);
+        ResultSet set = statement.executeQuery();
+        int productPrice = 0;
+        while (set.next())
+        {
+            productPrice = set.getInt("PRODUCT_PRICE");
+        }
+        return productPrice;
+    }
+
+    private  java.sql.Timestamp getCurrentTimeStamp() {
+
+        java.util.Date today = new java.util.Date();
+        return new java.sql.Timestamp(today.getTime());
+
+    }
+
 }
