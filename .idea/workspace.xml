@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11a68062-2ee8-4f21-8895-d66f3fd38b10" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3e9d35a7-52bc-4d5e-ad7b-f386ff7aa11a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3e9d35a7-52bc-4d5e-ad7b-f386ff7aa11a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/TransactionsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/AdminUI/fragmnets/TransactionsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketModel/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketModel/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Query/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Query/sql.sql" afterDir="false" />
-    </list>
+    <list default="true" id="11a68062-2ee8-4f21-8895-d66f3fd38b10" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,8 +64,8 @@
       <file leaf-file-name="TransactionDataBaseSingelton.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-605">
-              <caret line="81" column="61" lean-forward="true" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+            <state relative-caret-position="70">
+              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
             </state>
           </provider>
         </entry>
@@ -572,7 +566,7 @@
       <workItem from="1536808386215" duration="291000" />
       <workItem from="1536813555517" duration="2553000" />
       <workItem from="1536823605874" duration="1721000" />
-      <workItem from="1536828613359" duration="4413000" />
+      <workItem from="1536828613359" duration="4879000" />
     </task>
     <task id="LOCAL-00001" summary="add query to sql.sql">
       <created>1536663277978</created>
@@ -585,7 +579,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54606000" />
+    <option name="totallyTimeSpent" value="55072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -606,7 +600,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.3241491" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.20499243" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.20499243" />
       <window_info anchor="right" id="Database" order="8" sideWeight="0.3260212" weight="0.38729197" />
       <window_info id="Structure" order="1" sideWeight="0.5016234" side_tool="true" weight="0.14372164" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.0" />
@@ -984,8 +978,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MarketSingeltons/TransactionDataBaseSingelton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-605">
-          <caret line="81" column="61" lean-forward="true" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="61" />
+        <state relative-caret-position="70">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>

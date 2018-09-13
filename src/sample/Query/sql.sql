@@ -12,20 +12,23 @@ create table MARKETUSER
 )
 /
 
-create table MARKETPRODUCT
+create table MARKET_PRODUCT
 (
-  PRODUCT_NAME VARCHAR2(30) not null
+  PRODUCT_NAME       VARCHAR2(30) not null
     primary key,
-  PRODUCT_PRICE NUMBER not null,
-  PRODUCTION_DATE DATE not null,
-  EXPIRED_DATE DATE not null,
+  PRODUCT_PRICE      NUMBER       not null,
+  PRODUCTION_DATE    DATE         not null,
+  EXPIRED_DATE       DATE         not null,
   PRODUCTION_COMPANY VARCHAR2(30) not null,
-  ADMIN_EMAIL VARCHAR2(30) not null
-    constraint M_PRODUCT_M_USER_FK
+  ADMIN_EMAIL        VARCHAR2(30) not null
+    constraint MPRODUCT_M_USER_FK
     references MARKETUSER,
-  PRODUCT_QUANTITY NUMBER
-)
-/
+  PRODUCT_QUANTITY   NUMBER,
+  PRODUCT_IMAGE      BLOB,
+  CAT_ID             NUMBER
+    constraint MPRODUCT_MCATEGORY_CAT_ID_FK
+    references MARKETCATEGORY
+)/
 
 create table MARKETCATEGORY
 (
