@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="@localhost" uuid="22adaed9-df73-4af0-ac7f-670740f01da8">
+    <data-source name="@localhost" uuid="3e9d35a7-52bc-4d5e-ad7b-f386ff7aa11a">
       <database-info product="Oracle" version="Oracle Database 10g Enterprise Edition Release 10.2.0.3.0 - Production&#10;With the Partitioning, OLAP and Data Mining options" jdbc-version="10.2" driver-name="Oracle JDBC driver" driver-version="10.2.0.3.0">
         <extra-name-characters>$#</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
@@ -9,7 +9,7 @@
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>hr</user-name>
-      <introspection-schemas>*:@,HR</introspection-schemas>
+      <introspection-schemas>*:HR</introspection-schemas>
     </data-source>
   </component>
 </project>

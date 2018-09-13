@@ -76,6 +76,11 @@ public class AdminOperations implements CrudOperations,AdminPrivilidgeOpertation
         return null;
     }
 
+    @Override
+    public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException {
+        return null;
+    }
+
 
     @Override
     public List<User> login(User user) {

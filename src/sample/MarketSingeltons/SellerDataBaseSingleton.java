@@ -76,9 +76,9 @@ public class SellerDataBaseSingleton {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, User.getFirstName());
             preparedStatement.setString(2, User.getLastName());
-            preparedStatement.setString(2, User.getPassword());
+            preparedStatement.setString(3, User.getPassword());
 
-            preparedStatement.setString(2, User.getEmail());
+            preparedStatement.setString(4, User.getEmail());
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

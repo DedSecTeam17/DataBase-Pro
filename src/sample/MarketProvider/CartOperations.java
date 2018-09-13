@@ -6,6 +6,7 @@ import sample.MarketModel.Transaction;
 import sample.MarketModel.User;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class CartOperations implements CrudOperations {
 
@@ -72,6 +73,11 @@ public class CartOperations implements CrudOperations {
 
     @Override
     public String deleteTransaction(Transaction transaction) {
+        return null;
+    }
+
+    @Override
+    public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException {
         return null;
     }
 }

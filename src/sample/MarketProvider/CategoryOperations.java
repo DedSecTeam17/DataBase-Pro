@@ -78,4 +78,9 @@ public class CategoryOperations implements CrudOperations {
     public String deleteTransaction(Transaction transaction) {
         return null;
     }
+
+    @Override
+    public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException {
+        return null;
+    }
 }

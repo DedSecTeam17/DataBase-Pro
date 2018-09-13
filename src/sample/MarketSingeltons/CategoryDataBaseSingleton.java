@@ -20,7 +20,24 @@ public class CategoryDataBaseSingleton {
     private CategoryDataBaseSingleton() {
     }
 
+public static  void main(String a[])
+{
 
+
+
+    try {
+
+
+            System.out.println(getInstance().getCategoryById(1).getCategory_name());
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    }
+
+
+}
 
 
 
@@ -99,13 +116,13 @@ public class CategoryDataBaseSingleton {
         return category;
     }
     public List<Category> getAllCategory() throws SQLException, ClassNotFoundException {
-        Connection connection = null;
+
 //        product_name,product_price,production_date,expired_date,production_company,admin_email
-        connection = Config.getInstance().getConnection();
+        Connection connection  = Config.getInstance().getConnection();
 
         String sql = String.format("SELECT  * FROM  MarketCategory WHERE  EMAIL='%s'  ORDER  by CAT_ID ASC ", Auth.getInstance().getCurrentUser());
-        PreparedStatement statement = null;
-        statement = connection.prepareStatement(sql);
+
+        PreparedStatement  statement = connection.prepareStatement(sql);
 
         ResultSet SET = statement.executeQuery(sql);
         List<Category> categories = new ArrayList<>(20);

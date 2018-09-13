@@ -14,17 +14,17 @@ import java.util.List;
 public class SellerOperations implements CrudOperations {
     @Override
     public String insertUser(User user) {
-        return AdminDataBaseSingleton.getInstance().addAdmin(user);
+        return SellerDataBaseSingleton.getInstance().addSeller(user);
     }
 
     @Override
     public String updateUser(User user) {
-        return AdminDataBaseSingleton.getInstance().updateAdmin(user);
+        return SellerDataBaseSingleton.getInstance().updateSeller(user);
     }
 
     @Override
     public String deleteUser(User user) {
-        return AdminDataBaseSingleton.getInstance().deleteAdmin(user);
+        return SellerDataBaseSingleton.getInstance().deleteSeller(user);
     }
 
     public List<User> getAllSellers() throws SQLException, ClassNotFoundException {
@@ -77,6 +77,11 @@ public class SellerOperations implements CrudOperations {
 
     @Override
     public String deleteTransaction(Transaction transaction) {
+        return null;
+    }
+
+    @Override
+    public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException {
         return null;
     }
 }

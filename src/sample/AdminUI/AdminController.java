@@ -296,6 +296,7 @@ public class AdminController implements Initializable {
     private JFXHamburger hamburgerButton;
    @FXML
    private  Label image_hint ;
+   private  List<Category> categoryList;
 
     //#endregion
 
@@ -308,31 +309,34 @@ public class AdminController implements Initializable {
     private  String image_path="";
     private Map<String,Integer> hashMap=new HashMap<>();
     private       int i=0;
-private  void  setUpCategory() throws SQLException, ClassNotFoundException {
-    for (Category category:facadeMarketProvider.getAllCategories())
-    {
-        hashMap.put(category.getCategory_name(),category.getCategory_id());
-    }
-    int i=0;
-
-    for (Category cat: facadeMarketProvider.getAllCategories() ) {
-
-        all_category.getItems().add(i,cat.getCategory_name());
-        i++;
 
 
-    }
-
-}
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         facadeMarketProvider = new FacadeMarketProvider();
-
-
+        try {
+            categoryList=facadeMarketProvider.getAllCategories();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
 
         try {
-            setUpCategory();
+            for (Category category:categoryList)
+            {
+                hashMap.put(category.getCategory_name(),category.getCategory_id());
+            }
+            all_category.getItems().removeAll();
+
+            for (Category cat: categoryList ) {
+
+                all_category.getItems().add(cat.getCategory_name());
+
+
+
+            }
 
 
                 all_category.getItems().add("");
@@ -380,9 +384,11 @@ private  void  setUpCategory() throws SQLException, ClassNotFoundException {
         categoryFragment.onTableItemSelected(categor_tree_table, cat_name, cat_id);
         add_cat.setOnAction(event -> {
             try {
+
                 categoryFragment.addCategory(cat_name, cat_id, cat_id_hint, cat_name_hint, categor_tree_table);
                 this.i=0;
-                setUpCategory();
+                categoryList=facadeMarketProvider.getAllCategories();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -412,7 +418,6 @@ private  void  setUpCategory() throws SQLException, ClassNotFoundException {
                 e.printStackTrace();
             }
         });
-
         transactionsFragment.onTableItemSelected(transaction_id,transaction_userEmail,transaction_productName,transaction_sellingPrice,transaction_quantity,transactions_table);
         transaction_RemoveButton.setOnAction(event -> transactionsFragment.deleteTransaction(transaction_id,transaction_userEmail,transaction_productName,transaction_sellingPrice,transaction_quantity,transaction_id_hint,transaction_userEmail_hint,transaction_productName_hint,transaction_sellingPrice_hint,transaction_quantity_hint,transactions_table));
         transaction_UpdateButton.setOnAction(event -> {
@@ -428,15 +433,11 @@ private  void  setUpCategory() throws SQLException, ClassNotFoundException {
         });
 
     }
-
-
     private void setUpAsideNavBar() {
         drawer.setSidePane(vbox);
         hamburgerTransition = new HamburgerBackArrowBasicTransition(hamburgerButton);
         hamburgerTransition.setRate(-1);
     }
-
-
     @FXML
     private void handleHamburgerClick() {
         //Open and close drawer on hamburger button click
@@ -548,14 +549,9 @@ private  void  setUpCategory() throws SQLException, ClassNotFoundException {
                 Stage curStage = (Stage) currentPane.getScene().getWindow();
                 curStage.setMinWidth(WINDOW_WIDTH);
                 curStage.setMinHeight(WINDOW_HEIGHT);
-
                 curStage.setMaxHeight(WINDOW_HEIGHT);
                 curStage.setMaxWidth(WINDOW_WIDTH);
-
-
                 curStage.setScene(newScene);
-
-
                 curStage.show();
             }
         });

@@ -35,7 +35,7 @@ create table MARKETCATEGORY
   EMAIL VARCHAR2(30) not null
     constraint M_CATEGORY_M_EMAIL_FK
     references MARKETUSER
-)
+);
 
 create table MARKET_TRANSACTIONS
 (
@@ -47,7 +47,7 @@ create table MARKET_TRANSACTIONS
   TRANSACTION_PROFIT NUMBER NOT NULL,
 
   TRANSACTION_DATE TIMESTAMP
-)
+);
 
 /
 

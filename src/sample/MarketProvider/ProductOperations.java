@@ -77,6 +77,11 @@ public class ProductOperations implements CrudOperations ,AdminPrivilidgeOpertat
         return null;
     }
 
+    @Override
+    public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException {
+        return null;
+    }
+
 
     @Override
     public List<User> login(User user) {
