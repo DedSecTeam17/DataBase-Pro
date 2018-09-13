@@ -308,11 +308,11 @@ public class AdminController implements Initializable {
 
     private  String image_path="";
     private Map<String,Integer> hashMap=new HashMap<>();
-    private       int i=0;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        loadAllTables();
         facadeMarketProvider = new FacadeMarketProvider();
         try {
             categoryList=facadeMarketProvider.getAllCategories();
@@ -328,17 +328,9 @@ public class AdminController implements Initializable {
             {
                 hashMap.put(category.getCategory_name(),category.getCategory_id());
             }
-            all_category.getItems().removeAll();
-
             for (Category cat: categoryList ) {
-
                 all_category.getItems().add(cat.getCategory_name());
-
-
-
             }
-
-
                 all_category.getItems().add("");
             productFragment.ProductTableColumn(products_table);
             categoryFragment.CategorytTableColumn(categor_tree_table);
@@ -372,7 +364,6 @@ public class AdminController implements Initializable {
         });
         upload_image.setOnAction(event -> {
             FileChooser fileChooser = new FileChooser();
-            String ReddenMessageFromTheFile = "";
             File result = fileChooser.showOpenDialog(null);
             this.image_path=result.getAbsolutePath();
             Log.i(image_path);
@@ -384,10 +375,7 @@ public class AdminController implements Initializable {
         categoryFragment.onTableItemSelected(categor_tree_table, cat_name, cat_id);
         add_cat.setOnAction(event -> {
             try {
-
                 categoryFragment.addCategory(cat_name, cat_id, cat_id_hint, cat_name_hint, categor_tree_table);
-                this.i=0;
-                categoryList=facadeMarketProvider.getAllCategories();
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -401,7 +389,6 @@ public class AdminController implements Initializable {
                 e.printStackTrace();
             }
         });
-
         sellerFragment.onTableItemSelected(seller_FirstName,seller_LastName,seller_Email,seller_Password,seller_table);
         seller_AddButton.setOnAction(event -> {
             try {
@@ -456,19 +443,36 @@ public class AdminController implements Initializable {
         hideAllPanels();
         categoriesPanel.setVisible(true);
 
-       loadAllTables();
+
 
     }
-
     @FXML
     void ProductsButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         productsPanel.setVisible(true);
-        loadAllTables();
+
+        for (Category category:categoryList)
+        {
+            all_category.getItems().remove(category.getCategory_id());
+        }
+
+        try {
+            categoryList=facadeMarketProvider.getAllCategories();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        for (Category category:categoryList)
+        {
+            hashMap.replace(category.getCategory_name(),category.getCategory_id());
+        }
+        for (Category cat: categoryList ) {
+            all_category.getItems().add(cat.getCategory_id(),cat.getCategory_name());
+        }
 
     }
-
     private  void  loadAllTables()
     {    try {
         categoryFragment.CategorytTableColumn(categor_tree_table);
@@ -477,32 +481,26 @@ public class AdminController implements Initializable {
     } catch (Exception e) {
         e.printStackTrace();
     }
-
     }
-
     @FXML
     void HomeButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         homePanel.setVisible(true);
     }
-
     @FXML
     void SellersButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         sellersPanel.setVisible(true);
-        loadAllTables();
     }
-
     @FXML
     void TransactionsButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         transactionsPanel.setVisible(true);
-        loadAllTables();
-    }
 
+    }
     private void highlight(double y) {
         //moves the selection label to the y-axis of the selected button
         selectionLabel.setLayoutY(y);
@@ -511,7 +509,6 @@ public class AdminController implements Initializable {
         hamburgerTransition.play();
 
     }
-
     private void hideAllPanels() {
         sellersPanel.setVisible(false);
         productsPanel.setVisible(false);
@@ -519,7 +516,6 @@ public class AdminController implements Initializable {
         categoriesPanel.setVisible(false);
         homePanel.setVisible(false);
     }
-
     @FXML
     void signOut() {
         //Code to return to the login scene
@@ -527,9 +523,7 @@ public class AdminController implements Initializable {
         DirectUserWithFade(main_pane,"../Login.fxml");
 
     }
-
     private void DirectUserWithFade(StackPane currentPane, String fxml_file) {
-
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(100));
         fadeTransition.setNode(currentPane);

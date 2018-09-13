@@ -13,6 +13,7 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeTableColumn;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
+import sample.Atuhentication.Auth;
 import sample.Debugging.Log;
 import sample.MarketModel.User;
 import sample.MarketModel.User;
@@ -23,7 +24,7 @@ import java.time.LocalDate;
 
 public class SellerFragment
 {
-    private static final double COLUMN_WIDTH =831/6 ;
+    private static final double COLUMN_WIDTH =831/4 ;
     private ObservableList<SellerFragment.seller> codeObservableList;
     private FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
     public  void  onTableItemSelected(JFXTextField fName, JFXTextField lName,JFXTextField emailField,JFXTextField passwordField ,JFXTreeTableView treeTableView)
@@ -81,14 +82,10 @@ public class SellerFragment
             SellerTableColumn(treeTableView);
             clearFields(fName,lName,emailField,passwordField,hint_fName,hint_lName,hint_email,hint_password);
         } else {
-
             UiValidation.validateInput(fName.getText(), hint_fName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
             UiValidation.validateInput(lName.getText(), hint_lName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(emailField.getText(), hint_email, "empty filed not allowed", "only numbers", "valid", "num");
-            UiValidation.validateInput(passwordField.getText(), hint_password, "empty filed not allowed", "only numbers", "valid", "num");
-
-
-
+            UiValidation.validateInput(emailField.getText(), hint_email, "empty filed not allowed", "not valid email", "valid", "email");
+            UiValidation.validateInput(passwordField.getText(), hint_password, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
         }
     }
     public void addSeller(JFXTextField fName,JFXTextField lName,JFXTextField emailField,JFXTextField passwordField,Label hint_fName,Label hint_lName,Label hint_email,Label hint_password,JFXTreeTableView treeTableView) throws Exception {
@@ -106,30 +103,32 @@ public class SellerFragment
         } else {
             UiValidation.validateInput(fName.getText(), hint_fName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
             UiValidation.validateInput(lName.getText(), hint_lName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(emailField.getText(), hint_email, "empty filed not allowed", "only numbers", "valid", "num");
-            UiValidation.validateInput(passwordField.getText(), hint_password, "empty filed not allowed", "only numbers", "valid", "num");
-
-
-
+            UiValidation.validateInput(emailField.getText(), hint_email, "empty filed not allowed", "not valid email", "valid", "email");
+            UiValidation.validateInput(passwordField.getText(), hint_password, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
         }
-
     }
-    private void clearFields(JFXTextField p_name, JFXTextField p_price, JFXTextField p_company, JFXTextField p_quantity, Label hint_fName, Label hint_lName, Label hint_passwordField, Label hint_emailField) {
-        p_name.setEditable(true);
-        p_name.clear();
-        p_price.clear();
-        p_company.clear();
-        p_quantity.clear();
-
+    private void clearFields(JFXTextField first_name, JFXTextField last_name, JFXTextField email, JFXTextField password, Label hint_fName, Label hint_lName, Label hint_passwordField, Label hint_emailField) {
+        email.setEditable(true);
+        email.clear();
+        first_name.clear();
+        last_name.clear();
+        password.clear();
         hint_fName.setText("");
         hint_lName.setText("");
         hint_emailField.setText("");
         hint_passwordField.setText("");
     }
 
+
+
+
+
+
+
+
     //    PRODUCT TABLE
     public void SellerTableColumn(JFXTreeTableView treeTableView) throws Exception {
-        JFXTreeTableColumn<SellerFragment.seller, String> fName = new JFXTreeTableColumn<>("name");
+        JFXTreeTableColumn<SellerFragment.seller, String> fName = new JFXTreeTableColumn<>("FIRST NAME");
         fName.setPrefWidth(COLUMN_WIDTH);
         fName.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<SellerFragment.seller, String>, ObservableValue<String>>() {
             @Override
@@ -139,7 +138,7 @@ public class SellerFragment
         });
 
 
-        JFXTreeTableColumn<SellerFragment.seller, String> lName = new JFXTreeTableColumn<>("price");
+        JFXTreeTableColumn<SellerFragment.seller, String> lName = new JFXTreeTableColumn<>("LAST NAME");
         lName.setPrefWidth(COLUMN_WIDTH);
         lName.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<SellerFragment.seller, String>, ObservableValue<String>>() {
             @Override
@@ -149,7 +148,7 @@ public class SellerFragment
         });
 
 
-        JFXTreeTableColumn<SellerFragment.seller, String> email = new JFXTreeTableColumn<>("company");
+        JFXTreeTableColumn<SellerFragment.seller, String> email = new JFXTreeTableColumn<>("EMAIL");
         email.setPrefWidth(COLUMN_WIDTH);
         email.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<SellerFragment.seller, String>, ObservableValue<String>>() {
             @Override
@@ -159,7 +158,7 @@ public class SellerFragment
         });
 
 
-        JFXTreeTableColumn<SellerFragment.seller, String> password = new JFXTreeTableColumn<>("quantity");
+        JFXTreeTableColumn<SellerFragment.seller, String> password = new JFXTreeTableColumn<>("PASSWORD");
         password.setPrefWidth(COLUMN_WIDTH);
         password.setCellValueFactory(new Callback<TreeTableColumn.CellDataFeatures<SellerFragment.seller, String>, ObservableValue<String>>() {
             @Override
@@ -178,17 +177,13 @@ public class SellerFragment
         for (User user : facadeMarketProvider.getAllSellers()
                 ) {
 
-            codeObservableList.add(new SellerFragment.seller(user.getFirstName(), user.getLastName(), user.getEmail(), user.getPassword()));
+            codeObservableList.add(new SellerFragment.seller(user.getFirstName(), user.getLastName(), user.getEmail(),Auth.getInstance().md5(user.getPassword())));
 
         }
         final TreeItem<SellerFragment.seller> root = new RecursiveTreeItem<SellerFragment.seller>(codeObservableList, RecursiveTreeObject::getChildren);
-
-
         treeTableView.getColumns().setAll(fName, lName, email, password);
         treeTableView.setRoot(root);
         treeTableView.setShowRoot(false);
-
-
     }
     class seller extends RecursiveTreeObject<SellerFragment.seller> {
         StringProperty firstName;

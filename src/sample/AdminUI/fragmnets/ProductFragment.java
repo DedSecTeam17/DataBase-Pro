@@ -98,7 +98,9 @@ public class ProductFragment {
             UiValidation.validateInput(p_price.getText(), hint_p_price, "empty filed not allowed", "only numbers", "valid", "num");
             UiValidation.validateInput(p_quantity.getText(), hint_p_quantity, "empty filed not allowed", "only numbers", "valid", "num");
             UiValidation.validateInput(String.valueOf(selectedItem), selected_hint_id, "empty filed not allowed", "only numbers", "valid", "normal");
-//            UiValidation.validateInput(image_path, image_hint, "empty filed not allowed", "only numbers", "valid", "normal");
+            UiValidation.validateInput(p_date.getValue().toString(), hint_p_date, "empty filed not allowed", "not valid", "valid", "normal");
+            UiValidation.validateInput(expi_date.getValue().toString(), hint_expi_date, "empty filed not allowed", "not valid", "valid", "normal");
+//
         }
     }
 
@@ -120,10 +122,16 @@ public class ProductFragment {
             clearFields(p_name, p_price, p_company, p_quantity, p_date, expi_date, hint_p_name, hint_p_price, hint_p_company, hint_p_quantity, hint_p_date, hint_expi_date);
         } else {
             UiValidation.validateInput(p_name.getText(), hint_p_name, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(p_company.getText(), hint_p_name, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(p_company.getText(), hint_p_name, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(p_company.getText(), hint_p_company, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
             UiValidation.validateInput(p_price.getText(), hint_p_price, "empty filed not allowed", "only numbers", "valid", "num");
             UiValidation.validateInput(p_quantity.getText(), hint_p_quantity, "empty filed not allowed", "only numbers", "valid", "num");
+            UiValidation.validateInput(String.valueOf(selectedCategoryItem), selected_hint_id, "empty filed not allowed", "only numbers", "valid", "normal");
+            UiValidation.validateInput(p_date.getValue().toString(), hint_p_date, "empty filed not allowed", "not valid", "valid", "normal");
+            UiValidation.validateInput(expi_date.getValue().toString(), hint_expi_date, "empty filed not allowed", "not valid", "valid", "normal");
+
+
+            
+
 
         }
 

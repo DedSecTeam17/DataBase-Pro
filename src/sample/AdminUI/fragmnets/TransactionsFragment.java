@@ -84,27 +84,37 @@ public class TransactionsFragment {
             TransactionTableColumn(treeTableView);
             clearFields(id,userEmail,productName,sellingPrice,quantity,hint_id,hint_userEmail,hint_productName,hint_sellingPrice,hint_quantity);
         } else {
-            UiValidation.validateInput(id.getText(), hint_id, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(userEmail.getText(), hint_userEmail, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
-            UiValidation.validateInput(productName.getText(), hint_productName, "empty filed not allowed", "only numbers", "valid", "num");
-            UiValidation.validateInput(sellingPrice.getText(), hint_sellingPrice, "empty filed not allowed", "only numbers", "valid", "num");
+            UiValidation.validateInput(id.getText(), hint_id, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "num");
+            UiValidation.validateInput(userEmail.getText(), hint_userEmail, "empty filed not allowed", "not valid email", "valid", "email");
+            UiValidation.validateInput(productName.getText(), hint_productName, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "normal");
+            UiValidation.validateInput(sellingPrice.getText(), hint_sellingPrice, "empty filed not allowed", "greater than 6 white space not allowed", "valid", "num");
             UiValidation.validateInput(quantity.getText(),hint_quantity,"empty filed not allowed" , "only numbers","valid","num");
+
      }
     }
-    public void clearFields(JFXTextField id,JFXTextField userEmail, JFXTextField productName, JFXTextField sellingPrice, JFXTextField quantity ,Label hint_id,Label hint_userEmail,Label hint_productName,Label hint_sellingPrice ,Label hint_quantity)
+    private void clearFields(JFXTextField id, JFXTextField userEmail, JFXTextField productName, JFXTextField sellingPrice, JFXTextField quantity, Label hint_id, Label hint_userEmail, Label hint_productName, Label hint_sellingPrice, Label hint_quantity)
     {
         id.setEditable(true);
         userEmail.clear();
         productName.clear();
         sellingPrice.clear();
         quantity.clear();
-
+//
         hint_id.setText("");
         hint_userEmail.setText("");
         hint_productName.setText("");
         hint_sellingPrice.setText("");
         hint_quantity.setText("");
     }
+
+
+
+
+
+
+
+
+
 
     //    Transaction Table
     public void TransactionTableColumn(JFXTreeTableView treeTableView) throws Exception

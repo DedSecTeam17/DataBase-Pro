@@ -49,7 +49,7 @@ public class UiValidation {
                 }
                 break;
             case "email":
-                if (!FormValidation.getInstance().checkEmail(field )) {
+                if (!FormValidation.getInstance().checkEmail(field)) {
                     UiValidation.InputErrorValidationWithHint(field, label, message_err1, message_err2);
                 } else {
                     UiValidation.InputSuccessValidationWithHint(label, sucess_message);

@@ -37,8 +37,8 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable {
     private static final boolean ADMIN_ROLE = true;
     private static final boolean SELLER_ROLE = false;
-    private static final double WINDOW_WIDTH =1366 ;
-    private static final double WINDOW_HEIGHT =768 ;
+    private static final double WINDOW_WIDTH = 1366;
+    private static final double WINDOW_HEIGHT = 768;
 
 
     @FXML
@@ -113,7 +113,7 @@ public class Controller implements Initializable {
     private ToggleGroup usersGroupSignUp;
     private ToggleGroup usersGroupSignIn;
     private FacadeMarketProvider facadeMarketProvider;
-    private MediaPlayer mediaPlayer;
+
 
 
     @Override
@@ -262,6 +262,7 @@ public class Controller implements Initializable {
             UiValidation.validateInput(email.getText(), email_hint, "empty filed not allowed", "invalid email", "valid email", "email");
         }
     }
+
     private void SignUp(JFXTextField first_name, JFXTextField last_name, JFXTextField email, JFXPasswordField password) {
         String _email = email.getText().trim();
         String _password = password.getText().trim();
@@ -289,6 +290,7 @@ public class Controller implements Initializable {
         }
 
     }
+
     //#endregion
     private void DirectUserWithFade(AnchorPane currentPane, String fxml_file) {
 
@@ -306,7 +308,7 @@ public class Controller implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Scene newScene = new Scene(secondRoot,WINDOW_WIDTH,WINDOW_HEIGHT);
+                Scene newScene = new Scene(secondRoot, WINDOW_WIDTH, WINDOW_HEIGHT);
 
 
                 Stage curStage = (Stage) currentPane.getScene().getWindow();
