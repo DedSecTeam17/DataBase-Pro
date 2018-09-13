@@ -279,7 +279,7 @@ public class Controller implements Initializable {
             if (!warning.equals("")) {
                 UiValidation.hintSuccess(SignUp_email_hint, "this email already used");
             } else {
-                DirectUserWithFade(login_reg_pane, "../sample/SellerUI/seller.fxml");
+                DirectUserWithFade(login_reg_pane, "../sample/AdminUI/Admin.fxml");
             }
         } else {
             UiValidation.validateInput(first_name.getText(), SignUp_fname_hint, "empty filed not allowed", "greater than 6 white space not allowed", "valid first name", "normal");
