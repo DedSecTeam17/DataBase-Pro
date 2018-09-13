@@ -7,7 +7,7 @@
     <schema id="2" parent="1" name="HR">
       <ObjectId>55</ObjectId>
       <CreatedTimestamp>2018-06-27.00:48:37</CreatedTimestamp>
-      <ModifiedTimestamp>2018-09-12.14:43:15</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-09-12.19:06:54</ModifiedTimestamp>
       <CommentsHash>212605363307689</CommentsHash>
       <Current>1</Current>
       <Visible>1</Visible>
@@ -293,9 +293,9 @@
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="55" parent="2" name="MARKET_TRANSACTIONS">
-      <ObjectId>55522</ObjectId>
-      <CreatedTimestamp>2018-09-12.14:43:15</CreatedTimestamp>
-      <ModifiedTimestamp>2018-09-12.14:43:15</ModifiedTimestamp>
+      <ObjectId>55530</ObjectId>
+      <CreatedTimestamp>2018-09-12.19:06:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-12.19:06:54</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="56" parent="2" name="NEWSPAPER">
@@ -1430,35 +1430,33 @@ START_DATE</ColNames>
       <Position>7</Position>
       <DataType>TIMESTAMP(6)|0s</DataType>
     </column>
-    <index id="253" parent="55" name="SYS_C006159">
-      <ObjectId>55523</ObjectId>
+    <index id="253" parent="55" name="SYS_C006189">
+      <ObjectId>55531</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-09-12.14:43:15</CreatedTimestamp>
-      <ModifiedTimestamp>2018-09-12.14:43:15</ModifiedTimestamp>
+      <CreatedTimestamp>2018-09-12.19:06:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-12.19:06:29</ModifiedTimestamp>
       <TablespaceName>USERS</TablespaceName>
       <ColNames>TRANSACTION_ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="254" parent="55" name="SYS_C006159">
+    <key id="254" parent="55" name="SYS_C006189">
       <NameSurrogate>1</NameSurrogate>
-      <ModifiedTimestamp>2018-09-12.14:43:15</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-09-12.19:06:29</ModifiedTimestamp>
       <ColNames>TRANSACTION_ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
-      <UnderlyingIndexName>SYS_C006159</UnderlyingIndexName>
+      <UnderlyingIndexName>SYS_C006189</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="255" parent="55" name="SYS_C006160">
-      <NameSurrogate>1</NameSurrogate>
-      <ModifiedTimestamp>2018-09-12.14:43:15</ModifiedTimestamp>
+    <foreign-key id="255" parent="55" name="SYS_C006190">
+      <ModifiedTimestamp>2018-09-12.19:06:54</ModifiedTimestamp>
       <ColNames>TRANSACTION_USER_EMAIL</ColNames>
       <RefSchemaName>HR</RefSchemaName>
       <RefTableName>MARKETUSER</RefTableName>
       <RefKeyName>SYS_C006019</RefKeyName>
       <OnDelete>restrict</OnDelete>
     </foreign-key>
-    <foreign-key id="256" parent="55" name="SYS_C006161">
-      <NameSurrogate>1</NameSurrogate>
-      <ModifiedTimestamp>2018-09-12.14:43:15</ModifiedTimestamp>
+    <foreign-key id="256" parent="55" name="SYS_C006191">
+      <ModifiedTimestamp>2018-09-12.19:06:54</ModifiedTimestamp>
       <ColNames>TRANSACTION_PRODUCT_NAME</ColNames>
       <RefSchemaName>HR</RefSchemaName>
       <RefTableName>MARKETPRODUCT</RefTableName>

@@ -10,15 +10,25 @@ public class Transaction {
     private int quantity;
     private int profit;
     private String created_at;
+    private  String user_email;
+
+    public String getUser_email() {
+        return user_email;
+    }
+
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
+    }
 
     public Transaction(TransactionBuilder transactionBuilder) {
         setId(transactionBuilder.id);
-        setUserEmail(transactionBuilder.userEmail);
+        setUserEmail(transactionBuilder.user_email);
         setProductName(transactionBuilder.productName);
         setProfit(transactionBuilder.profit);
         setCreated_at(transactionBuilder.created_at);
         setSellingPrice(transactionBuilder.sellingPrice);
         setQuantity(transactionBuilder.quantity);
+        setUser_email(transactionBuilder.user_email);
     }
 
     public static TransactionBuilder newTransaction() {
@@ -88,19 +98,15 @@ public class Transaction {
 
     public static class TransactionBuilder {
         private int id;
-        private String userEmail;
+
         private String productName;
         private int profit;
         private String created_at;
         private int sellingPrice;
         private int quantity;
+        private  String user_email;
 
 
-        public TransactionBuilder userEmail(String userEmail)
-        {
-            this.userEmail = userEmail;
-            return this;
-        }
 
         public TransactionBuilder productName(String productName) {
 
@@ -131,6 +137,10 @@ public class Transaction {
 
         public TransactionBuilder id(int id) {
             this.id = id;
+            return this;
+        }
+        public TransactionBuilder email(String user_email) {
+            this.user_email = user_email;
             return this;
         }
 

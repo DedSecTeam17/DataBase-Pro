@@ -31,7 +31,7 @@ public class TransactionDataBaseSingelton {
             Transaction.setProfit(Transaction.getSellingPrice() - getProductPrice(Transaction.getProductName()));
 
             Connection connection = Config.getInstance().getConnection();
-            String sql = "INSERT INTO MARKETTRANSACTIONS(TRANSACTION_ID,TRANSACTION_USER_EMAIL,TRANSACTION_PRODUCT_NAME,TRANSACTION_SELLING_PRICE,TRANSACTION_QUANTITY,TRANSACTION_PROFIT,TRANSACTION_DATE) VALUES(?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO MARKET_TRANSACTIONS(TRANSACTION_ID,TRANSACTION_USER_EMAIL,TRANSACTION_PRODUCT_NAME,TRANSACTION_SELLING_PRICE,TRANSACTION_QUANTITY,TRANSACTION_PROFIT,TRANSACTION_DATE) VALUES(?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, Transaction.getId());
             preparedStatement.setString(2, Transaction.getUserEmail());
@@ -64,6 +64,15 @@ public class TransactionDataBaseSingelton {
     }
     public  String updateTransaction(Transaction Transaction)
     {
+
+//        int transaction_id= SET.getInt("TRANSACTION_ID");
+//        String transaction_user_email = SET.getString("TRANSACTION_USER_EMAIL");
+//        String transaction_product_name = SET.getString("TRANSACTION_PRODUCT_NAME");
+//        int transaction_selling_price = SET.getInt("TRANSACTION_SELLING_PRICE");
+//        int transaction_quantity = SET.getInt("TRANSACTION_QUANTITY");
+//        int transactionProfit = SET.getInt("TRANSACTION_PROFIT");
+//        String transaction_date = SET.getDate("TRANSACTION_DATE").toString();
+
         String data_base_message = "";
         try {
             Connection connection = Config.getInstance().getConnection();
@@ -87,31 +96,34 @@ public class TransactionDataBaseSingelton {
     }
 
     public List<Transaction> getAllTransactionGroupedWithSellerEmailOrderedwithHighProfit() throws SQLException, ClassNotFoundException {
-        Connection connection = null;
+        Connection
         connection = Config.getInstance().getConnection();
 
-        String sql = String.format("SELECT  * FROM  MARKETTRANSACTIONS WHERE  EMAIL='%s'  ORDER  by TRANSACTION_PROFIT Desc ",
+        String sql = String.format("SELECT  * FROM  MARKET_TRANSACTIONS   ORDER  by TRANSACTION_PROFIT Desc ",
                 Auth.getInstance().getCurrentUser());
-        PreparedStatement statement = null;
-        statement = connection.prepareStatement(sql);
+        PreparedStatement   statement = connection.prepareStatement(sql);
+
 
         ResultSet SET = statement.executeQuery(sql);
         List<Transaction> transactions = new ArrayList<>(20);
         while (SET.next()) {
-            int transactio_id = SET.getInt("Transaction_id");
-            String productName = SET.getString("T_PRODUCT_NAME");
-            int sellingPrice = SET.getInt("SELLING_PRICE");
-            int quantity = SET.getInt("QUANTITY");
-            int profit = SET.getInt("TRANSACTION_PROFIT");
-            String createdAt = SET.getString("TRANSACTION_DATE");
+
+            int transaction_id= SET.getInt("TRANSACTION_ID");
+            String transaction_user_email = SET.getString("TRANSACTION_USER_EMAIL");
+            String transaction_product_name = SET.getString("TRANSACTION_PRODUCT_NAME");
+            int transaction_selling_price = SET.getInt("TRANSACTION_SELLING_PRICE");
+            int transaction_quantity = SET.getInt("TRANSACTION_QUANTITY");
+            int transactionProfit = SET.getInt("TRANSACTION_PROFIT");
+            String transaction_date = SET.getDate("TRANSACTION_DATE").toString();
 
 
-            Transaction transaction = Transaction.newTransaction().id(transactio_id).
-                    productName(productName).
-                    sellingPrioce(sellingPrice).
-                    quantity(quantity).
-                    profit(profit).
-                    created_at(createdAt)
+            Transaction transaction = Transaction.newTransaction().id(transaction_id).
+                    productName(transaction_product_name).
+                    sellingPrioce(transaction_selling_price).
+                    quantity(transaction_quantity).
+                    profit(transactionProfit).
+                    email(transaction_user_email)
+                    .created_at(transaction_date)
                     .build();
 
             transactions.add(transaction);

@@ -73,7 +73,7 @@ public class TransactionsFragment {
         if (!id.getText().equals("") && !userEmail.getText().equals("") && !productName.getText().equals("") && !sellingPrice.getText().equals("") && !quantity.getText().equals("")) {
             Transaction transaction = Transaction.newTransaction()
                     .id(Integer.parseInt(id.getText()))
-                    .userEmail(userEmail.getText())
+                    .email(userEmail.getText())
                     .productName(productName.getText())
                     .sellingPrioce(Integer.parseInt(sellingPrice.getText()))
                     .quantity(Integer.parseInt(quantity.getText()))
