@@ -1,6 +1,7 @@
 package sample.AdminUI.fragmnets;
 
 import com.jfoenix.controls.*;
+import com.jfoenix.controls.cells.editors.base.JFXTreeTableCell;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -130,7 +131,7 @@ public class ProductFragment {
             UiValidation.validateInput(expi_date.getValue().toString(), hint_expi_date, "empty filed not allowed", "not valid", "valid", "normal");
 
 
-            
+
 
 
         }
@@ -223,7 +224,6 @@ public class ProductFragment {
             }
         });
 
-//
 
         try {
 
@@ -256,8 +256,10 @@ public class ProductFragment {
         StringProperty productedCompany;
         StringProperty quantity;
         StringProperty category;
+//        ImageView imageView;
 
         public ProductItem(String productName, int productPrice, String productionDate, String expiredDate, String productedCompany, int quantity, String category) {
+//            this.imageView=imageView;
             this.productName = new SimpleStringProperty(productName);
             this.productPrice = new SimpleStringProperty(String.valueOf(productPrice));
             this.productionDate = new SimpleStringProperty(productionDate);

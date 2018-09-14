@@ -80,7 +80,10 @@ public class FacadeMarketProvider {
         return categoryOperations.insertCategory(Category);
     }
 
-
+    public  void  updateProductQuantity(String productName,int quantity)
+    {
+       productOperations.updateProductQuantity(productName,quantity);
+    }
     public String updateCategory(Category Category) {
         return categoryOperations.updateCategory(Category);
     }

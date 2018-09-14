@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.controls.JFXTreeTableColumn;
 import com.jfoenix.controls.JFXTreeTableView;
 import com.jfoenix.controls.RecursiveTreeItem;
+import com.jfoenix.controls.cells.editors.base.JFXTreeTableCell;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -29,18 +30,41 @@ public class CartFragments {
 
 
     private ObservableList<CartItem> codeObservableList;
-    private static final double COLUMN_WIDTH = 322 / 3;
+    private static final double COLUMN_WIDTH = 442 / 3;
     private FacadeMarketProvider facadeMarketProvider = new FacadeMarketProvider();
 
-    public void SellAllProducts(List<Transaction> transactionList) throws Exception {
+    public void SellAllProducts(List<Transaction> transactionList, JFXTreeTableView cartTable) throws Exception {
         int totalCount = 0;
+
+            for (Product product:facadeMarketProvider.getAllProductForSellers())
+            {
+                for (Transaction transaction:transactionList)
+                {
+                    int quantity=transaction.getQuantity();
+                    String product_name=transaction.getProductName();
+                if (product.getProductName().equals(product_name))
+                {
+                    Log.i("we find indented product now we updating...");
+                    int newQuantity=product.getQuantity()-quantity;
+//                    update new quantity
+                    facadeMarketProvider.updateProductQuantity(product_name,newQuantity);
+                }else
+                {
+                    Log.e("still searching...");
+                }
+            }
+        }
+//        refresh the table
+//
+
+//            refresh
+        CartTableColumn(cartTable, transactionList);
+//        now add stuff into transaction table
         for (Transaction transaction : transactionList) {
             totalCount += transaction.getSellingPrice();
         }
         Log.i(String.valueOf(totalCount));
     }
-
-
     public void deleteCartItem(JFXTreeTableView cartTable, List<Transaction> transactionList) {
         int r_index = cartTable.getSelectionModel().getSelectedIndex();
         CartItem categorytItem = codeObservableList.get(r_index);

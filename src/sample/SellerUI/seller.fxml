@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTabPane?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SellerUI.SellerController">
+<StackPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #22313f;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SellerUI.SellerController">
    <children>
       <JFXTabPane>
          <tabs>
@@ -42,43 +41,103 @@
                               <DropShadow radius="6.2925" width="6.17" />
                            </effect>
                         </JFXTreeTableView>
-                        <Pane layoutX="906.0" layoutY="28.0" prefHeight="200.0" prefWidth="321.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                        <Pane layoutX="906.0" layoutY="28.0" prefHeight="200.0" prefWidth="198.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                            <children>
-                              <JFXButton fx:id="add_item_to_cart" layoutX="14.0" layoutY="139.0" prefHeight="35.0" prefWidth="294.0" style="-fx-background-color: #03c9a9;" text="Add to cart" textFill="#cdcdcd" />
-                              <Label fx:id="selected_product_name" layoutX="14.0" layoutY="38.0" text="Label">
+                              <JFXButton fx:id="add_item_to_cart" layoutX="14.0" layoutY="139.0" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: #03c9a9;" text="Add to cart" textFill="WHITE" />
+                              <Label fx:id="selected_product_name" layoutX="22.0" layoutY="72.0" text="no item selected" />
+                              <Label fx:id="selected_product_price" layoutX="145.0" layoutY="72.0" text="0" />
+                              <Label fx:id="quantity_hint" layoutX="35.0" layoutY="14.0" text="Label" />
+                              <JFXButton fx:id="decrese" layoutX="122.0" layoutY="90.0" style="-fx-background-radius: 5px;" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/min.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="increase" layoutX="36.0" layoutY="90.0" style="-fx-background-radius: 5PX;" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <Label fx:id="current_quantity" layoutX="94.0" layoutY="95.0" text="0">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <JFXTextField fx:id="customer_quantity" layoutX="55.0" layoutY="75.0" prefHeight="25.0" prefWidth="253.0" />
-                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="17.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="19.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/product.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="131.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../Images/quant.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="selected_product_price" layoutX="127.0" layoutY="38.0" text="Label">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="quantity_hint" layoutX="56.0" layoutY="110.0" text="Label" />
                            </children>
                            <effect>
                               <DropShadow radius="6.2925" width="6.17" />
                            </effect>
                         </Pane>
-                        <JFXTreeTableView fx:id="cart_table" layoutX="906.0" layoutY="241.0" prefHeight="301.0" prefWidth="322.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                        <JFXTreeTableView fx:id="cart_table" layoutX="906.0" layoutY="241.0" prefHeight="301.0" prefWidth="442.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                            <effect>
                               <DropShadow radius="6.2925" width="6.17" />
                            </effect>
                         </JFXTreeTableView>
-                        <Pane layoutX="906.0" layoutY="552.0" prefHeight="119.0" prefWidth="323.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                        <Pane layoutX="906.0" layoutY="552.0" prefHeight="119.0" prefWidth="443.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                            <effect>
                               <DropShadow radius="6.2925" width="6.17" />
                            </effect>
                            <children>
-                              <JFXButton fx:id="delete_cart_item" layoutX="15.0" layoutY="25.0" prefHeight="35.0" prefWidth="294.0" style="-fx-background-color: #f64747;" text="delete" textFill="#cdcdcd" />
-                              <JFXButton fx:id="add_all_cart_item_into_transaction" layoutX="15.0" layoutY="70.0" prefHeight="35.0" prefWidth="294.0" style="-fx-background-color: #81cfe0;" text="sell" textFill="#cdcdcd" />
+                              <JFXButton fx:id="delete_cart_item" layoutX="15.0" layoutY="25.0" prefHeight="35.0" prefWidth="415.0" style="-fx-background-color: #f64747;" text="delete" textFill="WHITE" />
+                              <JFXButton fx:id="add_all_cart_item_into_transaction" layoutX="15.0" layoutY="70.0" prefHeight="35.0" prefWidth="417.0" style="-fx-background-color: #81cfe0;" text="sell" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1108.0" layoutY="28.0" prefHeight="200.0" prefWidth="243.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                           <effect>
+                              <DropShadow radius="6.2925" width="6.17" />
+                           </effect>
+                           <children>
+                              <ImageView fitHeight="81.0" fitWidth="87.0" layoutX="81.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/ellon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="24.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/name.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="24.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/emial.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="user_name" layoutX="63.0" layoutY="59.0" text="User name">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="email" layoutX="63.0" layoutY="110.0" text="email@gmail.com">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="logout" layoutX="14.0" layoutY="151.0" text="Log out" textFill="#f64747">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/user_logout.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
                            </children>
                         </Pane>
                      </children>

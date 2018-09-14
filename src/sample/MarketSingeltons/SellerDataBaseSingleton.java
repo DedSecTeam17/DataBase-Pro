@@ -91,6 +91,24 @@ public class SellerDataBaseSingleton {
         return data_base_message;
     }
 
+    public static void main(String a[])
+    {
+        try {
+            for (User user:getInstance().getAllSeller())
+            {
+
+                    Log.i(user.getEmail());
+    //                usename.setText(user.getFirstName()+"\t"+user.getLastName());
+    //                email.setText(user.getEmail());
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public List<User> getAllSeller() throws SQLException, ClassNotFoundException {
         Connection connection = null;
 //        product_name,product_price,production_date,expired_date,production_company,admin_email

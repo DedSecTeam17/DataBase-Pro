@@ -157,6 +157,31 @@ public class ProductDataBaseSingleton {
         }
         return products;
     }
+
+
+    public  void  updateProductQuantity(String p_name,int quantity)
+    {
+
+        String data_base_message = "";
+        try {
+            Connection connection = Config.getInstance().getConnection();
+            String sql = "UPDATE MARKET_PRODUCT SET  PRODUCT_QUANTITY = ?  WHERE  product_name = ? ";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, quantity);
+            preparedStatement.setString(2, p_name);
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            Log.i(e.getMessage());
+            data_base_message = e.getMessage();
+            Log.i(data_base_message);
+        } catch (ClassNotFoundException e) {
+            data_base_message = e.getMessage();
+            Log.i(data_base_message);
+        }
+
+    }
+
+
     public List<Product> getAllProductForSellers() throws SQLException, ClassNotFoundException {
         Connection connection = null;
 //        product_name,product_price,production_date,expired_date,production_company,admin_email

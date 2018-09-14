@@ -11,15 +11,11 @@ import java.util.List;
 
 public class AdminDataBaseSingleton {
     private static AdminDataBaseSingleton ourInstance = new AdminDataBaseSingleton();
-
     public static AdminDataBaseSingleton getInstance() {
         return ourInstance;
     }
     private AdminDataBaseSingleton() {
     }
-
-
-//
     public  String addAdmin(User user)
     {
 
@@ -78,10 +74,8 @@ public class AdminDataBaseSingleton {
         List<User> selected_user=new ArrayList<>();
         try {
             connection = Config.getInstance().getConnection();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             data_base_message=e.getMessage();
-        } catch (ClassNotFoundException e) {
-           data_base_message=e.getMessage();
         }
 
         try {
@@ -97,12 +91,9 @@ public class AdminDataBaseSingleton {
              email = set.getString("email");
              role = set.getString("role");
             }
-        } catch (SQLException e) {
-            data_base_message=e.getMessage();
-        } catch (NoSuchAlgorithmException e) {
+        } catch (SQLException | NoSuchAlgorithmException e) {
             data_base_message=e.getMessage();
         }
-
         loggedUser= User.newUser().email(email).role(Boolean.parseBoolean(role)).message(data_base_message). build();
         selected_user.add(loggedUser);
         return  selected_user;

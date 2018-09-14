@@ -109,11 +109,14 @@ public class Controller implements Initializable {
 
     @FXML
     private JFXToggleButton toggleButton;
+
+
+
+
     private String selectedUser = "";
     private ToggleGroup usersGroupSignUp;
     private ToggleGroup usersGroupSignIn;
     private FacadeMarketProvider facadeMarketProvider;
-
 
 
     @Override
@@ -226,16 +229,15 @@ public class Controller implements Initializable {
                         Auth.getInstance().addUser(result.get(0).getEmail());
                         Log.i(Auth.getInstance().getCurrentUser());
                         if (Auth.getInstance().isset()) {
-                            Log.e("asdasd");
                             DirectUserWithFade(login_reg_pane, "../sample/AdminUI/Admin.fxml");
                         }
                         Log.i("this is admin and his email :" + result.get(0).getEmail());
                     } else {
-                        UiValidation.hintErr(email_hint, "this email is used or not registered");
+                        UiValidation.hintErr(email_hint, result.get(0).getMessage());
                     }
 
                 } else {
-                    UiValidation.hintErr(email_hint, "this email is used or not registered");
+                    UiValidation.hintErr(email_hint, result.get(0).getMessage());
                 }
 
             } else {
@@ -250,7 +252,7 @@ public class Controller implements Initializable {
                         }
                         Log.i("this is admin and his email :" + result.get(0).getEmail());
                     } else {
-                        UiValidation.hintErr(email_hint, "this email is used or not registered");
+                        UiValidation.hintErr(email_hint, result.get(0).getMessage());
                     }
 
                 } else {
@@ -290,7 +292,6 @@ public class Controller implements Initializable {
         }
 
     }
-
     //#endregion
     private void DirectUserWithFade(AnchorPane currentPane, String fxml_file) {
 
@@ -309,10 +310,7 @@ public class Controller implements Initializable {
                     e.printStackTrace();
                 }
                 Scene newScene = new Scene(secondRoot, WINDOW_WIDTH, WINDOW_HEIGHT);
-
-
                 Stage curStage = (Stage) currentPane.getScene().getWindow();
-                curStage.setFullScreen(true);
                 curStage.setMinWidth(WINDOW_WIDTH);
                 curStage.setMinHeight(WINDOW_HEIGHT);
 

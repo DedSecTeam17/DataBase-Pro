@@ -99,4 +99,9 @@ public class ProductOperations implements CrudOperations ,AdminPrivilidgeOpertat
 
         return ProductDataBaseSingleton.getInstance().getAllProductForSellers();
     }
+
+    public  void  updateProductQuantity(String productName,int quantity)
+    {
+        ProductDataBaseSingleton.getInstance().updateProductQuantity(productName,quantity);
+    }
 }
