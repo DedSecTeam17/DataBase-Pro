@@ -30,14 +30,14 @@ public class SellerDataBaseSingleton {
         String data_base_message = "";
         try {
             Connection connection = Config.getInstance().getConnection();
-            String sql = "INSERT INTO MarketUser(fname,lname,password,created_at,email,role) VALUES(?,?,?,?,?,?)";
+            String sql = "INSERT INTO MARKETSELLER(fname,lname,password,created_at,email,ADMIN_EMAIL) VALUES(?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, user.getFirstName());
             preparedStatement.setString(2, user.getLastName());
             preparedStatement.setString(3, Auth.getInstance().md5(user.getPassword()));
             preparedStatement.setTimestamp(4,getCurrentTimeStamp());
             preparedStatement.setString(5, user.getEmail());
-            preparedStatement.setString(6, String.valueOf(user.isRole()));
+            preparedStatement.setString(6,Auth.getInstance().getCurrentUser());
             preparedStatement.executeUpdate();
 
             preparedStatement.executeUpdate();
@@ -56,7 +56,7 @@ public class SellerDataBaseSingleton {
     public  String deleteSeller(User User)
     {
         String meaasge = "";
-        String sql = String.format("DELETE   FROM MARKETUSER WHERE  EMAIL='%s'", User.getEmail());
+        String sql = String.format("DELETE   FROM MARKETSELLER WHERE  EMAIL='%s'", User.getEmail());
         try {
             Connection connection = Config.getInstance().getConnection();
             Statement statement = connection.createStatement();
@@ -72,12 +72,11 @@ public class SellerDataBaseSingleton {
         String data_base_message = "";
         try {
             Connection connection = Config.getInstance().getConnection();
-            String sql = "UPDATE MARKETUSER SET  FNAME = ? , LNAME = ? , PASSWORD =? WHERE  EMAIL = ?";
+            String sql = "UPDATE MARKETSELLER SET  FNAME = ? , LNAME = ? , PASSWORD =? WHERE  EMAIL = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, User.getFirstName());
             preparedStatement.setString(2, User.getLastName());
             preparedStatement.setString(3, User.getPassword());
-
             preparedStatement.setString(4, User.getEmail());
 
             preparedStatement.executeUpdate();
@@ -93,20 +92,14 @@ public class SellerDataBaseSingleton {
 
     public static void main(String a[])
     {
-        try {
-            for (User user:getInstance().getAllSeller())
-            {
+        User user=User.newUser()
+                .email("mohamed@yahoo.com")
+                .password("mohamed")
+                .build();
 
-                    Log.i(user.getEmail());
-    //                usename.setText(user.getFirstName()+"\t"+user.getLastName());
-    //                email.setText(user.getEmail());
+      List<User> result=  getInstance().loginSeller(user);
+      Log.i(result.get(0).getMessage());
 
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     public List<User> getAllSeller() throws SQLException, ClassNotFoundException {
@@ -114,7 +107,7 @@ public class SellerDataBaseSingleton {
 //        product_name,product_price,production_date,expired_date,production_company,admin_email
         connection = Config.getInstance().getConnection();
 
-        String sql = "SELECT  * FROM  MARKETUSER where  ROLE='false'  ORDER by EMAIL ASC ";
+        String sql = String.format("SELECT  * FROM  MARKETSELLER where  ADMIN_EMAIL='%s'  ORDER by FNAME ASC ",Auth.getInstance().getCurrentUser());
         PreparedStatement statement = null;
         statement = connection.prepareStatement(sql);
 
@@ -147,4 +140,40 @@ public class SellerDataBaseSingleton {
         return new java.sql.Timestamp(today.getTime());
 
     }
+    public  List<User>  loginSeller(User user)
+    {
+        String data_base_message="";
+        String email="";
+        String role="";
+        Connection connection = null;
+        User loggedUser;
+        List<User> selected_user=new ArrayList<>();
+        try {
+            connection = Config.getInstance().getConnection();
+        } catch (SQLException | ClassNotFoundException e) {
+            data_base_message=e.getMessage();
+        }
+
+        try {
+
+            String sql = String.format("SELECT  * FROM  MARKETSELLER where email='%s' and password='%s'  ",user.getEmail(),Auth.getInstance().md5(user.getPassword()),String.valueOf(user.isRole()));
+            PreparedStatement statement = connection.prepareStatement(sql);
+
+            ResultSet set = statement.executeQuery(sql);
+
+
+
+            while (set.next()) {
+                email = set.getString("email");
+
+            }
+        } catch (SQLException | NoSuchAlgorithmException e) {
+            data_base_message=e.getMessage();
+        }
+        loggedUser= User.newUser().email(email).role(Boolean.parseBoolean(role)).message(data_base_message). build();
+        selected_user.add(loggedUser);
+        return  selected_user;
+    }
+
+
 }

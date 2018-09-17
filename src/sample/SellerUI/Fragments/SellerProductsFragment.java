@@ -38,7 +38,7 @@ public class SellerProductsFragment {
 //
     }
 
-    public void addCategoryItem(Label quantity, Label quantity_hint, Label selectedItemName, Label selectItemSellingPrice, JFXTreeTableView sellerProductTable, List<Transaction> transactions) throws Exception {
+    public void addCartItem(Label quantity, Label quantity_hint, Label selectedItemName, Label selectItemSellingPrice, JFXTreeTableView sellerProductTable, List<Transaction> transactions) throws Exception {
         if (!quantity.getText().equals("")) {
 
 //            check for quantity
@@ -51,9 +51,9 @@ public class SellerProductsFragment {
                                 .productName(selectedItemName.getText())
                                 .quantity(Integer.parseInt(quantity.getText()))
                                 .email(Auth.getInstance().getCurrentUser())
-                                .profit(product.getProductPrice()+10)
+                                .profit(Integer.parseInt(selectItemSellingPrice.getText())+10)
                                 .created_at(String.valueOf(LocalDate.now()))
-                                .sellingPrioce(Integer.parseInt(selectItemSellingPrice.getText())).
+                                .sellingPrioce(Integer.parseInt(selectItemSellingPrice.getText())*Integer.parseInt(quantity.getText())    ).
                                         build();
                         transactions.add(transaction);
                         UiValidation.hintSuccess(quantity_hint, "Added to cart");

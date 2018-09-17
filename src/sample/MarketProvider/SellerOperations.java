@@ -11,7 +11,7 @@ import sample.MarketSingeltons.SellerDataBaseSingleton;
 import java.sql.SQLException;
 import java.util.List;
 
-public class SellerOperations implements CrudOperations {
+public class SellerOperations implements CrudOperations,AdminPrivilidgeOpertation {
     @Override
     public String insertUser(User user) {
         return SellerDataBaseSingleton.getInstance().addSeller(user);
@@ -82,6 +82,17 @@ public class SellerOperations implements CrudOperations {
 
     @Override
     public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException {
+        return null;
+    }
+
+
+    @Override
+    public List<User> login(User user) {
+        return SellerDataBaseSingleton.getInstance().loginSeller(user);
+    }
+
+    @Override
+    public List<Product> getAllAdminProducts() throws SQLException, ClassNotFoundException {
         return null;
     }
 }

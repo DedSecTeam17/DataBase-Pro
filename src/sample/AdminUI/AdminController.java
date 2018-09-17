@@ -518,7 +518,7 @@ public class AdminController implements Initializable {
     }
     @FXML
     void signOut() {
-        //Code to return to the login scene
+        //Code to return to the loginAdmin scene
         Auth.getInstance().destroyUser();
         DirectUserWithFade(main_pane,"../Login.fxml");
 

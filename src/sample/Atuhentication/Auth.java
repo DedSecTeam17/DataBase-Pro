@@ -55,7 +55,7 @@ public class Auth {
         else
             return true;
     }
-// add user email to preference object ------> Done when user login
+// add user email to preference object ------> Done when user loginAdmin
     public boolean addUser(String value) {
         if (!value.equals("")) {
             try {

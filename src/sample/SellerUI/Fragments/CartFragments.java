@@ -33,7 +33,7 @@ public class CartFragments {
     private static final double COLUMN_WIDTH = 442 / 3;
     private FacadeMarketProvider facadeMarketProvider = new FacadeMarketProvider();
 
-    public void SellAllProducts(List<Transaction> transactionList, JFXTreeTableView cartTable) throws Exception {
+    public void SellAllProducts(List<Transaction> transactionList, JFXTreeTableView cartTable, Label mony) throws Exception {
         int totalCount = 0;
 
             for (Product product:facadeMarketProvider.getAllProductForSellers())
@@ -60,8 +60,36 @@ public class CartFragments {
 //            refresh
         CartTableColumn(cartTable, transactionList);
 //        now add stuff into transaction table
+
+        if (facadeMarketProvider.getAllTransactions().size()==0)
+        {
+            int i=0;
+            for (Transaction transaction:transactionList)
+            {
+                i+=1;
+                transaction.setId(i);
+                facadeMarketProvider.insertTransaction(transaction);
+
+            }
+        }else {
+            int i=facadeMarketProvider.getAllTransactions().get(facadeMarketProvider.getAllTransactions().size()-1).getId();
+            for (Transaction transaction:transactionList)
+            {
+                Log.i(String.valueOf(i));
+                i+=1;
+                transaction.setId(i);
+                facadeMarketProvider.insertTransaction(transaction);
+
+            }
+
+            // get the last item from databasemohamed
+//            add 1 to item
+//            insert item to data base
+        }
+
         for (Transaction transaction : transactionList) {
             totalCount += transaction.getSellingPrice();
+            mony.setText(String.valueOf(totalCount)+"\t SDG");
         }
         Log.i(String.valueOf(totalCount));
     }

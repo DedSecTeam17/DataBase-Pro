@@ -42,10 +42,12 @@ public class FacadeMarketProvider {
     }
 
 
-    public List<User> login(User user) {
+    public List<User> loginAdmin(User user) {
         return adminOperations.login(user);
     }
-
+    public List<User> loginSeller(User user) {
+        return sellerOperations.login(user);
+    }
     //
     public String insertSeller(User user) {
         return sellerOperations.insertUser(user);

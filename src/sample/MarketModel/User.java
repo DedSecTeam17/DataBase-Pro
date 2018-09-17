@@ -2,7 +2,7 @@ package sample.MarketModel;
 // UserBuilder Pattern
 public class User {
     
-//    user login
+//    user loginAdmin
     private  String Email;
     private  String password;
     

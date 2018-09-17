@@ -71,6 +71,20 @@ create table MARKET_TRANSACTIONS
 );
 
 
+create table MARKETSELLER
+(
+  FNAME       VARCHAR2(30) not null,
+  LNAME       VARCHAR2(30),
+  PASSWORD    VARCHAR2(60) default NULL,
+  CREATED_AT  TIMESTAMP(6),
+  EMAIL       VARCHAR2(30) not null
+    primary key,
+  ADMIN_EMAIL VARCHAR2(20) not null
+    constraint MTSELLER_MUSER_EMAIL_FK
+    references MARKETUSER
+)
+/
+
 
 
 

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Database Pro:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Database_Pro_jar</output-path>
+    <root id="archive" name="Database Pro.jar">
+      <element id="module-output" name="Database Pro" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jfoenix-8.0.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/ojdbc6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

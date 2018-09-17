@@ -26,20 +26,20 @@ public class ProductDataBaseSingleton {
 
 
 
-//    public  static  void  main(String a[]){
-//        for (int i=1; i<10000000; i++)
-//        {
-//            Product product= Product.newProduct()
-//                    .productName("Itemz"+i)
-//                    .productPrice(i)
-//                    .productedCompany("companyz"+i)
-//                    .quantity(i*10)
-//                    .productionDate(String.valueOf(LocalDate.now()))
-//                    .expiredDate(String.valueOf(LocalDate.now())).
-//                    build();
-//            getInstance().deleteProduct(product);
-//        }
-//    }
+    public  static  void  main(String a[]){
+        Auth.getInstance().start_session();
+        Auth.getInstance().addUser("mohamed@yahoo.com");
+        try {
+            for (Product product:getInstance().getAllProductForSellers()){
+                Log.i(product.getProductName());
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
     
     public String addProduct(Product Product) {
         String data_base_message = "";
@@ -187,7 +187,8 @@ public class ProductDataBaseSingleton {
 //        product_name,product_price,production_date,expired_date,production_company,admin_email
         connection = Config.getInstance().getConnection();
 
-        String sql = String.format("SELECT  * FROM  MARKET_PRODUCT   ORDER  by production_date ASC ");
+        String sql = String.format("select  * from  MARKET_PRODUCT join  MARKETSELLER  on MARKET_PRODUCT.ADMIN_EMAIL = MARKETSELLER.ADMIN_EMAIL  where EMAIL='%s' ",Auth.getInstance().getCurrentUser());
+
         PreparedStatement statement = null;
         statement = connection.prepareStatement(sql);
 

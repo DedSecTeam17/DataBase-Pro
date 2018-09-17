@@ -83,7 +83,7 @@
 
 
 
-            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;">
+            <AnchorPane fx:id="productsPanel" layoutX="29.0" prefHeight="600.0" prefWidth="872.0" style="-fx-background-color: #22313f;" visible="false">
 
 
                <children>
@@ -235,7 +235,7 @@
                </children>
             </AnchorPane>
 
-            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1288.0" visible="false">
+            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1288.0">
 
                <children>
                   <ImageView fitHeight="768.0" fitWidth="1288.0" pickOnBounds="true" preserveRatio="false">
@@ -246,11 +246,11 @@
                </children>
             </AnchorPane>
 
-            <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutX="12.0" layoutY="24.0" miniDrawerSize="0.0" prefHeight="688.0" prefWidth="258.0">
+            <JFXDrawer fx:id="drawer" alignment="CENTER_LEFT" defaultDrawerSize="250.0" layoutY="25.0" miniDrawerSize="0.0" prefHeight="726.0" prefWidth="270.0">
                <children>
-                  <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="744.0" prefWidth="266.0" style="-fx-background-color: #22313f;">
+                  <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="730.0" prefWidth="270.0" style="-fx-background-color: #22313f;">
                      <children>
-                        <Pane prefHeight="744.0" prefWidth="266.0" style="-fx-background-color: #22313f;">
+                        <Pane prefHeight="743.0" prefWidth="270.0" style="-fx-background-color: #22313f;">
                            <children>
                               <Label fx:id="selectionLabel" layoutX="-17.0" prefHeight="65.0" prefWidth="275.0" style="-fx-background-color: #03c9a9; -fx-background-radius: 5px;" />
                               <JFXButton layoutX="-3.0" onAction="#HomeButtonClicked" prefHeight="65.0" prefWidth="261.0" textFill="#ebebeb">

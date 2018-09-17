@@ -76,31 +76,31 @@ public class SellerController implements Initializable {
     private Label email;
 
     @FXML
+    private Label mony;
+
+    @FXML
     private JFXButton logout;
     @FXML
     private StackPane main_pane;
-    private  int quan=0;
+    private int quan = 0;
 
-    private static final double WINDOW_WIDTH =800 ;
+    private static final double WINDOW_WIDTH = 800;
     private static final double WINDOW_HEIGHT = 500;
-
 
 
     private SellerProductsFragment sellerProductsFragment;
     private CartFragments cartFragments;
     private List<Transaction> transactions;
 
-FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
+    FacadeMarketProvider facadeMarketProvider = new FacadeMarketProvider();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         try {
-            for (User user:facadeMarketProvider.getAllSellers())
-            {
-                if (user.getEmail().equals(Auth.getInstance().getCurrentUser()))
-                {
-                    user_name.setText(user.getFirstName()+"\t"+user.getLastName());
+            for (User user : facadeMarketProvider.getAllSellers()) {
+                if (user.getEmail().equals(Auth.getInstance().getCurrentUser())) {
+                    user_name.setText(user.getFirstName() + "\t" + user.getLastName());
                     email.setText(user.getEmail());
                 }
             }
@@ -108,69 +108,61 @@ FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
 
             logout.setOnAction(event -> {
                 Auth.getInstance().destroyUser();
-                DirectUserWithFade(main_pane,"../Login.fxml");
+                DirectUserWithFade(main_pane, "../Login.fxml");
             });
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
 
-
-
-
         increase.setOnAction(event -> {
-            quan+=1;
+            quan += 1;
             current_quantity.setText(String.valueOf(quan));
         });
         decrese.setOnAction(event -> {
-            if (quan>0)
-            quan-=1;
+            if (quan > 0)
+                quan -= 1;
             current_quantity.setText(String.valueOf(quan));
         });
 
 
-
-        transactions=new ArrayList<>();
-        sellerProductsFragment=new SellerProductsFragment();
-        cartFragments =new CartFragments();
+        transactions = new ArrayList<>();
+        sellerProductsFragment = new SellerProductsFragment();
+        cartFragments = new CartFragments();
 
         setupSellerProductOperations();
         setupCartOperations();
-
 
 
     }
 
     private void setupCartOperations() {
         try {
-            cartFragments.CartTableColumn(cart_table,transactions);
+            cartFragments.CartTableColumn(cart_table, transactions);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         delete_cart_item.setOnAction(event ->
         {
             try {
-                cartFragments.deleteCartItem(cart_table,transactions);
-                for (Transaction transaction:transactions)
-                {
-                    Log.i(transaction.getProductName()+" \t"+transaction.getSellingPrice());
+                cartFragments.deleteCartItem(cart_table, transactions);
+                for (Transaction transaction : transactions) {
+                    Log.i(transaction.getProductName() + " \t" + transaction.getSellingPrice());
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-
         add_all_cart_item_into_transaction.setOnAction(event ->
-        {
-            try {
-                cartFragments.SellAllProducts(transactions,cart_table);
-                sellerProductsFragment.SellerProductsTableColumn(seller_products_table);
+                {
+                    try {
+                        cartFragments.SellAllProducts(transactions, cart_table,mony);
+                        sellerProductsFragment.SellerProductsTableColumn(seller_products_table);
 
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
         );
     }
 
@@ -180,23 +172,27 @@ FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        sellerProductsFragment.onTableItemSelected(seller_products_table,selected_product_name,selected_product_price);
+        sellerProductsFragment.onTableItemSelected(seller_products_table, selected_product_name, selected_product_price);
+
+
+
         add_item_to_cart.setOnAction(event ->
         {
-            try {
-                sellerProductsFragment.addCategoryItem(current_quantity,quantity_hint,selected_product_name,selected_product_price,seller_products_table,transactions);
-                for (Transaction transaction:transactions)
-                {
-                    Log.i(transaction.getProductName()+" \t"+transaction.getSellingPrice());
-                }
-                cartFragments.CartTableColumn(cart_table,transactions);
+            this.quan = 0;
 
+
+            try {
+                sellerProductsFragment.addCartItem(current_quantity, quantity_hint, selected_product_name, selected_product_price, seller_products_table, transactions);
+                cartFragments.CartTableColumn(cart_table, transactions);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-    }
 
+
+
+
+    }
 
     private void DirectUserWithFade(StackPane pane, String fxml_file) {
         FadeTransition fadeTransition = new FadeTransition();
@@ -227,5 +223,4 @@ FacadeMarketProvider facadeMarketProvider=new FacadeMarketProvider();
         fadeTransition.play();
 
     }
-
 }

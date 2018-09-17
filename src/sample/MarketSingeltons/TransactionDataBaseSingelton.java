@@ -8,6 +8,7 @@ import sample.MarketModel.Transaction;
 import sample.MarketProvider.ProductOperations;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,10 +21,27 @@ public class TransactionDataBaseSingelton {
     }
     private TransactionDataBaseSingelton() {
     }
+
+
+//    public  static  void  main(String a[])
+//    {
+//        Transaction transaction=Transaction.newTransaction()
+//                .profit(22)
+//                .email("mohamed@gmail.com")
+//                .created_at(String.valueOf(LocalDate.now()))
+//                .productName("milk")
+//                .quantity(22)
+//                .id(1)
+//                .sellingPrioce(22)
+//                .build();
+//        getInstance().deleteTransaction(transaction);
+//    }
     public  String addTransaction(Transaction Transaction)
     {
         String data_base_message = "";
         try {
+
+
 
             //Calculate The Profit before adding it to the dataBase Table
             //By getting the price from the Products table and subtracting it from the Selling Price
@@ -36,8 +54,8 @@ public class TransactionDataBaseSingelton {
             preparedStatement.setInt(1, Transaction.getId());
             preparedStatement.setString(2, Transaction.getUserEmail());
             preparedStatement.setString(3, Transaction.getProductName());
-            preparedStatement.setInt(4, Transaction.getQuantity());
-            preparedStatement.setInt(5,Transaction.getSellingPrice() );
+            preparedStatement.setInt(4,Transaction.getSellingPrice() );
+            preparedStatement.setInt(5, Transaction.getQuantity());
             preparedStatement.setInt(6,Transaction.getProfit());
             preparedStatement.setTimestamp(7,getCurrentTimeStamp());
             preparedStatement.executeUpdate();
@@ -99,7 +117,7 @@ public class TransactionDataBaseSingelton {
         Connection
         connection = Config.getInstance().getConnection();
 
-        String sql = String.format("SELECT  * FROM  MARKET_TRANSACTIONS   ORDER  by TRANSACTION_PROFIT Desc ",
+        String sql = String.format("SELECT  * FROM  MARKET_TRANSACTIONS ORDER BY  TRANSACTION_ID ASC",
                 Auth.getInstance().getCurrentUser());
         PreparedStatement   statement = connection.prepareStatement(sql);
 

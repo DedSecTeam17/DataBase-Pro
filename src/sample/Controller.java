@@ -16,9 +16,6 @@ import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import sample.Atuhentication.Auth;
@@ -30,7 +27,6 @@ import sample.UiValidation.UiValidation;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -184,7 +180,7 @@ public class Controller implements Initializable {
         this.SignUp_email_hint.setText("");
         this.SignUp_lname_hint.setText("");
 
-//        login
+//        loginAdmin
         this.email_hint.setText("");
         this.password_hint.setText("");
         this.admin_radio.setUserData(true);
@@ -220,7 +216,8 @@ public class Controller implements Initializable {
                     password(_password).
                     role(role).
                     build();
-            List<User> result = facadeMarketProvider.login(user);
+            List<User> result = facadeMarketProvider.loginAdmin(user);
+            List<User> result_seller = facadeMarketProvider.loginSeller(user);
             if (result.get(0).isRole()) {
                 if (!result.get(0).getEmail().equals("")) {
                     if (result.get(0).getMessage().equals("")) {
@@ -241,18 +238,18 @@ public class Controller implements Initializable {
                 }
 
             } else {
-                if (!result.get(0).getEmail().equals("")) {
-                    if (result.get(0).getMessage().equals("")) {
+                if (!result_seller.get(0).getEmail().equals("")) {
+                    if (result_seller.get(0).getMessage().equals("")) {
                         //                redirect user into admin dashboard
                         Auth.getInstance().start_session();
-                        Auth.getInstance().addUser(result.get(0).getEmail());
+                        Auth.getInstance().addUser(result_seller.get(0).getEmail());
                         Log.i(Auth.getInstance().getCurrentUser());
                         if (Auth.getInstance().isset()) {
                             DirectUserWithFade(login_reg_pane, "../sample/SellerUI/seller.fxml");
                         }
-                        Log.i("this is admin and his email :" + result.get(0).getEmail());
+                        Log.i("this is admin and his email :" + result_seller.get(0).getEmail());
                     } else {
-                        UiValidation.hintErr(email_hint, result.get(0).getMessage());
+                        UiValidation.hintErr(email_hint, result_seller.get(0).getMessage());
                     }
 
                 } else {
@@ -280,6 +277,12 @@ public class Controller implements Initializable {
                     build();
             String warning = facadeMarketProvider.insertAdmin(user);
             if (!warning.equals("")) {
+                Auth.getInstance().start_session();
+                Auth.getInstance().addUser(_email);
+                Log.i(Auth.getInstance().getCurrentUser());
+                if (Auth.getInstance().isset()) {
+                    DirectUserWithFade(login_reg_pane, "../sample/SellerUI/seller.fxml");
+                }
                 UiValidation.hintSuccess(SignUp_email_hint, "this email already used");
             } else {
                 DirectUserWithFade(login_reg_pane, "../sample/AdminUI/Admin.fxml");
@@ -322,8 +325,6 @@ public class Controller implements Initializable {
         });
         fadeTransition.play();
     }
-
-
 }
 
 
