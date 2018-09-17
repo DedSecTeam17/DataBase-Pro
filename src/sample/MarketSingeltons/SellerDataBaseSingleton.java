@@ -19,12 +19,6 @@ public class SellerDataBaseSingleton {
 
     private SellerDataBaseSingleton() {
     }
-
-
-
-
-
-
     public  String addSeller(User user)
     {
         String data_base_message = "";
@@ -89,19 +83,6 @@ public class SellerDataBaseSingleton {
 
         return data_base_message;
     }
-
-    public static void main(String a[])
-    {
-        User user=User.newUser()
-                .email("mohamed@yahoo.com")
-                .password("mohamed")
-                .build();
-
-      List<User> result=  getInstance().loginSeller(user);
-      Log.i(result.get(0).getMessage());
-
-    }
-
     public List<User> getAllSeller() throws SQLException, ClassNotFoundException {
         Connection connection = null;
 //        product_name,product_price,production_date,expired_date,production_company,admin_email
@@ -133,7 +114,32 @@ public class SellerDataBaseSingleton {
         }
         return users;
     }
+    public  User getCurrentSeller() throws SQLException, ClassNotFoundException {
+        Connection connection = null;
+//        product_name,product_price,production_date,expired_date,production_company,admin_email
+        connection = Config.getInstance().getConnection();
 
+        String sql = String.format("SELECT  * FROM  MARKETSELLER where  EMAIL='%s'  ORDER by FNAME ASC ",Auth.getInstance().getCurrentUser());
+        PreparedStatement statement = null;
+        statement = connection.prepareStatement(sql);
+
+        ResultSet SET = statement.executeQuery(sql);
+        User user = null;
+        while (SET.next()) {
+            String _fname = SET.getString("FNAME") ;
+            String _lname = SET.getString("LNAME")  ;
+            String _email = SET.getString("EMAIL");
+             user = User.newUser().
+                    firstName(_fname).
+                    lastName(_lname).
+                    email(_email).
+                    build();
+
+        }
+
+        return user;
+
+    }
     private  java.sql.Timestamp getCurrentTimeStamp() {
 
         java.util.Date today = new java.util.Date();

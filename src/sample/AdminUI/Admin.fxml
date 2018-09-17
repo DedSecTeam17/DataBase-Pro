@@ -138,16 +138,10 @@
                               <Image url="@../Images/expired.png" />
                            </image>
                         </ImageView>
-                        <JFXButton fx:id="upload_image" layoutX="52.0" layoutY="393.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" style="-fx-background-color: #4ecdc4;" text="UPLOAD IMAGE" textFill="WHITE" />
                         <Label fx:id="image_hint" layoutX="50.0" layoutY="428.0" prefHeight="17.0" prefWidth="44.0" />
                         <JFXComboBox fx:id="all_category" layoutX="50.0" layoutY="344.0" prefHeight="25.0" prefWidth="220.0" />
                         <Label fx:id="selected_hint_id" layoutX="52.0" layoutY="374.0" />
                         <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/expired.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="15.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Images/cat.png" />
                            </image>
@@ -184,6 +178,31 @@
                         <Label fx:id="transaction_productName_hint" layoutX="50.0" layoutY="180.0" />
                         <Label fx:id="transaction_sellingPrice_hint" layoutX="50.0" layoutY="230.0" />
                         <Label fx:id="transaction_quantity_hint" layoutX="50.0" layoutY="280.0" />
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/id.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/EmailField.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/product.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/price.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/quant.png" />
+                           </image>
+                        </ImageView>
                      </children>
                      <effect>
                         <DropShadow />
@@ -191,9 +210,8 @@
                   </Pane>
                   <Pane layoutX="900.0" layoutY="530.0" prefHeight="180.0" prefWidth="320.0" style="-fx-background-color: white; -fx-background-radius: 5;">
                      <children>
-                        <JFXButton fx:id="transaction_AddButton" layoutX="28.0" layoutY="14.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #03c9a9;" text="Add" textFill="#f8f8f8" />
-                        <JFXButton fx:id="transaction_UpdateButton" layoutX="28.0" layoutY="73.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #81cfe0;" text="Update" textFill="#f8f8f8" />
-                        <JFXButton fx:id="transaction_RemoveButton" layoutX="28.0" layoutY="131.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="Remove" textFill="#f8f8f8" />
+                        <JFXButton fx:id="transaction_UpdateButton" layoutX="35.0" layoutY="44.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #81cfe0;" text="UPDATE" textFill="#f8f8f8" />
+                        <JFXButton fx:id="transaction_RemoveButton" layoutX="35.0" layoutY="102.0" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f64747;" text="DELETE" textFill="#f8f8f8" />
                      </children>
                      <effect>
                         <DropShadow />
@@ -235,7 +253,7 @@
                </children>
             </AnchorPane>
 
-            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1288.0">
+            <AnchorPane fx:id="homePanel" prefHeight="768.0" prefWidth="1288.0" visible="false">
 
                <children>
                   <ImageView fitHeight="768.0" fitWidth="1288.0" pickOnBounds="true" preserveRatio="false">
@@ -253,49 +271,49 @@
                         <Pane prefHeight="743.0" prefWidth="270.0" style="-fx-background-color: #22313f;">
                            <children>
                               <Label fx:id="selectionLabel" layoutX="-17.0" prefHeight="65.0" prefWidth="275.0" style="-fx-background-color: #03c9a9; -fx-background-radius: 5px;" />
-                              <JFXButton layoutX="-3.0" onAction="#HomeButtonClicked" prefHeight="65.0" prefWidth="261.0" textFill="#ebebeb">
+                              <JFXButton layoutX="-3.0" onAction="#HomeButtonClicked" prefHeight="65.0" prefWidth="261.0" text="HOME              " textFill="WHITE">
                                  <graphic>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../Images/home.png" />
                                        </image>
                                     </ImageView>
                                  </graphic></JFXButton>
-                              <JFXButton layoutX="-2.0" layoutY="65.0" onAction="#SellersButtonClicked" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" textFill="#ebebeb">
+                              <JFXButton layoutX="-2.0" layoutY="65.0" onAction="#SellersButtonClicked" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" text="SELLERS            " textFill="WHITE">
                                  <graphic>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../Images/seller.png" />
                                        </image>
                                     </ImageView>
                                  </graphic></JFXButton>
-                              <JFXButton buttonType="RAISED" layoutX="-2.0" layoutY="130.0" onAction="#ProductsButtonClicked" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" textFill="#ebebeb">
+                              <JFXButton buttonType="RAISED" layoutX="-2.0" layoutY="130.0" onAction="#ProductsButtonClicked" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" text="PRODUCTS         " textFill="WHITE">
                                  <graphic>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../Images/product_left_side.png" />
                                        </image>
                                     </ImageView>
                                  </graphic></JFXButton>
-                              <JFXButton layoutX="-2.0" layoutY="195.0" onAction="#TransactionsButtonClicked" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" textFill="#ebebeb">
+                              <JFXButton layoutX="-2.0" layoutY="195.0" onAction="#TransactionsButtonClicked" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" text="TRANSACTIONS" textFill="WHITE">
                                  <graphic>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../Images/home.png" />
                                        </image>
                                     </ImageView>
                                  </graphic></JFXButton>
-                              <JFXButton layoutX="-2.0" layoutY="260.0" onAction="#CategoriesButtonClicked" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" textFill="#ebebeb">
+                              <JFXButton layoutX="-2.0" layoutY="260.0" onAction="#CategoriesButtonClicked" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" text="CATEGORIES      " textFill="WHITE">
                                  <graphic>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../Images/category.png" />
                                        </image>
                                     </ImageView>
                                  </graphic></JFXButton>
-                              <JFXButton layoutX="-2.0" layoutY="325.0" onAction="#signOut" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" textFill="#ebebeb">
+                              <JFXButton layoutX="-2.0" layoutY="325.0" onAction="#signOut" prefHeight="65.0" prefWidth="261.0" style="-fx-background-radius: 10px;" text="LOGOUT               " textFill="WHITE">
                                  <graphic>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../Images/logout.png" />
                                        </image>

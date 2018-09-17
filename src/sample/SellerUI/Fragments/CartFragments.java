@@ -81,10 +81,6 @@ public class CartFragments {
                 facadeMarketProvider.insertTransaction(transaction);
 
             }
-
-            // get the last item from databasemohamed
-//            add 1 to item
-//            insert item to data base
         }
 
         for (Transaction transaction : transactionList) {

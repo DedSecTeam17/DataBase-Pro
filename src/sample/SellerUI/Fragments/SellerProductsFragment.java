@@ -53,7 +53,7 @@ public class SellerProductsFragment {
                                 .email(Auth.getInstance().getCurrentUser())
                                 .profit(Integer.parseInt(selectItemSellingPrice.getText())+10)
                                 .created_at(String.valueOf(LocalDate.now()))
-                                .sellingPrioce(Integer.parseInt(selectItemSellingPrice.getText())*Integer.parseInt(quantity.getText())    ).
+                                .sellingPrioce(Integer.parseInt(selectItemSellingPrice.getText())*Integer.parseInt(quantity.getText())).
                                         build();
                         transactions.add(transaction);
                         UiValidation.hintSuccess(quantity_hint, "Added to cart");
@@ -124,8 +124,6 @@ public class SellerProductsFragment {
                 return param.getValue().getValue().productQuantity;
             }
         });
-
-
         try {
 
 

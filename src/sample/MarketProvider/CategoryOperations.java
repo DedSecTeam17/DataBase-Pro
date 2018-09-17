@@ -83,4 +83,7 @@ public class CategoryOperations implements CrudOperations {
     public List<Transaction> getAllTransaction() throws SQLException, ClassNotFoundException {
         return null;
     }
+    public  List<Category> getAllCategoryForAllAdmins() throws SQLException, ClassNotFoundException {
+        return CategoryDataBaseSingleton.getInstance().getAllCategoryForAllAdmins();
+    }
 }

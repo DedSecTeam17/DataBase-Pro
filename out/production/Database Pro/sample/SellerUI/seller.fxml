@@ -32,9 +32,9 @@
                               <DropShadow radius="6.2925" width="6.17" />
                            </effect>
                         </JFXTreeTableView>
-                        <Pane layoutX="906.0" layoutY="28.0" prefHeight="200.0" prefWidth="198.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                        <Pane layoutX="903.0" layoutY="28.0" prefHeight="200.0" prefWidth="201.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                            <children>
-                              <JFXButton fx:id="add_item_to_cart" layoutX="14.0" layoutY="139.0" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: #03c9a9;" text="Add to cart" textFill="WHITE" />
+                              <JFXButton fx:id="add_item_to_cart" layoutX="14.0" layoutY="139.0" prefHeight="35.0" prefWidth="171.0" style="-fx-background-color: #03c9a9;" text="ADD TO CART" textFill="WHITE" />
                               <Label fx:id="selected_product_name" layoutX="22.0" layoutY="72.0" text="no item selected" />
                               <Label fx:id="selected_product_price" layoutX="145.0" layoutY="72.0" text="0" />
                               <Label fx:id="quantity_hint" layoutX="35.0" layoutY="14.0" text="Label" />
@@ -86,8 +86,8 @@
                               <DropShadow radius="6.2925" width="6.17" />
                            </effect>
                            <children>
-                              <JFXButton fx:id="delete_cart_item" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: #f64747;" text="delete" textFill="WHITE" />
-                              <JFXButton fx:id="add_all_cart_item_into_transaction" layoutX="31.0" layoutY="70.0" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: #81cfe0;" text="sell" textFill="WHITE" />
+                              <JFXButton fx:id="delete_cart_item" layoutX="31.0" layoutY="25.0" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: #f64747;" text="DELETE" textFill="WHITE" />
+                              <JFXButton fx:id="add_all_cart_item_into_transaction" layoutX="31.0" layoutY="70.0" prefHeight="35.0" prefWidth="185.0" style="-fx-background-color: #81cfe0;" text="SELL" textFill="WHITE" />
                            </children>
                         </Pane>
                         <Pane layoutX="1108.0" layoutY="28.0" prefHeight="200.0" prefWidth="243.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
@@ -120,7 +120,7 @@
                                     <Font name="Agency FB Bold" size="13.0" />
                                  </font>
                               </Label>
-                              <JFXButton fx:id="logout" layoutX="14.0" layoutY="151.0" text="Log out" textFill="#f64747">
+                              <JFXButton fx:id="logout" layoutX="14.0" layoutY="151.0" text="LOG OUT" textFill="#f64747">
                                  <graphic>
                                     <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -131,7 +131,7 @@
                               </JFXButton>
                            </children>
                         </Pane>
-                        <Pane layoutX="908.0" layoutY="552.0" prefHeight="120.0" prefWidth="187.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
+                        <Pane layoutX="902.0" layoutY="552.0" prefHeight="120.0" prefWidth="193.0" style="-fx-background-color: white; -fx-background-radius: 5px;">
                            <effect>
                               <DropShadow radius="6.2925" width="6.17" />
                            </effect>

@@ -95,4 +95,7 @@ public class SellerOperations implements CrudOperations,AdminPrivilidgeOpertatio
     public List<Product> getAllAdminProducts() throws SQLException, ClassNotFoundException {
         return null;
     }
+    public  User  getCurrrentSeller() throws SQLException, ClassNotFoundException {
+        return  SellerDataBaseSingleton.getInstance().getCurrentSeller();
+    }
 }

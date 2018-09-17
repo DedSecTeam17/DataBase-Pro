@@ -52,9 +52,9 @@ import java.util.ResourceBundle;
 public class AdminController implements Initializable {
 
     private static final double COLUMN_WIDTH = 831 / 6;
-    private static final double WINDOW_WIDTH =800 ;
+    private static final double WINDOW_WIDTH = 800;
     private static final double WINDOW_HEIGHT = 500;
-    public JFXButton upload_image;
+
     public JFXComboBox<String> all_category;
     public Label selected_hint_id;
     private HamburgerBackArrowBasicTransition hamburgerTransition;
@@ -294,9 +294,9 @@ public class AdminController implements Initializable {
 
     @FXML
     private JFXHamburger hamburgerButton;
-   @FXML
-   private  Label image_hint ;
-   private  List<Category> categoryList;
+    @FXML
+    private Label image_hint;
+    private List<Category> categoryList;
 
     //#endregion
 
@@ -306,8 +306,8 @@ public class AdminController implements Initializable {
     private SellerFragment sellerFragment = new SellerFragment();
     private TransactionsFragment transactionsFragment = new TransactionsFragment();
 
-    private  String image_path="";
-    private Map<String,Integer> hashMap=new HashMap<>();
+    private String image_path = "";
+    private Map<String, Integer> hashMap = new HashMap<>();
 
 
     @Override
@@ -315,7 +315,7 @@ public class AdminController implements Initializable {
         loadAllTables();
         facadeMarketProvider = new FacadeMarketProvider();
         try {
-            categoryList=facadeMarketProvider.getAllCategories();
+            categoryList = facadeMarketProvider.getAllCategories();
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -324,14 +324,13 @@ public class AdminController implements Initializable {
 
 
         try {
-            for (Category category:categoryList)
-            {
-                hashMap.put(category.getCategory_name(),category.getCategory_id());
+            for (Category category : categoryList) {
+                hashMap.put(category.getCategory_name(), category.getCategory_id());
             }
-            for (Category cat: categoryList ) {
+            for (Category cat : categoryList) {
                 all_category.getItems().add(cat.getCategory_name());
             }
-                all_category.getItems().add("");
+            all_category.getItems().add("");
             productFragment.ProductTableColumn(products_table);
             categoryFragment.CategorytTableColumn(categor_tree_table);
             sellerFragment.SellerTableColumn(seller_table);
@@ -347,7 +346,7 @@ public class AdminController implements Initializable {
         productFragment.onTableItemSelected(p_name, p_price, p_company, p_quantity, p_date, expi_date, products_table);
         add_product.setOnAction(event -> {
             try {
-                productFragment.addProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date,image_path,image_hint,hashMap.get(all_category.getSelectionModel().getSelectedItem()),selected_hint_id, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
+                productFragment.addProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, image_path, image_hint, hashMap.get(all_category.getSelectionModel().getSelectedItem()), selected_hint_id, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -357,21 +356,11 @@ public class AdminController implements Initializable {
         });
         update_product.setOnAction(event -> {
             try {
-                productFragment.updateProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date,image_path,image_hint,hashMap.get(all_category.getSelectionModel().getSelectedItem()),selected_hint_id, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
+                productFragment.updateProduct(p_name, p_price, p_company, p_quantity, p_date, expi_date, image_path, image_hint, hashMap.get(all_category.getSelectionModel().getSelectedItem()), selected_hint_id, p_name_hint, p_price_hint, p_company_hint, p_quantity_hint, produ_hint, p_expi_hint, products_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-        upload_image.setOnAction(event -> {
-            FileChooser fileChooser = new FileChooser();
-            File result = fileChooser.showOpenDialog(null);
-            this.image_path=result.getAbsolutePath();
-            Log.i(image_path);
-        });
-
-
-//
-
         categoryFragment.onTableItemSelected(categor_tree_table, cat_name, cat_id);
         add_cat.setOnAction(event -> {
             try {
@@ -389,30 +378,30 @@ public class AdminController implements Initializable {
                 e.printStackTrace();
             }
         });
-        sellerFragment.onTableItemSelected(seller_FirstName,seller_LastName,seller_Email,seller_Password,seller_table);
+        sellerFragment.onTableItemSelected(seller_FirstName, seller_LastName, seller_Email, seller_Password, seller_table);
         seller_AddButton.setOnAction(event -> {
             try {
-                sellerFragment.addSeller(seller_FirstName,seller_LastName,seller_Email,seller_Password,hint_Seller_FirstName,hint_Seller_LastName,hint_Seller_Email,hint_Seller_Password,seller_table);
+                sellerFragment.addSeller(seller_FirstName, seller_LastName, seller_Email, seller_Password, hint_Seller_FirstName, hint_Seller_LastName, hint_Seller_Email, hint_Seller_Password, seller_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-        seller_RemoveButton.setOnAction(event -> sellerFragment.deleteSeller(seller_FirstName,seller_LastName,seller_Email,seller_Password,hint_Seller_FirstName,hint_Seller_LastName,hint_Seller_Email,hint_Seller_Password,seller_table));
+        seller_RemoveButton.setOnAction(event -> sellerFragment.deleteSeller(seller_FirstName, seller_LastName, seller_Email, seller_Password, hint_Seller_FirstName, hint_Seller_LastName, hint_Seller_Email, hint_Seller_Password, seller_table));
         seller_UpdateButton.setOnAction(event -> {
             try {
-                sellerFragment.updateSeller(seller_FirstName,seller_LastName,seller_Email,seller_Password,hint_Seller_FirstName,hint_Seller_LastName,hint_Seller_Email,hint_Seller_Password,seller_table);
+                sellerFragment.updateSeller(seller_FirstName, seller_LastName, seller_Email, seller_Password, hint_Seller_FirstName, hint_Seller_LastName, hint_Seller_Email, hint_Seller_Password, seller_table);
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-        transactionsFragment.onTableItemSelected(transaction_id,transaction_userEmail,transaction_productName,transaction_sellingPrice,transaction_quantity,transactions_table);
-        transaction_RemoveButton.setOnAction(event -> transactionsFragment.deleteTransaction(transaction_id,transaction_userEmail,transaction_productName,transaction_sellingPrice,transaction_quantity,transaction_id_hint,transaction_userEmail_hint,transaction_productName_hint,transaction_sellingPrice_hint,transaction_quantity_hint,transactions_table));
+        transactionsFragment.onTableItemSelected(transaction_id, transaction_userEmail, transaction_productName, transaction_sellingPrice, transaction_quantity, transactions_table);
+        transaction_RemoveButton.setOnAction(event -> transactionsFragment.deleteTransaction(transaction_id, transaction_userEmail, transaction_productName, transaction_sellingPrice, transaction_quantity, transaction_id_hint, transaction_userEmail_hint, transaction_productName_hint, transaction_sellingPrice_hint, transaction_quantity_hint, transactions_table));
         transaction_UpdateButton.setOnAction(event -> {
             try {
-                transactionsFragment.updateTransaction(transaction_id,transaction_userEmail,transaction_productName,
-                        transaction_sellingPrice,transaction_quantity,
-                        transaction_id_hint,transaction_userEmail_hint,transaction_productName_hint,
-                        transaction_sellingPrice_hint,transaction_quantity_hint,
+                transactionsFragment.updateTransaction(transaction_id, transaction_userEmail, transaction_productName,
+                        transaction_sellingPrice, transaction_quantity,
+                        transaction_id_hint, transaction_userEmail_hint, transaction_productName_hint,
+                        transaction_sellingPrice_hint, transaction_quantity_hint,
                         transactions_table);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -420,11 +409,13 @@ public class AdminController implements Initializable {
         });
 
     }
+
     private void setUpAsideNavBar() {
         drawer.setSidePane(vbox);
         hamburgerTransition = new HamburgerBackArrowBasicTransition(hamburgerButton);
         hamburgerTransition.setRate(-1);
     }
+
     @FXML
     private void handleHamburgerClick() {
         //Open and close drawer on hamburger button click
@@ -444,56 +435,58 @@ public class AdminController implements Initializable {
         categoriesPanel.setVisible(true);
 
 
-
     }
+
     @FXML
     void ProductsButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         productsPanel.setVisible(true);
 
-        for (Category category:categoryList)
-        {
+        for (Category category : categoryList) {
             all_category.getItems().remove(category.getCategory_id());
         }
 
         try {
-            categoryList=facadeMarketProvider.getAllCategories();
+            categoryList = facadeMarketProvider.getAllCategories();
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 
 
-        for (Category category:categoryList)
-        {
-            hashMap.replace(category.getCategory_name(),category.getCategory_id());
+        for (Category category : categoryList) {
+            hashMap.replace(category.getCategory_name(), category.getCategory_id());
         }
-        for (Category cat: categoryList ) {
-            all_category.getItems().add(cat.getCategory_id(),cat.getCategory_name());
+        for (Category cat : categoryList) {
+            all_category.getItems().add(cat.getCategory_id(), cat.getCategory_name());
         }
 
     }
-    private  void  loadAllTables()
-    {    try {
-        categoryFragment.CategorytTableColumn(categor_tree_table);
-        productFragment.ProductTableColumn(products_table);
-        sellerFragment.SellerTableColumn(seller_table);
-    } catch (Exception e) {
-        e.printStackTrace();
+
+    private void loadAllTables() {
+        try {
+            categoryFragment.CategorytTableColumn(categor_tree_table);
+            productFragment.ProductTableColumn(products_table);
+            sellerFragment.SellerTableColumn(seller_table);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    }
+
     @FXML
     void HomeButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         homePanel.setVisible(true);
     }
+
     @FXML
     void SellersButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
         hideAllPanels();
         sellersPanel.setVisible(true);
     }
+
     @FXML
     void TransactionsButtonClicked(ActionEvent event) {
         highlight(((JFXButton) event.getSource()).getLayoutY());
@@ -501,6 +494,7 @@ public class AdminController implements Initializable {
         transactionsPanel.setVisible(true);
 
     }
+
     private void highlight(double y) {
         //moves the selection label to the y-axis of the selected button
         selectionLabel.setLayoutY(y);
@@ -509,6 +503,7 @@ public class AdminController implements Initializable {
         hamburgerTransition.play();
 
     }
+
     private void hideAllPanels() {
         sellersPanel.setVisible(false);
         productsPanel.setVisible(false);
@@ -516,12 +511,12 @@ public class AdminController implements Initializable {
         categoriesPanel.setVisible(false);
         homePanel.setVisible(false);
     }
+
     @FXML
     void signOut() {
         //Code to return to the loginAdmin scene
         Auth.getInstance().destroyUser();
-        DirectUserWithFade(main_pane,"../Login.fxml");
-
+        DirectUserWithFade(main_pane, "../Login.fxml");
     }
     private void DirectUserWithFade(StackPane currentPane, String fxml_file) {
         FadeTransition fadeTransition = new FadeTransition();

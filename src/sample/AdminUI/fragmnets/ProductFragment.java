@@ -114,7 +114,6 @@ public class ProductFragment {
                     .productionDate(p_date.getValue().toString())
                     .expiredDate(expi_date.getValue().toString())
                     .quantity(Integer.parseInt(p_quantity.getText()))
-                    .imagePath(image_path)
                     .Cat_id(selectedCategoryItem)
                     .build();
             Log.i(product.getImage_path());

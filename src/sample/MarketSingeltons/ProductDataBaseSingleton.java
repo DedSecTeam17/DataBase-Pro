@@ -27,17 +27,16 @@ public class ProductDataBaseSingleton {
 
 
     public  static  void  main(String a[]){
-        Auth.getInstance().start_session();
-        Auth.getInstance().addUser("mohamed@yahoo.com");
-        try {
-            for (Product product:getInstance().getAllProductForSellers()){
-                Log.i(product.getProductName());
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        Product product = Product.newProduct()
+                .productName("asdasd_testww")
+                .productPrice(22)
+                .productedCompany("asd")
+                .productionDate(String.valueOf(LocalDate.now()))
+                .expiredDate(String.valueOf(LocalDate.now()))
+                .quantity(111)
+                .Cat_id(44)
+                .build();
+        getInstance().updateProduct(product);
 
     }
     
@@ -45,11 +44,11 @@ public class ProductDataBaseSingleton {
         String data_base_message = "";
 
         try {
-            FileInputStream fin =new FileInputStream(Product.getImage_path());
+
             Connection connection = Config.getInstance().getConnection();
 
 
-            String sql = "INSERT INTO MARKET_PRODUCT(product_name,product_price,production_date,expired_date,production_company,admin_email,PRODUCT_QUANTITY,PRODUCT_IMAGE,CAT_ID) VALUES(?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO MARKET_PRODUCT(product_name,product_price,production_date,expired_date,production_company,admin_email,PRODUCT_QUANTITY,CAT_ID) VALUES(?,?,?,?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, Product.getProductName());
             preparedStatement.setInt(2, Product.getProductPrice());
@@ -58,14 +57,14 @@ public class ProductDataBaseSingleton {
             preparedStatement.setString(5, Product.getProductedCompany());
             preparedStatement.setString(6, Auth.getInstance().getCurrentUser());
             preparedStatement.setInt(7, Product.getQuantity());
-            preparedStatement.setBinaryStream(8,fin,fin.available());
-            preparedStatement.setInt(9,Product.getCat_id());
+//            preparedStatement.setBinaryStream(8,fin,fin.available());
+            preparedStatement.setInt(8,Product.getCat_id());
 //
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             Log.i(e.getMessage());
             data_base_message = e.getMessage();
-        } catch (ClassNotFoundException | IOException e) {
+        } catch (ClassNotFoundException e) {
             data_base_message = e.getMessage();
         }
 
@@ -89,31 +88,25 @@ public class ProductDataBaseSingleton {
     public String updateProduct(Product Product) {
         String data_base_message = "";
         try {
-            FileInputStream fin =new FileInputStream(Product.getImage_path());
+
             Connection connection = Config.getInstance().getConnection();
-            String sql = "UPDATE MARKET_PRODUCT SET  product_price = ? ,  production_date = ? ,expired_date = ? ,production_company = ? ,admin_email = ?,PRODUCT_QUANTITY = ? , PRODUCT_IMAGE = ?, CAT_ID=? WHERE  product_name = ? ";
+            String sql = "UPDATE MARKET_PRODUCT SET  product_price = ? ,  production_date = ? ,expired_date = ? ,production_company = ? ,admin_email = ?,PRODUCT_QUANTITY = ? ,  CAT_ID=? WHERE  product_name = ? ";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-
-
             preparedStatement.setInt(1, Product.getProductPrice());
             preparedStatement.setDate(2, Date.valueOf(Product.getProductionDate()));
             preparedStatement.setDate(3, Date.valueOf(Product.getExpiredDate()));
             preparedStatement.setString(4, Product.getProductedCompany());
             preparedStatement.setString(5, Auth.getInstance().getCurrentUser());
             preparedStatement.setInt(6, Product.getQuantity());
-            preparedStatement.setBinaryStream(7,fin,fin.available());
-            preparedStatement.setInt(8,Product.getCat_id());
-            preparedStatement.setString(9, Product.getProductName());
+//            preparedStatement.setBinaryStream(7,fin,fin.available());
+            preparedStatement.setInt(7,Product.getCat_id());
+            preparedStatement.setString(8, Product.getProductName());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             Log.i(e.getMessage());
             data_base_message = e.getMessage();
         } catch (ClassNotFoundException e) {
             data_base_message = e.getMessage();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
         return data_base_message;

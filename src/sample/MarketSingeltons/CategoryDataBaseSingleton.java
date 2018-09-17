@@ -20,24 +20,20 @@ public class CategoryDataBaseSingleton {
     private CategoryDataBaseSingleton() {
     }
 
-public static  void main(String a[])
-{
-
-
-
-    try {
-
-
-            System.out.println(getInstance().getCategoryById(1).getCategory_name());
-
-    } catch (SQLException e) {
-        e.printStackTrace();
-    } catch (ClassNotFoundException e) {
-        e.printStackTrace();
-    }
-
-
-}
+//public static  void main(String a[])
+//{
+//
+//
+//    try {
+//        Log.i(String.valueOf(getInstance().getAllCategoryForAllAdmins().get(getInstance().getAllCategoryForAllAdmins().size()-1).getCategory_id()));
+//    } catch (SQLException e) {
+//        e.printStackTrace();
+//    } catch (ClassNotFoundException e) {
+//        e.printStackTrace();
+//    }
+//
+//
+//}
 
 
 
@@ -121,6 +117,33 @@ public static  void main(String a[])
         Connection connection  = Config.getInstance().getConnection();
 
         String sql = String.format("SELECT  * FROM  MarketCategory WHERE  EMAIL='%s'  ORDER  by CAT_ID ASC ", Auth.getInstance().getCurrentUser());
+
+        PreparedStatement  statement = connection.prepareStatement(sql);
+
+        ResultSet SET = statement.executeQuery(sql);
+        List<Category> categories = new ArrayList<>(20);
+        while (SET.next()) {
+            String cat_name = SET.getString("CAT_NAME");
+            int cat_id = SET.getInt("CAT_ID");
+
+            Category category = Category.newCategory()
+                    .categoryName(cat_name)
+                    .categoryID(cat_id)
+                    .build();
+            categories.add(category);
+        }
+        return categories;
+    }
+
+
+
+
+    public List<Category> getAllCategoryForAllAdmins() throws SQLException, ClassNotFoundException {
+
+//        product_name,product_price,production_date,expired_date,production_company,admin_email
+        Connection connection  = Config.getInstance().getConnection();
+
+        String sql = String.format("SELECT  * FROM  MarketCategory   order by CAT_ID ASC ");
 
         PreparedStatement  statement = connection.prepareStatement(sql);
 

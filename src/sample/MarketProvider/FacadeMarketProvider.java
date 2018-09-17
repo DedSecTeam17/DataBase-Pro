@@ -66,6 +66,9 @@ public class FacadeMarketProvider {
     public String insertProduct(Product product) {
         return productOperations.insertProduct(product);
     }
+    public  User getCurrrentSeller() throws SQLException, ClassNotFoundException {
+        return  sellerOperations.getCurrrentSeller();
+    }
 
 
     public String updateProduct(Product product) {
@@ -98,7 +101,9 @@ public class FacadeMarketProvider {
     public List<Category> getAllCategories() throws SQLException, ClassNotFoundException {
         return categoryOperations.getAllCategories();
     }
-
+    public  List<Category> getAllCategoryForAllAdmins() throws SQLException, ClassNotFoundException {
+        return categoryOperations.getAllCategoryForAllAdmins();
+    }
     public  Category getCategoryById(int id) throws SQLException, ClassNotFoundException {
         return  categoryOperations.getItemById(id);
     }

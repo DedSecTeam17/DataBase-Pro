@@ -82,15 +82,6 @@ public class TransactionDataBaseSingelton {
     }
     public  String updateTransaction(Transaction Transaction)
     {
-
-//        int transaction_id= SET.getInt("TRANSACTION_ID");
-//        String transaction_user_email = SET.getString("TRANSACTION_USER_EMAIL");
-//        String transaction_product_name = SET.getString("TRANSACTION_PRODUCT_NAME");
-//        int transaction_selling_price = SET.getInt("TRANSACTION_SELLING_PRICE");
-//        int transaction_quantity = SET.getInt("TRANSACTION_QUANTITY");
-//        int transactionProfit = SET.getInt("TRANSACTION_PROFIT");
-//        String transaction_date = SET.getDate("TRANSACTION_DATE").toString();
-
         String data_base_message = "";
         try {
             Connection connection = Config.getInstance().getConnection();
@@ -112,13 +103,12 @@ public class TransactionDataBaseSingelton {
         return data_base_message;
 
     }
-
-    public List<Transaction> getAllTransactionGroupedWithSellerEmailOrderedwithHighProfit() throws SQLException, ClassNotFoundException {
+    public  List<Transaction> getAllTransactionForAdminsSellers() throws SQLException, ClassNotFoundException {
         Connection
-        connection = Config.getInstance().getConnection();
+                connection = Config.getInstance().getConnection();
 
-        String sql = String.format("SELECT  * FROM  MARKET_TRANSACTIONS ORDER BY  TRANSACTION_ID ASC",
-                Auth.getInstance().getCurrentUser());
+        String sql = String.format("SELECT  * FROM  MARKET_TRANSACTIONS where  ",Auth.getInstance().getCurrentUser());
+
         PreparedStatement   statement = connection.prepareStatement(sql);
 
 
@@ -149,6 +139,44 @@ public class TransactionDataBaseSingelton {
         return transactions;
     }
 
+
+
+
+    public List<Transaction> getAllTransactionGroupedWithSellerEmailOrderedwithHighProfit() throws SQLException, ClassNotFoundException {
+        Connection
+        connection = Config.getInstance().getConnection();
+
+        String sql = String.format("select  * from  MARKET_TRANSACTIONS join MARKETSELLER on MARKET_TRANSACTIONS.TRANSACTION_USER_EMAIL = MARKETSELLER.EMAIL where ADMIN_EMAIL='%s'",
+                Auth.getInstance().getCurrentUser());
+        PreparedStatement   statement = connection.prepareStatement(sql);
+
+
+        ResultSet SET = statement.executeQuery(sql);
+        List<Transaction> transactions = new ArrayList<>(20);
+        while (SET.next()) {
+
+            int transaction_id= SET.getInt("TRANSACTION_ID");
+            String transaction_user_email = SET.getString("TRANSACTION_USER_EMAIL");
+            String transaction_product_name = SET.getString("TRANSACTION_PRODUCT_NAME");
+            int transaction_selling_price = SET.getInt("TRANSACTION_SELLING_PRICE");
+            int transaction_quantity = SET.getInt("TRANSACTION_QUANTITY");
+            int transactionProfit = SET.getInt("TRANSACTION_PROFIT");
+            String transaction_date = SET.getDate("TRANSACTION_DATE").toString();
+
+
+            Transaction transaction = Transaction.newTransaction().id(transaction_id).
+                    productName(transaction_product_name).
+                    sellingPrioce(transaction_selling_price).
+                    quantity(transaction_quantity).
+                    profit(transactionProfit).
+                    email(transaction_user_email)
+                    .created_at(transaction_date)
+                    .build();
+
+            transactions.add(transaction);
+        }
+        return transactions;
+    }
     private int getProductPrice(String product_Name) throws SQLException, ClassNotFoundException {
         Connection connection = Config.getInstance().getConnection();
         String query = String.format("SELECT * FROM MARKETPRODUCT WHERE PRODUCT_NAME = '%s'",product_Name);
@@ -162,7 +190,6 @@ public class TransactionDataBaseSingelton {
         }
         return productPrice;
     }
-
     private  java.sql.Timestamp getCurrentTimeStamp() {
 
         java.util.Date today = new java.util.Date();

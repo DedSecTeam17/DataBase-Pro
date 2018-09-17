@@ -98,11 +98,11 @@ public class SellerController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         try {
-            for (User user : facadeMarketProvider.getAllSellers()) {
+       User user=facadeMarketProvider.getCurrrentSeller();
                 if (user.getEmail().equals(Auth.getInstance().getCurrentUser())) {
                     user_name.setText(user.getFirstName() + "\t" + user.getLastName());
                     email.setText(user.getEmail());
-                }
+
             }
 
 
@@ -173,14 +173,9 @@ public class SellerController implements Initializable {
             e.printStackTrace();
         }
         sellerProductsFragment.onTableItemSelected(seller_products_table, selected_product_name, selected_product_price);
-
-
-
         add_item_to_cart.setOnAction(event ->
         {
             this.quan = 0;
-
-
             try {
                 sellerProductsFragment.addCartItem(current_quantity, quantity_hint, selected_product_name, selected_product_price, seller_products_table, transactions);
                 cartFragments.CartTableColumn(cart_table, transactions);
@@ -188,12 +183,7 @@ public class SellerController implements Initializable {
                 e.printStackTrace();
             }
         });
-
-
-
-
     }
-
     private void DirectUserWithFade(StackPane pane, String fxml_file) {
         FadeTransition fadeTransition = new FadeTransition();
         fadeTransition.setDuration(Duration.millis(100));
